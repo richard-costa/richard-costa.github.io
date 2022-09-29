@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Some Pages"
 permalink: "/index/"
 layout: page
 ---
