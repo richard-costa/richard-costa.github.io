@@ -4,16 +4,15 @@ layout: page
 mathjax: true
 ---
 
-Earlier this year, [Pompili et al](https://arxiv.org/abs/2102.04471) puplished a paper on a realization of a three-node[^1] quantum network. Seems to be a good milestone, but I can't really judge it (nothing new here). Also, it seems this work is the [first](https://qutech.nl/2021/04/15/dutch-researchers-establish-the-first-entanglement-based-quantum-network/?cn-reloaded=1) to implement a multi-node quantum network.
+Earlier in 2021, [Pompili et al](https://arxiv.org/abs/2102.04471) puplished a paper on a realization of a three-node[^1] quantum network. Seems to be a good milestone, but I can't really judge it (nothing new here). Also, this work seems to be the [first](https://qutech.nl/2021/04/15/dutch-researchers-establish-the-first-entanglement-based-quantum-network/?cn-reloaded=1) to implement a multi-node quantum network.
 
-When you want to know more about a subject's important papers, you can usually find them cited in the introductions. In the very first sentence of Pompili et al, they reference two highly cited articles: ["The Quantum Internet"](https://arxiv.org/abs/0806.4195) by Kimble, from 2008 and ["Quantum internet: A vision for the road ahead"](https://www.researchgate.net/publication/328376157_Quantum_internet_A_vision_for_the_road_ahead) by Wehner, Elkouss and Hanson, from 2018. So, these seem to be the papers to read to understand better what's up with quantum networks. 
+When you want to know more about a subject's important papers, you can usually find them cited in the introductions. In the very first sentence of 'Pompili et al', they reference two highly cited articles: ["The Quantum Internet"](https://arxiv.org/abs/0806.4195) by Kimble, from 2008 and ["Quantum internet: A vision for the road ahead"](https://www.researchgate.net/publication/328376157_Quantum_internet_A_vision_for_the_road_ahead) by Wehner, Elkouss and Hanson, from 2018. These seem to be the papers to read to understand better what's up with quantum networks. 
 
 
-Honestly, I don't get how we can talk meaningfully about quantum software and networks if we haven't even been able to build a quantum computer with more than 100 qubits.  Maybe that's just my ignorance, but, it does sound a bit like putting the cart before the horse. 
+Honestly, I don't get how we can talk meaningfully about quantum software and networks if we haven't even been able to build a quantum computer with more than 100 qubits.  Maybe that's just my ignorance, but to me it does sound a bit like putting the cart before the horse.
 
-👉 __Update, Nov. 2nd: It was, after all, my ignorance. Accoding to Wehner et al, a quantum device with a single qubit at the end point is already sufficient for applications.__
 
-If we look at the history of classical computing and assume quantum computing should follow a similar path, then we are far away. As Nielsen put it in [quantum country](https://quantum.country/qcvc): we are in the ENIAC times of quantum computing, something like the 1970s for classical computing. At the same time advances may not develop like they did with classical computing. For example, we already have a somewhat high level abstraction of quantum computing in the form of [programming languages](https://en.wikipedia.org/wiki/Q_Sharp) (admitttedly, they are domain-specific, tailored for particular applications). 
+If we look at the history of classical computing and assume quantum computing should follow a similar path (which is assuming a lot, I know), then we are far away. As Nielsen put it in [quantum country](https://quantum.country/qcvc): we are in the ENIAC times of quantum computing, something like the 1970s for classical computing. On the other hand, progress may not develop like it did with classical computing. For example, we already have a somewhat high level abstraction of quantum computing in the form of [programming languages](https://en.wikipedia.org/wiki/Q_Sharp) (admitttedly, they are domain-specific, tailored for particular applications). 
 
 
 
@@ -34,9 +33,7 @@ Just as a sidenote, and as an excuse to talk about a theorem, I'd like to expand
 
 I'm not sure what he meant, but I guess he's talking about what is called the _Riesz Representation Theorem_ [^2]. This is a nice theorem which plays a role in the mathematical formulation of quantum mechanics, spefically on what's known as the Dirac notation. 
 
-AA dollar sign $. Done.
-
-Just to give it a taste: say we have a vector space (think of it as a space formed by usual vectors. Let's call this vector space $V$. In finite dimensions we can build another space  $W$ which is isomorphic [^3] to $V$. In this new space $W$, vectors are linear functions and those functions take as input the vectors belonging to $V$ and return numbers (this type of function is called a _linear functional_). This set of vectors (functionals) is called the _dual space_. What the Riesz Theorem states is that for some vector spaces satisfying some conditions, every linear (and continous) functional in the dual space can be put in the form of an inner product, which for the usual euclidean 3D space is just the familiar dot product. 
+Say we have a vector space (think of it as a space formed by usual vectors). Let's call this vector space $V$. In finite dimensions we can build another space  $W$ which is isomorphic [^3] to $V$. In this new space $W$, vectors are linear functions and those functions take as input vectors belonging to $V$ and return numbers (this type of function is called a _linear functional_). This set of vectors (functionals) is called the _dual space_. What the Riesz Theorem states is that for some vector spaces satisfying some conditions, every linear (and continous) functional in the dual space can be put in the form of an inner product, which for the usual euclidean 3D space is just the familiar dot product. 
 
 The second passage is
 
@@ -78,9 +75,3 @@ I guess that's what he meant with "the gradient you’re looking for at the give
 [^1]: A node locally stores, generates and process quantum information.
 [^2]: I don't think wikipedia is very useful to learn more about this theorem. For those who already studied linear algebra, on page 188 of [Axler's Linear Algebra Done Right](https://www.amazon.com/Linear-Algebra-Right-Undergraduate-Mathematics/dp/3319110799/ref=sr_1_2?crid=19HCZIYE129HK&dchild=1&keywords=axler+linear&qid=1635796013&sprefix=axler+linear%2Caps%2C336&sr=8-2), 3rd ed., you can find the theorem for finite-dimensional vector spaces and a short proof.
 [^3]: More formally, a linear isomorphism: every element in a space is associated with one and only one element of the other space and we can go back and forth between them.
-
-
-<!-- LikeBtn.com BEGIN -->
-<span class="likebtn-wrapper" data-theme="custom" data-btn_size="20" data-f_size="16" data-icon_size="30" data-icon_l="hrt6" data-icon_l_c="#0512fb" data-icon_l_c_v="#fb0505" data-icon_d_c_v="#bd0019" data-brdr_c="#fdfdfd" data-i18n_like=" Did you like this article?" data-ef_voting="grow" data-dislike_enabled="false" data-icon_dislike_show="false" data-counter_zero_show="true"></span>
-<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
-<!-- LikeBtn.com END --->
