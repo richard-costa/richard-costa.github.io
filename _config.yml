@@ -1,6 +1,6 @@
 title: "Richard Costa"
 author: "Richard"
-description: ""
+description: " "
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -16,7 +16,8 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html"}
+  - {file: "index.md"}
+  - {file: "blog.html", title: "Blog"}
   - {file: "readme.md", title: "About"}
   - {file: "index_posts.md", title: "Index"}
 
@@ -24,6 +25,7 @@ external:                  # shows a footer with social links - for available ic
   - {title: Mail, icon: envelope, url: "mailto:scosta.richard@gmail.com.com"}
   - {title: Github, icon: github, url: "https://github.com/richard-costa"}
   - {title: Twitter, icon: twitter, url: "https:/twitter.com/richsicist"}
+  - {title: Theme by Niklas Buschmann, url: https://github.com/niklasbuschmann/contrast}
  #  - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
 comments:
