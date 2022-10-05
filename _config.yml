@@ -23,7 +23,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, url: "mailto:scosta.richard@gmail.com", icon: envelope}
   - {title: Github, url: "https://github.com/richard-costa", icon: github}
-  - {title: Twitter, url: "https:/twitter.com/richsicist", icon: twitter}
+  - {title: Twitter, url: "https://twitter.com/richsicist", icon: twitter}
   - {title: Blog Theme, url: https://github.com/niklasbuschmann/contrast}
  #  - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
