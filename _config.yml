@@ -1,6 +1,6 @@
 title: "Richard Costa"
 author: "Richard Costa"
-description: "Richard Costa"
+description: "Just a personal website"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -10,21 +10,21 @@ date_format: "%B %d, %Y"
 
 show_excerpts: false        # show article excerpts on the home page
 show_frame: true          # adds a gray frame to the site
-show_sidebar: false        # show a sidebar instead of the usual header
+show_sidebar: true        # show a sidebar instead of the usual header
 minimal: false             # use a dark header
 
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-#  - {file: "index.md", title: "Home"}
-  - {file: "blog.html", title: "Blog"}
-  - {file: "index_posts.md", title: "Index"}
+  - {file: "index.md", title: "Home", icon: house}
+  - {file: "blog.html", title: "Blog", icon: pencil}
+  - {file: "index_posts.md", title: "Pages Index"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:scosta.richard@gmail.com.com"}
+  - {title: Mail, icon: envelope, url: "mailto:scosta.richard@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/richard-costa"}
   - {title: Twitter, icon: twitter, url: "https:/twitter.com/richsicist"}
-  - {title: Theme by Niklas Buschmann, url: https://github.com/niklasbuschmann/contrast}
+  - {title: Blog Theme, url: https://github.com/niklasbuschmann/contrast, icon: github}
  #  - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
 comments:
