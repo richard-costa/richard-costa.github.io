@@ -158,15 +158,15 @@ __Fig. 4__: _Volume elements under some external force at times $t$_ and $t+ dt$
 
 This movement is determined by the initial conditions and by the force applied to the system. That way, we may write
 
+<a name="eq1"></a>
+
 
 
 $$
 \begin{aligned}
 \vec{r}' &= \vec{r} + \dot{\vec{r}}dt = \vec{r} + \vec{v} dt, \\
-\vec{v}' & = \vec{v} + \dot{\vec{v}} dt = \vec{v} + \frac{\vec{F}}{m} dt.
+\vec{v}' & = \vec{v} + \dot{\vec{v}} dt = \vec{v} + \frac{\vec{F}}{m} dt. \qquad (1)
 \end{aligned}
-\label{eq:displaced}
-\tag{1}
 $$
 
 
@@ -178,7 +178,7 @@ d^{3} r' d^{3} v ' = | \; J \; | d^{3} r d^{3} v,
 $$
 
 
-where $J$ is the Jacobian of the transformation between the coordinates $(\vec{r}, \vec{v})$ and $(\vec{r}', \vec{v}')$. At first order in time the Jacobian is equal to $1$ and then the volume elements are qual. This is showed in the \hyperref[Exe1]{exercises section}.
+where $J$ is the Jacobian of the transformation between the coordinates $(\vec{r}, \vec{v})$ and $(\vec{r}', \vec{v}')$. At first order in time the Jacobian is equal to $1$ and then the volume elements are qual. This is showed in the exercises section.
 
 All molecules that were initially at $d^{3}r d^{3}v$ will be  at $d^{3} r' d^{3} v'$. This is due to the fact that the initial conditions of very close particles in a volume element are similar, that all particles are subjected to the same external force and that there are no collisions. Since __all__ molecules move to the new volume element, the distribution functions are the same:
 
@@ -189,7 +189,7 @@ f( \vec{r}, \vec{v}, t) d^{3} r d^{3} v = f(\vec{r}', \vec{v}', t) d^{3} r' d^{3
 $$
 
 
-Using $(\ref{eq:displaced})$ we can write
+Using [(1)](#eq1) we can write
 
 
 $$
@@ -226,15 +226,13 @@ $$
 
 Therefore,
 
-
+<a name="eq2"></a>
 $$
-f\left( \vec{r} + \vec{v} dt, \vec{v} + \frac{\vec{F}}{m} dt, t+ dt \right) - f(\vec{r}, \vec{v}, t) = \left( \frac{\partial f}{\partial t} \right)_{\mathrm{coll}} dt
-\label{eq:colleq}
-\tag{2}
+f \left( \vec{r} + \vec{v} dt, \vec{v} + \frac{\vec{F}}{m} dt, t+ dt \right) - f(\vec{r}, \vec{v}, t) = \left( \frac{\partial f}{\partial t} \right)_{\mathrm{coll}} dt \qquad(2)
 $$
 
 
-This definition of the collision term as a partial derivative is due to historical reasons. Other texts just call it $C$. Either way, note that we must have units of $f$ on the right side of $(\ref{colleq})$.
+This definition of the collision term as a partial derivative is due to historical reasons. Other texts just call it $C$. Either way, note that we must have units of $f$ on the right side of [(2)](#eq2).
 
 We'll expand the distribution function above in a Taylor series. Recall that the Taylor series expansion at first order for $n$ variables around the point $(a_{1}, \cdots, a_{n})$ is given by
 
@@ -260,7 +258,7 @@ $$
 $$
 
 
-where we have kept only first order terms of the expansion. Replacing this into ($\ref{eq:colleq}$) we get
+where we have kept only first order terms of the expansion. Replacing this into [(2)](#eq2) we get
 
 
 $$
@@ -288,15 +286,16 @@ $$
 $$
 
 
-This way can factor out $f$ and then we have the Boltzmann equation: 
+This way we can factor $f$ out and then we have the Boltzmann equation: 
 
 
 $$
-\begin{equation}
-\label{BoltzmannEq}\tag{3}
-\left( \frac{\partial}{\partial t} + \vec{v} \cdot \nabla_{r} + \frac{\vec{F}}{m}  \cdot \nabla_{v}\right) f(\vec{r}, \vec{v}, t) = \left(\frac{\partial f}{\partial t} \right)_{\mathrm{Coll.}}.
-\end{equation}
+\begin{aligned}
+\left( \frac{\partial}{\partial t} + \vec{v} \cdot \nabla_{r} + \frac{\vec{F}}{m}  \cdot \nabla_{v}\right) f(\vec{r}, \vec{v}, t) = \left(\frac{\partial f}{\partial t} \right)_{\mathrm{Coll.}}. \qquad(3)
+\end{aligned}
 $$
+
+
 We can also write the Boltzmann equations in terms of momenta. Just note that $p_{i} = m v_{i}$, so
 
 
@@ -309,10 +308,9 @@ Therefore,
 
 
 $$
-\begin{equation}
-\label{eq:BoltzmannEqMom}\tag{4}
-\left( \frac{\partial}{\partial t} + \vec{v} \cdot \nabla_{r} + \vec{F}  \cdot \nabla_{p}\right) f(\vec{r}, \vec{p}, t) = \left(\frac{\partial f}{\partial t} \right)_{\mathrm{Coll.}}.
-\end{equation}
+\begin{aligned}
+\left( \frac{\partial}{\partial t} + \vec{v} \cdot \nabla_{r} + \vec{F}  \cdot \nabla_{p}\right) f(\vec{r}, \vec{p}, t) = \left(\frac{\partial f}{\partial t} \right)_{\mathrm{Coll.}}. \qquad(4)
+\end{aligned}
 $$
 
 
