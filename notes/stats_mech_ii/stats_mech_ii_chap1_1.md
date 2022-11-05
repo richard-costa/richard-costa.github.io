@@ -13,7 +13,7 @@ typora-root-url: ./..\..
 
 [1.3 Deriving the Boltzmann Equation](#13-deriving-the-boltzmann-equation)
 
-[Exercises](#exercises)
+
 
 ---
 
@@ -245,7 +245,7 @@ f(x_{1}, \cdots, x_{n}) & \approx f(a_{1}, \cdots, a_{n}) \; +  \\
 $$
 
 
-For more info on this see $\href{https://math.jhu.edu/~lindblad/211/l9.pdf}{here}$ and $\href{https://en.wikipedia.org/wiki/Taylor_series\#Taylor_series_in_several_variables}{here}$. In our case we have $6N$ variables, where $3N$ are for positions and $3N$ for momenta. The expansion is done around the point $(\vec{r}, \vec{v}, t)$: 
+For more info on this see [here](https://math.jhu.edu/~lindblad/211/l9.pdf) and [here](https://en.wikipedia.org/wiki/Taylor_series\#Taylor_series_in_several_variables). In our case we have $6N$ variables, where $3N$ are for positions and $3N$ for momenta. The expansion is done around the point $(\vec{r}, \vec{v}, t)$: 
 
 
 $$
