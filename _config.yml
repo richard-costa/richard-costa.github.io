@@ -19,7 +19,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
  #  - {file: "index.md", title: "Home"}
   - {file: "blog.html", title: "Blog"}
   - {file: "index_posts.md", title: "Posts Index"}
-  - {file: "index_notes.md", title: "Notes Index"}
+  - {file: "index_notes.md", title: "Notes"}
   - {file: "art.md", title: "Art"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
