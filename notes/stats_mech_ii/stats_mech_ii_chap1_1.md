@@ -4,7 +4,6 @@ layout: page
 mathjax: true
 typora-root-url: ./..\..
 ---
-
 # Contents
 
 [1.1 Introduction](#11-introduction)
@@ -13,11 +12,7 @@ typora-root-url: ./..\..
 
 [1.3 Deriving the Boltzmann Equation](#13-deriving-the-boltzmann-equation)
 
-
-
 ---
-
-
 
 # 1.1 Introduction
 
@@ -32,7 +27,6 @@ Kinetic theories make use of something called _coarse graining_, which can be un
 - _The Boltzmann Equation_. This equation gives us the time evolution of the position and velocity __distributions__ of particles (from a gas) and it is more appropriate to describe diluted systems, where interactions are short range in nature. We will talk more about this equation soon.
 - _The Vlasov Equation_. Used to describe quasi-neutral[^1] plasma and more appropriate for long-range interactions (in this case, the eletromagnetic interaction).
 
-
 Stochastic theories allows to construct probabilistic models, usually inspired in the Brownian movement. In this realm we will see the Langevin Equation, the Fokker-Planck equation and the master equation with some applications. 
 
 Now, our entry point will be the Boltzmann equation, and in these lectures we will see two ways of deriving it. One is more phenomenological, and the other more formal[^2]. We will start with the former, so we can have more physical insight into what is going on.
@@ -45,18 +39,11 @@ To arrive at the Boltzmann equation we start with the following assumptions:
 4. The system is finite with ideal walls which reflect particles as if in an elastic collision. We can also consider a system with an infinite number of particles, but we may require that in the thermodynamic limit the density is finite and constant: $N/V = \mathrm{constant}$.
 5. The system is under a force $\vec{F}(\vec{r}, t)$ which, for simplicity, we assume it does not depend on the velocity of particles (for the Lorentz force this assumption does not hold, since this force does depend on the velocity of particles).
 
-
-
-
-
 <a name="fig1"></a>
 
 <img src="/notes/stats_mech_ii/imgs_chap1/statmech1-1.jpg" style="zoom:25%;" />
 
-
 __Fig. 1__: _Representation of a gas made up of $N$ particles in a volume $V$_.
-
-
 
 
 __First Assumption__. For a dilute gas ([Fig.1 above](#fig1)) we can think that we're dealing with a system of low density.  More formally, the gas is dilute when the average distance between particles is much greater than their sizes: $d \gg \lambda$. First, let $v$ be the specific volume of the gas. Then
@@ -87,24 +74,19 @@ $$
 
 We can also characterize this gas condition in terms of the _thermal wavelength_ $\lambda = h/(\sqrt{2 \pi m k T})$. Since $\lambda$ is of the same order as $\lambda_{B}$ then $n^{-\frac{1}{3}} \gg \lambda$. Therefore, our first assumption can be translated as 
 
-
 $$
 \lambda_{B}^{3} n \ll 1, \; \text{or} \; \lambda^{3} n \ll 1.
 $$
 
-
 We can use this condition to characterize the dilute gas as well as the classical regime.
 
 __Second assumption__. Since we have a dilute gas or low density of particles, those particles move as free particles. Only on short time intervals they interact with each other, that is, they collide. The nature of collisions is determined by what is called _cross section_, which will see in more detail later on.
-
 
 # 1.2 Phase Space and the Distribution Function 
 
 [Back to Contents](#contents)
 
 This space (also denoted $\mu$ _space_) has $6$ dimensions, $3$ of which are the position coordinates and the remaining $3$ describe the momenta coordinates (or equivalently velocities), for each particle/molecule. A point in this space represents the dynamic state of a particle/molecule. For $N$ particles or molecules, the state of the system is represented by $N$ points in this space. The state is completely determined by the position and momenta coordinates. A representation of this space can be seen in the figure below:
-
-
 
 <a name="fig2"></a>
 
@@ -120,27 +102,21 @@ We now define a _distribution function_ $f$ in this space such that $f(\vec{r}, 
 
 __Fig. 3__: _Distribution function and number of points in phase space_.
 
-
-
-
 We suppose that $f(\vec{r}, \vec{p}, t)$ is a continuous function in its arguments. This isn't really true, but since there are usually a huge number of particles in the volume element $d^{3}r d^{3}p$ and the density of points vary smoothly, we make this assumption[^3]. The goal of _Kinetic Theory_ is to find the distribution function $f$. This function depends on the problem at hand: the type of interactions between the particles, initial conditions, boundary conditions, etc.
 
 The distribution function can be determined by the Boltzmann Equation and so when we solve this equation we are effectively finding what the distribution function is. With the distribution function we can then find the ensemble average of the physical quantities we are interested in. For instance, let $\chi (\vec{r}, \vec{v}, t) = m \vec{v}^{2}/2$. Then, its average in time $t$ and position $\vec{r}$ is obtained by integration over velocities:
-
 
 $$
 \langle \chi (\vec{r}, t) \rangle = \frac{\int d^{3} v \chi (\vec{r}, \vec{v}, t) f(\vec{r}, \vec{v}, t)}{\int d^{3} v f(\vec{r}, \vec{v}, t)},
 $$
 
+where we assumed that $f$ is already normalized. The denominator is the number of particles in the phase space volume element $d^{3}r d^{3}v$ . We may denote
 
-where we assumed that $f$ is already normalized. The denominator is the number of particles in the phase space volume element $d^{3}r d^{3}v$ . We may denote 
 $$
 n(\vec{r}, t) = \int d^{3} v f(\vec{r}, \vec{v}, t)
 $$
 
 so $n(\vec{r}, t)$ is the number of particles per unit volume around $\vec{r}$ at time $t$.
-
-
 
 # 1.3 Deriving the Boltzmann Equation
 
@@ -154,13 +130,9 @@ Let $d^{3} r d^{3}v$ be the volume element in the $\mu$ space of our system. Now
 
 __Fig. 4__: _Volume elements under some external force at times $t$_ and $t+ dt$.
 
-
-
 This movement is determined by the initial conditions and by the force applied to the system. That way, we may write
 
 <a name="eq1"></a>
-
-
 
 $$
 \begin{aligned}
@@ -169,34 +141,25 @@ $$
 \end{aligned}
 $$
 
-
-
 We can show that both volume elements are equal, that is, $d^{3}r d^{3} v = d^{3}r' d^{3} v'$. As a matter of fact, the relationship between the two is given by
 
 $$
 d^{3} r' d^{3} v ' = | \; J \; | d^{3} r d^{3} v,
 $$
 
-
 where $J$ is the Jacobian of the transformation between the coordinates $(\vec{r}, \vec{v})$ and $(\vec{r}', \vec{v}')$. At first order in time the Jacobian is equal to $1$ and then the volume elements are qual. This is showed in the exercises section.
 
 All molecules that were initially at $d^{3}r d^{3}v$ will be  at $d^{3} r' d^{3} v'$. This is due to the fact that the initial conditions of very close particles in a volume element are similar, that all particles are subjected to the same external force and that there are no collisions. Since __all__ molecules move to the new volume element, the distribution functions are the same:
-
-
 
 $$
 f( \vec{r}, \vec{v}, t) d^{3} r d^{3} v = f(\vec{r}', \vec{v}', t) d^{3} r' d^{3} v' \implies f( \vec{r}, \vec{v}, t) = f( \vec{r}', \vec{v}', t).
 $$
 
-
 Using [(1)](#eq1) we can write
-
 
 $$
 f (\vec{r}, \vec{v}, t) = f\left(\vec{r} + \vec{v} dt, \vec{v} + \frac{\vec{F}}{m}dt, t + dt\right).
 $$
-
-
 
 When there are collisions not all molecules from $d^{3} r d^{3} v$ will end up at $d^{3}r' d^{3}v'$, so we will see what happens in this case. There will be a term stemming from collisions which, fairly enough, we will call the _collision term_.
 
@@ -206,23 +169,17 @@ When there are collisions not all molecules from $d^{3} r d^{3} v$ will end up a
 
 __Fig. 5__: _Possible collisions_.
 
-
-
 Now suppose we have molecules that do collide. Consider molecules that have similar velocities and are under the same external force. Due to the collision there will be a significant change in their positions and velocities. They may not end up in the volume $d^{3} r' d^{3} v'$ centered at $(\vec{r}', \vec{v}')$. Furthermore, we may have molecules that initially were at a different volume element (one not centered in $(\vec{r}, \vec{v})$) but ended up in $d^{3} r' d^{3} v'$ anyway. So
-
 
 $$
 f (\vec{r}, \vec{v}, t) \neq f\left(\vec{r} + \vec{v} dt, \vec{v} + \frac{\vec{F}}{m}dt, t + dt\right).
 $$
 
-
 This difference of the distributions functions due to collisions is what we call the collision term. It is a constant and we define it, for now, as a partial derivative
-
 
 $$
 \underbrace{\left( \frac{\partial f}{\partial t} \right)_{\mathrm{Coll.}}}_{\equiv C} dt.
 $$
-
 
 Therefore,
 
@@ -231,11 +188,9 @@ $$
 f \left( \vec{r} + \vec{v} dt, \vec{v} + \frac{\vec{F}}{m} dt, t+ dt \right) - f(\vec{r}, \vec{v}, t) = \left( \frac{\partial f}{\partial t} \right)_{\mathrm{coll}} dt \qquad(2)
 $$
 
-
 This definition of the collision term as a partial derivative is due to historical reasons. Other texts just call it $C$. Either way, note that we must have units of $f$ on the right side of [(2)](#eq2).
 
 We'll expand the distribution function above in a Taylor series. Recall that the Taylor series expansion at first order for $n$ variables around the point $(a_{1}, \cdots, a_{n})$ is given by
-
 
 $$
 \begin{aligned}
@@ -244,9 +199,7 @@ f(x_{1}, \cdots, x_{n}) & \approx f(a_{1}, \cdots, a_{n}) \; +  \\
 \end{aligned}
 $$
 
-
-For more info on this see [here](https://math.jhu.edu/~lindblad/211/l9.pdf) and [here](https://en.wikipedia.org/wiki/Taylor_series\#Taylor_series_in_several_variables). In our case we have $6N$ variables, where $3N$ are for positions and $3N$ for momenta. The expansion is done around the point $(\vec{r}, \vec{v}, t)$: 
-
+For more info on this see [here](https://math.jhu.edu/~lindblad/211/l9.pdf) and [here](https://en.wikipedia.org/wiki/Taylor_series#Taylor_series_in_several_variables). In our case we have $6N$ variables, where $3N$ are for positions and $3N$ for momenta. The expansion is done around the point $(\vec{r}, \vec{v}, t)$: 
 
 $$
 \begin{aligned}
@@ -257,25 +210,19 @@ $$
 \end{aligned}
 $$
 
-
 where we have kept only first order terms of the expansion. Replacing this into [(2)](#eq2) we get
-
 
 $$
 \frac{\partial}{\partial t}f + \nabla_{r} f \cdot \vec{v} + \nabla_{v} f \cdot \frac{\vec{F}}{m} = \left(\frac{\partial f}{\partial t} \right)_{\mathrm{Coll.}}.
 $$
 
-
 Now, the dot product of gradients of $f$ with vectors is commutative, that is,  
-
 
 $$
 \nabla_{r}f \cdot \vec{a} = \vec{a} \cdot \nabla_{r} f \; \text{and} \; \nabla_{v}f \cdot \vec{a} = \vec{a} \cdot \nabla_{v} f
 $$
 
-
 for any vector $\vec{a} \in \mathbb{R}^{n}$.  Commutation can be seen by writing the dot product explicitly:
-
 
 $$
 \begin{aligned}
@@ -285,9 +232,7 @@ $$
 \end{aligned}
 $$
 
-
 This way we can factor $f$ out and then we have the Boltzmann equation: 
-
 
 $$
 \begin{aligned}
@@ -295,17 +240,13 @@ $$
 \end{aligned}
 $$
 
-
 We can also write the Boltzmann equations in terms of momenta. Just note that $p_{i} = m v_{i}$, so
-
 
 $$
 \nabla_{v} f \cdot \frac{F}{m} = \frac{\vec{F}}{m} \cdot \nabla_{v} f = F_{i} \frac{1}{m} \frac{\partial f}{\partial v_{i}} = F_{i} \frac{\partial f}{\partial (m v_{i})} = F_{i} \frac{\partial f}{\partial p_{i}} = \vec{F} \cdot \nabla_{p}.
 $$
 
-
 Therefore,
-
 
 $$
 \begin{aligned}
@@ -313,14 +254,9 @@ $$
 \end{aligned}
 $$
 
-
 However, note that we __do not__ have an expression for the collision term just yet. We did nothing more than just state that there is a difference between the distribution functions and worked it out from there. We will now derive the expression for the collision term.
 
-
-
 # 1.4 The Collision Term
-
-
 
 ---
 # Footnotes
