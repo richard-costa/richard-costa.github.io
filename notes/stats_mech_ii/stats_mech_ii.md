@@ -15,11 +15,17 @@ mathjax: true
 - Stochastic Processes, 
 - the Langevin & Fokker-Planck Equations, 
 - and Markov Chains.
-
-The link for a pdf version of these notes can be found [here]({% link files/Statistical Mechanics 2 - Lecture Notes.pdf %}).
+- 
 
 ## Summary
 
 ### Chapter 1 - The Boltzmann Equation
 
 [1.1 Introduction]({% link notes/stats_mech_ii/stats_mech_ii_chap1_1.md %})
+
+
+
+
+
+---
+

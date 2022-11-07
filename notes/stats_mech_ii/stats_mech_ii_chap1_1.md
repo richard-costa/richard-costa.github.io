@@ -4,6 +4,7 @@ layout: page
 mathjax: true
 typora-root-url: ./..\..
 ---
+
 # Contents
 
 [1.1 Introduction](#11-introduction)
@@ -12,11 +13,13 @@ typora-root-url: ./..\..
 
 [1.3 Deriving the Boltzmann Equation](#13-deriving-the-boltzmann-equation)
 
+[1.4 The Collision Term](#14-the-collision-term)
+
 ---
 
 # 1.1 Introduction
 
-IN A FIRST course in statistical mechanics we usually focus on systems at thermodynamic equilibrium. In those systems the macroscopic state does not depend on time, that is, everything that was supposed to happen regarding its thermal evolution already happened and the system reached equilibrium. The theoretical framework used to describe these kind of systems is well established in the theory of ensembles, specifically the microcanonical, canonical and grand canonical ensembles. In this context we have already studied several techniques to obtain the partition function and, from it, the thermodynamics we are interested in, whether we are dealing with classical or quantum systems.
+IN A FIRST course in statistical mechanics course we usually focus on systems at thermodynamic equilibrium. In those systems the macroscopic state does not depend on time, that is, everything that was supposed to happen regarding its thermal evolution already happened and the system reached equilibrium. The theoretical framework used to describe these kind of systems is well established in the theory of ensembles, specifically the microcanonical, canonical and grand canonical ensembles. In this context we have already studied several techniques to obtain the partition function and, from it, the thermodynamics we are interested in, whether we are dealing with classical or quantum systems.
 
 In these notes we are going to study systems that are not in thermodynamic equilibrium. The description of those kind of systems is far less complete and satisfactory than those in equilibrium, so it is a theory still under development. 
 
@@ -41,7 +44,7 @@ To arrive at the Boltzmann equation we start with the following assumptions:
 
 <a name="fig1"></a>
 
-<img src="/notes/stats_mech_ii/imgs_chap1/statmech1-1.jpg" style="zoom:25%;" />
+<img src="/notes/stats_mech_ii/imgs_chap1/img_1_1.jpg" style="zoom:15%;" />
 
 __Fig. 1__: _Representation of a gas made up of $N$ particles in a volume $V$_.
 
@@ -86,11 +89,11 @@ __Second assumption__. Since we have a dilute gas or low density of particles, t
 
 [Back to Contents](#contents)
 
-This space (also denoted $\mu$ _space_) has $6$ dimensions, $3$ of which are the position coordinates and the remaining $3$ describe the momenta coordinates (or equivalently velocities), for each particle/molecule. A point in this space represents the dynamic state of a particle/molecule. For $N$ particles or molecules, the state of the system is represented by $N$ points in this space. The state is completely determined by the position and momenta coordinates. A representation of this space can be seen in the figure below:
+The phase space (also denoted $\mu$ _space_) has $6$ dimensions, $3$ of which are the position coordinates and the remaining $3$ describe the momenta coordinates (or equivalently velocities), for each particle/molecule. A point in this space represents the dynamic state of a particle/molecule. For $N$ particles or molecules, the state of the system is represented by $N$ points in this space. The state is completely determined by the position and momenta coordinates. A representation of this space can be seen in the figure below:
 
 <a name="fig2"></a>
 
-<img src="/notes/stats_mech_ii/imgs_chap1/statmech2-1.jpg" alt="figura" style="zoom:25%;" />
+<img src="/notes/stats_mech_ii/imgs_chap1/img_1_2.jpg" alt="figura" style="zoom:25%;" />
 
 __Fig. 2__: _Representation of a gas made up of $N$ particles in a volume $V$_.
 
@@ -98,7 +101,7 @@ We now define a _distribution function_ $f$ in this space such that $f(\vec{r}, 
 
 <a name="fig3"></a>
 
-<img src="/notes/stats_mech_ii/imgs_chap1/statmech3-1.jpg" alt="function_phase_space" style="zoom:25%;" />
+<img src="/notes/stats_mech_ii/imgs_chap1/img_1_3.jpg" alt="function_phase_space" style="zoom:25%;" />
 
 __Fig. 3__: _Distribution function and number of points in phase space_.
 
@@ -126,7 +129,7 @@ Let $d^{3} r d^{3}v$ be the volume element in the $\mu$ space of our system. Now
 
 <a name="fig4"></a>
 
-<img src="/notes/stats_mech_ii/imgs_chap1/statmech4-1.jpg" style="zoom:67%;" />
+<img src="/notes/stats_mech_ii/imgs_chap1/img_1_4.jpg" style="zoom:67%;" />
 
 __Fig. 4__: _Volume elements under some external force at times $t$_ and $t+ dt$.
 
@@ -163,14 +166,17 @@ $$
 
 When there are collisions not all molecules from $d^{3} r d^{3} v$ will end up at $d^{3}r' d^{3}v'$, so we will see what happens in this case. There will be a term stemming from collisions which, fairly enough, we will call the _collision term_.
 
+Now suppose we have molecules that do collide. Consider molecules that have similar velocities and are under the same external force. Due to the collision there will be a significant change in their positions and velocities. They may not end up in the volume $d^{3} r' d^{3} v'$ centered at $(\vec{r}', \vec{v}')$. Furthermore, we may have molecules that initially were at a different volume element (one not centered in $(\vec{r}, \vec{v})$) but ended up in $d^{3} r' d^{3} v'$ anyway. This is illustrated in the figure below:
+
 <a name="fig5"></a>
 
-<img src="/notes/stats_mech_ii/imgs_chap1/statmech5-1.jpg" style="zoom:33%;" />
+<img src="/notes/stats_mech_ii/imgs_chap1/img_1_5.jpg" style="zoom:33%;" />
 
 __Fig. 5__: _Possible collisions_.
 
-Now suppose we have molecules that do collide. Consider molecules that have similar velocities and are under the same external force. Due to the collision there will be a significant change in their positions and velocities. They may not end up in the volume $d^{3} r' d^{3} v'$ centered at $(\vec{r}', \vec{v}')$. Furthermore, we may have molecules that initially were at a different volume element (one not centered in $(\vec{r}, \vec{v})$) but ended up in $d^{3} r' d^{3} v'$ anyway. So
 
+
+So
 $$
 f (\vec{r}, \vec{v}, t) \neq f\left(\vec{r} + \vec{v} dt, \vec{v} + \frac{\vec{F}}{m}dt, t + dt\right).
 $$
@@ -240,7 +246,7 @@ $$
 \end{aligned}
 $$
 
-We can also write the Boltzmann equations in terms of momenta. Just note that $p_{i} = m v_{i}$, so
+We can also write the Boltzmann equations in terms of the momenta. Just note that $p_{i} = m v_{i}$, so
 
 $$
 \nabla_{v} f \cdot \frac{F}{m} = \frac{\vec{F}}{m} \cdot \nabla_{v} f = F_{i} \frac{1}{m} \frac{\partial f}{\partial v_{i}} = F_{i} \frac{\partial f}{\partial (m v_{i})} = F_{i} \frac{\partial f}{\partial p_{i}} = \vec{F} \cdot \nabla_{p}.
@@ -257,6 +263,82 @@ $$
 However, note that we __do not__ have an expression for the collision term just yet. We did nothing more than just state that there is a difference between the distribution functions and worked it out from there. We will now derive the expression for the collision term.
 
 # 1.4 The Collision Term
+
+[Back to Contents](#contents)
+
+The collision term is the (net) number of particles in a given (phase space) volume element  $d^{3}r d^{3}p$ due to collisions. Some of these particles enter this volume due to those collisions and some particles that were initially there escape it due to those collisions. Let us denote the number of particles that enter and escape $d^{3}r d^{3}p$ due to collisions as $\overline{R}$ and $R$, respectively. Therefore we can write
+$$
+\left( \frac{\partial f}{\partial t} \right)_{\mathrm{Coll.}} dt = (\overline{R} - R)dt.
+$$
+
+An illustration of $R$ and $\overline{R}$ can be seen below:
+
+<a name="fig5"></a><img src="/notes/stats_mech_ii/imgs_chap1/img_1_6.jpg" style="zoom: 80%;" />
+
+Now, the volume element is so small (infinitesimal) that any collision will shoot the particle out of that element. So if a particle gets out of that volume element then there was a collision. That way, the number of particles that escape the volume element, $R$, is directly related to the number of collisions:
+
+- $Rdt d^{3} d^{3}p$:  the number of collisions taking place between $t$ and $t + dt$ in which one of the particles was initially at $d^{3}r d^{3}p$.
+
+The number of collisions originally outside the volume element that end up in $d^{3}r d^{3}p$, i.e., the number of collisions whose final phase state is in $d^{3}r d^{3}p$ is $\overline{R}$. Therefore,
+
+- $\overline{R}dtd^{3}d^{3}p$: the number of collisions taking place between $t$ and $t+dt$, in which one of the particles has a final state in $d^{3} d^{3}p$.
+
+Also note that for collisions to happen we need particles to be close to each other, regardless of their momenta. In phase space, this means for them to be in the same vertical strip
+
+<img src="/notes/stats_mech_ii/imgs_chap1/img_1_7.png" style="zoom:33%;" />
+
+As for the collisions themselves we assume the following:
+
+- Rarified (low density) gas: collisions take place among \textbf{pairs} of particles,
+- During collisions, the net effect of external forces on the particles is negligible compared to the forces that act between the particles.
+
+In first the assumption we are ignoring triple and more particles collisions. At least we consider them to be extremely rare.
+
+In the second assumption we also mean the length scale on which the force acts, $L$, is much greater than the distance where the collision happens $d$, that is, the distance between the particles. On such a short scale the external force varies little and so we may regard it as constant and, therefore, in the collision range $d$ there won't be a significant change in the particles potential energies nor a significant contribution to their momenta due to the external force:
+
+<img src="/notes/stats_mech_ii/imgs_chap1/img_1_8.png" style="zoom: 10%;" />
+
+By conservation of momentum we have $$m \vec{v}_{1} + m \vec{v}_{2} = \vec{P} = \mathrm{constant}$$ . Defining the relative velocity by $$\vec{V} \equiv  \vec{v}_{1} - \vec{v}_{2}$$ we  can write the velocities of each particle as
+
+
+$$
+\begin{aligned}
+\vec{v}_{1} &= \vec{c} + \frac{\mu}{m_{1}} \vec{V}, \\
+\vec{v}_{2} &= \vec{c} + \frac{\mu}{m_{2}} \vec{V},
+\end{aligned}
+$$
+
+
+where
+
+
+$$
+\begin{aligned}
+\vec{c} &= \frac{\vec{P}}{m_{1} + m_{2}} = \frac{m_{1} \vec{v}_{1} + m_{2} \vec{v}_{2}}{m_{1} + m_{2}} ,\\
+\mu &= \frac{m_{1} m_{2}}{m_{1} + m_{2}}.
+\end{aligned}
+$$
+
+
+are the center of mass velocity and reduced mass, respectively. With this new set of variables, the particles kinetic energy is given by
+
+
+$$
+K = \frac{1}{2} m_{1} v_{1}^{2} + \frac{1}{2} m_{2} v_{2} = \frac{1}{2} (m_{1} + m_{2}) \vec{c}^{2} + \frac{1}{2} \mu \vec{V}^{2}.
+$$
+
+
+In an elastic collision kinetic energy is conserved and so $K=K'$ for some later time $t'$. Since the center of mass and reduced mass do not change during the collision we have
+
+ 
+$$
+\vec{V}^{2} = \vec{V}'^{2} \implies | \vec{V} | = | \vec{V}' |
+$$
+
+
+for intial velocities $$\vec{v}_{1}, \vec{v}_{2}$$ and final velocities $$\vec{v}'_{1}, \vec{v}'_{2}$$. Although the absolute value of the relative velocity is the same, $\vec{V}$ may change during the collision.
+
+
 
 ---
 # Footnotes
