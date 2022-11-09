@@ -266,7 +266,8 @@ However, note that we __do not__ have an expression for the collision term just 
 
 [Back to Contents](#contents)
 
-The collision term is the (net) number of particles in a given (phase space) volume element  $d^{3}r d^{3}p$ due to collisions. Some of these particles enter this volume due to those collisions and some particles that were initially there escape it due to those collisions. Let us denote the number of particles that enter and escape $d^{3}r d^{3}p$ due to collisions as $\overline{R}$ and $R$, respectively. Therefore we can write
+To fully derive the Boltzmann Equation we need to determine the collision term. The collision term is the (net) number of particles in a given (phase space) volume element  $d^{3}r d^{3}p$ due to collisions. Some of these particles enter this volume due to those collisions and some particles that were initially there escape it due to those collisions. Let us denote the number of particles that enter and escape $d^{3}r d^{3}p$ due to collisions as $\overline{R}$ and $R$, respectively. Therefore we can write
+
 $$
 \left( \frac{\partial f}{\partial t} \right)_{\mathrm{Coll.}} dt = (\overline{R} - R)dt.
 $$
@@ -289,7 +290,7 @@ Also note that for collisions to happen we need particles to be close to each ot
 
 As for the collisions themselves we assume the following:
 
-- Rarified (low density) gas: collisions take place among \textbf{pairs} of particles,
+- Rarified (low density) gas: collisions take place among **pairs** of particles,
 - During collisions, the net effect of external forces on the particles is negligible compared to the forces that act between the particles.
 
 In first the assumption we are ignoring triple and more particles collisions. At least we consider them to be extremely rare.
@@ -315,12 +316,12 @@ where
 $$
 \begin{aligned}
 \vec{c} &= \frac{\vec{P}}{m_{1} + m_{2}} = \frac{m_{1} \vec{v}_{1} + m_{2} \vec{v}_{2}}{m_{1} + m_{2}} ,\\
-\mu &= \frac{m_{1} m_{2}}{m_{1} + m_{2}}.
+\mu &= \frac{m_{1} m_{2}}{m_{1} + m_{2}}
 \end{aligned}
 $$
 
 
-are the center of mass velocity and reduced mass, respectively. With this new set of variables, the particles kinetic energy is given by
+are the *center of mass velocity* and *reduced mass*, respectively. During collisions $$\vec{c}$$ remains unchanged, while in general the relative velocity may change: $$\vec{V} \to \vec{V}'$$ for some later time $t'$. With this new set of variables, the total kinetic energy is given by
 
 
 $$
@@ -328,15 +329,16 @@ K = \frac{1}{2} m_{1} v_{1}^{2} + \frac{1}{2} m_{2} v_{2} = \frac{1}{2} (m_{1} +
 $$
 
 
-In an elastic collision kinetic energy is conserved and so $K=K'$ for some later time $t'$. Since the center of mass and reduced mass do not change during the collision we have
+In an elastic collision kinetic energy is conserved and so $K=K'$ . Since the center of mass and reduced mass do not change during the collision from the expression for the kinetic energy above we have
 
- 
+
 $$
 \vec{V}^{2} = \vec{V}'^{2} \implies | \vec{V} | = | \vec{V}' |
 $$
 
+for initial velocities $$\vec{v}_{1}, \vec{v}_{2}$$ and final velocities $$\vec{v}'_{1}, \vec{v}'_{2}$$. Although the absolute value of the relative velocity is the same, $\vec{V}$ may change direction after the collisison.
 
-for intial velocities $$\vec{v}_{1}, \vec{v}_{2}$$ and final velocities $$\vec{v}'_{1}, \vec{v}'_{2}$$. Although the absolute value of the relative velocity is the same, $\vec{V}$ may change during the collision.
+Since direction is the only variable here, we can use angles to describe the collisions. Let $$\theta, \varphi$$
 
 
 

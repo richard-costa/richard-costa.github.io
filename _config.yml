@@ -1,4 +1,4 @@
-title: "Richard Costa"
+title: "Richard Costa | Home"
 author: "Richard Costa"
 description: "Just a personal website"
 permalink: /:title/
@@ -18,13 +18,13 @@ minimal: false             # use a dark header
 navigation:                # accepts {file, title, url, icon, sidebaricon}
  #  - {file: "index.md", title: "Home"}
   - {file: "blog.html", title: "Blog"}
-  - {file: "index_posts.md", title: "Posts Index"}
+  - {file: "selected_posts.md", title: "Selected Posts"}
   - {file: "index_notes.md", title: "Notes"}
-  - {file: "art.md", title: "Art"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, url: "mailto:scosta.richard@gmail.com", icon: envelope}
   - {title: Twitter, url: "https://twitter.com/richsicist", icon: twitter}
+  - {title: Artstation, url: "https://richardcosta.artstation.com/", icon: artstation}
   - {title: Blog Theme, url: https://github.com/niklasbuschmann/contrast}
  #  - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
