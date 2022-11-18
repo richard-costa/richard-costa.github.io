@@ -15,6 +15,8 @@ typora-root-url: ./..\..
 
 [1.4 The Collision Term](#14-the-collision-term)
 
+[1.5 Scattering](#15-scattering)
+
 ---
 
 # 1.1 Introduction
@@ -23,14 +25,14 @@ IN A FIRST course in statistical mechanics course we usually focus on systems at
 
 In these notes we are going to study systems that are not in thermodynamic equilibrium. The description of those kind of systems is far less complete and satisfactory than those in equilibrium, so it is a theory still under development. 
 
-In practice there are several ways to describe a system out of equilibrium, some better than others depending on the type of problem at hand. However, there are two main ways of describing out-of-equilibrium (OFQ) systems: through kinetic theories and stochastic theories.
+In practice there are several ways to describe a system out of equilibrium, some better than others depending on the type of problem at hand. In general, there are two main ways of describing out-of-equilibrium (OFQ) systems: through kinetic theories and stochastic theories.
 
-Kinetic theories make use of something called _coarse graining_, which can be understood as a way to systematically use approximations in order to describe the system, controlling how much information we need - or want - to add to our model and how much we leave out. Therefore, there's control of its complexity and certainty about what we are leaving out. An analogy would be expanding some function into a Taylor series and truncating it according to what the situation requires of us. Examples of kinetic theories and coarse graining descriptions include:
+Kinetic theories make use of something called _coarse graining_, which can be understood as a way to systematically use approximations in order to describe the system, controlling how much information we need - or want - to add to our model and how much we leave out. Therefore, there's control of its complexity and we can be sure about what we are leaving out. An analogy would be expanding some function into a Taylor series and truncating it according to what the situation requires of us. Examples of kinetic theories and coarse graining descriptions include:
 
 - _The Boltzmann Equation_. This equation gives us the time evolution of the position and velocity __distributions__ of particles (from a gas) and it is more appropriate to describe diluted systems, where interactions are short range in nature. We will talk more about this equation soon.
 - _The Vlasov Equation_. Used to describe quasi-neutral[^1] plasma and more appropriate for long-range interactions (in this case, the eletromagnetic interaction).
 
-Stochastic theories allows to construct probabilistic models, usually inspired in the Brownian movement. In this realm we will see the Langevin Equation, the Fokker-Planck equation and the master equation with some applications. 
+Stochastic theories allows to construct probabilistic models, usually inspired in the Brownian motion. In the stochastic approach we will see the Langevin Equation, the Fokker-Planck equation and the master equation with some applications. 
 
 Now, our entry point will be the Boltzmann equation, and in these lectures we will see two ways of deriving it. One is more phenomenological, and the other more formal[^2]. We will start with the former, so we can have more physical insight into what is going on.
 
@@ -48,9 +50,9 @@ To arrive at the Boltzmann equation we start with the following assumptions:
 
 __Fig. 1__: _Representation of a gas made up of $N$ particles in a volume $V$_.
 
+Some remarks on the first and second assumptions are in order:
 
-__First Assumption__. For a dilute gas ([Fig.1 above](#fig1)) we can think that we're dealing with a system of low density.  More formally, the gas is dilute when the average distance between particles is much greater than their sizes: $d \gg \lambda$. First, let $v$ be the specific volume of the gas. Then
-
+__First Assumption__. We can think of a dilute gas ([Fig.1 above](#fig1)) as a system of low density.  More formally, the gas is dilute when the average distance between particles is much greater than their sizes: $d \gg \lambda$. First, let $v$ be the specific volume of the gas. Then,
 $$
 \begin{aligned}
 v &= \frac{V}{N} = \left(\frac{N}{V} \right)^{-1}= n^{-1}.
@@ -83,7 +85,7 @@ $$
 
 We can use this condition to characterize the dilute gas as well as the classical regime.
 
-__Second assumption__. Since we have a dilute gas or low density of particles, those particles move as free particles. Only on short time intervals they interact with each other, that is, they collide. The nature of collisions is determined by what is called _cross section_, which will see in more detail later on.
+__Second assumption__. Since we have a dilute gas or low density of particles, those particles move as free particles. Only for short time intervals they interact with each other, that is, they collide. The nature of collisions is determined by what is called _cross section_, which will see in more detail later on.
 
 # 1.2 Phase Space and the Distribution Function 
 
@@ -97,7 +99,7 @@ The phase space (also denoted $\mu$ _space_) has $6$ dimensions, $3$ of which ar
 
 __Fig. 2__: _Representation of a gas made up of $N$ particles in a volume $V$_.
 
-We now define a _distribution function_ $f$ in this space such that $f(\vec{r}, \vec{p}, t)d^{3} d^{3}p$ is the number of particles in time $t$ that are within the 'position volume' $d^{3}r$ around $\vec{r}$ and 'momenta volume' $d^{3}p$ around $\vec{p}$, where $d^{3}r \equiv d r_{1} d r_{2} d r_{3} \equiv r_{x} r_{y} r_{z}$, and the same for the momenta.
+We now define a _distribution function_ $f$ in this space such that $f(\vec{r}, \vec{p}, t)d^{3}r d^{3}p$ is the number of particles in time $t$ that are within the 'position volume' $d^{3}r$ around $\vec{r}$ and 'momenta volume' $d^{3}p$ around $\vec{p}$, where $d^{3}r \equiv d r_{1} d r_{2} d r_{3} \equiv r_{x} r_{y} r_{z}$, and the same for the momenta.
 
 <a name="fig3"></a>
 
@@ -105,10 +107,13 @@ We now define a _distribution function_ $f$ in this space such that $f(\vec{r}, 
 
 __Fig. 3__: _Distribution function and number of points in phase space_.
 
-We suppose that $f(\vec{r}, \vec{p}, t)$ is a continuous function in its arguments. This isn't really true, but since there are usually a huge number of particles in the volume element $d^{3}r d^{3}p$ and the density of points vary smoothly, we make this assumption[^3]. The goal of _Kinetic Theory_ is to find the distribution function $f$. This function depends on the problem at hand: the type of interactions between the particles, initial conditions, boundary conditions, etc.
+On the distribution function we make two assumptions: that there are usually a huge number of particles in the volume element $d^{3}r d^{3}p$ and the density of points varies smoothly. This means we are assuming $f(\vec{r}, \vec{p}, t)$ is a continuous function in its arguments[^3]. 
 
-The distribution function can be determined by the Boltzmann Equation and so when we solve this equation we are effectively finding what the distribution function is. With the distribution function we can then find the ensemble average of the physical quantities we are interested in. For instance, let $\chi (\vec{r}, \vec{v}, t) = m \vec{v}^{2}/2$. Then, its average in time $t$ and position $\vec{r}$ is obtained by integration over velocities:
+The goal of _Kinetic Theory_ is to find the distribution function $f$. This function depends on time because particles constantly enter and leave a given volume element in phase-space. It also depends on the problem at hand: the type of interactions between the particles, initial conditions, boundary conditions, etc. 
 
+The distribution function can be determined by the **Boltzmann Equation** (its equation of motion), and so when we solve this equation we are effectively finding what the distribution function is. 
+
+With the distribution function we can find the ensemble average of the physical quantities we are interested in. As an example, let $\chi (\vec{r}, \vec{v}, t) = m \vec{v}^{2}/2$. Then, its average in time $t$ and position $\vec{r}$ is obtained by integration over velocities:
 $$
 \langle \chi (\vec{r}, t) \rangle = \frac{\int d^{3} v \chi (\vec{r}, \vec{v}, t) f(\vec{r}, \vec{v}, t)}{\int d^{3} v f(\vec{r}, \vec{v}, t)},
 $$
@@ -119,13 +124,20 @@ $$
 n(\vec{r}, t) = \int d^{3} v f(\vec{r}, \vec{v}, t)
 $$
 
-so $n(\vec{r}, t)$ is the number of particles per unit volume around $\vec{r}$ at time $t$.
+so $n(\vec{r}, t)$ is the number of particles per unit volume around $\vec{r}$ at time $t$. Then,
+
+
+$$
+\langle \chi (\vec{r}, t) \rangle = \frac{m}{2 n(\vec{r}, t)} \int d^{3} v \; \vec{v}^{2} f(\vec{r}, \vec{v}, t)
+$$
+
+and the average will be determined by $f$.
 
 # 1.3 Deriving the Boltzmann Equation
 
-[Back to Contents](#contents)
+[Back o Contents](#contents)
 
-Let $d^{3} r d^{3}v$ be the volume element in the $\mu$ space of our system. Now, suppose there are no collisions between particles. In a instant in time $t' = t+ dt$ the molecules  (and the $d^{3}r d^{3}v$ volume) will move due to the external force and end up in another position $(\vec{r}', \vec{v}')$, as illustrated in the figure below:
+Let $d^{3} r d^{3}v$ be the volume element in the $\mu$ space of our system. Now, suppose there are no collisions between particles. In a later instant in time $t' = t+ dt$ the molecules move due to the external force and end up in another position $(\vec{r}', \vec{v}')$ as illustrated in the figure below:
 
 <a name="fig4"></a>
 
@@ -133,7 +145,7 @@ Let $d^{3} r d^{3}v$ be the volume element in the $\mu$ space of our system. Now
 
 __Fig. 4__: _Volume elements under some external force at times $t$_ and $t+ dt$.
 
-This movement is determined by the initial conditions and by the force applied to the system. That way, we may write
+This motion is determined by the initial conditions and by the force applied to the system. That way, we may write
 
 <a name="eq1"></a>
 
@@ -150,9 +162,9 @@ $$
 d^{3} r' d^{3} v ' = | \; J \; | d^{3} r d^{3} v,
 $$
 
-where $J$ is the Jacobian of the transformation between the coordinates $(\vec{r}, \vec{v})$ and $(\vec{r}', \vec{v}')$. At first order in time the Jacobian is equal to $1$ and then the volume elements are qual. This is showed in the exercises section.
+where $J$ is the Jacobian of the transformation between the coordinates $(\vec{r}, \vec{v})$ and $(\vec{r}', \vec{v}')$. At first order in time the Jacobian is equal to $1$ and then the volume elements are equal. This is showed in the exercises section.
 
-All molecules that were initially at $d^{3}r d^{3}v$ will be  at $d^{3} r' d^{3} v'$. This is due to the fact that the initial conditions of very close particles in a volume element are similar, that all particles are subjected to the same external force and that there are no collisions. Since __all__ molecules move to the new volume element, the distribution functions are the same:
+All molecules that were initially at $d^{3}r d^{3}v$ will be at $d^{3} r' d^{3} v'$. This is due to the fact that the initial conditions of very close particles in a volume element are similar, that all particles are subjected to the same external force and that there are no collisions. Since __all__ molecules move to the new volume element, the distribution functions are the same:
 
 $$
 f( \vec{r}, \vec{v}, t) d^{3} r d^{3} v = f(\vec{r}', \vec{v}', t) d^{3} r' d^{3} v' \implies f( \vec{r}, \vec{v}, t) = f( \vec{r}', \vec{v}', t).
@@ -164,9 +176,9 @@ $$
 f (\vec{r}, \vec{v}, t) = f\left(\vec{r} + \vec{v} dt, \vec{v} + \frac{\vec{F}}{m}dt, t + dt\right).
 $$
 
-When there are collisions not all molecules from $d^{3} r d^{3} v$ will end up at $d^{3}r' d^{3}v'$, so we will see what happens in this case. There will be a term stemming from collisions which, fairly enough, we will call the _collision term_.
+When there are collisions not all molecules from $d^{3} r d^{3} v$ will move to $d^{3}r' d^{3}v'$ and then there'll be a term stemming from collisions which, fairly enough, we call the _collision term_. 
 
-Now suppose we have molecules that do collide. Consider molecules that have similar velocities and are under the same external force. Due to the collision there will be a significant change in their positions and velocities. They may not end up in the volume $d^{3} r' d^{3} v'$ centered at $(\vec{r}', \vec{v}')$. Furthermore, we may have molecules that initially were at a different volume element (one not centered in $(\vec{r}, \vec{v})$) but ended up in $d^{3} r' d^{3} v'$ anyway. This is illustrated in the figure below:
+To have some idea of what happens when we deal with collisions let us consider molecules that have similar velocities and are under the same external force. Due to the collision there is going to be a significant change in their positions and velocities. They may not end up in the volume $d^{3} r' d^{3} v'$ centered at $(\vec{r}', \vec{v}')$. Furthermore, we may have molecules that initially were at a different volume element (one not centered in $(\vec{r}, \vec{v})$) but ended up in $d^{3} r' d^{3} v'$ anyway. This is illustrated in the figure below:
 
 <a name="fig5"></a>
 
@@ -176,12 +188,12 @@ __Fig. 5__: _Possible collisions_.
 
 
 
-So
+With that in mind we may write
 $$
 f (\vec{r}, \vec{v}, t) \neq f\left(\vec{r} + \vec{v} dt, \vec{v} + \frac{\vec{F}}{m}dt, t + dt\right).
 $$
 
-This difference of the distributions functions due to collisions is what we call the collision term. It is a constant and we define it, for now, as a partial derivative
+This difference of the distributions functions due to collisions is what we call the collision term. It is a constant and we define it, for now, as a partial derivative:
 
 $$
 \underbrace{\left( \frac{\partial f}{\partial t} \right)_{\mathrm{Coll.}}}_{\equiv C} dt.
@@ -196,7 +208,7 @@ $$
 
 This definition of the collision term as a partial derivative is due to historical reasons. Other texts just call it $C$. Either way, note that we must have units of $f$ on the right side of [(2)](#eq2).
 
-We'll expand the distribution function above in a Taylor series. Recall that the Taylor series expansion at first order for $n$ variables around the point $(a_{1}, \cdots, a_{n})$ is given by
+We'll expand the distribution function above in a Taylor series. Recall that the Taylor series expansion at **first order** for $n$ variables around the point $(a_{1}, \cdots, a_{n})$ is given by
 
 $$
 \begin{aligned}
@@ -205,7 +217,7 @@ f(x_{1}, \cdots, x_{n}) & \approx f(a_{1}, \cdots, a_{n}) \; +  \\
 \end{aligned}
 $$
 
-For more info on this see [here](https://math.jhu.edu/~lindblad/211/l9.pdf) and [here](https://en.wikipedia.org/wiki/Taylor_series#Taylor_series_in_several_variables). In our case we have $6N$ variables, where $3N$ are for positions and $3N$ for momenta. The expansion is done around the point $(\vec{r}, \vec{v}, t)$: 
+For more info on this see [here](https://math.jhu.edu/~lindblad/211/l9.pdf) and [here](https://en.wikipedia.org/wiki/Taylor_series#Taylor_series_in_several_variables). In our case we have $6N$ variables, where $3N$ are for positions and $3N$ for momenta. The expansion is around the point $(\vec{r}, \vec{v}, t)$: 
 
 $$
 \begin{aligned}
@@ -260,13 +272,13 @@ $$
 \end{aligned}
 $$
 
-However, note that we __do not__ have an expression for the collision term just yet. We did nothing more than just state that there is a difference between the distribution functions and worked it out from there. We will now derive the expression for the collision term.
+However, note that we __do not__ have an expression for the collision term just yet. We did nothing more than just state that there is a difference between the distribution functions and worked it out from there. Next we derive the expression for the collision term.
 
 # 1.4 The Collision Term
 
 [Back to Contents](#contents)
 
-To fully derive the Boltzmann Equation we need to determine the collision term. The collision term is the (net) number of particles in a given (phase space) volume element  $d^{3}r d^{3}p$ due to collisions. Some of these particles enter this volume due to those collisions and some particles that were initially there escape it due to those collisions. Let us denote the number of particles that enter and escape $d^{3}r d^{3}p$ due to collisions as $\overline{R}$ and $R$, respectively. Therefore we can write
+To fully derive the Boltzmann Equation we need to determine the collision term. The collision term is the (net) number of particles in a given (phase space) volume element  $d^{3}r d^{3}p$ due to collisions: some of these particles entered the volume and some escaped it. Let us denote the number of particles that enter and escape $d^{3}r d^{3}p$ due to collisions as $\overline{R}$ and $R$, respectively. Therefore we can write
 
 $$
 \left( \frac{\partial f}{\partial t} \right)_{\mathrm{Coll.}} dt = (\overline{R} - R)dt.
@@ -276,11 +288,11 @@ An illustration of $R$ and $\overline{R}$ can be seen below:
 
 <a name="fig5"></a><img src="/notes/stats_mech_ii/imgs_chap1/img_1_6.jpg" style="zoom: 80%;" />
 
-Now, the volume element is so small (infinitesimal) that any collision will shoot the particle out of that element. So if a particle gets out of that volume element then there was a collision. That way, the number of particles that escape the volume element, $R$, is directly related to the number of collisions:
+Now, the volume element is so small (infinitesimal) that any collision will shoot the particle out of that element. So if a particle gets out of that volume element we can infer that there was a collision. That way, the number of particles that escape the volume element, $R$, is directly related to the number of collisions:
 
 - $Rdt d^{3} d^{3}p$:  the number of collisions taking place between $t$ and $t + dt$ in which one of the particles was initially at $d^{3}r d^{3}p$.
 
-The number of collisions originally outside the volume element that end up in $d^{3}r d^{3}p$, i.e., the number of collisions whose final phase state is in $d^{3}r d^{3}p$ is $\overline{R}$. Therefore,
+The number of collisions originally outside the volume element that shoots one of the particles to $d^{3}r d^{3}p$ is $\overline{R}$ (the particle has its final phase space in that volume element). Therefore,
 
 - $\overline{R}dtd^{3}d^{3}p$: the number of collisions taking place between $t$ and $t+dt$, in which one of the particles has a final state in $d^{3} d^{3}p$.
 
@@ -293,7 +305,7 @@ As for the collisions themselves we assume the following:
 - Rarified (low density) gas: collisions take place among **pairs** of particles,
 - During collisions, the net effect of external forces on the particles is negligible compared to the forces that act between the particles.
 
-In first the assumption we are ignoring triple and more particles collisions. At least we consider them to be extremely rare.
+In the first assumption we are ignoring triple and more particles collisions. At least we consider them to be extremely rare.
 
 In the second assumption we also mean the length scale on which the force acts, $L$, is much greater than the distance where the collision happens $d$, that is, the distance between the particles. On such a short scale the external force varies little and so we may regard it as constant and, therefore, in the collision range $d$ there won't be a significant change in the particles potential energies nor a significant contribution to their momenta due to the external force:
 
@@ -321,7 +333,7 @@ $$
 $$
 
 
-are the *center of mass velocity* and *reduced mass*, respectively. During collisions $$\vec{c}$$ remains unchanged, while in general the relative velocity may change: $$\vec{V} \to \vec{V}'$$ for some later time $t'$. With this new set of variables, the total kinetic energy is given by
+are the *center of mass velocity* and *reduced mass*, respectively. During collisions the velocity $$\vec{c}$$ remains unchanged, while in general the relative velocity may change. With this new set of variables, the total kinetic energy is given by
 
 
 $$
@@ -329,16 +341,24 @@ K = \frac{1}{2} m_{1} v_{1}^{2} + \frac{1}{2} m_{2} v_{2} = \frac{1}{2} (m_{1} +
 $$
 
 
-In an elastic collision kinetic energy is conserved and so $K=K'$ . Since the center of mass and reduced mass do not change during the collision from the expression for the kinetic energy above we have
+In an elastic collision kinetic energy is conserved: $K=K'$ . Since the center of mass and reduced mass do not change during the collision, we have, from the expression for the kinetic energy above,
 
 
 $$
 \vec{V}^{2} = \vec{V}'^{2} \implies | \vec{V} | = | \vec{V}' |
 $$
 
-for initial velocities $$\vec{v}_{1}, \vec{v}_{2}$$ and final velocities $$\vec{v}'_{1}, \vec{v}'_{2}$$. Although the absolute value of the relative velocity is the same, $\vec{V}$ may change direction after the collisison.
+for initial velocities $$\vec{v}_{1}, \vec{v}_{2}$$ and final velocities $$\vec{v}'_{1}, \vec{v}'_{2}$$. 
 
-Since direction is the only variable here, we can use angles to describe the collisions. Let $$\theta, \varphi$$
+Although the absolute value of the relative velocity is the same, $\vec{V}$ may change direction after the collisison. Since direction is the only variable here, we can use angles between $\vec{V}$ and $\vec{V}^{\prime}$ to describe the collisions.
+
+
+
+# 1.5 Scattering 
+
+[Back to Contents](#contents)
+
+
 
 
 
