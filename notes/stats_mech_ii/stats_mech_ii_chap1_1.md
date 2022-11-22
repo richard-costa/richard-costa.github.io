@@ -1,5 +1,5 @@
 ---
-title: "Statistical Mechanics II | Chapter 1 | The Boltzmann Equation"
+title: "Statistical Mechanics II | 1 -The Boltzmann Equation"
 layout: page
 mathjax: true
 typora-root-url: ./..\..
@@ -46,7 +46,7 @@ To arrive at the Boltzmann equation we start with the following assumptions:
 
 <a name="fig1"></a>
 
-<img src="/notes/stats_mech_ii/imgs_chap1/img_1_1.jpg" style="zoom:15%;" />
+<p style="text-align:center;"><img src="/notes/stats_mech_ii/imgs_chap1/img_1_1.jpg" style="zoom:15%;" /></p>
 
 __Fig. 1__: _Representation of a gas made up of $N$ particles in a volume $V$_.
 
@@ -95,7 +95,7 @@ The phase space (also denoted $\mu$ _space_) has $6$ dimensions, $3$ of which ar
 
 <a name="fig2"></a>
 
-<img src="/notes/stats_mech_ii/imgs_chap1/img_1_2.jpg" alt="figura" style="zoom:25%;" />
+<p style="text-align:center;"><img src="/notes/stats_mech_ii/imgs_chap1/img_1_2.jpg" alt="figura" style="zoom:25%;" /></p>
 
 __Fig. 2__: _Representation of a gas made up of $N$ particles in a volume $V$_.
 
@@ -103,7 +103,7 @@ We now define a _distribution function_ $f$ in this space such that $f(\vec{r}, 
 
 <a name="fig3"></a>
 
-<img src="/notes/stats_mech_ii/imgs_chap1/img_1_3.jpg" alt="function_phase_space" style="zoom:25%;" />
+<p style="text-align:center;"><img src="/notes/stats_mech_ii/imgs_chap1/img_1_3.jpg" alt="function_phase_space" style="zoom:25%;" /></p>
 
 __Fig. 3__: _Distribution function and number of points in phase space_.
 
@@ -182,7 +182,7 @@ To have some idea of what happens when we deal with collisions let us consider m
 
 <a name="fig5"></a>
 
-<img src="/notes/stats_mech_ii/imgs_chap1/img_1_5.jpg" style="zoom:33%;" />
+<p style="text-align:center;"><img src="/notes/stats_mech_ii/imgs_chap1/img_1_5.jpg" style="zoom:33%;" /></p>
 
 __Fig. 5__: _Possible collisions_.
 
@@ -286,7 +286,8 @@ $$
 
 An illustration of $R$ and $\overline{R}$ can be seen below:
 
-<a name="fig5"></a><img src="/notes/stats_mech_ii/imgs_chap1/img_1_6.jpg" style="zoom: 80%;" />
+<a name="fig6"></a>
+<p style="text-align:center;"><img src="/notes/stats_mech_ii/imgs_chap1/img_1_6.jpg" style="zoom: 80%;" /></p>
 
 Now, the volume element is so small (infinitesimal) that any collision will shoot the particle out of that element. So if a particle gets out of that volume element we can infer that there was a collision. That way, the number of particles that escape the volume element, $R$, is directly related to the number of collisions:
 
@@ -298,7 +299,7 @@ The number of collisions originally outside the volume element that shoots one o
 
 Also note that for collisions to happen we need particles to be close to each other, regardless of their momenta. In phase space, this means for them to be in the same vertical strip
 
-<img src="/notes/stats_mech_ii/imgs_chap1/img_1_7.png" style="zoom:33%;" />
+<p style="text-align:center;"><img src="/notes/stats_mech_ii/imgs_chap1/img_1_7.png" style="zoom:33%;" /></p>
 
 As for the collisions themselves we assume the following:
 
@@ -309,7 +310,7 @@ In the first assumption we are ignoring triple and more particles collisions. At
 
 In the second assumption we also mean the length scale on which the force acts, $L$, is much greater than the distance where the collision happens $d$, that is, the distance between the particles. On such a short scale the external force varies little and so we may regard it as constant and, therefore, in the collision range $d$ there won't be a significant change in the particles potential energies nor a significant contribution to their momenta due to the external force:
 
-<img src="/notes/stats_mech_ii/imgs_chap1/img_1_8.png" style="zoom: 10%;" />
+<p style="text-align:center;"><img src="/notes/stats_mech_ii/imgs_chap1/img_1_8.png" width="50%" height="auto"/></p>
 
 By conservation of momentum we have $$m \vec{v}_{1} + m \vec{v}_{2} = \vec{P} = \mathrm{constant}$$ . Defining the relative velocity by $$\vec{V} \equiv  \vec{v}_{1} - \vec{v}_{2}$$ we  can write the velocities of each particle as
 
