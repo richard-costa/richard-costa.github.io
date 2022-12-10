@@ -219,11 +219,12 @@ $$
 
 For more info on this see [here](https://math.jhu.edu/~lindblad/211/l9.pdf) and [here](https://en.wikipedia.org/wiki/Taylor_series#Taylor_series_in_several_variables). In our case we have $6N$ variables, where $3N$ are for positions and $3N$ for momenta. The expansion is around the point $(\vec{r}, \vec{v}, t)$: 
 
+
 $$
 \begin{aligned}
-& f\left( \vec{r} + \vec{v} dt, \vec{v} + \frac{\vec{F}}{m} dt, t+ dt \right) \approx f(\vec{r}, \vec{v}, t) + \sum_{i=1}^{3N} \frac{\partial}{\partial x_{i}} f(\vec{r}, \vec{v}, t) (\vec{r} + \vec{v}dt - \vec{r}) \\
+& f\left( \vec{r} + \vec{v} dt, \vec{v} + \frac{\vec{F}}{m} dt, t+ dt \right) \approx f(\vec{r}, \vec{v}, t) + \sum_{i=1}^{3N} \frac{\partial}{\partial r_{i}} f(\vec{r}, \vec{v}, t) (\vec{r} + \vec{v}dt - \vec{r}) \\
 & + \sum_{j=1}^{3N} \frac{\partial}{\partial v_{j}} f(\vec{r}, \vec{v}, t)\left( \vec{v} + \frac{\vec{F}}{m} dt - \vec{v} \right) + \frac{\partial}{\partial t} f(\vec{r}, \vec{v}, t)(t + dt - t)\\
-& = f(\vec{r}, \vec{v}, t) + \sum_{i=1}^{3N} \frac{\partial}{\partial x_{i}} f(\vec{r}, \vec{v}, t) \vec{v}dt + \sum_{j=1}^{3N} \frac{\partial}{\partial v_{j}} (\vec{r}, \vec{v}, t) \frac{\vec{F}}{m}dt + \frac{\partial}{\partial t} f(\vec{r}, \vec{v}, t)dt \\
+& = f(\vec{r}, \vec{v}, t) + \sum_{i=1}^{3N} \frac{\partial}{\partial r_{i}} f(\vec{r}, \vec{v}, t) \vec{v}dt + \sum_{j=1}^{3N} \frac{\partial}{\partial v_{j}} (\vec{r}, \vec{v}, t) \frac{\vec{F}}{m}dt + \frac{\partial}{\partial t} f(\vec{r}, \vec{v}, t)dt \\
 & = f(\vec{r}, \vec{v}, t) + \nabla_{r}f \cdot \vec{v} dt + \nabla_{v} f \cdot \frac{\vec{F}}{m}dt + \frac{\partial}{\partial t} f(\vec{r}, \vec{v}, t)dt,
 \end{aligned}
 $$
