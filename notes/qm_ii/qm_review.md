@@ -27,7 +27,6 @@ $$
 \langle \mathbf{p} | \Psi \rangle = \phi ( \mathbf{p}),
 $$
 
-where...
 
 ### Stationary States
 
