@@ -1,1 +1,0 @@
-### Riesz Representation Theorem
