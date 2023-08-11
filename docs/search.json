@@ -14,18 +14,25 @@
     "text": "About Me\nI’m Richard. I work as a Data Scientist for a startup and I’m also a Ph.D. student in Physics at Federal University of ABC at the Quantum Information Group. For a quick overview of my education and professional experience you can check my cv here. I also do some digital painting from time to time. Here’s my latest artwork:"
   },
   {
+    "objectID": "notes/dirac_notation.html",
+    "href": "notes/dirac_notation.html",
+    "title": "Richard Costa",
+    "section": "",
+    "text": "Riesz Representation Theorem"
+  },
+  {
     "objectID": "notes/qm_ii/qm_review.html",
     "href": "notes/qm_ii/qm_review.html",
     "title": "Review of Quantum Mechanics",
     "section": "",
-    "text": "This is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[ | \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle \\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\\]\nPositions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\nwhere…\n\n\nStationary States\n\n\nSuggested Reading\n\nClass Notes\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
+    "text": "This is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[ | \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle \\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\\]\nPositions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\n\n\nStationary States\n\n\nSuggested Reading\n\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
   },
   {
     "objectID": "notes.html",
     "href": "notes.html",
     "title": "Richard Costa",
     "section": "",
-    "text": "Quantum Mechanics\n\nQuantum Mechanics II\n\nReview of Quantum Mechanics"
+    "text": "Quantum Mechanics\n\nQuantum Mechanics II\n\nReview of Quantum Mechanics\n\nMathematical Formalism\n\nDirac Notation"
   },
   {
     "objectID": "posts.html",
