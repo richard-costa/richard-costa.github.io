@@ -12,6 +12,8 @@ website:
         text: cv
       - href: posts.qmd
         text: posts
+      - href: notes.qmd
+        text: notes
 
 
 format:
