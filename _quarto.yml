@@ -10,6 +10,9 @@ website:
         text: Home
       - href: cv.qmd
         text: cv
+      - href: posts.qmd
+        text: posts
+
 
 format:
   html:
