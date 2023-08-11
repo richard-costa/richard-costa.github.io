@@ -35,6 +35,10 @@ where...
 
 ### Suggested Reading
 
- - Class Notes
  - Weinberg, S., 2015. _Lectures on quantum mechanics_. Cambridge University Press.
  - Merzbacher, E. (1998) _Quantum Mechanics_. John Wiley & Sons.
+
+
+
+
+
