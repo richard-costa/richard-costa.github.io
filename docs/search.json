@@ -7,10 +7,17 @@
     "text": "About this site"
   },
   {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "english\n\n\n\n\nportuguese"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "richard-costa.github.io",
+    "title": "Richard Costa",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "About Me\nI’m Richard. I work as a Data Scientist for a startup and I’m also a Ph.D. student in Physics at Federal University of ABC at the Quantum Information Group. For a quick overview of my education and professional experience you can check my cv here. I also do some digital painting from time to time. Here’s my latest artwork:"
   }
 ]
