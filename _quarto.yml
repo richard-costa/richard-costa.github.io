@@ -3,16 +3,16 @@ project:
   output-dir: docs
 
 website:
-  title: "richard-costa.github.io"
+  title: "Richard Costa"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
 
 format:
   html:
-    theme: cosmo
+    theme: lux
     css: styles.css
     toc: true
 
