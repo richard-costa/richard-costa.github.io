@@ -5,3 +5,5 @@
     
 
 - Mathematical Formalism
+  - [Dirac Notation](dirac_notation.md)
+
