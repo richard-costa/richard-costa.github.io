@@ -14,6 +14,8 @@ website:
         text: posts
       - href: notes.qmd
         text: notes
+      - href: resources.qmd
+        text: resources
 
 
 format:
