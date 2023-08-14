@@ -139,15 +139,37 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<style>
+  .iframe-container {
+    width: 100%;
+    max-width: 800px; /* Set a maximum width if you want to limit the width on larger screens */
+  }
+
+  .iframe {
+    width: 100%;
+    height: 60vw; /* Set height based on a percentage of viewport width */
+    max-height: 80vh; /* Set a maximum height as a percentage of viewport height */
+  }
+
+  @media screen and (max-width: 768px) {
+    /* Media query for screens with a maximum width of 768px (typical for mobile screens) */
+    .iframe {
+      height: 80vw; /* Adjust height for mobile screens */
+      max-height: none; /* Reset the maximum height for mobile screens */
+    }
+  }
+</style>
 <section id="english" class="level3">
 <h3 class="anchored" data-anchor-id="english">english</h3>
-<iframe width="780" height="1150" src="./cv/cv_english.pdf">
-</iframe>
+<div class="iframe-container">
+<p><iframe class="iframe" src="./cv/cv_english.pdf"></iframe></p>
+</div>
 </section>
 <section id="portuguese" class="level3">
 <h3 class="anchored" data-anchor-id="portuguese">portuguese</h3>
-<iframe width="780" height="1150" src="./cv/cv_portuguese.pdf">
-</iframe>
+<div class="iframe-container">
+<p><iframe class="iframe" src="./cv/cv_portuguese.pdf"></iframe></p>
+</div>
 
 
 </section>
