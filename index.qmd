@@ -16,15 +16,11 @@ about:
 ---
 # About Me
 
-I'm Richard. I work as a Data Scientist for a startup and I'm also a Ph.D. student in Physics at [Federal University of ABC](https://www.ufabc.edu.br/en/) at the [Quantum Information Group](https://www.quantumufabc.org/). 
+I'm Richard. I work as a Data Scientist for a startup and I'm also a Ph.D. student in Physics at [Federal University of ABC](https://www.ufabc.edu.br/en/) with the [Quantum Information Group](https://www.quantumufabc.org/). 
 
 # Resume
 
-My resume can be found here:
-
-[in english](/resume/resume_english.pdf)
-
-[in portuguese](/resume/resume_portuguese.pdf)
+[portuguese](/resume/resume_portuguese.pdf) | [english](/resume/resume_english.pdf)
 
 # Artwork
 
