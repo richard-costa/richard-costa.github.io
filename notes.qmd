@@ -3,3 +3,11 @@ title: ""
 ---
 
 {{< include notes/README.md >}}
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
