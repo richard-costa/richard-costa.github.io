@@ -25,7 +25,7 @@
     "href": "notes.html",
     "title": "Richard Costa",
     "section": "",
-    "text": "Quantum Mechanics\n\nQuantum Mechanics II\n\nReview of Quantum Mechanics\n\nMathematical Formalism\n\nDirac Notation\n\n\ngraph TD;\n    A-->B;\n    A-->C;\n    B-->D;\n    C-->D;"
+    "text": "Quantum Mechanics\n\nQuantum Mechanics II\n\nReview of Quantum Mechanics\n\nMathematical Formalism\n\nDirac Notation"
   },
   {
     "objectID": "posts.html",
