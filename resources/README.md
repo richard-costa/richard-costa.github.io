@@ -2,8 +2,7 @@
 
 ## Machine Learning
 
-- [Why the sudden fascination with tensors? - Cross Validated](https://stats.stackexchange.com/questions/198061/why-the-sudden-fascination-with-tensors)
-    - On the usage of the word 'tensor' in machine learning, math, and physics.
+ - [The word 'tensor' in machine learning, math, and physics](https://stats.stackexchange.com/a/198395)
 
 ___
 # Math/Physics
