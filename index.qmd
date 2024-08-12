@@ -1,6 +1,5 @@
 ---
 # title: ""
-image: profile_image.jpg
 about:
     template: jolla
     links:
@@ -18,15 +17,8 @@ about:
 ---
 ### About Me
 
-I'm a Data Scientist working for [Atento](https://atento.com/en/). Data Science is a huge field, a whole landscape to be explored, and I'm interested in much of what's going on in this field. 
-
-I'm also a Ph.D. student in Physics at [Federal University of ABC](https://www.ufabc.edu.br/en/) with the [Quantum Information Group](https://www.quantumufabc.org/). My master's thesis was on a very niche subject, concerning the calculation of some thermodynamic quantities for a specific kind of fermionic field. 
+I'm a Data Scientist. My educational background is in Physics. I also make some digital paintings. You can see them on my `artstation` profile below.
 
 My resume can be found here:
 
 [english](/resume/resume_english.pdf) | [português](/resume/resume_portuguese.pdf) 
-
-___
-### Painting
-
-One of my hobbies is digital painting. You can see my artwork on my `artstation` profile below.
