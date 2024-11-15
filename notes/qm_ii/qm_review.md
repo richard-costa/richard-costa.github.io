@@ -1,5 +1,5 @@
 ---
-title: "Review of Quantum Mechanics"
+title: '🌱 Review of Quantum Mechanics'
 crossref:
     eq-prefix: ""
 ---
