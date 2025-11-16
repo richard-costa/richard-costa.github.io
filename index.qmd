@@ -11,14 +11,19 @@ about:
           text: Github
           href: https://github.com/richard-costa
         
-        - icon: palette
-          text: ArtStation
-          href: https://richardcosta.artstation.com
+        - icon: instagram
+          text: Art Profile
+          href: https://www.instagram.com/richardcosta.art/
 ---
 ### About Me
+\
+I'm a _Data Scientist_ who also works as a _Python developer_ building applications powered by large language models.
 
-I'm a Data Scientist. My educational background is in Physics. I also make some digital paintings. You can see them on my `artstation` profile below.
+I hold a _B.Sc. and M.Sc. in Physics_
 
-My resume can be found here:
+Beyond tech, I'm an _amateur digital artist_. I create digital paintings using [krita](https://krita.org/en/), and you can find my artwork on my `Instagram` profile below.
+
+You can access my résumé here:
+
 
 [english](/resume/resume_english.pdf) | [português](/resume/resume_portuguese.pdf) 
