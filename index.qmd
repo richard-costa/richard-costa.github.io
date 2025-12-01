@@ -17,7 +17,7 @@ about:
 ---
 ### About Me
 \
-I'm a _Data Scientist_ who also works as a _Python developer_ building applications powered by large language models. I also hold a _B.Sc_ and a _M.Sc._ in Physics.
+I'm a _Data Scientist_, now working more on the engineering and application side of things. I also hold a _B.Sc_ and a _M.Sc._ in Physics.
 
 Beyond tech, I'm an _amateur digital artist_. I create digital paintings using [krita](https://krita.org/en/), and you can find my artwork on my `Instagram` profile below.
 
