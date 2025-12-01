@@ -25,3 +25,4 @@ You can access my résumé here:
 
 
 [english](/resume/resume_english.pdf) | [português](/resume/resume_portuguese.pdf) 
+[label](http://localhost:3726/notes.html)
