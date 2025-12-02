@@ -4,7 +4,28 @@
     "href": "index.html",
     "title": "Richard Costa",
     "section": "",
-    "text": "About Me\n\nI’m a Data Scientist who also works as a Python developer building applications powered by large language models. I also hold a B.Sc and a M.Sc. in Physics.\nBeyond tech, I’m an amateur digital artist. I create digital paintings using krita, and you can find my artwork on my Instagram profile below.\nYou can access my résumé here:\nenglish | português label"
+    "text": "About Me\n\nI’m a Data Scientist, now working more on the engineering and application side of things. I also hold a B.Sc and a M.Sc. in Physics.\nBeyond tech, I’m an amateur digital artist. I create digital paintings using krita, and you can find my artwork on my Instagram profile below.\nYou can access my résumé here:\nenglish | português label"
+  },
+  {
+    "objectID": "posts/1.cosmic-and-sddm-omarchy.html",
+    "href": "posts/1.cosmic-and-sddm-omarchy.html",
+    "title": "Cosmic, sddm, and Omarchy",
+    "section": "",
+    "text": "Please, note: I don’t know much about linux, so be careful when running commands and be sure to back up your stuff when you feel like you might break things.\nAlthough Omarchy is supposed to be used ‘as is’, of course people are going to want to tinker it. In my case I wanted two things: to test the Cosmic desktop environment and add a separate user for family and friends so they have a separate and friendly environment to use my computer. Along the way I found out that I could use some nice themes for the sddm display manager and could logout from the menu in omarchy."
+  },
+  {
+    "objectID": "posts/1.cosmic-and-sddm-omarchy.html#hyprctl-issues",
+    "href": "posts/1.cosmic-and-sddm-omarchy.html#hyprctl-issues",
+    "title": "Cosmic, sddm, and Omarchy",
+    "section": "hyprctl issues",
+    "text": "hyprctl issues\nAfter installing cosmic, instead of using sudo systemctl restart sddm I guess you could use hyprctl dispatch exit. But for some reason it was sending me to a black screen, so that’s why I restarted sddm. This issue came back when I tried to add the option to logout from the menu."
+  },
+  {
+    "objectID": "posts/1.cosmic-and-sddm-omarchy.html#footnotes",
+    "href": "posts/1.cosmic-and-sddm-omarchy.html#footnotes",
+    "title": "Cosmic, sddm, and Omarchy",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAt first I tried sudo pacman -S cosmic but got an error like:\n error: failed retrieving file ‘cosmic-initial-setup-1.0.0.beta.7-2-x86_64.pkg.tar.zst’ from stable-mirror.omarchy.org : The requested URL returned error: 404 warning: failed to retrieve some files error: failed to commit transaction (failed to retrieve some files) Errors occurred, no packages were upgraded.\nThat’s why the flag to ignore the cosmic inital setup is there.↩︎"
   },
   {
     "objectID": "notes/qm_ii/qm_review.html",
@@ -39,7 +60,7 @@
     "href": "posts.html",
     "title": "Posts",
     "section": "",
-    "text": "This is a testing post\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Cosmic, sddm, and Omarchy\n\n\n\nlinux\n\nhow-to\n\nomarchy\n\n\n\n\n\n\n\n\n\nDec 2, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "resources.html",

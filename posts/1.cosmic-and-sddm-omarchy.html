@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-12-02">
 
-<title>This is a testing post – Richard Costa</title>
+<title>Cosmic, sddm, and Omarchy – Richard Costa</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -117,23 +153,52 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#installing-cosmic" id="toc-installing-cosmic" class="nav-link active" data-scroll-target="#installing-cosmic">installing cosmic</a>
+  <ul class="collapse">
+  <li><a href="#hyprctl-issues" id="toc-hyprctl-issues" class="nav-link" data-scroll-target="#hyprctl-issues">hyprctl issues</a></li>
+  </ul></li>
+  <li><a href="#adding-users-to-omarchy" id="toc-adding-users-to-omarchy" class="nav-link" data-scroll-target="#adding-users-to-omarchy">adding users to omarchy</a></li>
+  <li><a href="#adding-a-nice-theme" id="toc-adding-a-nice-theme" class="nav-link" data-scroll-target="#adding-a-nice-theme">adding a nice theme</a></li>
+  <li><a href="#extra-adding-logout" id="toc-extra-adding-logout" class="nav-link" data-scroll-target="#extra-adding-logout">[extra] adding logout</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">This is a testing post</h1>
-</div>
+<h1 class="title">Cosmic, sddm, and Omarchy</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">linux</div>
+    <div class="quarto-category">how-to</div>
+    <div class="quarto-category">omarchy</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 2, 2025</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">UPDATED</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">December 2, 2025</p>
+    </div>
+  </div>
     
   </div>
   
@@ -143,10 +208,111 @@ ul.task-list li input[type="checkbox"] {
 
 
 <hr>
+<p><em>Please, note: I don’t know much about linux, so be careful when running commands and be sure to back up your stuff when you feel like you might break things</em>.</p>
+<hr>
+<p>Although <a href="https://omarchy.org/">Omarchy</a> is supposed to be used ‘as is’, of course people are going to want to tinker it. In my case I wanted two things: to test the <a href="https://system76.com/cosmic">Cosmic</a> desktop environment and add a separate user for family and friends so they have a separate and friendly environment to use my computer. Along the way I found out that I could use some nice themes for the <code>sddm</code> display manager and could logout from the menu in omarchy.</p>
+<section id="installing-cosmic" class="level1">
+<h1>installing cosmic</h1>
+<p>The first thing I did was to remove the autologin to my default user so later on you can change manually which desktop environment you want for the session. The autologin file should be in <code>/etc/sddm.conf/autologin.conf</code> and it looks something like</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[Autologin]</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">User</span><span class="op">=&lt;</span>your_user<span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="va">Session</span><span class="op">=</span>hyprland-uwsm</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[Theme]</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="va">Current</span><span class="op">=</span>breeze</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You may want to backup that file before removing it. Now, to install cosmic just run<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> rm /etc/sddm.conf.d/autologin.conf</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman <span class="at">-Syu</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman <span class="at">-S</span> cosmic <span class="at">--ignore</span> cosmic-initial-setup</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then</p>
+<p><code>sudo systemctl restart sddm</code></p>
+<p>You should be redirected to the sddm login screen. There you can select your desktop environment by clicking the gear icon somewhere in the top left corner. Just choose cosmic, enter the password and that should be it.</p>
+<section id="hyprctl-issues" class="level2">
+<h2 class="anchored" data-anchor-id="hyprctl-issues">hyprctl issues</h2>
+<p>After installing cosmic, instead of using <code>sudo systemctl restart sddm</code> I guess you could use <code>hyprctl dispatch exit</code>. But for some reason it was sending me to a black screen, so that’s why I restarted sddm. This issue came back when I tried to add the option to logout from the menu.</p>
+</section>
+</section>
+<section id="adding-users-to-omarchy" class="level1">
+<h1>adding users to omarchy</h1>
+<p>To add new users, just run</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> useradd <span class="at">-m</span> <span class="at">-G</span> wheel,network <span class="at">-s</span> /bin/bash <span class="op">&lt;</span>user_name<span class="op">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> passwd <span class="op">&lt;</span>user_password<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>where <code>-m</code> creates a the user’s home directory, <code>-G</code> adds groups to the account and <code>-s</code> is the account login shell (just felt like sharing this info).</p>
+</section>
+<section id="adding-a-nice-theme" class="level1">
+<h1>adding a nice theme</h1>
+<p>For my theme I’m using one of the bundle in <a href="https://github.com/Keyitdev/sddm-astronaut-theme/">sddm-astronaut-theme</a>. To get those themes basically, just copy and paste:</p>
+<p><code>sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"</code></p>
+<p>You can change the themes in <code>/usr/share/sddm/themes/sddm-astronaut-theme/metadata.desktop</code> in the <code>ConfigFile</code> entry. For example, my current theme is the <code>japanese aesthetic</code> one:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">~</span> ❯ cat /usr/share/sddm/themes/sddm-astronaut-theme/metadata.desktop</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">[SddmGreeterTheme]</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="va">Name</span><span class="op">=</span>sddm-astronaut-theme</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="va">Description</span><span class="op">=</span>sddm-astronaut-theme</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="va">Author</span><span class="op">=</span>keyitdev</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="va">Website</span><span class="op">=</span>https://github.com/Keyitdev/sddm-astronaut-theme</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="va">License</span><span class="op">=</span>GPL-3.0-or-later</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="va">Type</span><span class="op">=</span>sddm-theme</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="va">Version</span><span class="op">=</span>1.3</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="va">ConfigFile</span><span class="op">=</span>Themes/japanese_aesthetic.conf</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="va">Screenshot</span><span class="op">=</span>Previews/astronaut.png</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="va">MainScript</span><span class="op">=</span>Main.qml</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="va">TranslationsDirectory</span><span class="op">=</span>translations</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="ex">Theme-Id=sddm-astronaut-theme</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="ex">Theme-API=2.0</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="va">QtVersion</span><span class="op">=</span>6</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You can find the list of configuration files for the themes <a href="https://github.com/Keyitdev/sddm-astronaut-theme/tree/master/Themes">here</a>.</p>
+</section>
+<section id="extra-adding-logout" class="level1">
+<h1>[extra] adding logout</h1>
+<p>I wanted some way to be able to log out of a user without having to write <code>hyprctl dispatch exit</code> or <code>sudo systemctl restart sddm</code> every time and also to have some option to logout from the menu. In order to do that i needed to change the <code>omarchy-menu</code> file, which is a bash script.</p>
+<p>But, first, backup the file</p>
+<p><code>cp ~/.local/share/omarchy/bin/omarchy-menu ~/.local/share/omarchy/bin/omarchy-menu.bak</code></p>
+<p>We can restore it with</p>
+<p><code>cp ~/.local/share/omarchy/bin/omarchy-menu.bak ~/.local/share/omarchy/bin/omarchy-menu</code></p>
+<p>Now, in the <code>omarchy-menu</code> we need to change the function <code>show_system_menu</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">show_system_menu()</span> <span class="kw">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="va">$(</span><span class="ex">menu</span> <span class="st">"System"</span> <span class="st">"  Lock\n󱄄  Screensaver\n󰤄  Suspend\n󰗼  Logout\n󰜉  Restart\n󰐥  Shutdown"</span><span class="va">)</span> <span class="kw">in</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Lock</span><span class="pp">*</span><span class="kw">)</span> <span class="ex">omarchy-lock-screen</span> <span class="cf">;;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Screensaver</span><span class="pp">*</span><span class="kw">)</span> <span class="ex">omarchy-launch-screensaver</span> force <span class="cf">;;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Suspend</span><span class="pp">*</span><span class="kw">)</span> <span class="ex">systemctl</span> suspend <span class="cf">;;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Logout</span><span class="pp">*</span><span class="kw">)</span> <span class="ex">hyprctl</span> dispatch exit <span class="cf">;;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Restart</span><span class="pp">*</span><span class="kw">)</span> <span class="ex">omarchy-cmd-reboot</span> <span class="cf">;;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Shutdown</span><span class="pp">*</span><span class="kw">)</span> <span class="ex">omarchy-cmd-shutdown</span> <span class="cf">;;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="kw">)</span> <span class="ex">back_to</span> show_main_menu <span class="cf">;;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">esac</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Here I just added <code>Logout\n󰜉</code> to the <code>case</code> statement and asked to run <code>hyprctl dispatch exit</code> for that option. But since I have the black screen issue with that command I replaced it with the restarting sddm:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">show_system_menu()</span> <span class="kw">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="va">$(</span><span class="ex">menu</span> <span class="st">"System"</span> <span class="st">"  Lock\n󱄄  Screensaver\n󰤄  Suspend\n󰗼  Logout\n󰜉  Restart\n󰐥  Shutdown"</span><span class="va">)</span> <span class="kw">in</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Lock</span><span class="pp">*</span><span class="kw">)</span> <span class="ex">omarchy-lock-screen</span> <span class="cf">;;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Screensaver</span><span class="pp">*</span><span class="kw">)</span> <span class="ex">omarchy-launch-screensaver</span> force <span class="cf">;;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Suspend</span><span class="pp">*</span><span class="kw">)</span> <span class="ex">systemctl</span> suspend <span class="cf">;;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Logout</span><span class="pp">*</span><span class="kw">)</span> <span class="fu">sudo</span> systemctl restart sddm <span class="cf">;;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Restart</span><span class="pp">*</span><span class="kw">)</span> <span class="ex">omarchy-cmd-reboot</span> <span class="cf">;;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="ss">Shutdown</span><span class="pp">*</span><span class="kw">)</span> <span class="ex">omarchy-cmd-shutdown</span> <span class="cf">;;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="pp">*</span><span class="kw">)</span> <span class="ex">back_to</span> show_main_menu <span class="cf">;;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">esac</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now, since restarting sddm asks me for a password, I removed this need so the logout functions as I expected. To do that I ran</p>
+<p><code>sudo visudo</code></p>
+<p>and added</p>
+<p><code>%wheel ALL=(root) NOPASSWD: /usr/bin/systemctl restart sddm</code></p>
+<p>to the end of the file. This makes any user in the <code>wheel</code> group to able to run <code>sudo systemctl restart sddm</code> without a password</p>
+<p>Note that when you run <code>sudo visudo</code> it will open a file in the <code>vi</code> editor. If you are not familiar with vi (like me), you need to press <code>i</code> to go into <code>insert mode</code>. That way you are able to write in the file and paste the command (with <code>ctrl + shift +v</code>). Then you should press <code>esc</code> to leave insert mode and type <code>:wq</code> to save your changes and exit (’wq: write and quit’the file ;)).</p>
+<p>And that’s it. Now I have a nice-looking display manager and can logout from the menu.</p>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>At first I tried <code>sudo pacman -S cosmic</code> but got an error like:</p>
+<p><em> error: failed retrieving file ‘cosmic-initial-setup-1.0.0.beta.7-2-x86_64.pkg.tar.zst’ from stable-mirror.omarchy.org : The requested URL returned error: 404 warning: failed to retrieve some files error: failed to commit transaction (failed to retrieve some files) Errors occurred, no packages were upgraded.</em></p>
+<p>That’s why the flag to ignore the cosmic inital setup is there.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
