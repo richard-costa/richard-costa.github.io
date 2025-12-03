@@ -1,1 +1,16 @@
 /* css styles */
+
+/* Target the marquee about-page image directly */
+div.quarto-about-marquee img {
+  max-width: 200px;    /* or whatever size you like */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;  /* make it round, like jolla */
+}
+
+/* div.quarto-about-marquee img {
+  box-shadow: 0 0 0 4px rgb(127, 74, 141);
+} */
+
