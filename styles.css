@@ -15,3 +15,10 @@ div.quarto-about-marquee img {
   box-shadow: 0 0 0 4px rgb(127, 74, 141);
 } */
 
+/* Hide listing description/excerpt text in cards */
+.listing-description,
+.listing-excerpt,
+.listing-item .description {
+  display: none !important;
+}
+
