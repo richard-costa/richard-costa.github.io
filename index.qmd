@@ -2,6 +2,9 @@
 # title: ""
 about:
     template: marquee
+    image: profile_image.jpeg
+    image-width: 200px     # or 10em, 30%, whatever you want
+    image-shape: round   # optional: rectangle / round / rounded / etc.
     links:
         - icon: linkedin
           text: LinkedIn
@@ -14,6 +17,10 @@ about:
         - icon: instagram
           text: Art Profile
           href: https://www.instagram.com/richardcosta.art/
+
+format:
+  html:
+    css: styles.css
 ---
 ### About Me
 \
