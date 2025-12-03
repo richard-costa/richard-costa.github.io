@@ -93,7 +93,9 @@ Theme-API=2.0
 QtVersion=6
 ```
 
-You can find the list of configuration files for the themes [here](https://github.com/Keyitdev/sddm-astronaut-theme/tree/master/Themes).
+You can find the list of configuration files for the themes [here](https://github.com/Keyitdev/sddm-astronaut-theme/tree/master/Themes). But here's how it looks:
+
+![sddm-login-theme](images/login-screen.png)
 
 
 # [extra] adding logout
