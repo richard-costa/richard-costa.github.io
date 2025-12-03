@@ -6,6 +6,10 @@ about:
     image-width: 200px     # or 10em, 30%, whatever you want
     image-shape: round   # optional: rectangle / round / rounded / etc.
     links:
+        - icon: envelope
+          text: Email
+          href: scosta.richard@gmail.com
+
         - icon: linkedin
           text: LinkedIn
           href: https://www.linkedin.com/in/richard-silva-costa
@@ -17,6 +21,10 @@ about:
         - icon: instagram
           text: Art Profile
           href: https://www.instagram.com/richardcosta.art/
+
+        - icon: reddit
+          text: Reddit
+          href: https://www.reddit.com/user/Charlinhow/
 
 format:
   html:
