@@ -1,0 +1,187 @@
+---
+title: 'Calendar on Omarchy'
+date: 12-03-2025
+date-modified: last-modified
+language: 
+  title-block-modified: "UPDATED"
+categories: 
+  - linux
+  - how-to
+  - omarchy
+  - hyprland
+---
+
+I've been missing a calendar on omarchy for some time. For the command line we have a nice tool called `cal`:
+
+```bash
+
+~ ❯ cal
+    December 2025
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+
+~ ❯ cal -n 3
+    December 2025         January 2026          February 2026
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6               1  2  3   1  2  3  4  5  6  7
+ 7  8  9 10 11 12 13   4  5  6  7  8  9 10   8  9 10 11 12 13 14
+14 15 16 17 18 19 20  11 12 13 14 15 16 17  15 16 17 18 19 20 21
+21 22 23 24 25 26 27  18 19 20 21 22 23 24  22 23 24 25 26 27 28
+28 29 30 31           25 26 27 28 29 30 31
+
+
+~ ❯ cal -h
+
+Usage:
+ cal [options] [[[day] month] year]
+ cal [options] <timestamp|monthname>
+
+Display a calendar, or some part of it.
+Without any arguments, display the current month.
+
+Options:
+ -1, --one             show only a single month (default)
+ -3, --three           show three months spanning the date
+ -n, --months <num>    show num months starting with date's month
+ -S, --span            span the date when displaying multiple months
+ -s, --sunday          Sunday as first day of week
+ -m, --monday          Monday as first day of week
+ -j, --julian          use day-of-year for all calendars
+     --reform <val>    Gregorian reform date (1752|gregorian|iso|julian)
+     --iso             alias for --reform=iso
+ -y, --year            show the whole year
+ -Y, --twelve          show the next twelve months
+ -w, --week[=<num>]    show US or ISO-8601 week numbers
+ -v, --vertical        show day vertically instead of line
+ -c, --columns <width> amount of columns to use
+     --color[=<when>]  colorize messages (auto, always or never)
+                         colors are enabled by default
+
+ -h, --help            display this help
+ -V, --version         display version
+
+For more details see cal(1).
+```
+
+But I wanted a simple calendar in my `waybar` where I could just click on it and have it display a calendar. Some solutions I stumbled upon would only allow me to see the current month, and I wanted to be able to navigate between months and years. After some search, I decided to go with [yad](https://github.com/v1cont/yad). To use it properly I'd also need to create a script to run the calendar widget and set an icon in my waybar for it. So that's what I did.
+
+
+# basic calendar
+
+First, install `yad`:
+
+```bash
+sudo pacman -Syu
+sudo pacman -S yad
+```
+
+Then, create a file `~/.config/waybar/scripts/calendar.sh`. 
+The simplest way to make the calendar work is just by writing:
+
+```bash
+#!/usr/bin/env bash
+
+yad --calendar
+```
+
+Make the file executable by running
+
+`chmod +x ~/.config/waybar/scripts/calendar.sh`
+
+Now, add the script path to the waybar config file at `~/.config/waybar/config.jsonc`: 
+
+```bash
+"custom/calendar": {
+  "format": "",
+  "tooltip": false,
+  "on-click": "~/.config/waybar/scripts/calendar.sh"
+}
+```
+
+In the config file there is an entry called 'modules-right':
+
+```bash
+  "modules-right": [
+    "group/tray-expander",
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "cpu",
+    "battery"
+  ]
+```
+
+
+Add your calendar to this section:
+
+```bash
+  "modules-right": [
+    "group/tray-expander",
+    "custom/calendar",
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "cpu",
+    "battery"
+  ],
+```
+
+
+In `~/.config/waybar/styles.css` add 
+
+```css
+#custom-calendar {
+  min-width: 12px;
+  margin: 0 18px;
+}
+```
+
+so that the calendar icon to add some space between the calendar icon and the next icon. Adjust margin as you see fit. Finally, run
+
+`pkill waybar && waybar &`
+
+# some more tweaks
+
+If you want to add a keybinding to the calendar (mine is `SUPER + C`) go to `~/.config/hypr/bindings.conf` and add
+
+`bindd = SUPER, C, Calendar, exec, ~/.config/waybar/scripts/calendar.sh`
+
+I also removed buttons ('ok' and 'cancel'), set some size to the calendar, and gave it a name so that I could reference in hyprland configuration later::
+
+```bash
+#!/usr/bin/env bash
+
+# if a YAD calendar titled "Calendar" is already running, kill it
+if pgrep -f 'yad --calendar --title=Calendar' >/dev/null; then
+  pkill -f 'yad --calendar --title=Calendar'
+  exit 0
+fi
+
+# otherwise, open a new calendar (toggle on)
+yad --calendar \
+    --title="Calendar" \
+    --width=320 \
+    --height=260 \
+    --no-buttons 
+```
+
+The first bit is to ensure that if you click again it won't open up another window (since we don't have buttons now to close the window. To make it appear in the center of the screen go to `~/.config/hypr/hyprland.conf` and add 
+
+```bash
+# float the YAD calendar popup
+windowrulev2 = float, class:^(?i:yad)$, title:^(Calendar)$
+
+# center it on the monitor
+windowrulev2 = center, class:^(?i:yad)$, title:^(Calendar)$
+```
+
+It should like like this:
+
+![calendar](images/calendar.png)
+
+We could also add the calendar to the menu, but I'll leave that for later.
