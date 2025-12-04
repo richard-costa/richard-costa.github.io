@@ -1,10 +1,38 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "todos.html",
+    "href": "todos.html",
     "title": "Richard Costa",
     "section": "",
-    "text": "About Me\n\nI’m a Data Scientist, now working more on the engineering and application side of things. I also hold a B.Sc and a M.Sc. in Physics.\nBeyond tech, I’m an amateur digital artist. I create digital paintings using krita, and you can find my artwork on my Instagram profile below.\nYou can access my résumé here:\nenglish | português label"
+    "text": "-[ ] remove unnecessary comments in files (index.qmd, posts.qmd, and others) -[ ] add to the cosmic-and-sddm post the snippet to screenshot the sddm login screen"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Data Science",
+    "section": "",
+    "text": "The word ‘tensor’ in machine learning, math, and physics"
+  },
+  {
+    "objectID": "resources.html#machine-learning",
+    "href": "resources.html#machine-learning",
+    "title": "Data Science",
+    "section": "",
+    "text": "The word ‘tensor’ in machine learning, math, and physics"
+  },
+  {
+    "objectID": "resources.html#mathematical-physics",
+    "href": "resources.html#mathematical-physics",
+    "title": "Data Science",
+    "section": "Mathematical Physics",
+    "text": "Mathematical Physics\n\nnlab entry on mathematical physics."
+  },
+  {
+    "objectID": "resources.html#quarto",
+    "href": "resources.html#quarto",
+    "title": "Data Science",
+    "section": "Quarto",
+    "text": "Quarto\nThis site is built using quarto. To know more about it you should start in the get started section. After that, the following articles were particularly useful to me:\n\nCreating your personal website using Quarto\nAdding a blog to your existing Quarto website"
   },
   {
     "objectID": "posts/2.calendar-omarchy.html",
@@ -18,7 +46,7 @@
     "href": "posts.html",
     "title": "Posts",
     "section": "",
-    "text": "Calendar on Omarchy\n\n\n\nlinux\n\nhow-to\n\nomarchy\n\nhyprland\n\n\n\n\n\n\n\n\n\nDec 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCosmic, sddm, and Omarchy\n\n\n\nlinux\n\nhow-to\n\nomarchy\n\n\n\n\n\n\n\n\n\nDec 2, 2025\n\n\n\n\n\nNo matching items"
+    "text": "installing quarto on arch linux\n\n\n\nlinux\n\nhow-to\n\nquarto\n\n\n\n\n\n\n\n\n\nDec 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCalendar on Omarchy\n\n\n\nlinux\n\nhow-to\n\nomarchy\n\nhyprland\n\n\n\n\n\n\n\n\n\nDec 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCosmic, sddm, and Omarchy\n\n\n\nlinux\n\nhow-to\n\nomarchy\n\n\n\n\n\n\n\n\n\nDec 2, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes/qm_dirac_notation.html",
@@ -70,31 +98,17 @@
     "text": "Footnotes\n\n\nAt first I tried sudo pacman -S cosmic but got an error like:\n error: failed retrieving file ‘cosmic-initial-setup-1.0.0.beta.7-2-x86_64.pkg.tar.zst’ from stable-mirror.omarchy.org : The requested URL returned error: 404 warning: failed to retrieve some files error: failed to commit transaction (failed to retrieve some files) Errors occurred, no packages were upgraded.\nThat’s why the flag to ignore the cosmic inital setup is there.↩︎"
   },
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Data Science",
+    "objectID": "posts/3.quarto-arch.html",
+    "href": "posts/3.quarto-arch.html",
+    "title": "installing quarto on arch linux",
     "section": "",
-    "text": "The word ‘tensor’ in machine learning, math, and physics"
+    "text": "This website uses quarto as its publishing and writing platform. It seems the package for installing quarto on arch-linux is not maintained at this time. We are left then with downloading the tarball file and installing it. After downloading the file from https://quarto.org/docs/get-started/ we should extract the contents of it and in my case I needed to create a symlink to be able to use it in the terminal, so basically for the 1.8.26 version:\ncd ~/Downloads\ntar -xvzf quarto-1.8.26-linux-amd64.tar.gz\nsudo mv quarto-1.8.26 /opt/quarto\nsudo ln -sf /opt/quarto/bin/quarto /usr/local/bin/quarto\nThat’s it. However, since I didn’t install it via a package manager I created a script in /usr/local/bin/update-quarto to update it:\n#!/usr/bin/env bash\nset -e\n\nINSTALL_DIR=\"/opt/quarto\"\nBIN_LINK=\"/usr/local/bin/quarto\"\n\necho \"removing old quarto installation...\"\nsudo rm -rf \"$INSTALL_DIR\"\n\necho \"downloading latest quarto release...\"\ncd /tmp\nLATEST_URL=$(curl -s https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest \\\n  | grep browser_download_url \\\n  | grep linux-amd64.tar.gz \\\n  | cut -d '\"' -f 4)\n\ncurl -sSL \"$LATEST_URL\" -o quarto.tar.gz\n\necho \"extracting...\"\ntar -xzf quarto.tar.gz\nEXTRACTED_DIR=$(tar -tf quarto.tar.gz | head -1 | cut -f1 -d\"/\")\n\necho \"installing to $INSTALL_DIR...\"\nsudo mv \"$EXTRACTED_DIR\" \"$INSTALL_DIR\"\nsudo ln -sf \"$INSTALL_DIR/bin/quarto\" \"$BIN_LINK\"\n\necho \"cleaning up...\"\nrm -f quarto.tar.gz\n\necho \"done. installed $(/usr/local/bin/quarto --version)\"\nAnd then in the terminal just run update-quarto. It seems to be working but double check it if you want to run it yourself."
   },
   {
-    "objectID": "resources.html#machine-learning",
-    "href": "resources.html#machine-learning",
-    "title": "Data Science",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Richard Costa",
     "section": "",
-    "text": "The word ‘tensor’ in machine learning, math, and physics"
-  },
-  {
-    "objectID": "resources.html#mathematical-physics",
-    "href": "resources.html#mathematical-physics",
-    "title": "Data Science",
-    "section": "Mathematical Physics",
-    "text": "Mathematical Physics\n\nnlab entry on mathematical physics."
-  },
-  {
-    "objectID": "resources.html#quarto",
-    "href": "resources.html#quarto",
-    "title": "Data Science",
-    "section": "Quarto",
-    "text": "Quarto\nThis site is built using quarto. To know more about it you should start in the get started section. After that, the following articles were particularly useful to me:\n\nCreating your personal website using Quarto\nAdding a blog to your existing Quarto website"
+    "text": "About Me\n\nI’m a Data Scientist, now working more on the engineering and application side of things. I also hold a B.Sc and a M.Sc. in Physics.\nBeyond tech, I’m an amateur digital artist. I create digital paintings using krita, and you can find my artwork on my Instagram profile below.\nYou can access my résumé here:\nenglish | português label"
   }
 ]

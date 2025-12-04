@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/3.quarto-arch.html",
       "/posts/2.calendar-omarchy.html",
       "/posts/1.cosmic-and-sddm-omarchy.html"
     ]

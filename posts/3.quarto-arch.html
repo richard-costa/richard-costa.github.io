@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-12-04">
 
-<title>Posts – Richard Costa</title>
+<title>installing quarto on arch linux – Richard Costa</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +21,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c00b42e811b0fd9a18ac62455ba22490.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-c00b42e811b0fd9a18ac62455ba22490.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,67 +104,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -140,7 +116,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Richard Costa</span>
     </a>
   </div>
@@ -151,19 +127,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+    <a class="nav-link" href="../posts.html"> 
 <span class="menu-text">posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./notes.html"> 
+    <a class="nav-link" href="../notes.html"> 
 <span class="menu-text">notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resources.html"> 
+    <a class="nav-link" href="../resources.html"> 
 <span class="menu-text">resources</span></a>
   </li>  
 </ul>
@@ -177,23 +153,40 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="aG93LXRv">how-to <span class="quarto-category-count">(3)</span></div><div class="category" data-category="aHlwcmxhbmQ=">hyprland <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGludXg=">linux <span class="quarto-category-count">(3)</span></div><div class="category" data-category="b21hcmNoeQ==">omarchy <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cXVhcnRv">quarto <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Posts</h1>
-</div>
+<h1 class="title">installing quarto on arch linux</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">linux</div>
+    <div class="quarto-category">how-to</div>
+    <div class="quarto-category">quarto</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 4, 2025</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">UPDATED</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">December 4, 2025</p>
+    </div>
+  </div>
     
   </div>
   
@@ -202,110 +195,47 @@ window.Quarto = {
 </header>
 
 
+<p>This website uses quarto as its publishing and writing platform. It seems the package for installing quarto on arch-linux is not maintained at this time. We are left then with downloading the tarball file and installing it. After downloading the file from https://quarto.org/docs/get-started/ we should extract the contents of it and in my case I needed to create a symlink to be able to use it in the terminal, so basically for the <code>1.8.26</code> version:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Downloads</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xvzf</span> quarto-1.8.26-linux-amd64.tar.gz</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mv quarto-1.8.26 /opt/quarto</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ln <span class="at">-sf</span> /opt/quarto/bin/quarto /usr/local/bin/quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>That’s it. However, since I didn’t install it via a package manager I created a script in <code>/usr/local/bin/update-quarto</code> to update it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env bash</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="at">-e</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="va">INSTALL_DIR</span><span class="op">=</span><span class="st">"/opt/quarto"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="va">BIN_LINK</span><span class="op">=</span><span class="st">"/usr/local/bin/quarto"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"removing old quarto installation..."</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> rm <span class="at">-rf</span> <span class="st">"</span><span class="va">$INSTALL_DIR</span><span class="st">"</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"downloading latest quarto release..."</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /tmp</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="va">LATEST_URL</span><span class="op">=</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-s</span> https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest <span class="dt">\</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">|</span> <span class="fu">grep</span> browser_download_url <span class="dt">\</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">|</span> <span class="fu">grep</span> linux-amd64.tar.gz <span class="dt">\</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">'"'</span> <span class="at">-f</span> 4<span class="va">)</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sSL</span> <span class="st">"</span><span class="va">$LATEST_URL</span><span class="st">"</span> <span class="at">-o</span> quarto.tar.gz</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"extracting..."</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzf</span> quarto.tar.gz</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="va">EXTRACTED_DIR</span><span class="op">=</span><span class="va">$(</span><span class="fu">tar</span> <span class="at">-tf</span> quarto.tar.gz <span class="kw">|</span> <span class="fu">head</span> <span class="at">-1</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-f1</span> <span class="at">-d</span><span class="st">"/"</span><span class="va">)</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"installing to </span><span class="va">$INSTALL_DIR</span><span class="st">..."</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mv <span class="st">"</span><span class="va">$EXTRACTED_DIR</span><span class="st">"</span> <span class="st">"</span><span class="va">$INSTALL_DIR</span><span class="st">"</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ln <span class="at">-sf</span> <span class="st">"</span><span class="va">$INSTALL_DIR</span><span class="st">/bin/quarto"</span> <span class="st">"</span><span class="va">$BIN_LINK</span><span class="st">"</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"cleaning up..."</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-f</span> quarto.tar.gz</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"done. installed </span><span class="va">$(</span><span class="ex">/usr/local/bin/quarto</span> <span class="at">--version</span><span class="va">)</span><span class="st">"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>And then in the terminal just run <code>update-quarto</code>. It seems to be working but double check it if you want to run it yourself.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bGludXglMkNob3ctdG8lMkNxdWFydG8=" data-listing-date-sort="1764817200000" data-listing-file-modified-sort="1764875018898" data-listing-date-modified-sort="1764875018000" data-listing-reading-time-sort="1" data-listing-word-count-sort="196">
-<div class="thumbnail"><a href="./posts/3.quarto-arch.html" class="no-external">
-
-<img loading="lazy" src="./posts/images/quarto-logo.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/3.quarto-arch.html" class="no-external">installing quarto on arch linux</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGludXg='); return false;">linux</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aG93LXRv'); return false;">how-to</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhcnRv'); return false;">quarto</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/3.quarto-arch.html" class="no-external">
-This website uses quarto as its publishing and writing platform. It seems the package for installing quarto on arch-linux is not maintained at this time. We are left then…<code></code>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/3.quarto-arch.html" class="no-external">
-<div class="listing-date">
-Dec 4, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bGludXglMkNob3ctdG8lMkNvbWFyY2h5JTJDaHlwcmxhbmQ=" data-listing-date-sort="1764730800000" data-listing-file-modified-sort="1764799798179" data-listing-date-modified-sort="1764799798000" data-listing-reading-time-sort="6" data-listing-word-count-sort="1031">
-<div class="thumbnail"><a href="./posts/2.calendar-omarchy.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/images/calendar.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2.calendar-omarchy.html" class="no-external">Calendar on Omarchy</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGludXg='); return false;">linux</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aG93LXRv'); return false;">how-to</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b21hcmNoeQ=='); return false;">omarchy</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aHlwcmxhbmQ='); return false;">hyprland</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2.calendar-omarchy.html" class="no-external">
-I’ve been missing a calendar on omarchy for some time. For the command line we have a nice tool called <code>cal</code>:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2.calendar-omarchy.html" class="no-external">
-<div class="listing-date">
-Dec 3, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bGludXglMkNob3ctdG8lMkNvbWFyY2h5" data-listing-date-sort="1764644400000" data-listing-file-modified-sort="1764801699723" data-listing-date-modified-sort="1764801699000" data-listing-reading-time-sort="5" data-listing-word-count-sort="828">
-<div class="thumbnail"><a href="./posts/1.cosmic-and-sddm-omarchy.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/images/login-screen.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/1.cosmic-and-sddm-omarchy.html" class="no-external">Cosmic, sddm, and Omarchy</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGludXg='); return false;">linux</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aG93LXRv'); return false;">how-to</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b21hcmNoeQ=='); return false;">omarchy</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/1.cosmic-and-sddm-omarchy.html" class="no-external">
-<em>Please, note: I don’t know much about linux, so be careful when running commands and be sure to back up your stuff when you feel like you might break things</em>.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/1.cosmic-and-sddm-omarchy.html" class="no-external">
-<div class="listing-date">
-Dec 2, 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

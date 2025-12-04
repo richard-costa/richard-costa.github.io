@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://richard-costa.github.io/index.html</loc>
-    <lastmod>2025-12-04T00:04:46.173Z</lastmod>
+    <loc>https://richard-costa.github.io/todos.html</loc>
+    <lastmod>2025-12-04T01:07:25.239Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/resources.html</loc>
+    <lastmod>2025-12-01T10:18:17.492Z</lastmod>
   </url>
   <url>
     <loc>https://richard-costa.github.io/posts/2.calendar-omarchy.html</loc>
@@ -10,7 +14,7 @@
   </url>
   <url>
     <loc>https://richard-costa.github.io/posts.html</loc>
-    <lastmod>2025-12-03T23:02:33.103Z</lastmod>
+    <lastmod>2025-12-04T19:03:10.677Z</lastmod>
   </url>
   <url>
     <loc>https://richard-costa.github.io/notes/qm_dirac_notation.html</loc>
@@ -33,7 +37,11 @@
     <lastmod>2025-12-03T22:41:39.723Z</lastmod>
   </url>
   <url>
-    <loc>https://richard-costa.github.io/resources.html</loc>
-    <lastmod>2025-12-01T10:18:17.492Z</lastmod>
+    <loc>https://richard-costa.github.io/posts/3.quarto-arch.html</loc>
+    <lastmod>2025-12-04T19:03:38.898Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/index.html</loc>
+    <lastmod>2025-12-04T00:04:46.173Z</lastmod>
   </url>
 </urlset>
