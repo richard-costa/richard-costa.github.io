@@ -24,3 +24,7 @@ This site is built using [quarto](https://quarto.org/). To know more about it yo
 
 - [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/#where-you-should-start-changing-stuff)
 - [Adding a blog to your existing Quarto website](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/)
+
+My blog posts about quarto:
+
+- [installing quarto on arch linux](posts/3.quarto-arch.md)
