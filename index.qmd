@@ -8,7 +8,7 @@ about:
     links:
         - icon: envelope
           text: Email
-          href: scosta.richard@gmail.com
+          href: mailto:scosta.richard@gmail.com
 
         - icon: linkedin
           text: LinkedIn
