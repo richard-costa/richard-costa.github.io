@@ -6,6 +6,7 @@ about:
     image-width: 200px     # or 10em, 30%, whatever you want
     image-shape: round   # optional: rectangle / round / rounded / etc.
     links:
+        # icons: https://icons.getbootstrap.com/
         - icon: envelope
           text: Email
           href: mailto:scosta.richard@gmail.com
@@ -40,4 +41,3 @@ You can access my résumé here:
 
 
 [english](/resume/resume_english.pdf) | [português](/resume/resume_portuguese.pdf) 
-[label](http://localhost:3726/notes.html)
