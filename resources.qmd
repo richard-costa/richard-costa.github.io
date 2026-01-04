@@ -17,7 +17,7 @@ ___
 ---
 # Linux 
 
-## Omarchy
+## Arch Linux/Omarchy
 
 Blog posts about Omarchy, an Arch-Linux based distro (or a bunch configurations if you want to call it that way):
 

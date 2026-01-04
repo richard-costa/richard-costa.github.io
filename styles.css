@@ -22,3 +22,39 @@ div.quarto-about-marquee img {
   display: none !important;
 }
 
+/* ==========================
+   Note status badges
+   ========================== */
+
+.note-status {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.status-draft {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-wip {
+  background-color: #e0f2fe;
+  color: #075985;
+}
+
+.status-mature {
+  background-color: #ecfdf5;
+  color: #065f46;
+}
+
+/* Extra horizontal spacing for inline note badges */
+
+.note-status {
+  margin-left: 0.75rem;
+}
+

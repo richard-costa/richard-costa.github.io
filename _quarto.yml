@@ -1,6 +1,9 @@
 project:
   type: website
 
+filters:
+  - note-status.lua
+
 website:
   title: "Richard Costa"
   navbar:

@@ -1,8 +1,9 @@
 ---
-title: '🌱 Review of Quantum Mechanics'
+title: 'Review of Quantum Mechanics'
 crossref:
     eq-prefix: ""
----
+
+status: draft # draft | wip | mature
 ---
 
 This is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.
