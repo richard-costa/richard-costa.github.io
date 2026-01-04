@@ -28,11 +28,11 @@
     "text": "Mathematical Physics\n\nnlab entry on mathematical physics.\nLinux"
   },
   {
-    "objectID": "resources.html#omarchy",
-    "href": "resources.html#omarchy",
+    "objectID": "resources.html#arch-linuxomarchy",
+    "href": "resources.html#arch-linuxomarchy",
     "title": "Data Science",
-    "section": "Omarchy",
-    "text": "Omarchy\nBlog posts about Omarchy, an Arch-Linux based distro (or a bunch configurations if you want to call it that way):\n\ninstalling cosmic and changing sddm on omarchy\ninstalling a calendar widget on omarch"
+    "section": "Arch Linux/Omarchy",
+    "text": "Arch Linux/Omarchy\nBlog posts about Omarchy, an Arch-Linux based distro (or a bunch configurations if you want to call it that way):\n\ninstalling cosmic and changing sddm on omarchy\ninstalling a calendar widget on omarch"
   },
   {
     "objectID": "resources.html#quarto",
@@ -67,7 +67,7 @@
     "href": "notes.html",
     "title": "Richard Costa",
     "section": "",
-    "text": "🌱: draft\n🌿: work in progress\n🌲: mature\n\n\nQuantum Mechanics\n\nQuantum Mechanics II\n\n🌱 Review of Quantum Mechanics\n\nMathematical Formalism\n\n🌱 Dirac Notation\n\n\n\n\nLogic\n\n🌱 Introduction to Logic\n\n\n\nPhilosophy"
+    "text": "Note maturity levels\n\nDraft — incomplete or exploratory notes\nWork in progress — actively developed\nMature — stable and polished\n\n\n\n\n\n\nQuantum Mechanics\n\nQuantum Mechanics II\n\nReview of Quantum Mechanics DRAFT\n\nMathematical Formalism\n\nDirac Notation WORK IN PROGRESS\n\n\n\n\nLogic\n\nIntroduction to Logic DRAFT"
   },
   {
     "objectID": "notes/logic_intro.html",
@@ -79,9 +79,9 @@
   {
     "objectID": "notes/qm_ii/qm_review.html",
     "href": "notes/qm_ii/qm_review.html",
-    "title": "🌱 Review of Quantum Mechanics",
+    "title": "Review of Quantum Mechanics",
     "section": "",
-    "text": "This is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[\n| \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle\n\\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\n\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\n\\] Positions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\n\n\nStationary States\n\n\nSuggested Reading\n\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
+    "text": "DRAFT\nThis is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[\n| \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle\n\\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\n\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\n\\] Positions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\n\n\nStationary States\n\n\nSuggested Reading\n\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
   },
   {
     "objectID": "posts/1.cosmic-and-sddm-omarchy.html",
