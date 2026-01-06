@@ -16,7 +16,7 @@ title: ""
 
 - Quantum Mechanics II
   - [Review of Quantum Mechanics](notes/qm_ii/qm_review.qmd)
-    <span class="note-status status-draft">DRAFT</span>
+    <span class="note-status  status-draft">DRAFT</span>
 
 - Mathematical Formalism
   - [Dirac Notation](notes/qm_dirac_notation.md)
@@ -26,3 +26,6 @@ title: ""
 
 - [Introduction to Logic](notes/logic_intro.md)
 <span class="note-status status-draft">DRAFT</span>
+
+
+Hello 

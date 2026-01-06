@@ -58,3 +58,41 @@ div.quarto-about-marquee img {
   margin-left: 0.75rem;
 }
 
+/* ==========================
+   PDF badge
+   ========================== */
+
+
+.note-pdf {
+  background-color: #ede9fe;
+  color: #5b21b6;
+  text-decoration: none;
+}
+
+/* call to action to view pdf */
+.note-pdf.cta-pdf::before {
+  content: "View as PDF 📄";
+  font-size: 0.85rem;
+  line-height: 1;
+} 
+
+/* Hover state*/
+
+.note-pdf:hover {
+  background-color: #ddd6fe;
+  color: #4c1d95;
+  text-decoration: none;
+} 
+/* ==========================
+   Note header layout
+   ========================== */
+/* lay out the status badge and the PDF badge on a single horizontal line*/
+
+   .note-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+
