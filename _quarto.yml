@@ -8,11 +8,11 @@ website:
   title: "Richard Costa"
   navbar:
     right:
-      - href: index.qmd
+      - href: home.qmd
         text: Home
       - href: posts.qmd
         text: posts
-      - href: notes.qmd
+      - href: notes/index.qmd
         text: notes
       - href: resources.qmd
         text: resources

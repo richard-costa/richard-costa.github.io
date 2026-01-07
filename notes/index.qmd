@@ -15,16 +15,16 @@ title: ""
 ### Quantum Mechanics
 
 - Quantum Mechanics II
-  - [Review of Quantum Mechanics](notes/qm_ii/qm_review.qmd)
+  - [Review of Quantum Mechanics](qm_ii/qm_review.qmd)
     <span class="note-status  status-draft">DRAFT</span>
 
 - Mathematical Formalism
-  - [Dirac Notation](notes/qm_dirac_notation.md)
+  - [Dirac Notation](qm_dirac_notation.md)
     <span class="note-status status-wip">WORK IN PROGRESS</span>
 
 ### Logic
 
-- [Introduction to Logic](notes/logic_intro.md)
+- [Introduction to Logic](logic_intro.md)
 <span class="note-status status-draft">DRAFT</span>
 
 

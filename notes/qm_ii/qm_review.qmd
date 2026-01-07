@@ -11,8 +11,6 @@ format:
   pdf:
     documentclass: article
 
-format-links: false
-
 ---
 
 {{< include ../../../../obsidian/qm-formalism.md >}}
