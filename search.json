@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "todos.html",
-    "href": "todos.html",
+    "objectID": "home.html",
+    "href": "home.html",
     "title": "Richard Costa",
     "section": "",
-    "text": "-[ ] remove unnecessary comments in files (index.qmd, posts.qmd, and others) -[ ] add to the cosmic-and-sddm post the snippet to screenshot the sddm login screen"
+    "text": "About Me\n\nI’m a Data Scientist, now working more on the engineering and application side of things. I also hold a B.Sc and a M.Sc. in Physics.\nBeyond tech, I’m an amateur digital artist. I create digital paintings using krita, and you can find my artwork on my Instagram profile below.\nYou can access my résumé here:\nenglish | português"
   },
   {
     "objectID": "resources.html",
@@ -56,18 +56,11 @@
     "text": "installing quarto on arch linux\n\n\n\nlinux\n\nhow-to\n\nquarto\n\n\n\n\n\n\n\n\n\nDec 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCalendar on Omarchy\n\n\n\nlinux\n\nhow-to\n\nomarchy\n\nhyprland\n\n\n\n\n\n\n\n\n\nDec 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCosmic, sddm, and Omarchy\n\n\n\nlinux\n\nhow-to\n\nomarchy\n\n\n\n\n\n\n\n\n\nDec 2, 2025\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "notes/qm_dirac_notation.html",
-    "href": "notes/qm_dirac_notation.html",
-    "title": "Richard Costa",
+    "objectID": "notes/qm_ii/qm_review.html",
+    "href": "notes/qm_ii/qm_review.html",
+    "title": "Review of Quantum Mechanics",
     "section": "",
-    "text": "Riesz Representation Theorem"
-  },
-  {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "Richard Costa",
-    "section": "",
-    "text": "Note maturity levels\n\nDraft — incomplete or exploratory notes\nWork in progress — actively developed\nMature — stable and polished\n\n\n\n\n\n\nQuantum Mechanics\n\nQuantum Mechanics II\n\nReview of Quantum Mechanics DRAFT\n\nMathematical Formalism\n\nDirac Notation WORK IN PROGRESS\n\n\n\n\nLogic\n\nIntroduction to Logic DRAFT"
+    "text": "DRAFT\n  \n  \nThis is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[\n| \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle\n\\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\n\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\n\\] Positions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\n\n\nStationary States\n\n\nSuggested Reading\n\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
   },
   {
     "objectID": "notes/logic_intro.html",
@@ -77,11 +70,18 @@
     "text": "link"
   },
   {
-    "objectID": "notes/qm_ii/qm_review.html",
-    "href": "notes/qm_ii/qm_review.html",
-    "title": "Review of Quantum Mechanics",
+    "objectID": "notes/qm_dirac_notation.html",
+    "href": "notes/qm_dirac_notation.html",
+    "title": "Richard Costa",
     "section": "",
-    "text": "DRAFT\nThis is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[\n| \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle\n\\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\n\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\n\\] Positions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\n\n\nStationary States\n\n\nSuggested Reading\n\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
+    "text": "Riesz Representation Theorem"
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Richard Costa",
+    "section": "",
+    "text": "Note maturity levels\n\nDraft — incomplete or exploratory notes\nWork in progress — actively developed\nMature — stable and polished\n\n\n\n\n\n\nQuantum Mechanics\n\nQuantum Mechanics II\n\nReview of Quantum Mechanics DRAFT\n\nMathematical Formalism\n\nDirac Notation WORK IN PROGRESS\n\n\n\n\nLogic\n\nIntroduction to Logic DRAFT\n\nHello"
   },
   {
     "objectID": "posts/1.cosmic-and-sddm-omarchy.html",
@@ -112,10 +112,10 @@
     "text": "This website uses quarto as its publishing and writing platform. It seems the package for installing quarto on arch-linux is not maintained at this time. We are left then with downloading the tarball file and installing it. After downloading the file from https://quarto.org/docs/get-started/ we should extract the contents of it and in my case I needed to create a symlink to be able to use it in the terminal, so basically for the 1.8.26 version:\ncd ~/Downloads\ntar -xvzf quarto-1.8.26-linux-amd64.tar.gz\nsudo mv quarto-1.8.26 /opt/quarto\nsudo ln -sf /opt/quarto/bin/quarto /usr/local/bin/quarto\nThat’s it. However, since I didn’t install it via a package manager I created a script in /usr/local/bin/update-quarto to update it:\n#!/usr/bin/env bash\nset -e\n\nINSTALL_DIR=\"/opt/quarto\"\nBIN_LINK=\"/usr/local/bin/quarto\"\n\necho \"removing old quarto installation...\"\nsudo rm -rf \"$INSTALL_DIR\"\n\necho \"downloading latest quarto release...\"\ncd /tmp\nLATEST_URL=$(curl -s https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest \\\n  | grep browser_download_url \\\n  | grep linux-amd64.tar.gz \\\n  | cut -d '\"' -f 4)\n\ncurl -sSL \"$LATEST_URL\" -o quarto.tar.gz\n\necho \"extracting...\"\ntar -xzf quarto.tar.gz\nEXTRACTED_DIR=$(tar -tf quarto.tar.gz | head -1 | cut -f1 -d\"/\")\n\necho \"installing to $INSTALL_DIR...\"\nsudo mv \"$EXTRACTED_DIR\" \"$INSTALL_DIR\"\nsudo ln -sf \"$INSTALL_DIR/bin/quarto\" \"$BIN_LINK\"\n\necho \"cleaning up...\"\nrm -f quarto.tar.gz\n\necho \"done. installed $(/usr/local/bin/quarto --version)\"\nAnd then in the terminal just run update-quarto. It seems to be working but double check it if you want to run it yourself."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "todos.html",
+    "href": "todos.html",
     "title": "Richard Costa",
     "section": "",
-    "text": "About Me\n\nI’m a Data Scientist, now working more on the engineering and application side of things. I also hold a B.Sc and a M.Sc. in Physics.\nBeyond tech, I’m an amateur digital artist. I create digital paintings using krita, and you can find my artwork on my Instagram profile below.\nYou can access my résumé here:\nenglish | português"
+    "text": "-[ ] remove unnecessary comments in files (index.qmd, posts.qmd, and others) -[ ] add to the cosmic-and-sddm post the snippet to screenshot the sddm login screen"
   }
 ]
