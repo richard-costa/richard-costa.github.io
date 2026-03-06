@@ -1,47 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://richard-costa.github.io/home.html</loc>
-    <lastmod>2025-12-06T18:59:31.799Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/resources.html</loc>
-    <lastmod>2026-01-04T21:24:25.264Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/posts/2.calendar-omarchy.html</loc>
-    <lastmod>2025-12-03T22:09:58.179Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/posts.html</loc>
-    <lastmod>2025-12-04T19:03:10.677Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/notes/qm_ii/qm_review.html</loc>
-    <lastmod>2026-01-07T11:32:15.941Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/notes/logic_intro.html</loc>
-    <lastmod>2025-11-16T15:11:53.142Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/notes/qm_dirac_notation.html</loc>
-    <lastmod>2025-11-16T15:11:53.142Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/notes/index.html</loc>
-    <lastmod>2026-01-06T12:08:21.065Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/posts/1.cosmic-and-sddm-omarchy.html</loc>
-    <lastmod>2025-12-03T22:41:39.723Z</lastmod>
+    <loc>https://richard-costa.github.io/index.html</loc>
+    <lastmod>2026-03-06T22:56:38.250Z</lastmod>
   </url>
   <url>
     <loc>https://richard-costa.github.io/posts/3.quarto-arch.html</loc>
     <lastmod>2025-12-04T19:03:38.898Z</lastmod>
   </url>
   <url>
-    <loc>https://richard-costa.github.io/todos.html</loc>
-    <lastmod>2025-12-04T01:07:25.239Z</lastmod>
+    <loc>https://richard-costa.github.io/posts/1.cosmic-and-sddm-omarchy.html</loc>
+    <lastmod>2026-03-06T23:01:42.085Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/index.html</loc>
+    <lastmod>2026-01-06T12:08:21.065Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/qm_dirac_notation.html</loc>
+    <lastmod>2025-11-16T15:11:53.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/logic_intro.html</loc>
+    <lastmod>2026-03-06T23:01:34.528Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/qm_ii/qm_review.html</loc>
+    <lastmod>2026-01-07T11:32:15.941Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/posts.html</loc>
+    <lastmod>2025-12-04T19:03:10.677Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/posts/2.calendar-omarchy.html</loc>
+    <lastmod>2025-12-03T22:09:58.179Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/resources.html</loc>
+    <lastmod>2026-01-04T21:24:25.264Z</lastmod>
   </url>
 </urlset>
