@@ -8,7 +8,7 @@ website:
   title: "Richard Costa"
   navbar:
     right:
-      - href: home.qmd
+      - href: index.qmd
         text: Home
       - href: posts.qmd
         text: posts
