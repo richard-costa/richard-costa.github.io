@@ -23,7 +23,7 @@ title: ""
     <span class="note-status status-wip">DRAFT</span>
 
 
-- [Presentation on Qubits and Hilbert Spaces (In Porguese)](../files/apresentacao.pdf)
+- [Presentation on Qubits and Hilbert Spaces (In Portuguese)](../files/apresentacao.pdf)
 
 ### Logic
 
