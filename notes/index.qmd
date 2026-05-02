@@ -27,5 +27,3 @@ title: ""
 - [Introduction to Logic](logic_intro.md)
 <span class="note-status status-draft">DRAFT</span>
 
-
-Hello 
