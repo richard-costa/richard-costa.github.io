@@ -13,4 +13,4 @@ format:
 
 ---
 
-{{< include ../../../../obsidian/10-knowledge/qm-formalism.md >}}
+{{< include ../../../../obsidian/10-notes/qm-formalism.md >}}
