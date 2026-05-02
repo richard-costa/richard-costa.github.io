@@ -19,8 +19,11 @@ title: ""
     <span class="note-status  status-draft">DRAFT</span>
 
 - Mathematical Formalism
-  - [Dirac Notation](qm_dirac_notation.md)
-    <span class="note-status status-wip">WORK IN PROGRESS</span>
+  - [Dirac Notation and Riesz Theorem](qm-dirac-riesz.md)
+    <span class="note-status status-wip">DRAFT</span>
+
+
+- [Presentation on Qubits and Hilbert Spaces (In Porguese)](../files/apresentacao.pdf)
 
 ### Logic
 
