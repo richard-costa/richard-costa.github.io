@@ -35,18 +35,18 @@
     "text": "Footnotes\n\n\nAt first I tried sudo pacman -S cosmic but got an error like:\n error: failed retrieving file ‘cosmic-initial-setup-1.0.0.beta.7-2-x86_64.pkg.tar.zst’ from stable-mirror.omarchy.org : The requested URL returned error: 404 warning: failed to retrieve some files error: failed to commit transaction (failed to retrieve some files) Errors occurred, no packages were upgraded.\nThat’s why the flag to ignore the cosmic inital setup is there.↩︎"
   },
   {
-    "objectID": "notes/index.html",
-    "href": "notes/index.html",
-    "title": "Richard Costa",
-    "section": "",
-    "text": "Note maturity levels\n\nDraft — incomplete or exploratory notes\nWork in progress — actively developed\nMature — stable and polished\n\n\n\n\n\n\nQuantum Mechanics\n\nQuantum Mechanics II\n\nReview of Quantum Mechanics DRAFT\n\nMathematical Formalism\n\nDirac Notation WORK IN PROGRESS\n\n\n\n\nLogic\n\nIntroduction to Logic DRAFT\n\nHello"
-  },
-  {
-    "objectID": "notes/qm_dirac_notation.html",
-    "href": "notes/qm_dirac_notation.html",
+    "objectID": "notes/qm-dirac-riesz.html",
+    "href": "notes/qm-dirac-riesz.html",
     "title": "Richard Costa",
     "section": "",
     "text": "Riesz Representation Theorem"
+  },
+  {
+    "objectID": "notes/qm_ii/qm_review.html",
+    "href": "notes/qm_ii/qm_review.html",
+    "title": "Review of Quantum Mechanics",
+    "section": "",
+    "text": "DRAFT\n  \n  \nThis is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[\n| \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle\n\\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\n\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\n\\] Positions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\n\n\nStationary States\n\n\nSuggested Reading\n\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
   },
   {
     "objectID": "notes/logic_intro.html",
@@ -56,11 +56,11 @@
     "text": "link"
   },
   {
-    "objectID": "notes/qm_ii/qm_review.html",
-    "href": "notes/qm_ii/qm_review.html",
-    "title": "Review of Quantum Mechanics",
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Richard Costa",
     "section": "",
-    "text": "DRAFT\n  \n  \nThis is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[\n| \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle\n\\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\n\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\n\\] Positions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\n\n\nStationary States\n\n\nSuggested Reading\n\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
+    "text": "Note maturity levels\n\nDraft — incomplete or exploratory notes\nWork in progress — actively developed\nMature — stable and polished\n\n\n\n\n\n\nQuantum Mechanics\n\nQuantum Mechanics II\n\nReview of Quantum Mechanics DRAFT\n\nMathematical Formalism\n\nDirac Notation and Riesz Theorem DRAFT\n\nPresentation on Qubits and Hilbert Spaces (In Porguese)\n\n\n\nLogic\n\nIntroduction to Logic DRAFT"
   },
   {
     "objectID": "posts.html",
