@@ -20,7 +20,7 @@ title: ""
 
 - Mathematical Formalism
   - [Dirac Notation and Riesz Theorem](qm-dirac-riesz.md)
-    <span class="note-status status-wip">DRAFT</span>
+    <span class="note-status status-draft">DRAFT</span>
 
 
 - [Presentation on Qubits and Hilbert Spaces (In Portuguese)](../files/apresentacao.pdf)
