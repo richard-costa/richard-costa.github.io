@@ -1,6 +1,6 @@
 ---
 title: 'installing quarto on arch linux'
-date: 12-04-2025
+date: 2025-12-04
 date-modified: last-modified
 language: 
   title-block-modified: "UPDATED"

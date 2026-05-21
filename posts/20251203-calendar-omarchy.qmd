@@ -1,6 +1,6 @@
 ---
 title: 'Calendar on Omarchy'
-date: 12-03-2025
+date: 2025-12-03
 date-modified: last-modified
 language: 
   title-block-modified: "UPDATED"
