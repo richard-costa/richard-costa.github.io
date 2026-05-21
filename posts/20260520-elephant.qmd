@@ -1,0 +1,20 @@
+---
+title: 'Music for an Elderly Elephant'
+# author: Richard Costa
+date: 20-05-2026
+# lang: us
+# date-modified: last-modified
+# language: 
+  # title-block-published: "MODIFIED"
+  # title-block-modified: "UPDATED"
+
+image: https://i.ytimg.com/vi/i1qQOGCyRbY/maxresdefault.jpg
+categories: 
+  - wholesome
+---
+
+
+{{< video https://youtu.be/i1qQOGCyRbY?si=ftUPLB2T-HDpixuT >}}
+
+
+Somewhere someone played piano to an elderly elephant. That's it. Also,  they flap their ears to express some emotions.
