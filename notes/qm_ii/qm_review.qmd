@@ -10,4 +10,4 @@ format:
 
 ---
 
-{{< include ../../../../obsidian/10-notes/qm-formalism.md >}}
+{{< include ../../../../obsidian/00-inbox/qm-formalism.md >}}
