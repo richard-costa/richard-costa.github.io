@@ -14,8 +14,6 @@ website:
         text: notes
       - href: posts.qmd
         text: posts
-      - href: resources.qmd
-        text: resources
       - href: https://github.com/richard-costa
         text: github
 

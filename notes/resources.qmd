@@ -1,9 +1,8 @@
 ---
 title: "resources"
-toc: true
 ---
 
-A small collection of references I want to keep around.
+A curated collection of references I want to keep around.
 
 ## data_science
 
@@ -21,8 +20,8 @@ A small collection of references I want to keep around.
 
 ### arch_linux / omarchy
 
-- [Installing COSMIC and changing SDDM on Omarchy](posts/20251202-cosmic-and-sddm-omarchy.qmd)
-- [Installing a calendar widget on Omarchy](posts/20251203-calendar-omarchy.qmd)
+- [Installing COSMIC and changing SDDM on Omarchy](../posts/20251202-cosmic-and-sddm-omarchy.qmd)
+- [Installing a calendar widget on Omarchy](../posts/20251203-calendar-omarchy.qmd)
 
 ## quarto
 
@@ -30,4 +29,4 @@ This site is built with [Quarto](https://quarto.org/).
 
 - [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/)
 - [Adding a blog to your existing Quarto website](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/)
-- [Installing Quarto on Arch Linux](posts/20251204-quarto-arch.md)
+- [Installing Quarto on Arch Linux](../posts/20251204-quarto-arch.qmd)

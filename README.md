@@ -10,33 +10,54 @@ quarto preview
 
 The generated site goes to `_site/` and is ignored by Git.
 
-To force all formats for the quantum-mechanics note:
+To render the quantum-mechanics review in both HTML and PDF:
 
 ```bash
-quarto render notes/qm_ii/qm_review.qmd
+quarto render notes/quantum-mechanics/review.qmd
 ```
 
-That produces both the HTML page and, when a LaTeX installation is available, `_site/notes/qm_ii/qm_review.pdf`.
+That produces `review.html` and, when a LaTeX installation is available, `review.pdf` under `_site/notes/quantum-mechanics/`.
 
 ## Structure
 
 ```text
 .
-├── _quarto.yml          # site-wide behavior and navigation
-├── theme.scss           # all site-wide visual styling
-├── index.qmd            # homepage
+├── _quarto.yml
+├── theme.scss
+├── index.qmd
+├── posts.qmd
+│
 ├── notes/
-│   ├── _metadata.yml    # defaults inherited by technical notes
-│   ├── .obsidian/       # local Obsidian settings; ignored by Git
-│   └── ...              # canonical note sources
+│   ├── _metadata.yml
+│   ├── index.qmd
+│   ├── resources.qmd
+│   ├── quantum-mechanics/
+│   │   ├── review.qmd
+│   │   └── dirac-riesz.qmd
+│   └── logic/
+│       └── introduction.qmd
+│
 ├── posts/
-│   ├── _metadata.yaml   # defaults inherited by posts
-│   └── ...              # individual posts
-├── posts.qmd            # posts listing page
-├── resources.qmd        # reference links
-├── resume/              # downloadable résumé PDFs
-└── files/               # other downloadable files
+│   ├── _metadata.yaml
+│   ├── images/
+│   └── YYYYMMDD-name.qmd
+│
+└── files/
+    ├── qubits-hilbert-spaces-pt.pdf
+    └── resume/
+        ├── resume_english.pdf
+        └── resume_portuguese.pdf
 ```
+
+## Mental model
+
+There are only three kinds of public source content:
+
+- `index.qmd` — homepage
+- `notes/` — technical notes and curated references
+- `posts/` — chronological articles
+
+Software projects live in their own repositories and are linked from the homepage. Static downloads live under `files/`.
 
 ## Where to change things
 
@@ -46,13 +67,11 @@ That produces both the HTML page and, when a LaTeX installation is available, `_
 - **Technical-note defaults:** `notes/_metadata.yml`
 - **Post defaults:** `posts/_metadata.yaml`
 
-The theme uses one SCSS file instead of a Bootswatch theme plus override files. Its small token section controls the visual system; `$accent` controls the site's blue accent.
-
 ## Notes and Obsidian
 
-The canonical note files live inside `notes/`. Open that directory as an Obsidian vault if you want to edit the same files in Obsidian.
+The canonical note files live inside `notes/`. Open that directory as an Obsidian vault to edit the same files Quarto renders.
 
-There are no external include paths or duplicated note sources. The local `notes/.obsidian/` directory is ignored by Git.
+Local Obsidian settings in `notes/.obsidian/` are ignored by Git. There are no external include paths or duplicated note sources.
 
 ## Equations and cross-references
 
@@ -78,4 +97,19 @@ format:
 
 format-links:
   - pdf
+```
+
+## Publish
+
+For normal updates:
+
+```bash
+quarto preview
+quarto render
+
+git add .
+git commit -m "Update site"
+git push
+
+quarto publish gh-pages
 ```

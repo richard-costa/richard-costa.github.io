@@ -22,8 +22,8 @@ Building things with data, models and code. I work mainly on the engineering and
 ::: {.hero-links}
 [github](https://github.com/richard-costa){.terminal-link}
 [linkedin](https://www.linkedin.com/in/richard-silva-costa){.terminal-link}
-[résumé - en](/resume/resume_english.pdf){.terminal-link}
-[résumé - pt](/resume/resume_portuguese.pdf){.terminal-link}
+[résumé - en](/files/resume/resume_english.pdf){.terminal-link}
+[résumé - pt](/files/resume/resume_portuguese.pdf){.terminal-link}
 [email](mailto:scosta.richard@gmail.com){.terminal-link}
 :::
 
@@ -65,7 +65,7 @@ python · postgres · pgvector · ollama
 :::
 
 ::: {.item-body}
-<p class="item-title">[review of quantum mechanics ↗](notes/qm_ii/qm_review.qmd)</p>
+<p class="item-title">[review of quantum mechanics ↗](notes/quantum-mechanics/review.qmd)</p>
 :::
 
 ::: {.item-meta}
@@ -81,7 +81,7 @@ physics · latex
 :::
 
 ::: {.item-body}
-<p class="item-title">[dirac notation & riesz theorem ↗](notes/qm-dirac-riesz.md)</p>
+<p class="item-title">[dirac notation & riesz theorem ↗](notes/quantum-mechanics/dirac-riesz.qmd)</p>
 :::
 
 ::: {.item-meta}

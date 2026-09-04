@@ -11,10 +11,14 @@ Technical notes and working material. Status labels are intentionally simple:
 
 ## quantum_mechanics
 
-- [Review of Quantum Mechanics](qm_ii/qm_review.qmd) [draft]{.note-status .status-draft}
-- [Dirac Notation and Riesz Theorem](qm-dirac-riesz.md) [draft]{.note-status .status-draft}
-- [Qubits and Hilbert Spaces — presentation, Portuguese](../files/apresentacao.pdf)
+- [Review of Quantum Mechanics](quantum-mechanics/review.qmd) [draft]{.note-status .status-draft}
+- [Dirac Notation and Riesz Theorem](quantum-mechanics/dirac-riesz.qmd) [draft]{.note-status .status-draft}
+- [Qubits and Hilbert Spaces — presentation, Portuguese](../files/qubits-hilbert-spaces-pt.pdf)
 
 ## logic
 
-- [Introduction to Logic](logic_intro.md) [draft]{.note-status .status-draft}
+- [Introduction to Logic](logic/introduction.qmd) [draft]{.note-status .status-draft}
+
+## resources
+
+- [Curated links and references](resources.qmd)
