@@ -202,13 +202,16 @@ h3 {
   font-size: 1.02rem;
 }
 
-.hero-links {
+.hero-links p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
+  margin: 0;
 }
 
 .terminal-link {
+  display: inline-flex;
+  white-space: nowrap;
   padding: 0.42rem 0.68rem;
   border: 1px solid $border;
   border-radius: 3px;
@@ -293,6 +296,10 @@ h3 {
   margin: 0;
   color: $muted;
   font-size: 0.9rem;
+}
+
+.item-body {
+  min-width: 0;
 }
 
 .item-meta {
@@ -395,16 +402,19 @@ div.sourceCode {
 p code,
 li code {
   padding: 0.14rem 0.32rem;
-  border: 1px solid #30363d;
+  border: 1px solid $code-border;
   border-radius: 3px;
-
-  background: #161b22;
   background: $code-bg;
   color: $code-text;
-  border: 1px solid $code-border;
-  
   font-weight: 500;
   overflow-wrap: anywhere;
+}
+
+// Keep media inside the content column on narrow screens.
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 // Horizontal scrolling keeps wide equations readable on small screens.
