@@ -22,7 +22,8 @@ Building things with data, models and code. I work mainly on the engineering and
 ::: {.hero-links}
 [github](https://github.com/richard-costa){.terminal-link}
 [linkedin](https://www.linkedin.com/in/richard-silva-costa){.terminal-link}
-[résumé](/resume/resume_english.pdf){.terminal-link}
+[résumé - en](/resume/resume_english.pdf){.terminal-link}
+[résumé - pt](/resume/resume_portuguese.pdf){.terminal-link}
 [email](mailto:scosta.richard@gmail.com){.terminal-link}
 :::
 
