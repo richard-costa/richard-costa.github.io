@@ -304,7 +304,6 @@ h3 {
 
 .item-meta {
   text-align: right;
-  white-space: nowrap;
 }
 
 .home-location {
@@ -388,7 +387,7 @@ main.content {
 
 
 code {
-  color: $accent;
+  color: $code-text;
 }
 
 pre,
