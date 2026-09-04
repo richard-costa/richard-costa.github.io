@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://richard-costa.github.io/resources.html</loc>
-    <lastmod>2026-09-04T22:46:14.123Z</lastmod>
-  </url>
-  <url>
     <loc>https://richard-costa.github.io/index.html</loc>
-    <lastmod>2026-09-04T23:22:00.357Z</lastmod>
+    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
   </url>
   <url>
     <loc>https://richard-costa.github.io/posts/20251204-quarto-arch.html</loc>
-    <lastmod>2026-09-04T21:37:31.079Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/posts/20251202-cosmic-and-sddm-omarchy.html</loc>
-    <lastmod>2026-09-04T21:37:31.079Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/notes/qm_ii/qm_review.html</loc>
-    <lastmod>2026-09-04T22:46:14.123Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/notes/logic_intro.html</loc>
-    <lastmod>2026-09-04T21:37:31.079Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/notes/qm-dirac-riesz.html</loc>
-    <lastmod>2026-09-04T21:37:31.079Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/notes/index.html</loc>
-    <lastmod>2026-09-04T22:46:14.122Z</lastmod>
+    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
   </url>
   <url>
     <loc>https://richard-costa.github.io/posts/20251203-calendar-omarchy.html</loc>
+    <lastmod>2026-09-04T21:37:31.079Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/resources.html</loc>
+    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/quantum-mechanics/dirac-riesz.html</loc>
+    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/index.html</loc>
+    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/logic/introduction.html</loc>
+    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/quantum-mechanics/review.html</loc>
+    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/posts/20251202-cosmic-and-sddm-omarchy.html</loc>
     <lastmod>2026-09-04T21:37:31.079Z</lastmod>
   </url>
   <url>
