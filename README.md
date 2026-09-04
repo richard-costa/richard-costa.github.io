@@ -10,6 +10,14 @@ quarto preview
 
 The generated site goes to `_site/` and is ignored by Git.
 
+To force all formats for the quantum-mechanics note:
+
+```bash
+quarto render notes/qm_ii/qm_review.qmd
+```
+
+That produces both the HTML page and, when a LaTeX installation is available, `_site/notes/qm_ii/qm_review.pdf`.
+
 ## Structure
 
 ```text
@@ -19,7 +27,8 @@ The generated site goes to `_site/` and is ignored by Git.
 ├── index.qmd            # homepage
 ├── notes/
 │   ├── _metadata.yml    # defaults inherited by technical notes
-│   └── ...              # note content / wrappers
+│   ├── .obsidian/       # local Obsidian settings; ignored by Git
+│   └── ...              # canonical note sources
 ├── posts/
 │   ├── _metadata.yaml   # defaults inherited by posts
 │   └── ...              # individual posts
@@ -37,7 +46,13 @@ The generated site goes to `_site/` and is ignored by Git.
 - **Technical-note defaults:** `notes/_metadata.yml`
 - **Post defaults:** `posts/_metadata.yaml`
 
-The theme deliberately uses one SCSS file instead of a Bootswatch theme plus override files. The first variables in `theme.scss` control most of the visual system.
+The theme uses one SCSS file instead of a Bootswatch theme plus override files. Its small token section controls the visual system; `$accent` controls the site's blue accent.
+
+## Notes and Obsidian
+
+The canonical note files live inside `notes/`. Open that directory as an Obsidian vault if you want to edit the same files in Obsidian.
+
+There are no external include paths or duplicated note sources. The local `notes/.obsidian/` directory is ignored by Git.
 
 ## Equations and cross-references
 
@@ -53,12 +68,14 @@ See @eq-energy.
 
 The project-level `eq-prefix: ""` setting keeps inline equation references compact.
 
-## Obsidian note source
+A note that needs a downloadable PDF should explicitly declare both formats:
 
-`notes/qm_ii/qm_review.qmd` currently includes:
+```yaml
+format:
+  html: default
+  pdf:
+    documentclass: article
 
-```text
-../../../../obsidian/00-inbox/qm-formalism.md
+format-links:
+  - pdf
 ```
-
-That external dependency is intentionally preserved for now so the existing local authoring workflow keeps working. A clean clone of this repository alone cannot render that note until its canonical source is moved into the repository.

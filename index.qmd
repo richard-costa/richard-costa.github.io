@@ -30,22 +30,22 @@ Building things with data, models and code. I work mainly on the engineering and
 
 ::: {.home-section}
 
-<p class="home-section-title">selected_work</p>
+<p class="section-label">selected_work</p>
 
-::: {.work-row}
+::: {.item-row}
 
-::: {.work-number}
+::: {.item-number}
 01
 :::
 
-::: {.work-body}
-<p class="work-title">[rag ↗](https://github.com/richard-costa/rag)</p>
-<p class="work-description">
+::: {.item-body}
+<p class="item-title">[rag ↗](https://github.com/richard-costa/rag)</p>
+<p class="item-description">
 A framework-light RAG implementation built to understand the underlying application structure rather than hide it behind abstractions.
 </p>
 :::
 
-::: {.tech}
+::: {.item-meta}
 python · postgres · pgvector · ollama
 :::
 
@@ -55,35 +55,35 @@ python · postgres · pgvector · ollama
 
 ::: {.home-section}
 
-<p class="home-section-title">selected_notes</p>
+<p class="section-label">selected_notes</p>
 
-::: {.note-row}
+::: {.item-row}
 
-::: {.note-number}
+::: {.item-number}
 01
 :::
 
-::: {.note-body}
-<p class="note-title">[review of quantum mechanics ↗](notes/qm_ii/qm_review.qmd)</p>
+::: {.item-body}
+<p class="item-title">[review of quantum mechanics ↗](notes/qm_ii/qm_review.qmd)</p>
 :::
 
-::: {.tech}
+::: {.item-meta}
 physics · latex
 :::
 
 :::
 
-::: {.note-row}
+::: {.item-row}
 
-::: {.note-number}
+::: {.item-number}
 02
 :::
 
-::: {.note-body}
-<p class="note-title">[dirac notation & riesz theorem ↗](notes/qm-dirac-riesz.md)</p>
+::: {.item-body}
+<p class="item-title">[dirac notation & riesz theorem ↗](notes/qm-dirac-riesz.md)</p>
 :::
 
-::: {.tech}
+::: {.item-meta}
 physics · math
 :::
 
