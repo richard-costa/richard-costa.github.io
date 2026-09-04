@@ -13,7 +13,7 @@ $text: #c8d1ce;
 $text-strong: #edf4f1;
 $muted: #7d8b87;
 $border: #202b2b;
-$accent: #6ea8fe; // main accent: change this one value to recolor the site
+$accent: #7e99c3; // main accent: change this one value to recolor the site
 
 $mono:
   "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -361,11 +361,20 @@ main.content {
   font-family: $mono;
 }
 
+.quarto-listing .listing-title {
+  margin-bottom: 0.6rem !important;
+}
+
+.quarto-listing .listing-categories {
+  margin-bottom: 1rem;
+}
+
 .quarto-listing .listing-date,
 .quarto-listing .listing-category,
 .quarto-listing .listing-description {
   color: $muted;
 }
+
 
 code {
   color: $accent;
