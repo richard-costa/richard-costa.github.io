@@ -1,40 +1,33 @@
 ---
-title: ""
+title: "resources"
+toc: true
 ---
 
-# Data Science
+A small collection of references I want to keep around.
 
-## Machine Learning
+## data_science
 
- - [The word 'tensor' in machine learning, math, and physics](https://stats.stackexchange.com/a/198395)
+### machine_learning
 
-___
-# Math/Physics
+- [The word "tensor" in machine learning, math, and physics](https://stats.stackexchange.com/a/198395)
 
-## Mathematical Physics
+## math_physics
 
-- [nlab entry on mathematical physics](https://ncatlab.org/nlab/show/mathematical+physics).
----
-# Linux 
+### mathematical_physics
 
-## Arch Linux/Omarchy
+- [nLab: mathematical physics](https://ncatlab.org/nlab/show/mathematical+physics)
 
-Blog posts about Omarchy, an Arch-Linux based distro (or a bunch of configurations if you want to call it that way):
+## linux
 
-- [installing cosmic and changing sddm on omarchy](posts/1.cosmic-and-sddm-omarchy.qmd)
-- [installing a calendar widget on omarchy](posts/2.calendar-omarchy.qmd)
+### arch_linux / omarchy
 
+- [Installing COSMIC and changing SDDM on Omarchy](posts/20251202-cosmic-and-sddm-omarchy.qmd)
+- [Installing a calendar widget on Omarchy](posts/20251203-calendar-omarchy.qmd)
 
-___
-# Other
+## quarto
 
-## Quarto
+This site is built with [Quarto](https://quarto.org/).
 
-This site is built using [quarto](https://quarto.org/). To know more about it you should start in the `get started` section. After that, the following articles were particularly useful to me:
-
-- [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/#where-you-should-start-changing-stuff)
+- [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/)
 - [Adding a blog to your existing Quarto website](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/)
-
-My blog posts about quarto:
-
-- [installing quarto on arch linux](posts/3.quarto-arch.md)
+- [Installing Quarto on Arch Linux](posts/20251204-quarto-arch.md)

@@ -1,0 +1,9 @@
+# Defaults inherited by every document inside notes/.
+# Individual notes only need to declare options that differ from these.
+format:
+  html:
+    toc: true
+
+  # Keep PDF/LaTeX output available for technical notes.
+  pdf:
+    documentclass: article

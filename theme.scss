@@ -1,0 +1,463 @@
+/*-- scss:defaults --*/
+
+// ============================================================
+// Richard Costa — minimal dark theme
+//
+// Most visual changes can be made by editing the small set of
+// variables below. Quarto still provides Bootstrap, MathJax,
+// code blocks, listings, TOCs, and cross-references underneath.
+// ============================================================
+
+$body-bg: #090d0f;
+$body-color: #c8d1ce;
+$headings-color: #edf4f1;
+$link-color: #74e0bd;
+
+$font-family-sans-serif:
+  -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+$font-family-monospace:
+  "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+
+/*-- scss:rules --*/
+
+:root {
+  --rc-bg: #090d0f;
+  --rc-surface: #0e1416;
+  --rc-surface-soft: #11191b;
+  --rc-text: #c8d1ce;
+  --rc-text-strong: #edf4f1;
+  --rc-muted: #7d8b87;
+  --rc-line: #202b2b;
+  --rc-accent: #74e0bd;
+  --rc-accent-soft: rgba(116, 224, 189, 0.10);
+  --rc-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+// ------------------------------------------------------------
+// Base
+// ------------------------------------------------------------
+
+html {
+  background: var(--rc-bg);
+}
+
+body {
+  background-color: var(--rc-bg);
+  color: var(--rc-text);
+  line-height: 1.72;
+  text-rendering: optimizeLegibility;
+}
+
+// A very faint grid gives the site some texture without turning
+// the background into a visual effect.
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(116, 224, 189, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(116, 224, 189, 0.018) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+a {
+  color: var(--rc-accent);
+  text-decoration-color: rgba(116, 224, 189, 0.42);
+  text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:focus {
+  color: #9aebd2;
+  text-decoration-color: currentColor;
+}
+
+::selection {
+  background: var(--rc-accent);
+  color: var(--rc-bg);
+}
+
+// ------------------------------------------------------------
+// Navigation
+// ------------------------------------------------------------
+
+.navbar {
+  background: rgba(9, 13, 15, 0.88);
+  border-bottom: 1px solid var(--rc-line);
+  backdrop-filter: blur(12px);
+}
+
+.navbar-brand {
+  color: var(--rc-text-strong) !important;
+  font-family: var(--rc-mono);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.navbar-nav .nav-link {
+  color: var(--rc-muted) !important;
+  font-family: var(--rc-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--rc-accent) !important;
+}
+
+.navbar-nav .nav-link::before {
+  content: "/";
+  color: #44504d;
+  margin-right: 0.12rem;
+}
+
+// ------------------------------------------------------------
+// Typography
+// ------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+.quarto-title .title {
+  color: var(--rc-text-strong);
+  font-family: var(--rc-mono);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+h2 {
+  margin-top: 2.8rem;
+  font-size: 1.35rem;
+}
+
+h2::before {
+  content: "> ";
+  color: var(--rc-accent);
+}
+
+h3 {
+  font-size: 1.05rem;
+}
+
+.quarto-title-meta,
+.description,
+.subtitle {
+  color: var(--rc-muted);
+}
+
+hr {
+  margin: 2.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--rc-line);
+  opacity: 1;
+}
+
+// ------------------------------------------------------------
+// Homepage
+// ------------------------------------------------------------
+
+.home-shell {
+  width: min(100% - 2rem, 980px);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 9vw, 7rem) 0 5rem;
+}
+
+.home-hero {
+  min-height: 54vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid var(--rc-line);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+}
+
+.home-identity {
+  margin: 0 0 2rem;
+  color: var(--rc-muted);
+  font-family: var(--rc-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.hero-role {
+  margin: 0.18rem 0;
+  color: var(--rc-text-strong);
+  font-family: var(--rc-mono);
+  font-size: clamp(1.35rem, 4vw, 2.2rem);
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+}
+
+.hero-role::first-letter {
+  color: var(--rc-accent);
+}
+
+.hero-copy {
+  max-width: 650px;
+  margin: 2rem 0 1.8rem;
+  color: var(--rc-muted);
+  font-size: 1.02rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.terminal-link {
+  display: inline-block;
+  padding: 0.42rem 0.68rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 3px;
+  color: var(--rc-text);
+  font-family: var(--rc-mono);
+  font-size: 0.78rem;
+  text-decoration: none;
+}
+
+.terminal-link::before {
+  content: "[ ";
+  color: var(--rc-muted);
+}
+
+.terminal-link::after {
+  content: " ]";
+  color: var(--rc-muted);
+}
+
+.terminal-link:hover {
+  border-color: var(--rc-accent);
+  background: var(--rc-accent-soft);
+  color: var(--rc-accent);
+  text-decoration: none;
+}
+
+.home-section {
+  padding: 3.2rem 0;
+  border-bottom: 1px solid var(--rc-line);
+}
+
+.home-section:last-child {
+  border-bottom: 0;
+}
+
+.home-section-title {
+  margin: 0 0 1.8rem;
+  color: var(--rc-muted);
+  font-family: var(--rc-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+}
+
+.home-section-title::before {
+  content: "";
+}
+
+.work-row,
+.note-row {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) auto;
+  gap: 1.2rem;
+  align-items: start;
+  padding: 1.2rem 0;
+}
+
+.work-row + .work-row,
+.note-row + .note-row {
+  border-top: 1px dashed var(--rc-line);
+}
+
+.work-number,
+.note-number {
+  padding-top: 0.15rem;
+  color: #53615d;
+  font-family: var(--rc-mono);
+  font-size: 0.72rem;
+}
+
+.work-title,
+.note-title {
+  margin: 0 0 0.35rem;
+  font-family: var(--rc-mono);
+  font-size: 0.98rem;
+}
+
+.work-title a,
+.note-title a {
+  color: var(--rc-text-strong);
+  text-decoration: none;
+}
+
+.work-title a:hover,
+.note-title a:hover {
+  color: var(--rc-accent);
+}
+
+.work-description {
+  max-width: 650px;
+  margin: 0;
+  color: var(--rc-muted);
+  font-size: 0.9rem;
+}
+
+.tech {
+  padding-top: 0.15rem;
+  color: var(--rc-muted);
+  font-family: var(--rc-mono);
+  font-size: 0.68rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.home-location {
+  color: var(--rc-muted);
+  font-family: var(--rc-mono);
+  font-size: 0.72rem;
+}
+
+// ------------------------------------------------------------
+// Notes, posts, and long-form content
+// ------------------------------------------------------------
+
+main.content {
+  padding-top: 2.2rem;
+}
+
+#TOC {
+  border-left-color: var(--rc-line);
+}
+
+#TOC a {
+  color: var(--rc-muted);
+}
+
+#TOC a:hover,
+#TOC .active {
+  color: var(--rc-accent) !important;
+}
+
+.note-status {
+  display: inline-block;
+  margin-left: 0.45rem;
+  padding: 0.08rem 0.38rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 3px;
+  color: var(--rc-muted);
+  font-family: var(--rc-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: 0.08em;
+}
+
+.status-draft {
+  border-color: #5a4c2f;
+  color: #cdb775;
+}
+
+.status-wip {
+  border-color: #30505b;
+  color: #7fc7d7;
+}
+
+.status-mature {
+  border-color: #305743;
+  color: #82d6ab;
+}
+
+// Quarto listing pages.
+.quarto-listing .listing-item {
+  border-bottom-color: var(--rc-line) !important;
+}
+
+.quarto-listing .listing-title,
+.quarto-listing .listing-title a {
+  color: var(--rc-text-strong);
+  font-family: var(--rc-mono);
+}
+
+.quarto-listing .listing-date,
+.quarto-listing .listing-category,
+.quarto-listing .listing-description {
+  color: var(--rc-muted);
+}
+
+// Code. Syntax colors remain Quarto's responsibility.
+code {
+  color: #91e8cc;
+}
+
+pre,
+div.sourceCode {
+  border: 1px solid var(--rc-line);
+  border-radius: 4px;
+  background: var(--rc-surface) !important;
+}
+
+p code,
+li code {
+  padding: 0.12rem 0.28rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 3px;
+  background: var(--rc-surface-soft);
+}
+
+// Keep wide equations usable on narrow screens. This does not
+// alter MathJax numbering or Quarto cross-reference anchors.
+.math.display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+// ------------------------------------------------------------
+// Footer and responsive tweaks
+// ------------------------------------------------------------
+
+.nav-footer {
+  border-top: 1px solid var(--rc-line);
+  color: var(--rc-muted);
+  font-family: var(--rc-mono);
+  font-size: 0.68rem;
+}
+
+@media (max-width: 680px) {
+  .home-shell {
+    width: min(100% - 1.4rem, 980px);
+    padding-top: 2.5rem;
+  }
+
+  .home-hero {
+    min-height: auto;
+  }
+
+  .work-row,
+  .note-row {
+    grid-template-columns: 2rem minmax(0, 1fr);
+  }
+
+  .tech {
+    grid-column: 2;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .navbar-nav .nav-link::before {
+    content: "";
+  }
+}

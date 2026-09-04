@@ -1,13 +1,6 @@
 ---
-title: 'Review of Quantum Mechanics'
-status: draft # draft | wip | mature
-
-format:
-  html:
-    toc: true
-  pdf:
-    documentclass: article
-
+title: "Review of Quantum Mechanics"
+status: draft
 ---
 
 {{< include ../../../../obsidian/00-inbox/qm-formalism.md >}}

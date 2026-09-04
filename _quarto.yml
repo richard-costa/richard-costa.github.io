@@ -1,29 +1,36 @@
+# Site-wide Quarto configuration.
+# Page-specific options belong in the page itself or in a directory _metadata.yml.
 project:
   type: website
 
-filters:
-  - note-header.lua
-
 website:
   title: "Richard Costa"
+  site-url: "https://richard-costa.github.io"
+
   navbar:
+    title: "richard.costa_"
     right:
-      - href: index.qmd
-        text: Home
-      - href: posts.qmd
-        text: posts
       - href: notes/index.qmd
         text: notes
+      - href: posts.qmd
+        text: posts
       - href: resources.qmd
         text: resources
+      - href: https://github.com/richard-costa
+        text: github
 
+  page-footer:
+    left: "Richard Costa"
+    right: "Built with Quarto"
 
 format:
   html:
-    theme: lux
-    css: styles.css
+    theme: theme.scss
     toc: true
+    smooth-scroll: true
+    code-copy: true
 
+# Keep equation references compact: "(1)" instead of "Equation 1".
+# Equation numbering/cross-references remain Quarto-native.
 crossref:
-    eq-prefix: ""
-
+  eq-prefix: ""

@@ -1,32 +1,20 @@
 ---
-title: ""
+title: "notes"
+toc: false
 ---
 
-::: {.callout-note appearance="minimal"}
-**Note maturity levels**
+Technical notes and working material. Status labels are intentionally simple:
 
-- **Draft** — incomplete or exploratory notes
-- **Work in progress** — actively developed
-- **Mature** — stable and polished
-:::
+- **draft** — incomplete or exploratory
+- **wip** — actively developed
+- **mature** — stable and polished
 
----
+## quantum_mechanics
 
-### Quantum Mechanics
+- [Review of Quantum Mechanics](qm_ii/qm_review.qmd) [draft]{.note-status .status-draft}
+- [Dirac Notation and Riesz Theorem](qm-dirac-riesz.md) [draft]{.note-status .status-draft}
+- [Qubits and Hilbert Spaces — presentation, Portuguese](../files/apresentacao.pdf)
 
-- Quantum Mechanics II
-  - [Review of Quantum Mechanics](qm_ii/qm_review.qmd)
-    <span class="note-status  status-draft">DRAFT</span>
+## logic
 
-- Mathematical Formalism
-  - [Dirac Notation and Riesz Theorem](qm-dirac-riesz.md)
-    <span class="note-status status-draft">DRAFT</span>
-
-
-- [Presentation on Qubits and Hilbert Spaces (In Portuguese)](../files/apresentacao.pdf)
-
-### Logic
-
-- [Introduction to Logic](logic_intro.md)
-<span class="note-status status-draft">DRAFT</span>
-
+- [Introduction to Logic](logic_intro.md) [draft]{.note-status .status-draft}
