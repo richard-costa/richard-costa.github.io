@@ -14,6 +14,10 @@ $text-strong: #edf4f1;
 $muted: #7d8b87;
 $border: #202b2b;
 $accent: #7e99c3; // main accent: change this one value to recolor the site
+$code-bg: #161b22;
+$code-text: #e6edf3;
+$code-border: #30363d;
+
 
 $mono:
   "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -387,12 +391,20 @@ div.sourceCode {
   background: $surface !important;
 }
 
+// Inline code should be readable, not use the site's accent color.
 p code,
 li code {
-  padding: 0.12rem 0.28rem;
-  border: 1px solid $border;
+  padding: 0.14rem 0.32rem;
+  border: 1px solid #30363d;
   border-radius: 3px;
-  background: $surface;
+
+  background: #161b22;
+  background: $code-bg;
+  color: $code-text;
+  border: 1px solid $code-border;
+  
+  font-weight: 500;
+  overflow-wrap: anywhere;
 }
 
 // Horizontal scrolling keeps wide equations readable on small screens.
