@@ -1,6 +1,6 @@
 ---
 title: "YAD calendar popup for Waybar"
-status: wip
+status: mature
 ---
 
 A small clickable calendar for Waybar using [YAD](https://github.com/v1cont/yad), with optional Hyprland integration.

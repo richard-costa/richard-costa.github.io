@@ -5,6 +5,6 @@ toc: false
 
 Configuration and troubleshooting notes.
 
-- [Using the SDDM Astronaut theme](sddm-astronaut-theme.qmd) [wip]{.note-status .status-wip}
-- [YAD calendar popup for Waybar](waybar-yad-calendar.qmd) [wip]{.note-status .status-wip}
+- [Using the SDDM Astronaut theme](sddm-astronaut-theme.qmd) [developing]{.note-status .status-developing}
+- [YAD calendar popup for Waybar](waybar-yad-calendar.qmd) [mature]{.note-status .status-mature}
 - [Installing and updating Quarto on Arch Linux](arch/quarto.qmd) [mature]{.note-status .status-mature}
