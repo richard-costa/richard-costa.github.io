@@ -6,12 +6,20 @@ toc: false
 Technical notes and working material. Status labels are intentionally simple:
 
 - **draft** — incomplete or exploratory
-- **wip** — actively developed
+- **wip** — actively developed or version-sensitive
 - **mature** — stable and polished
 
 ## linux
 
-- [Linux configuration and troubleshooting](linux/index.qmd) [mature]{.note-status .status-mature}
+### omarchy
+
+- [Omarchy autologin and requiring a password after boot](linux/omarchy/autologin-and-password.qmd) [wip]{.note-status .status-wip}
+- [Fixing logout to an empty desktop on Omarchy 4.0.1](linux/omarchy/logout-empty-session.qmd) [wip]{.note-status .status-wip}
+- [Multiple users on Omarchy](linux/omarchy/multiple-users.qmd) [wip]{.note-status .status-wip}
+
+### arch_linux
+
+- [Installing current Quarto on Arch Linux](linux/arch/quarto.qmd) [mature]{.note-status .status-mature}
 
 ## quantum_mechanics
 

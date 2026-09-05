@@ -3,10 +3,8 @@ title: "omarchy"
 toc: false
 ---
 
-Focused setup and troubleshooting notes for Omarchy.
+Current Omarchy notes. These are version-sensitive because Omarchy changes quickly.
 
-- [Installing COSMIC on Omarchy](install-cosmic.qmd) [mature]{.note-status .status-mature}
-- [Configuring SDDM on Omarchy](sddm.qmd) [mature]{.note-status .status-mature}
-- [Adding logout to the Omarchy menu](logout-menu.qmd) [mature]{.note-status .status-mature}
-- [Adding another user](add-user.qmd) [mature]{.note-status .status-mature}
-- [Calendar on Omarchy](calendar.qmd) [mature]{.note-status .status-mature}
+- [Omarchy autologin and requiring a password after boot](autologin-and-password.qmd) [wip]{.note-status .status-wip}
+- [Fixing logout to an empty desktop on Omarchy 4.0.1](logout-empty-session.qmd) [wip]{.note-status .status-wip}
+- [Multiple users on Omarchy](multiple-users.qmd) [wip]{.note-status .status-wip}

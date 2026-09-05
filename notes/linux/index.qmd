@@ -3,12 +3,14 @@ title: "linux"
 toc: false
 ---
 
-Configuration and troubleshooting notes. These are setup-specific snapshots; verify package names, paths, and commands against your current system before applying them.
+Configuration and troubleshooting notes.
 
 ## omarchy
 
-- [Omarchy notes](omarchy/index.qmd)
+- [Omarchy autologin and requiring a password after boot](omarchy/autologin-and-password.qmd) [wip]{.note-status .status-wip}
+- [Fixing logout to an empty desktop on Omarchy 4.0.1](omarchy/logout-empty-session.qmd) [wip]{.note-status .status-wip}
+- [Multiple users on Omarchy](omarchy/multiple-users.qmd) [wip]{.note-status .status-wip}
 
 ## arch_linux
 
-- [Arch Linux notes](arch/index.qmd)
+- [Installing current Quarto on Arch Linux](arch/quarto.qmd) [mature]{.note-status .status-mature}

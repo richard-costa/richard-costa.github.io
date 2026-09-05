@@ -1,76 +1,42 @@
 ---
-title: "Installing Quarto on Arch Linux"
+title: "Installing current Quarto on Arch Linux"
 status: mature
 ---
 
-Manual Quarto installation for Arch Linux when using the upstream tarball instead of a package-manager installation.
+There are two reasonable ways to install Quarto on Arch: use an AUR package, or use Quarto's official Linux tarball. The old version of this note assumed the Arch package route was unavailable; that is no longer true.
 
-## install from the tarball
+## option 1: AUR
 
-Download the Linux AMD64 tarball from the [Quarto download page](https://quarto.org/docs/get-started/).
-
-For version `1.8.26`:
+The AUR currently has `quarto-cli-bin`:
 
 ```bash
-cd ~/Downloads
-tar -xvzf quarto-1.8.26-linux-amd64.tar.gz
-sudo mv quarto-1.8.26 /opt/quarto
-sudo ln -sf /opt/quarto/bin/quarto /usr/local/bin/quarto
+yay -S quarto-cli-bin
 ```
 
-Check the installation:
+This is the simplest Arch-style installation, but the AUR package can lag behind Quarto's current upstream release.
+
+## option 2: official tarball
+
+Quarto documents a user-local tarball installation on Linux. Download the current Linux x86_64 tarball from the [Quarto release page](https://quarto.org/docs/download/release), then extract it under `~/opt` and link the executable into `~/.local/bin`.
+
+For a downloaded file named `quarto-VERSION-linux-amd64.tar.gz`:
 
 ```bash
-quarto --version
+mkdir -p ~/opt ~/.local/bin
+tar -C ~/opt -xzf ~/Downloads/quarto-VERSION-linux-amd64.tar.gz
+ln -sfn ~/opt/quarto-VERSION/bin/quarto ~/.local/bin/quarto
 ```
 
-## update script
-
-For a manual installation, this script replaces the existing `/opt/quarto` directory with the latest Linux AMD64 release.
-
-Create `/usr/local/bin/update-quarto`:
+Make sure `~/.local/bin` is on `PATH`, then verify:
 
 ```bash
-#!/usr/bin/env bash
-set -e
-
-INSTALL_DIR="/opt/quarto"
-BIN_LINK="/usr/local/bin/quarto"
-
-echo "removing old quarto installation..."
-sudo rm -rf "$INSTALL_DIR"
-
-echo "downloading latest quarto release..."
-cd /tmp
-LATEST_URL=$(curl -s https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest \
-  | grep browser_download_url \
-  | grep linux-amd64.tar.gz \
-  | cut -d '"' -f 4)
-
-curl -sSL "$LATEST_URL" -o quarto.tar.gz
-
-echo "extracting..."
-tar -xzf quarto.tar.gz
-EXTRACTED_DIR=$(tar -tf quarto.tar.gz | head -1 | cut -f1 -d"/")
-
-echo "installing to $INSTALL_DIR..."
-sudo mv "$EXTRACTED_DIR" "$INSTALL_DIR"
-sudo ln -sf "$INSTALL_DIR/bin/quarto" "$BIN_LINK"
-
-echo "cleaning up..."
-rm -f quarto.tar.gz
-
-echo "done. installed $(/usr/local/bin/quarto --version)"
+quarto check
 ```
 
-Make it executable:
+Using a user-local install avoids the old `sudo mv ... /opt/quarto` setup and does not require maintaining a root-owned updater script.
 
-```bash
-sudo chmod +x /usr/local/bin/update-quarto
-```
+## references
 
-Then update with:
-
-```bash
-update-quarto
-```
+- [Quarto: Tarball Installation on Linux](https://quarto.org/docs/download/tarball.html)
+- [Quarto release builds](https://quarto.org/docs/download/release)
+- [AUR: quarto-cli-bin](https://aur.archlinux.org/packages/quarto-cli-bin)
