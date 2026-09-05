@@ -23,4 +23,21 @@ Technical notes and working material. Status labels are **draft**, **developing*
 
 ## resources
 
-- [Curated links and references](resources.qmd)
+References I want to keep around.
+
+### data science/ml
+
+- [The word "tensor" in machine learning, math, and physics](https://stats.stackexchange.com/a/198395)
+
+
+### mathematical_physics
+
+- [nLab: mathematical physics](https://ncatlab.org/nlab/show/mathematical+physics)
+
+### quarto
+
+This site is built with [Quarto](https://quarto.org/).
+
+- [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/)
+- [Adding a blog to your existing Quarto website](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/)
+
