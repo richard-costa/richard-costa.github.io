@@ -14,6 +14,132 @@
     "text": "Somewhere someone played piano to an elderly elephant. That’s it. Also, they flap their ears to express some emotions."
   },
   {
+    "objectID": "notes/linux/sddm-astronaut-theme.html",
+    "href": "notes/linux/sddm-astronaut-theme.html",
+    "title": "Using the SDDM Astronaut theme",
+    "section": "",
+    "text": "Notes from a setup where I disabled SDDM autologin and used sddm-astronaut-theme.\nThis was originally configured in December 2025 and has not been recently retested."
+  },
+  {
+    "objectID": "notes/linux/sddm-astronaut-theme.html#disable-autologin",
+    "href": "notes/linux/sddm-astronaut-theme.html#disable-autologin",
+    "title": "Using the SDDM Astronaut theme",
+    "section": "disable autologin",
+    "text": "disable autologin\nOn that setup, autologin was configured in:\n/etc/sddm.conf.d/autologin.conf\nThe file contained an [Autologin] section similar to:\n[Autologin]\nUser=&lt;your_user&gt;\nSession=hyprland-uwsm\nBack up the file before changing it:\nsudo cp /etc/sddm.conf.d/autologin.conf /etc/sddm.conf.d/autologin.conf.bak\nRemoving the autologin configuration made SDDM show the login screen instead of entering the session automatically.\nThe exact SDDM configuration path can vary, so check the current system before copying this literally."
+  },
+  {
+    "objectID": "notes/linux/sddm-astronaut-theme.html#install-the-theme",
+    "href": "notes/linux/sddm-astronaut-theme.html#install-the-theme",
+    "title": "Using the SDDM Astronaut theme",
+    "section": "install the theme",
+    "text": "install the theme\nThe Astronaut theme project provides an installer:\nsh -c \"$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)\"\nReview remote scripts before piping them to a shell.\nOn this setup the installed theme metadata was:\n/usr/share/sddm/themes/sddm-astronaut-theme/metadata.desktop\nThe selected variant is controlled by ConfigFile. For example:\n[SddmGreeterTheme]\nName=sddm-astronaut-theme\nConfigFile=Themes/japanese_aesthetic.conf\nThe available variants are in the project’s Themes directory."
+  },
+  {
+    "objectID": "notes/linux/arch/quarto.html",
+    "href": "notes/linux/arch/quarto.html",
+    "title": "Installing and updating Quarto on Arch Linux",
+    "section": "",
+    "text": "There are two useful installation paths: an AUR package, or Quarto’s upstream Linux tarball."
+  },
+  {
+    "objectID": "notes/linux/arch/quarto.html#aur",
+    "href": "notes/linux/arch/quarto.html#aur",
+    "title": "Installing and updating Quarto on Arch Linux",
+    "section": "AUR",
+    "text": "AUR\nUsing an AUR helper:\nyay -S quarto-cli-bin\nIf Quarto is installed this way, normal AUR/package updates should handle future versions."
+  },
+  {
+    "objectID": "notes/linux/arch/quarto.html#manual-user-local-install",
+    "href": "notes/linux/arch/quarto.html#manual-user-local-install",
+    "title": "Installing and updating Quarto on Arch Linux",
+    "section": "manual user-local install",
+    "text": "manual user-local install\nFor a manual installation, download the current Linux AMD64 tarball from the Quarto release page.\nA user-local layout avoids a root-owned installation under /opt:\n~/.local/opt/quarto/\n~/.local/bin/quarto -&gt; ~/.local/opt/quarto/bin/quarto\nExtract a downloaded release and create the symlink:\nmkdir -p ~/.local/opt ~/.local/bin\n\ntar -xzf ~/Downloads/quarto-VERSION-linux-amd64.tar.gz -C /tmp\nrm -rf ~/.local/opt/quarto\nmv /tmp/quarto-VERSION ~/.local/opt/quarto\nln -sfn ~/.local/opt/quarto/bin/quarto ~/.local/bin/quarto\nMake sure ~/.local/bin is on PATH, then check:\nquarto check"
+  },
+  {
+    "objectID": "notes/linux/arch/quarto.html#update-quarto-script",
+    "href": "notes/linux/arch/quarto.html#update-quarto-script",
+    "title": "Installing and updating Quarto on Arch Linux",
+    "section": "update-quarto script",
+    "text": "update-quarto script\nIf using the manual tarball installation, automating updates is still useful.\nCreate ~/.local/bin/update-quarto:\n#!/usr/bin/env bash\nset -euo pipefail\n\nINSTALL_DIR=\"$HOME/.local/opt/quarto\"\nBIN_LINK=\"$HOME/.local/bin/quarto\"\n\ntmp_dir=$(mktemp -d)\ntrap 'rm -rf \"$tmp_dir\"' EXIT\n\necho \"finding latest Quarto release...\"\nlatest_url=$(\n  curl -fsSL https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest |\n    sed -n 's/.*\"browser_download_url\": \"\\([^\"]*linux-amd64\\.tar\\.gz\\)\".*/\\1/p' |\n    head -n 1\n)\n\nif [[ -z \"$latest_url\" ]]; then\n  echo \"could not find the latest Linux AMD64 tarball\" &gt;&2\n  exit 1\nfi\n\necho \"downloading...\"\ncurl -fL \"$latest_url\" -o \"$tmp_dir/quarto.tar.gz\"\n\necho \"extracting...\"\ntar -xzf \"$tmp_dir/quarto.tar.gz\" -C \"$tmp_dir\"\n\nextracted_dir=$(\n  find \"$tmp_dir\" -mindepth 1 -maxdepth 1 -type d -name 'quarto-*' |\n    head -n 1\n)\n\nif [[ -z \"$extracted_dir\" ]]; then\n  echo \"could not find extracted Quarto directory\" &gt;&2\n  exit 1\nfi\n\nmkdir -p \"$(dirname \"$INSTALL_DIR\")\" \"$(dirname \"$BIN_LINK\")\"\n\necho \"installing...\"\nrm -rf \"$INSTALL_DIR\"\nmv \"$extracted_dir\" \"$INSTALL_DIR\"\nln -sfn \"$INSTALL_DIR/bin/quarto\" \"$BIN_LINK\"\n\necho \"installed Quarto $(\"$BIN_LINK\" --version)\"\nMake it executable:\nchmod +x ~/.local/bin/update-quarto\nThen update with:\nupdate-quarto\nThis keeps the useful part of the old updater workflow without requiring sudo or replacing a root-owned /opt/quarto directory."
+  },
+  {
+    "objectID": "notes/linux/arch/quarto.html#references",
+    "href": "notes/linux/arch/quarto.html#references",
+    "title": "Installing and updating Quarto on Arch Linux",
+    "section": "references",
+    "text": "references\n\nQuarto: Tarball Installation on Linux\nQuarto release builds\nAUR: quarto-cli-bin"
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "notes",
+    "section": "",
+    "text": "Technical notes and working material. Status labels are draft, developing and mature."
+  },
+  {
+    "objectID": "notes/index.html#linux",
+    "href": "notes/index.html#linux",
+    "title": "notes",
+    "section": "linux",
+    "text": "linux\n\nUsing the SDDM Astronaut theme developing\nYAD calendar popup for Waybar mature\nInstalling and updating Quarto on Arch Linux mature"
+  },
+  {
+    "objectID": "notes/index.html#quantum_mechanics",
+    "href": "notes/index.html#quantum_mechanics",
+    "title": "notes",
+    "section": "quantum_mechanics",
+    "text": "quantum_mechanics\n\nReview of Quantum Mechanics draft\nDirac Notation and Riesz Theorem draft\nQubits and Hilbert Spaces — presentation, Portuguese"
+  },
+  {
+    "objectID": "notes/index.html#logic",
+    "href": "notes/index.html#logic",
+    "title": "notes",
+    "section": "logic",
+    "text": "logic\n\nIntroduction to Logic draft"
+  },
+  {
+    "objectID": "notes/index.html#resources",
+    "href": "notes/index.html#resources",
+    "title": "notes",
+    "section": "resources",
+    "text": "resources\nReferences I want to keep around.\n\ndata science/ml\n\nThe word “tensor” in machine learning, math, and physics\n\n\n\nmathematical_physics\n\nnLab: mathematical physics\n\n\n\nquarto\nThis site is built with Quarto.\n\nCreating your personal website using Quarto\nAdding a blog to your existing Quarto website"
+  },
+  {
+    "objectID": "notes/quantum-mechanics/dirac-riesz.html",
+    "href": "notes/quantum-mechanics/dirac-riesz.html",
+    "title": "Dirac Notation and Riesz Theorem",
+    "section": "",
+    "text": "Riesz Representation Theorem"
+  },
+  {
+    "objectID": "notes/logic/introduction.html",
+    "href": "notes/logic/introduction.html",
+    "title": "Introduction to Logic",
+    "section": "",
+    "text": "Introduction to Logic — Cezar Mortari"
+  },
+  {
+    "objectID": "notes/quantum-mechanics/review.html",
+    "href": "notes/quantum-mechanics/review.html",
+    "title": "Review of Quantum Mechanics",
+    "section": "",
+    "text": "This is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[\n| \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle\n\\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\n\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\n\\] Positions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\n\n\nStationary States\n\n\nSuggested Reading\n\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
+  },
+  {
+    "objectID": "notes/linux/arch/index.html",
+    "href": "notes/linux/arch/index.html",
+    "title": "arch linux",
+    "section": "",
+    "text": "Installing current Quarto on Arch Linux mature"
+  },
+  {
+    "objectID": "notes/linux/index.html",
+    "href": "notes/linux/index.html",
+    "title": "linux",
+    "section": "",
+    "text": "Configuration and troubleshooting notes.\n\nUsing the SDDM Astronaut theme developing\nYAD calendar popup for Waybar mature\nInstalling and updating Quarto on Arch Linux mature"
+  },
+  {
     "objectID": "notes/linux/waybar-yad-calendar.html",
     "href": "notes/linux/waybar-yad-calendar.html",
     "title": "YAD calendar popup for Waybar",
@@ -54,167 +180,6 @@
     "title": "YAD calendar popup for Waybar",
     "section": "optional Hyprland keybinding",
     "text": "optional Hyprland keybinding\nFor SUPER + C:\nbindd = SUPER, C, Calendar, exec, ~/.config/waybar/scripts/calendar.sh\nTo float and center the popup:\nwindowrulev2 = float, class:^(?i:yad)$, title:^(Calendar)$\nwindowrulev2 = center, class:^(?i:yad)$, title:^(Calendar)$"
-  },
-  {
-    "objectID": "notes/linux/index.html",
-    "href": "notes/linux/index.html",
-    "title": "linux",
-    "section": "",
-    "text": "Configuration and troubleshooting notes.\n\nUsing the SDDM Astronaut theme developing\nYAD calendar popup for Waybar mature\nInstalling and updating Quarto on Arch Linux mature"
-  },
-  {
-    "objectID": "notes/linux/arch/index.html",
-    "href": "notes/linux/arch/index.html",
-    "title": "arch linux",
-    "section": "",
-    "text": "Installing current Quarto on Arch Linux mature"
-  },
-  {
-    "objectID": "notes/quantum-mechanics/review.html",
-    "href": "notes/quantum-mechanics/review.html",
-    "title": "Review of Quantum Mechanics",
-    "section": "",
-    "text": "This is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[\n| \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle\n\\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\n\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\n\\] Positions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\n\n\nStationary States\n\n\nSuggested Reading\n\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
-  },
-  {
-    "objectID": "notes/logic/introduction.html",
-    "href": "notes/logic/introduction.html",
-    "title": "Introduction to Logic",
-    "section": "",
-    "text": "Introduction to Logic — Cezar Mortari"
-  },
-  {
-    "objectID": "notes/quantum-mechanics/dirac-riesz.html",
-    "href": "notes/quantum-mechanics/dirac-riesz.html",
-    "title": "Dirac Notation and Riesz Theorem",
-    "section": "",
-    "text": "Riesz Representation Theorem"
-  },
-  {
-    "objectID": "notes/index.html",
-    "href": "notes/index.html",
-    "title": "notes",
-    "section": "",
-    "text": "Technical notes and working material. Status labels are draft, developing and mature."
-  },
-  {
-    "objectID": "notes/index.html#linux",
-    "href": "notes/index.html#linux",
-    "title": "notes",
-    "section": "linux",
-    "text": "linux\n\nUsing the SDDM Astronaut theme developing\nYAD calendar popup for Waybar mature\nInstalling and updating Quarto on Arch Linux mature"
-  },
-  {
-    "objectID": "notes/index.html#quantum_mechanics",
-    "href": "notes/index.html#quantum_mechanics",
-    "title": "notes",
-    "section": "quantum_mechanics",
-    "text": "quantum_mechanics\n\nReview of Quantum Mechanics draft\nDirac Notation and Riesz Theorem draft\nQubits and Hilbert Spaces — presentation, Portuguese"
-  },
-  {
-    "objectID": "notes/index.html#logic",
-    "href": "notes/index.html#logic",
-    "title": "notes",
-    "section": "logic",
-    "text": "logic\n\nIntroduction to Logic draft"
-  },
-  {
-    "objectID": "notes/index.html#resources",
-    "href": "notes/index.html#resources",
-    "title": "notes",
-    "section": "resources",
-    "text": "resources\n\nCurated links and references"
-  },
-  {
-    "objectID": "notes/linux/arch/quarto.html",
-    "href": "notes/linux/arch/quarto.html",
-    "title": "Installing and updating Quarto on Arch Linux",
-    "section": "",
-    "text": "There are two useful installation paths: an AUR package, or Quarto’s upstream Linux tarball."
-  },
-  {
-    "objectID": "notes/linux/arch/quarto.html#aur",
-    "href": "notes/linux/arch/quarto.html#aur",
-    "title": "Installing and updating Quarto on Arch Linux",
-    "section": "AUR",
-    "text": "AUR\nUsing an AUR helper:\nyay -S quarto-cli-bin\nIf Quarto is installed this way, normal AUR/package updates should handle future versions."
-  },
-  {
-    "objectID": "notes/linux/arch/quarto.html#manual-user-local-install",
-    "href": "notes/linux/arch/quarto.html#manual-user-local-install",
-    "title": "Installing and updating Quarto on Arch Linux",
-    "section": "manual user-local install",
-    "text": "manual user-local install\nFor a manual installation, download the current Linux AMD64 tarball from the Quarto release page.\nA user-local layout avoids a root-owned installation under /opt:\n~/.local/opt/quarto/\n~/.local/bin/quarto -&gt; ~/.local/opt/quarto/bin/quarto\nExtract a downloaded release and create the symlink:\nmkdir -p ~/.local/opt ~/.local/bin\n\ntar -xzf ~/Downloads/quarto-VERSION-linux-amd64.tar.gz -C /tmp\nrm -rf ~/.local/opt/quarto\nmv /tmp/quarto-VERSION ~/.local/opt/quarto\nln -sfn ~/.local/opt/quarto/bin/quarto ~/.local/bin/quarto\nMake sure ~/.local/bin is on PATH, then check:\nquarto check"
-  },
-  {
-    "objectID": "notes/linux/arch/quarto.html#update-quarto-script",
-    "href": "notes/linux/arch/quarto.html#update-quarto-script",
-    "title": "Installing and updating Quarto on Arch Linux",
-    "section": "update-quarto script",
-    "text": "update-quarto script\nIf using the manual tarball installation, automating updates is still useful.\nCreate ~/.local/bin/update-quarto:\n#!/usr/bin/env bash\nset -euo pipefail\n\nINSTALL_DIR=\"$HOME/.local/opt/quarto\"\nBIN_LINK=\"$HOME/.local/bin/quarto\"\n\ntmp_dir=$(mktemp -d)\ntrap 'rm -rf \"$tmp_dir\"' EXIT\n\necho \"finding latest Quarto release...\"\nlatest_url=$(\n  curl -fsSL https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest |\n    sed -n 's/.*\"browser_download_url\": \"\\([^\"]*linux-amd64\\.tar\\.gz\\)\".*/\\1/p' |\n    head -n 1\n)\n\nif [[ -z \"$latest_url\" ]]; then\n  echo \"could not find the latest Linux AMD64 tarball\" &gt;&2\n  exit 1\nfi\n\necho \"downloading...\"\ncurl -fL \"$latest_url\" -o \"$tmp_dir/quarto.tar.gz\"\n\necho \"extracting...\"\ntar -xzf \"$tmp_dir/quarto.tar.gz\" -C \"$tmp_dir\"\n\nextracted_dir=$(\n  find \"$tmp_dir\" -mindepth 1 -maxdepth 1 -type d -name 'quarto-*' |\n    head -n 1\n)\n\nif [[ -z \"$extracted_dir\" ]]; then\n  echo \"could not find extracted Quarto directory\" &gt;&2\n  exit 1\nfi\n\nmkdir -p \"$(dirname \"$INSTALL_DIR\")\" \"$(dirname \"$BIN_LINK\")\"\n\necho \"installing...\"\nrm -rf \"$INSTALL_DIR\"\nmv \"$extracted_dir\" \"$INSTALL_DIR\"\nln -sfn \"$INSTALL_DIR/bin/quarto\" \"$BIN_LINK\"\n\necho \"installed Quarto $(\"$BIN_LINK\" --version)\"\nMake it executable:\nchmod +x ~/.local/bin/update-quarto\nThen update with:\nupdate-quarto\nThis keeps the useful part of the old updater workflow without requiring sudo or replacing a root-owned /opt/quarto directory."
-  },
-  {
-    "objectID": "notes/linux/arch/quarto.html#references",
-    "href": "notes/linux/arch/quarto.html#references",
-    "title": "Installing and updating Quarto on Arch Linux",
-    "section": "references",
-    "text": "references\n\nQuarto: Tarball Installation on Linux\nQuarto release builds\nAUR: quarto-cli-bin"
-  },
-  {
-    "objectID": "notes/linux/sddm-astronaut-theme.html",
-    "href": "notes/linux/sddm-astronaut-theme.html",
-    "title": "Using the SDDM Astronaut theme",
-    "section": "",
-    "text": "Notes from a setup where I disabled SDDM autologin and used sddm-astronaut-theme.\nThis was originally configured in December 2025 and has not been recently retested."
-  },
-  {
-    "objectID": "notes/linux/sddm-astronaut-theme.html#disable-autologin",
-    "href": "notes/linux/sddm-astronaut-theme.html#disable-autologin",
-    "title": "Using the SDDM Astronaut theme",
-    "section": "disable autologin",
-    "text": "disable autologin\nOn that setup, autologin was configured in:\n/etc/sddm.conf.d/autologin.conf\nThe file contained an [Autologin] section similar to:\n[Autologin]\nUser=&lt;your_user&gt;\nSession=hyprland-uwsm\nBack up the file before changing it:\nsudo cp /etc/sddm.conf.d/autologin.conf /etc/sddm.conf.d/autologin.conf.bak\nRemoving the autologin configuration made SDDM show the login screen instead of entering the session automatically.\nThe exact SDDM configuration path can vary, so check the current system before copying this literally."
-  },
-  {
-    "objectID": "notes/linux/sddm-astronaut-theme.html#install-the-theme",
-    "href": "notes/linux/sddm-astronaut-theme.html#install-the-theme",
-    "title": "Using the SDDM Astronaut theme",
-    "section": "install the theme",
-    "text": "install the theme\nThe Astronaut theme project provides an installer:\nsh -c \"$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)\"\nReview remote scripts before piping them to a shell.\nOn this setup the installed theme metadata was:\n/usr/share/sddm/themes/sddm-astronaut-theme/metadata.desktop\nThe selected variant is controlled by ConfigFile. For example:\n[SddmGreeterTheme]\nName=sddm-astronaut-theme\nConfigFile=Themes/japanese_aesthetic.conf\nThe available variants are in the project’s Themes directory."
-  },
-  {
-    "objectID": "notes/resources.html",
-    "href": "notes/resources.html",
-    "title": "resources",
-    "section": "",
-    "text": "A curated collection of references I want to keep around."
-  },
-  {
-    "objectID": "notes/resources.html#data_science",
-    "href": "notes/resources.html#data_science",
-    "title": "resources",
-    "section": "data_science",
-    "text": "data_science\n\nmachine_learning\n\nThe word “tensor” in machine learning, math, and physics"
-  },
-  {
-    "objectID": "notes/resources.html#math_physics",
-    "href": "notes/resources.html#math_physics",
-    "title": "resources",
-    "section": "math_physics",
-    "text": "math_physics\n\nmathematical_physics\n\nnLab: mathematical physics"
-  },
-  {
-    "objectID": "notes/resources.html#linux",
-    "href": "notes/resources.html#linux",
-    "title": "resources",
-    "section": "linux",
-    "text": "linux\n\nUsing the SDDM Astronaut theme\nYAD calendar popup for Waybar\nInstalling and updating Quarto on Arch Linux"
-  },
-  {
-    "objectID": "notes/resources.html#quarto",
-    "href": "notes/resources.html#quarto",
-    "title": "resources",
-    "section": "quarto",
-    "text": "quarto\nThis site is built with Quarto.\n\nCreating your personal website using Quarto\nAdding a blog to your existing Quarto website"
   },
   {
     "objectID": "posts.html",
