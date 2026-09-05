@@ -7,18 +7,172 @@
     "text": "richard.costa_ / são paulo\n\n\n&gt; data scientist\n\n\n&gt; software / ml engineering\n\n\n&gt; physics\n\n\nBuilding things with data, models and code. I work mainly on the engineering and application side of data science, with a background in physics.\n\n\ngithub linkedin résumé - en résumé - pt email\n\n\n\n\nselected_work\n\n\n\n01\n\n\n\nrag ↗\n\n\nA framework-light RAG implementation built to understand the underlying application structure rather than hide it behind abstractions.\n\n\n\npython · postgres · pgvector · ollama\n\n\n\n\n\nselected_notes\n\n\n\n01\n\n\n\nreview of quantum mechanics ↗\n\n\n\nphysics · latex\n\n\n\n\n02\n\n\n\ndirac notation & riesz theorem ↗\n\n\n\nphysics · math\n\n\n\nSão Paulo / Brazil"
   },
   {
-    "objectID": "posts/20251204-quarto-arch.html",
-    "href": "posts/20251204-quarto-arch.html",
-    "title": "installing quarto on arch linux",
+    "objectID": "posts/20260520-elephant.html",
+    "href": "posts/20260520-elephant.html",
+    "title": "Music for an Elderly Elephant",
     "section": "",
-    "text": "This website uses quarto as its publishing and writing platform. It seems the package for installing quarto on arch-linux is not maintained at this time. We are left then with downloading the tarball file and installing it. After downloading the file from https://quarto.org/docs/get-started/ we should extract the contents of it and in my case I needed to create a symlink to be able to use it in the terminal, so basically for the 1.8.26 version:\ncd ~/Downloads\ntar -xvzf quarto-1.8.26-linux-amd64.tar.gz\nsudo mv quarto-1.8.26 /opt/quarto\nsudo ln -sf /opt/quarto/bin/quarto /usr/local/bin/quarto\nThat’s it. However, since I didn’t install it via a package manager I created a script in /usr/local/bin/update-quarto to update it:\n#!/usr/bin/env bash\nset -e\n\nINSTALL_DIR=\"/opt/quarto\"\nBIN_LINK=\"/usr/local/bin/quarto\"\n\necho \"removing old quarto installation...\"\nsudo rm -rf \"$INSTALL_DIR\"\n\necho \"downloading latest quarto release...\"\ncd /tmp\nLATEST_URL=$(curl -s https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest \\\n  | grep browser_download_url \\\n  | grep linux-amd64.tar.gz \\\n  | cut -d '\"' -f 4)\n\ncurl -sSL \"$LATEST_URL\" -o quarto.tar.gz\n\necho \"extracting...\"\ntar -xzf quarto.tar.gz\nEXTRACTED_DIR=$(tar -tf quarto.tar.gz | head -1 | cut -f1 -d\"/\")\n\necho \"installing to $INSTALL_DIR...\"\nsudo mv \"$EXTRACTED_DIR\" \"$INSTALL_DIR\"\nsudo ln -sf \"$INSTALL_DIR/bin/quarto\" \"$BIN_LINK\"\n\necho \"cleaning up...\"\nrm -f quarto.tar.gz\n\necho \"done. installed $(/usr/local/bin/quarto --version)\"\nAnd then in the terminal just run update-quarto. It seems to be working but double check it if you want to run it yourself."
+    "text": "Somewhere someone played piano to an elderly elephant. That’s it. Also, they flap their ears to express some emotions."
   },
   {
-    "objectID": "posts/20251203-calendar-omarchy.html",
-    "href": "posts/20251203-calendar-omarchy.html",
-    "title": "Calendar on Omarchy",
+    "objectID": "notes/linux/waybar-yad-calendar.html",
+    "href": "notes/linux/waybar-yad-calendar.html",
+    "title": "YAD calendar popup for Waybar",
     "section": "",
-    "text": "I’ve been missing a calendar on omarchy for some time. For the command line we have a nice tool called cal:\n\n~ ❯ cal\n    December 2025\nSu Mo Tu We Th Fr Sa\n    1  2  3  4  5  6\n 7  8  9 10 11 12 13\n14 15 16 17 18 19 20\n21 22 23 24 25 26 27\n28 29 30 31\n\n\n~ ❯ cal -n 3\n    December 2025         January 2026          February 2026\nSu Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa\n    1  2  3  4  5  6               1  2  3   1  2  3  4  5  6  7\n 7  8  9 10 11 12 13   4  5  6  7  8  9 10   8  9 10 11 12 13 14\n14 15 16 17 18 19 20  11 12 13 14 15 16 17  15 16 17 18 19 20 21\n21 22 23 24 25 26 27  18 19 20 21 22 23 24  22 23 24 25 26 27 28\n28 29 30 31           25 26 27 28 29 30 31\n\n\n~ ❯ cal -h\n\nUsage:\n cal [options] [[[day] month] year]\n cal [options] &lt;timestamp|monthname&gt;\n\nDisplay a calendar, or some part of it.\nWithout any arguments, display the current month.\n\nOptions:\n -1, --one             show only a single month (default)\n -3, --three           show three months spanning the date\n -n, --months &lt;num&gt;    show num months starting with date's month\n -S, --span            span the date when displaying multiple months\n -s, --sunday          Sunday as first day of week\n -m, --monday          Monday as first day of week\n -j, --julian          use day-of-year for all calendars\n     --reform &lt;val&gt;    Gregorian reform date (1752|gregorian|iso|julian)\n     --iso             alias for --reform=iso\n -y, --year            show the whole year\n -Y, --twelve          show the next twelve months\n -w, --week[=&lt;num&gt;]    show US or ISO-8601 week numbers\n -v, --vertical        show day vertically instead of line\n -c, --columns &lt;width&gt; amount of columns to use\n     --color[=&lt;when&gt;]  colorize messages (auto, always or never)\n                         colors are enabled by default\n\n -h, --help            display this help\n -V, --version         display version\n\nFor more details see cal(1).\nBut I wanted a simple calendar in my waybar where I could just click on it and have it display a calendar. Some solutions I stumbled upon would only allow me to see the current month, and I wanted to be able to navigate between months and years. After some search, I decided to go with yad. To use it properly I’d also need to create a script to run the calendar widget and set an icon in my waybar for it. So that’s what I did.\n\nbasic calendar\nFirst, install yad:\nsudo pacman -Syu\nsudo pacman -S yad\nThen, create a file ~/.config/waybar/scripts/calendar.sh. The simplest way to make the calendar work is just by writing:\n#!/usr/bin/env bash\n\nyad --calendar\nMake the file executable by running\nchmod +x ~/.config/waybar/scripts/calendar.sh\nNow, add the script path to the waybar config file at ~/.config/waybar/config.jsonc:\n\"custom/calendar\": {\n  \"format\": \"\",\n  \"tooltip\": false,\n  \"on-click\": \"~/.config/waybar/scripts/calendar.sh\"\n}\nIn the config file there is an entry called ‘modules-right’:\n  \"modules-right\": [\n    \"group/tray-expander\",\n    \"bluetooth\",\n    \"network\",\n    \"pulseaudio\",\n    \"cpu\",\n    \"battery\"\n  ]\nAdd your calendar to this section:\n  \"modules-right\": [\n    \"group/tray-expander\",\n    \"custom/calendar\",\n    \"bluetooth\",\n    \"network\",\n    \"pulseaudio\",\n    \"cpu\",\n    \"battery\"\n  ],\nIn ~/.config/waybar/styles.css add\n#custom-calendar {\n  min-width: 12px;\n  margin: 0 18px;\n}\nso that the calendar icon to add some space between the calendar icon and the next icon. Adjust margin as you see fit. Finally, run\npkill waybar && waybar &\n\n\nsome more tweaks\nIf you want to add a keybinding to the calendar (mine is SUPER + C) go to ~/.config/hypr/bindings.conf and add\nbindd = SUPER, C, Calendar, exec, ~/.config/waybar/scripts/calendar.sh\nI also removed buttons (‘ok’ and ‘cancel’), set some size to the calendar, and gave it a name so that I could reference in hyprland configuration later::\n#!/usr/bin/env bash\n\n# if a YAD calendar titled \"Calendar\" is already running, kill it\nif pgrep -f 'yad --calendar --title=Calendar' &gt;/dev/null; then\n  pkill -f 'yad --calendar --title=Calendar'\n  exit 0\nfi\n\n# otherwise, open a new calendar (toggle on)\nyad --calendar \\\n    --title=\"Calendar\" \\\n    --width=320 \\\n    --height=260 \\\n    --no-buttons \nThe first bit is to ensure that if you click again it won’t open up another window (since we don’t have buttons now to close the window. To make it appear in the center of the screen go to ~/.config/hypr/hyprland.conf and add\n# float the YAD calendar popup\nwindowrulev2 = float, class:^(?i:yad)$, title:^(Calendar)$\n\n# center it on the monitor\nwindowrulev2 = center, class:^(?i:yad)$, title:^(Calendar)$\nIt should like like this:\n\n\n\ncalendar\n\n\nWe could also add the calendar to the menu, but I’ll leave that for later."
+    "text": "A small clickable calendar for Waybar using YAD, with optional Hyprland integration.\nThis was originally configured in December 2025 and has not been recently retested."
+  },
+  {
+    "objectID": "notes/linux/waybar-yad-calendar.html#install-yad",
+    "href": "notes/linux/waybar-yad-calendar.html#install-yad",
+    "title": "YAD calendar popup for Waybar",
+    "section": "install YAD",
+    "text": "install YAD\nOn Arch Linux:\nsudo pacman -S yad"
+  },
+  {
+    "objectID": "notes/linux/waybar-yad-calendar.html#create-the-calendar-script",
+    "href": "notes/linux/waybar-yad-calendar.html#create-the-calendar-script",
+    "title": "YAD calendar popup for Waybar",
+    "section": "create the calendar script",
+    "text": "create the calendar script\nCreate:\n~/.config/waybar/scripts/calendar.sh\nMinimal version:\n#!/usr/bin/env bash\n\nyad --calendar\nMake it executable:\nchmod +x ~/.config/waybar/scripts/calendar.sh"
+  },
+  {
+    "objectID": "notes/linux/waybar-yad-calendar.html#add-it-to-waybar",
+    "href": "notes/linux/waybar-yad-calendar.html#add-it-to-waybar",
+    "title": "YAD calendar popup for Waybar",
+    "section": "add it to Waybar",
+    "text": "add it to Waybar\nIn ~/.config/waybar/config.jsonc:\n\"custom/calendar\": {\n  \"format\": \"\",\n  \"tooltip\": false,\n  \"on-click\": \"~/.config/waybar/scripts/calendar.sh\"\n}\nAdd \"custom/calendar\" to the appropriate modules list.\nFor spacing, in ~/.config/waybar/styles.css:\n#custom-calendar {\n  min-width: 12px;\n  margin: 0 18px;\n}\nReload Waybar:\npkill waybar && waybar &"
+  },
+  {
+    "objectID": "notes/linux/waybar-yad-calendar.html#toggle-the-popup",
+    "href": "notes/linux/waybar-yad-calendar.html#toggle-the-popup",
+    "title": "YAD calendar popup for Waybar",
+    "section": "toggle the popup",
+    "text": "toggle the popup\nThis version closes the existing calendar when the script is run again:\n#!/usr/bin/env bash\n\nif pgrep -f 'yad --calendar --title=Calendar' &gt;/dev/null; then\n  pkill -f 'yad --calendar --title=Calendar'\n  exit 0\nfi\n\nyad --calendar \\\n  --title=\"Calendar\" \\\n  --width=320 \\\n  --height=260 \\\n  --no-buttons"
+  },
+  {
+    "objectID": "notes/linux/waybar-yad-calendar.html#optional-hyprland-keybinding",
+    "href": "notes/linux/waybar-yad-calendar.html#optional-hyprland-keybinding",
+    "title": "YAD calendar popup for Waybar",
+    "section": "optional Hyprland keybinding",
+    "text": "optional Hyprland keybinding\nFor SUPER + C:\nbindd = SUPER, C, Calendar, exec, ~/.config/waybar/scripts/calendar.sh\nTo float and center the popup:\nwindowrulev2 = float, class:^(?i:yad)$, title:^(Calendar)$\nwindowrulev2 = center, class:^(?i:yad)$, title:^(Calendar)$"
+  },
+  {
+    "objectID": "notes/linux/index.html",
+    "href": "notes/linux/index.html",
+    "title": "linux",
+    "section": "",
+    "text": "Configuration and troubleshooting notes.\n\nUsing the SDDM Astronaut theme wip\nYAD calendar popup for Waybar wip\nInstalling and updating Quarto on Arch Linux mature"
+  },
+  {
+    "objectID": "notes/linux/arch/index.html",
+    "href": "notes/linux/arch/index.html",
+    "title": "arch linux",
+    "section": "",
+    "text": "Installing current Quarto on Arch Linux mature"
+  },
+  {
+    "objectID": "notes/quantum-mechanics/review.html",
+    "href": "notes/quantum-mechanics/review.html",
+    "title": "Review of Quantum Mechanics",
+    "section": "",
+    "text": "This is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[\n| \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle\n\\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\n\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\n\\] Positions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\n\n\nStationary States\n\n\nSuggested Reading\n\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
+  },
+  {
+    "objectID": "notes/logic/introduction.html",
+    "href": "notes/logic/introduction.html",
+    "title": "Introduction to Logic",
+    "section": "",
+    "text": "Introduction to Logic — Cezar Mortari"
+  },
+  {
+    "objectID": "notes/quantum-mechanics/dirac-riesz.html",
+    "href": "notes/quantum-mechanics/dirac-riesz.html",
+    "title": "Dirac Notation and Riesz Theorem",
+    "section": "",
+    "text": "Riesz Representation Theorem"
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "notes",
+    "section": "",
+    "text": "Technical notes and working material. Status labels are draft, wip and mature. ## linux"
+  },
+  {
+    "objectID": "notes/index.html#quantum_mechanics",
+    "href": "notes/index.html#quantum_mechanics",
+    "title": "notes",
+    "section": "quantum_mechanics",
+    "text": "quantum_mechanics\n\nReview of Quantum Mechanics draft\nDirac Notation and Riesz Theorem draft\nQubits and Hilbert Spaces — presentation, Portuguese"
+  },
+  {
+    "objectID": "notes/index.html#logic",
+    "href": "notes/index.html#logic",
+    "title": "notes",
+    "section": "logic",
+    "text": "logic\n\nIntroduction to Logic draft"
+  },
+  {
+    "objectID": "notes/index.html#resources",
+    "href": "notes/index.html#resources",
+    "title": "notes",
+    "section": "resources",
+    "text": "resources\n\nCurated links and references"
+  },
+  {
+    "objectID": "notes/linux/arch/quarto.html",
+    "href": "notes/linux/arch/quarto.html",
+    "title": "Installing and updating Quarto on Arch Linux",
+    "section": "",
+    "text": "There are two useful installation paths: an AUR package, or Quarto’s upstream Linux tarball."
+  },
+  {
+    "objectID": "notes/linux/arch/quarto.html#aur",
+    "href": "notes/linux/arch/quarto.html#aur",
+    "title": "Installing and updating Quarto on Arch Linux",
+    "section": "AUR",
+    "text": "AUR\nUsing an AUR helper:\nyay -S quarto-cli-bin\nIf Quarto is installed this way, normal AUR/package updates should handle future versions."
+  },
+  {
+    "objectID": "notes/linux/arch/quarto.html#manual-user-local-install",
+    "href": "notes/linux/arch/quarto.html#manual-user-local-install",
+    "title": "Installing and updating Quarto on Arch Linux",
+    "section": "manual user-local install",
+    "text": "manual user-local install\nFor a manual installation, download the current Linux AMD64 tarball from the Quarto release page.\nA user-local layout avoids a root-owned installation under /opt:\n~/.local/opt/quarto/\n~/.local/bin/quarto -&gt; ~/.local/opt/quarto/bin/quarto\nExtract a downloaded release and create the symlink:\nmkdir -p ~/.local/opt ~/.local/bin\n\ntar -xzf ~/Downloads/quarto-VERSION-linux-amd64.tar.gz -C /tmp\nrm -rf ~/.local/opt/quarto\nmv /tmp/quarto-VERSION ~/.local/opt/quarto\nln -sfn ~/.local/opt/quarto/bin/quarto ~/.local/bin/quarto\nMake sure ~/.local/bin is on PATH, then check:\nquarto check"
+  },
+  {
+    "objectID": "notes/linux/arch/quarto.html#update-quarto-script",
+    "href": "notes/linux/arch/quarto.html#update-quarto-script",
+    "title": "Installing and updating Quarto on Arch Linux",
+    "section": "update-quarto script",
+    "text": "update-quarto script\nIf using the manual tarball installation, automating updates is still useful.\nCreate ~/.local/bin/update-quarto:\n#!/usr/bin/env bash\nset -euo pipefail\n\nINSTALL_DIR=\"$HOME/.local/opt/quarto\"\nBIN_LINK=\"$HOME/.local/bin/quarto\"\n\ntmp_dir=$(mktemp -d)\ntrap 'rm -rf \"$tmp_dir\"' EXIT\n\necho \"finding latest Quarto release...\"\nlatest_url=$(\n  curl -fsSL https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest |\n    sed -n 's/.*\"browser_download_url\": \"\\([^\"]*linux-amd64\\.tar\\.gz\\)\".*/\\1/p' |\n    head -n 1\n)\n\nif [[ -z \"$latest_url\" ]]; then\n  echo \"could not find the latest Linux AMD64 tarball\" &gt;&2\n  exit 1\nfi\n\necho \"downloading...\"\ncurl -fL \"$latest_url\" -o \"$tmp_dir/quarto.tar.gz\"\n\necho \"extracting...\"\ntar -xzf \"$tmp_dir/quarto.tar.gz\" -C \"$tmp_dir\"\n\nextracted_dir=$(\n  find \"$tmp_dir\" -mindepth 1 -maxdepth 1 -type d -name 'quarto-*' |\n    head -n 1\n)\n\nif [[ -z \"$extracted_dir\" ]]; then\n  echo \"could not find extracted Quarto directory\" &gt;&2\n  exit 1\nfi\n\nmkdir -p \"$(dirname \"$INSTALL_DIR\")\" \"$(dirname \"$BIN_LINK\")\"\n\necho \"installing...\"\nrm -rf \"$INSTALL_DIR\"\nmv \"$extracted_dir\" \"$INSTALL_DIR\"\nln -sfn \"$INSTALL_DIR/bin/quarto\" \"$BIN_LINK\"\n\necho \"installed Quarto $(\"$BIN_LINK\" --version)\"\nMake it executable:\nchmod +x ~/.local/bin/update-quarto\nThen update with:\nupdate-quarto\nThis keeps the useful part of the old updater workflow without requiring sudo or replacing a root-owned /opt/quarto directory."
+  },
+  {
+    "objectID": "notes/linux/arch/quarto.html#references",
+    "href": "notes/linux/arch/quarto.html#references",
+    "title": "Installing and updating Quarto on Arch Linux",
+    "section": "references",
+    "text": "references\n\nQuarto: Tarball Installation on Linux\nQuarto release builds\nAUR: quarto-cli-bin"
+  },
+  {
+    "objectID": "notes/linux/sddm-astronaut-theme.html",
+    "href": "notes/linux/sddm-astronaut-theme.html",
+    "title": "Using the SDDM Astronaut theme",
+    "section": "",
+    "text": "Notes from a setup where I disabled SDDM autologin and used sddm-astronaut-theme.\nThis was originally configured in December 2025 and has not been recently retested."
+  },
+  {
+    "objectID": "notes/linux/sddm-astronaut-theme.html#disable-autologin",
+    "href": "notes/linux/sddm-astronaut-theme.html#disable-autologin",
+    "title": "Using the SDDM Astronaut theme",
+    "section": "disable autologin",
+    "text": "disable autologin\nOn that setup, autologin was configured in:\n/etc/sddm.conf.d/autologin.conf\nThe file contained an [Autologin] section similar to:\n[Autologin]\nUser=&lt;your_user&gt;\nSession=hyprland-uwsm\nBack up the file before changing it:\nsudo cp /etc/sddm.conf.d/autologin.conf /etc/sddm.conf.d/autologin.conf.bak\nRemoving the autologin configuration made SDDM show the login screen instead of entering the session automatically.\nThe exact SDDM configuration path can vary, so check the current system before copying this literally."
+  },
+  {
+    "objectID": "notes/linux/sddm-astronaut-theme.html#install-the-theme",
+    "href": "notes/linux/sddm-astronaut-theme.html#install-the-theme",
+    "title": "Using the SDDM Astronaut theme",
+    "section": "install the theme",
+    "text": "install the theme\nThe Astronaut theme project provides an installer:\nsh -c \"$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)\"\nReview remote scripts before piping them to a shell.\nOn this setup the installed theme metadata was:\n/usr/share/sddm/themes/sddm-astronaut-theme/metadata.desktop\nThe selected variant is controlled by ConfigFile. For example:\n[SddmGreeterTheme]\nName=sddm-astronaut-theme\nConfigFile=Themes/japanese_aesthetic.conf\nThe available variants are in the project’s Themes directory."
   },
   {
     "objectID": "notes/resources.html",
@@ -46,97 +200,20 @@
     "href": "notes/resources.html#linux",
     "title": "resources",
     "section": "linux",
-    "text": "linux\n\narch_linux / omarchy\n\nInstalling COSMIC and changing SDDM on Omarchy\nInstalling a calendar widget on Omarchy"
+    "text": "linux\n\nUsing the SDDM Astronaut theme\nYAD calendar popup for Waybar\nInstalling and updating Quarto on Arch Linux"
   },
   {
     "objectID": "notes/resources.html#quarto",
     "href": "notes/resources.html#quarto",
     "title": "resources",
     "section": "quarto",
-    "text": "quarto\nThis site is built with Quarto.\n\nCreating your personal website using Quarto\nAdding a blog to your existing Quarto website\nInstalling Quarto on Arch Linux"
-  },
-  {
-    "objectID": "notes/quantum-mechanics/dirac-riesz.html",
-    "href": "notes/quantum-mechanics/dirac-riesz.html",
-    "title": "Dirac Notation and Riesz Theorem",
-    "section": "",
-    "text": "Riesz Representation Theorem"
-  },
-  {
-    "objectID": "notes/index.html",
-    "href": "notes/index.html",
-    "title": "notes",
-    "section": "",
-    "text": "Technical notes and working material. Status labels are intentionally simple:"
-  },
-  {
-    "objectID": "notes/index.html#quantum_mechanics",
-    "href": "notes/index.html#quantum_mechanics",
-    "title": "notes",
-    "section": "quantum_mechanics",
-    "text": "quantum_mechanics\n\nReview of Quantum Mechanics draft\nDirac Notation and Riesz Theorem draft\nQubits and Hilbert Spaces — presentation, Portuguese"
-  },
-  {
-    "objectID": "notes/index.html#logic",
-    "href": "notes/index.html#logic",
-    "title": "notes",
-    "section": "logic",
-    "text": "logic\n\nIntroduction to Logic draft"
-  },
-  {
-    "objectID": "notes/index.html#resources",
-    "href": "notes/index.html#resources",
-    "title": "notes",
-    "section": "resources",
-    "text": "resources\n\nCurated links and references"
-  },
-  {
-    "objectID": "notes/logic/introduction.html",
-    "href": "notes/logic/introduction.html",
-    "title": "Introduction to Logic",
-    "section": "",
-    "text": "Introduction to Logic — Cezar Mortari"
-  },
-  {
-    "objectID": "notes/quantum-mechanics/review.html",
-    "href": "notes/quantum-mechanics/review.html",
-    "title": "Review of Quantum Mechanics",
-    "section": "",
-    "text": "This is a review of important concepts in quantum mechanics, aimed at the reader who has already taken a first course on quantum mechanics.\n\n\nQuantum States\nStates are represented by vectors in a Hilbert space. A wavefunction \\(\\psi\\) is a solution to the Schrödinger equation. It also represents the components of a state vector \\(\\Psi\\). If the wavefunction depends on the position \\(\\mathbf{r}\\), that is, \\(\\psi = \\psi(\\mathbf{r})\\), then it is a solution to the Schrödinger equation in position space components of \\(\\Psi\\) in an infinite dimension along the direction corresponding to a definite value \\(\\mathbf{r}\\) of the position. The wavefunction is also a type of projection. The state vector \\(\\Psi\\) is given by\n\\[\n| \\Psi \\rangle = \\int d^{3} \\mathbf{r} | \\mathbf{r} \\rangle \\langle \\mathbf{r} | \\Psi \\rangle\n\\tag{1}\\]\nand this component in terms of Dirac notation is given by\n\\[\n\\langle  \\mathbf{r}  | \\Psi \\rangle = \\psi (\\mathbf{r}).\n\\] Positions are part of a continuous set, so at first: \\(\\mathbf{r} \\in [-\\infty, \\infty ]\\). Since each component in the state vector space is associated to a value of the position vector, we have infinite directions in this space and each direction is labeled by \\(\\mathbf{r}\\).\nThe state vector in the form (1) is just one of the possible representations. In particular, we used the position representation. We can use another system variable such as the momentum. In this case, we have\n\\[\n\\langle \\mathbf{p} | \\Psi \\rangle = \\phi ( \\mathbf{p}),\n\\]\n\n\nStationary States\n\n\nSuggested Reading\n\nWeinberg, S., 2015. Lectures on quantum mechanics. Cambridge University Press.\nMerzbacher, E. (1998) Quantum Mechanics. John Wiley & Sons."
-  },
-  {
-    "objectID": "posts/20251202-cosmic-and-sddm-omarchy.html",
-    "href": "posts/20251202-cosmic-and-sddm-omarchy.html",
-    "title": "Cosmic, sddm, and Omarchy",
-    "section": "",
-    "text": "Please, note: I don’t know much about linux, so be careful when running commands and be sure to back up your stuff when you feel like you might break things.\nAlthough Omarchy is supposed to be used ‘as is’, of course people are going to want to tinker it. In my case I wanted two things: to test the Cosmic desktop environment and add a separate user for family and friends so they have a separate and friendly environment to use my computer. Along the way I found out that I could use some nice themes for the sddm display manager and could logout from the menu in omarchy."
-  },
-  {
-    "objectID": "posts/20251202-cosmic-and-sddm-omarchy.html#hyprctl-issues",
-    "href": "posts/20251202-cosmic-and-sddm-omarchy.html#hyprctl-issues",
-    "title": "Cosmic, sddm, and Omarchy",
-    "section": "hyprctl issues",
-    "text": "hyprctl issues\nAfter installing cosmic, instead of using sudo systemctl restart sddm I guess you could use hyprctl dispatch exit. But for some reason it was sending me to a black screen, so that’s why I restarted sddm. This issue came back when I tried to add the option to logout from the menu."
-  },
-  {
-    "objectID": "posts/20251202-cosmic-and-sddm-omarchy.html#footnotes",
-    "href": "posts/20251202-cosmic-and-sddm-omarchy.html#footnotes",
-    "title": "Cosmic, sddm, and Omarchy",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nAt first I tried sudo pacman -S cosmic but got an error like:\n error: failed retrieving file ‘cosmic-initial-setup-1.0.0.beta.7-2-x86_64.pkg.tar.zst’ from stable-mirror.omarchy.org : The requested URL returned error: 404 warning: failed to retrieve some files error: failed to commit transaction (failed to retrieve some files) Errors occurred, no packages were upgraded.\nThat’s why the flag to ignore the cosmic inital setup is there.↩︎"
-  },
-  {
-    "objectID": "posts/20260520-elephant.html",
-    "href": "posts/20260520-elephant.html",
-    "title": "Music for an Elderly Elephant",
-    "section": "",
-    "text": "Somewhere someone played piano to an elderly elephant. That’s it. Also, they flap their ears to express some emotions."
+    "text": "quarto\nThis site is built with Quarto.\n\nCreating your personal website using Quarto\nAdding a blog to your existing Quarto website"
   },
   {
     "objectID": "posts.html",
     "href": "posts.html",
     "title": "posts",
     "section": "",
-    "text": "Music for an Elderly Elephant\n\n\n\nwholesome\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\n\n\n\n\n\n\n\ninstalling quarto on arch linux\n\n\n\nlinux\n\nhow-to\n\nquarto\n\n\n\n\n\n\n\n\n\nDec 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCalendar on Omarchy\n\n\n\nlinux\n\nhow-to\n\nomarchy\n\nhyprland\n\n\n\n\n\n\n\n\n\nDec 3, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nCosmic, sddm, and Omarchy\n\n\n\nlinux\n\nhow-to\n\nomarchy\n\n\n\n\n\n\n\n\n\nDec 2, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Music for an Elderly Elephant\n\n\n\nwholesome\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\nNo matching items"
   }
 ]

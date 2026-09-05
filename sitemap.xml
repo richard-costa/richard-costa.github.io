@@ -2,18 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://richard-costa.github.io/index.html</loc>
-    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
+    <lastmod>2026-09-04T23:45:33.416Z</lastmod>
   </url>
   <url>
-    <loc>https://richard-costa.github.io/posts/20251204-quarto-arch.html</loc>
-    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/posts/20251203-calendar-omarchy.html</loc>
+    <loc>https://richard-costa.github.io/posts/20260520-elephant.html</loc>
     <lastmod>2026-09-04T21:37:31.079Z</lastmod>
   </url>
   <url>
-    <loc>https://richard-costa.github.io/notes/resources.html</loc>
+    <loc>https://richard-costa.github.io/notes/linux/waybar-yad-calendar.html</loc>
+    <lastmod>2026-09-05T21:59:27.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/linux/index.html</loc>
+    <lastmod>2026-09-05T21:59:27.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/linux/arch/index.html</loc>
+    <lastmod>2026-09-05T21:59:27.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/quantum-mechanics/review.html</loc>
+    <lastmod>2026-09-04T23:45:49.420Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/notes/logic/introduction.html</loc>
     <lastmod>2026-09-04T23:39:32.226Z</lastmod>
   </url>
   <url>
@@ -22,23 +34,19 @@
   </url>
   <url>
     <loc>https://richard-costa.github.io/notes/index.html</loc>
-    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
+    <lastmod>2026-09-05T22:06:16.977Z</lastmod>
   </url>
   <url>
-    <loc>https://richard-costa.github.io/notes/logic/introduction.html</loc>
-    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
+    <loc>https://richard-costa.github.io/notes/linux/arch/quarto.html</loc>
+    <lastmod>2026-09-05T21:59:27.996Z</lastmod>
   </url>
   <url>
-    <loc>https://richard-costa.github.io/notes/quantum-mechanics/review.html</loc>
-    <lastmod>2026-09-04T23:39:32.226Z</lastmod>
+    <loc>https://richard-costa.github.io/notes/linux/sddm-astronaut-theme.html</loc>
+    <lastmod>2026-09-05T21:59:27.996Z</lastmod>
   </url>
   <url>
-    <loc>https://richard-costa.github.io/posts/20251202-cosmic-and-sddm-omarchy.html</loc>
-    <lastmod>2026-09-04T21:37:31.079Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/posts/20260520-elephant.html</loc>
-    <lastmod>2026-09-04T21:37:31.079Z</lastmod>
+    <loc>https://richard-costa.github.io/notes/resources.html</loc>
+    <lastmod>2026-09-05T21:59:27.996Z</lastmod>
   </url>
   <url>
     <loc>https://richard-costa.github.io/posts.html</loc>
