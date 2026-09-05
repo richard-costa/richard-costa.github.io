@@ -60,7 +60,7 @@
     "href": "notes/linux/index.html",
     "title": "linux",
     "section": "",
-    "text": "Configuration and troubleshooting notes.\n\nUsing the SDDM Astronaut theme wip\nYAD calendar popup for Waybar wip\nInstalling and updating Quarto on Arch Linux mature"
+    "text": "Configuration and troubleshooting notes.\n\nUsing the SDDM Astronaut theme developing\nYAD calendar popup for Waybar mature\nInstalling and updating Quarto on Arch Linux mature"
   },
   {
     "objectID": "notes/linux/arch/index.html",
@@ -95,7 +95,14 @@
     "href": "notes/index.html",
     "title": "notes",
     "section": "",
-    "text": "Technical notes and working material. Status labels are draft, wip and mature. ## linux"
+    "text": "Technical notes and working material. Status labels are draft, developing and mature."
+  },
+  {
+    "objectID": "notes/index.html#linux",
+    "href": "notes/index.html#linux",
+    "title": "notes",
+    "section": "linux",
+    "text": "linux\n\nUsing the SDDM Astronaut theme developing\nYAD calendar popup for Waybar mature\nInstalling and updating Quarto on Arch Linux mature"
   },
   {
     "objectID": "notes/index.html#quantum_mechanics",
