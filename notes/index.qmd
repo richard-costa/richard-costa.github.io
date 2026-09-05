@@ -6,7 +6,7 @@ toc: false
 Technical notes and working material. Status labels are intentionally simple:
 
 - **draft** — incomplete or exploratory
-- **wip** — actively developed
+- **developing** — actively developed
 - **mature** — stable and polished
 
 ## quantum_mechanics
