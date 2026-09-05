@@ -3,9 +3,13 @@ title: "Multiple users on Omarchy"
 status: wip
 ---
 
-Omarchy is still designed primarily as a single-user system. Creating another Linux account is straightforward, but that does **not** make the second account a fully configured Omarchy user.
+Omarchy 4.0.x is still designed primarily as a single-user system. Creating another Linux account is straightforward, but that does **not** make the second account a fully configured Omarchy user.
 
 Last checked on 2026-09-05.
+
+::: {.callout-note}
+Upstream discussion says native multi-user support is planned for Omarchy 4.1. Re-check this note after upgrading; much of it may become unnecessary.
+:::
 
 ## create a non-admin account
 
@@ -20,18 +24,15 @@ Do not add the account to `wheel` unless it should have administrative access.
 
 The old version of this note also added the user to the `network` group. That is unnecessary on current Arch Linux: the `network` group is unused by default.
 
-## what Omarchy does not handle for you
+## Omarchy 4.0.x limitations
 
 A second account will not automatically receive the first user's Omarchy configuration under `~/.config` and related per-user directories.
 
-Omarchy also defaults to SDDM autologin and its current SDDM theme is intentionally minimal. It uses the last user rather than presenting the kind of full user/session picker common on multi-user desktop distributions.
-
-If you need a conventional multi-user workstation, expect to manage the display-manager and per-user configuration yourself. This remains outside Omarchy's normal design.
+Omarchy 4.0.x also defaults to SDDM autologin rather than a conventional multi-user login flow. If you need a shared workstation before 4.1, expect to manage the display-manager and per-user configuration yourself.
 
 See [Omarchy autologin and requiring a password after boot](autologin-and-password.qmd) before changing the login flow.
 
 ## references
 
 - [Omarchy discussion: Support Multiple Users](https://github.com/basecamp/omarchy/discussions/532)
-- [Omarchy SDDM theme](https://github.com/basecamp/omarchy/blob/quattro/default/sddm/omarchy/Main.qml)
 - [ArchWiki: Users and groups](https://wiki.archlinux.org/title/Users_and_groups)
