@@ -9,6 +9,10 @@ Technical notes and working material. Status labels are intentionally simple:
 - **wip** — actively developed
 - **mature** — stable and polished
 
+## linux
+
+- [Linux configuration and troubleshooting](linux/index.qmd) [mature]{.note-status .status-mature}
+
 ## quantum_mechanics
 
 - [Review of Quantum Mechanics](quantum-mechanics/review.qmd) [draft]{.note-status .status-draft}

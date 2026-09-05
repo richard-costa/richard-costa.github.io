@@ -20,8 +20,12 @@ A curated collection of references I want to keep around.
 
 ### arch_linux / omarchy
 
-- [Installing COSMIC and changing SDDM on Omarchy](../posts/20251202-cosmic-and-sddm-omarchy.qmd)
-- [Installing a calendar widget on Omarchy](../posts/20251203-calendar-omarchy.qmd)
+- [COSMIC, SDDM, and Omarchy](linux/cosmic-sddm-omarchy.qmd)
+- [Calendar on Omarchy](linux/calendar-omarchy.qmd)
+
+### arch_linux
+
+- [Installing Quarto on Arch Linux](linux/quarto-arch.qmd)
 
 ## quarto
 
@@ -29,4 +33,3 @@ This site is built with [Quarto](https://quarto.org/).
 
 - [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/)
 - [Adding a blog to your existing Quarto website](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/)
-- [Installing Quarto on Arch Linux](../posts/20251204-quarto-arch.qmd)

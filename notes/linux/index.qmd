@@ -1,0 +1,15 @@
+---
+title: "linux"
+toc: false
+---
+
+Configuration and troubleshooting notes. These are setup-specific snapshots; verify package names, paths, and commands against your current system before applying them.
+
+## arch_linux / omarchy
+
+- [COSMIC, SDDM, and Omarchy](cosmic-sddm-omarchy.qmd) [mature]{.note-status .status-mature}
+- [Calendar on Omarchy](calendar-omarchy.qmd) [mature]{.note-status .status-mature}
+
+## arch_linux
+
+- [Installing Quarto on Arch Linux](quarto-arch.qmd) [mature]{.note-status .status-mature}

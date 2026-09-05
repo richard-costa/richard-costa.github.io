@@ -1,17 +1,15 @@
 ---
-title: 'installing quarto on arch linux'
-date: 2025-12-04
-date-modified: last-modified
-language: 
-  title-block-modified: "UPDATED"
-categories: 
-  - linux
-  - how-to
-  - quarto
-image: images/quarto-logo.png
+title: "Installing Quarto on Arch Linux"
+status: mature
 ---
 
-This website uses quarto as its publishing and writing platform. It seems the package for installing quarto on arch-linux is not maintained at this time. We are left then with downloading the tarball file and installing it. After downloading the file from https://quarto.org/docs/get-started/ we should extract the contents of it and in my case I needed to create a symlink to be able to use it in the terminal, so basically for the `1.8.26` version:
+Manual Quarto installation for Arch Linux when using the upstream tarball instead of a package-manager installation.
+
+## install from the tarball
+
+Download the Linux AMD64 tarball from the [Quarto download page](https://quarto.org/docs/get-started/).
+
+For version `1.8.26`:
 
 ```bash
 cd ~/Downloads
@@ -20,7 +18,17 @@ sudo mv quarto-1.8.26 /opt/quarto
 sudo ln -sf /opt/quarto/bin/quarto /usr/local/bin/quarto
 ```
 
-That's it. However, since I didn't install it via a package manager I created a script in `/usr/local/bin/update-quarto` to update it:
+Check the installation:
+
+```bash
+quarto --version
+```
+
+## update script
+
+For a manual installation, this script replaces the existing `/opt/quarto` directory with the latest Linux AMD64 release.
+
+Create `/usr/local/bin/update-quarto`:
 
 ```bash
 #!/usr/bin/env bash
@@ -55,5 +63,14 @@ rm -f quarto.tar.gz
 echo "done. installed $(/usr/local/bin/quarto --version)"
 ```
 
-And then in the terminal just run `update-quarto`. It seems to be working but double check it if you want to run it yourself.
+Make it executable:
 
+```bash
+sudo chmod +x /usr/local/bin/update-quarto
+```
+
+Then update with:
+
+```bash
+update-quarto
+```
