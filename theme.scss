@@ -395,6 +395,16 @@ div.sourceCode {
   border: 1px solid $border;
   border-radius: 4px;
   background: $surface !important;
+  color: $code-text !important;
+}
+
+// Quarto's generated sourceCode rules can override the generic code color.
+// Keep plain-text and fenced code readable against the dark code surface.
+pre > code,
+pre > code.sourceCode,
+div.sourceCode pre,
+div.sourceCode pre > code {
+  color: $code-text !important;
 }
 
 // Inline code should be readable, not use the site's accent color.

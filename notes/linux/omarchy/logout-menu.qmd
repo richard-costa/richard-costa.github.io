@@ -1,0 +1,58 @@
+---
+title: "Adding logout to the Omarchy menu"
+status: mature
+---
+
+Add a logout action to the Omarchy system menu.
+
+## back up the menu script
+
+```bash
+cp ~/.local/share/omarchy/bin/omarchy-menu ~/.local/share/omarchy/bin/omarchy-menu.bak
+```
+
+Restore it with:
+
+```bash
+cp ~/.local/share/omarchy/bin/omarchy-menu.bak ~/.local/share/omarchy/bin/omarchy-menu
+```
+
+## add the logout entry
+
+In `~/.local/share/omarchy/bin/omarchy-menu`, update `show_system_menu`:
+
+```bash
+show_system_menu() {
+  case $(menu "System" "  Lock\n󱄄  Screensaver\n󰤄  Suspend\n󰗼  Logout\n󰜉  Restart\n󰐥  Shutdown") in
+  *Lock*) omarchy-lock-screen ;;
+  *Screensaver*) omarchy-launch-screensaver force ;;
+  *Suspend*) systemctl suspend ;;
+  *Logout*) sudo systemctl restart sddm ;;
+  *Restart*) omarchy-cmd-reboot ;;
+  *Shutdown*) omarchy-cmd-shutdown ;;
+  *) back_to show_main_menu ;;
+  esac
+}
+```
+
+This uses an SDDM restart because `hyprctl dispatch exit` produced a black screen on this setup.
+
+## optional passwordless SDDM restart
+
+If the menu action must work without prompting for a password, edit sudoers with:
+
+```bash
+sudo visudo
+```
+
+and add:
+
+```text
+%wheel ALL=(root) NOPASSWD: /usr/bin/systemctl restart sddm
+```
+
+::: {.callout-warning}
+That rule allows every user in `wheel` to restart SDDM without a password. Use it only if that permission is acceptable on the machine.
+:::
+
+See [Configuring SDDM on Omarchy](sddm.qmd) for the related SDDM setup.

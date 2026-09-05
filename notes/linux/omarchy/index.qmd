@@ -1,0 +1,12 @@
+---
+title: "omarchy"
+toc: false
+---
+
+Focused setup and troubleshooting notes for Omarchy.
+
+- [Installing COSMIC on Omarchy](install-cosmic.qmd) [mature]{.note-status .status-mature}
+- [Configuring SDDM on Omarchy](sddm.qmd) [mature]{.note-status .status-mature}
+- [Adding logout to the Omarchy menu](logout-menu.qmd) [mature]{.note-status .status-mature}
+- [Adding another user](add-user.qmd) [mature]{.note-status .status-mature}
+- [Calendar on Omarchy](calendar.qmd) [mature]{.note-status .status-mature}

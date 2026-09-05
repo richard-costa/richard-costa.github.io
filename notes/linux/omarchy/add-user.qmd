@@ -1,0 +1,17 @@
+---
+title: "Adding another user on Omarchy"
+status: mature
+---
+
+Create another local user with a home directory and the groups used on this setup.
+
+```bash
+sudo useradd -m -G wheel,network -s /bin/bash <user_name>
+sudo passwd <user_name>
+```
+
+- `-m`: create the home directory
+- `-G`: add supplementary groups
+- `-s`: set the login shell
+
+Check that the groups you specify exist and are appropriate for the account. In particular, membership in `wheel` normally grants access to administrative commands through sudo configuration.
