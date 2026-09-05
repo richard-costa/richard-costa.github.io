@@ -1,39 +1,115 @@
 ---
-title: "Installing current Quarto on Arch Linux"
+title: "Installing and updating Quarto on Arch Linux"
 status: mature
 ---
 
-There are two reasonable ways to install Quarto on Arch: use an AUR package, or use Quarto's official Linux tarball. The old version of this note assumed the Arch package route was unavailable; that is no longer true.
+There are two useful installation paths: an AUR package, or Quarto's upstream Linux tarball.
 
-## option 1: AUR
+## AUR
 
-The AUR currently has `quarto-cli-bin`:
+Using an AUR helper:
 
 ```bash
 yay -S quarto-cli-bin
 ```
 
-This is the simplest Arch-style installation, but the AUR package can lag behind Quarto's current upstream release.
+If Quarto is installed this way, normal AUR/package updates should handle future versions.
 
-## option 2: official tarball
+## manual user-local install
 
-Quarto documents a user-local tarball installation on Linux. Download the current Linux x86_64 tarball from the [Quarto release page](https://quarto.org/docs/download/release), then extract it under `~/opt` and link the executable into `~/.local/bin`.
+For a manual installation, download the current Linux AMD64 tarball from the [Quarto release page](https://quarto.org/docs/download/release).
 
-For a downloaded file named `quarto-VERSION-linux-amd64.tar.gz`:
+A user-local layout avoids a root-owned installation under `/opt`:
 
-```bash
-mkdir -p ~/opt ~/.local/bin
-tar -C ~/opt -xzf ~/Downloads/quarto-VERSION-linux-amd64.tar.gz
-ln -sfn ~/opt/quarto-VERSION/bin/quarto ~/.local/bin/quarto
+```text
+~/.local/opt/quarto/
+~/.local/bin/quarto -> ~/.local/opt/quarto/bin/quarto
 ```
 
-Make sure `~/.local/bin` is on `PATH`, then verify:
+Extract a downloaded release and create the symlink:
+
+```bash
+mkdir -p ~/.local/opt ~/.local/bin
+
+tar -xzf ~/Downloads/quarto-VERSION-linux-amd64.tar.gz -C /tmp
+rm -rf ~/.local/opt/quarto
+mv /tmp/quarto-VERSION ~/.local/opt/quarto
+ln -sfn ~/.local/opt/quarto/bin/quarto ~/.local/bin/quarto
+```
+
+Make sure `~/.local/bin` is on `PATH`, then check:
 
 ```bash
 quarto check
 ```
 
-Using a user-local install avoids the old `sudo mv ... /opt/quarto` setup and does not require maintaining a root-owned updater script.
+## update-quarto script
+
+If using the manual tarball installation, automating updates is still useful.
+
+Create `~/.local/bin/update-quarto`:
+
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+
+INSTALL_DIR="$HOME/.local/opt/quarto"
+BIN_LINK="$HOME/.local/bin/quarto"
+
+tmp_dir=$(mktemp -d)
+trap 'rm -rf "$tmp_dir"' EXIT
+
+echo "finding latest Quarto release..."
+latest_url=$(
+  curl -fsSL https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest |
+    sed -n 's/.*"browser_download_url": "\([^"]*linux-amd64\.tar\.gz\)".*/\1/p' |
+    head -n 1
+)
+
+if [[ -z "$latest_url" ]]; then
+  echo "could not find the latest Linux AMD64 tarball" >&2
+  exit 1
+fi
+
+echo "downloading..."
+curl -fL "$latest_url" -o "$tmp_dir/quarto.tar.gz"
+
+echo "extracting..."
+tar -xzf "$tmp_dir/quarto.tar.gz" -C "$tmp_dir"
+
+extracted_dir=$(
+  find "$tmp_dir" -mindepth 1 -maxdepth 1 -type d -name 'quarto-*' |
+    head -n 1
+)
+
+if [[ -z "$extracted_dir" ]]; then
+  echo "could not find extracted Quarto directory" >&2
+  exit 1
+fi
+
+mkdir -p "$(dirname "$INSTALL_DIR")" "$(dirname "$BIN_LINK")"
+
+echo "installing..."
+rm -rf "$INSTALL_DIR"
+mv "$extracted_dir" "$INSTALL_DIR"
+ln -sfn "$INSTALL_DIR/bin/quarto" "$BIN_LINK"
+
+echo "installed Quarto $("$BIN_LINK" --version)"
+```
+
+Make it executable:
+
+```bash
+chmod +x ~/.local/bin/update-quarto
+```
+
+Then update with:
+
+```bash
+update-quarto
+```
+
+This keeps the useful part of the old updater workflow without requiring `sudo` or replacing a root-owned `/opt/quarto` directory.
 
 ## references
 

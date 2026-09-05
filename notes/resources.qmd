@@ -18,15 +18,9 @@ A curated collection of references I want to keep around.
 
 ## linux
 
-### omarchy
-
-- [Omarchy autologin and requiring a password after boot](linux/omarchy/autologin-and-password.qmd)
-- [Fixing logout to an empty desktop on Omarchy 4.0.1](linux/omarchy/logout-empty-session.qmd)
-- [Multiple users on Omarchy](linux/omarchy/multiple-users.qmd)
-
-### arch_linux
-
-- [Installing current Quarto on Arch Linux](linux/arch/quarto.qmd)
+- [Using the SDDM Astronaut theme](linux/sddm-astronaut-theme.qmd)
+- [YAD calendar popup for Waybar](linux/waybar-yad-calendar.qmd)
+- [Installing and updating Quarto on Arch Linux](linux/arch/quarto.qmd)
 
 ## quarto
 

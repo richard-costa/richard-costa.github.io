@@ -1,0 +1,101 @@
+---
+title: "YAD calendar popup for Waybar"
+status: wip
+---
+
+A small clickable calendar for Waybar using [YAD](https://github.com/v1cont/yad), with optional Hyprland integration.
+
+This was originally configured in December 2025 and has not been recently retested.
+
+## install YAD
+
+On Arch Linux:
+
+```bash
+sudo pacman -S yad
+```
+
+## create the calendar script
+
+Create:
+
+```text
+~/.config/waybar/scripts/calendar.sh
+```
+
+Minimal version:
+
+```bash
+#!/usr/bin/env bash
+
+yad --calendar
+```
+
+Make it executable:
+
+```bash
+chmod +x ~/.config/waybar/scripts/calendar.sh
+```
+
+## add it to Waybar
+
+In `~/.config/waybar/config.jsonc`:
+
+```json
+"custom/calendar": {
+  "format": "",
+  "tooltip": false,
+  "on-click": "~/.config/waybar/scripts/calendar.sh"
+}
+```
+
+Add `"custom/calendar"` to the appropriate modules list.
+
+For spacing, in `~/.config/waybar/styles.css`:
+
+```css
+#custom-calendar {
+  min-width: 12px;
+  margin: 0 18px;
+}
+```
+
+Reload Waybar:
+
+```bash
+pkill waybar && waybar &
+```
+
+## toggle the popup
+
+This version closes the existing calendar when the script is run again:
+
+```bash
+#!/usr/bin/env bash
+
+if pgrep -f 'yad --calendar --title=Calendar' >/dev/null; then
+  pkill -f 'yad --calendar --title=Calendar'
+  exit 0
+fi
+
+yad --calendar \
+  --title="Calendar" \
+  --width=320 \
+  --height=260 \
+  --no-buttons
+```
+
+## optional Hyprland keybinding
+
+For `SUPER + C`:
+
+```ini
+bindd = SUPER, C, Calendar, exec, ~/.config/waybar/scripts/calendar.sh
+```
+
+To float and center the popup:
+
+```ini
+windowrulev2 = float, class:^(?i:yad)$, title:^(Calendar)$
+windowrulev2 = center, class:^(?i:yad)$, title:^(Calendar)$
+```

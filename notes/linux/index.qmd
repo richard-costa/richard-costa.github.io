@@ -5,12 +5,6 @@ toc: false
 
 Configuration and troubleshooting notes.
 
-## omarchy
-
-- [Omarchy autologin and requiring a password after boot](omarchy/autologin-and-password.qmd) [wip]{.note-status .status-wip}
-- [Fixing logout to an empty desktop on Omarchy 4.0.1](omarchy/logout-empty-session.qmd) [wip]{.note-status .status-wip}
-- [Multiple users on Omarchy](omarchy/multiple-users.qmd) [wip]{.note-status .status-wip}
-
-## arch_linux
-
-- [Installing current Quarto on Arch Linux](arch/quarto.qmd) [mature]{.note-status .status-mature}
+- [Using the SDDM Astronaut theme](sddm-astronaut-theme.qmd) [wip]{.note-status .status-wip}
+- [YAD calendar popup for Waybar](waybar-yad-calendar.qmd) [wip]{.note-status .status-wip}
+- [Installing and updating Quarto on Arch Linux](arch/quarto.qmd) [mature]{.note-status .status-mature}
