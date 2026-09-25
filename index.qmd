@@ -25,24 +25,12 @@ Building things with data, models and code. I work mainly on the engineering and
 
 :::
 
-::: {.home-blogroll}
-
-<div class="home-section-label">blogroll</div>
-
-::: {.blogroll-list}
-::: {.blogroll-item}
-[nLab ↗](https://ncatlab.org/)
-
-<span>Interconnected notes on mathematics and physics.</span>
-:::
-
-::: {.blogroll-item}
-[Quarto ↗](https://quarto.org/)
-
-<span>The publishing system behind this site.</span>
-:::
-:::
-
-:::
+<div class="home-blogroll">
+  <div class="blogroll-title">blogroll</div>
+  <nav class="blogroll-links" aria-label="Blogroll">
+    <a href="https://ncatlab.org/">nLab <span>↗</span></a>
+    <a href="https://quarto.org/">Quarto <span>↗</span></a>
+  </nav>
+</div>
 
 :::
