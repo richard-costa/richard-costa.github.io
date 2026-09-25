@@ -24,14 +24,12 @@ website:
         text: notes
       - href: posts.qmd
         text: posts
+      - href: now.qmd
+        text: now
       - text: more
         menu:
-          - href: now.qmd
-            text: now
           - href: bookmarks.qmd
             text: bookmarks
-          - href: blogroll.qmd
-            text: blogroll
           - href: changelog.qmd
             text: changelog
 
