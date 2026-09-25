@@ -182,6 +182,7 @@
       ["whoami", "identify this site"],
       ["ls", "list site sections"],
       ["coffee", "brew something small"],
+      ["clear", "clear terminal output"],
       ["physics", "render a random physics equation"],
       ["math", "render a random mathematical identity"],
       ["cmatrix", "start the blue character rain"]
@@ -205,13 +206,13 @@
     const art = document.createElement("pre");
     art.className = "terminal-art";
     art.textContent = [
-      "       ( (",
-      "        ) )",
-      "     ........",
-      "     |      |]",
-      "     \\      /",
-      "      `----'",
-    ].join("\\n");
+      "        ( (",
+      "         ) )",
+      "      .------.",
+      "      |      |]",
+      "      \\      /",
+      "       `----'",
+    ].join("\n");
     const note = document.createElement("div");
     note.className = "terminal-muted";
     note.textContent = "coffee: brewed locally, no package manager required.";
@@ -366,6 +367,8 @@
           `;
         } else if (command === "coffee") {
           renderCoffee(output);
+        } else if (command === "clear") {
+          output.textContent = "";
         } else if (command === "physics" || command === "math") {
           await renderEquation(output, command);
         } else if (command === "cmatrix") {
