@@ -7,4 +7,4 @@ comments:
     repo: richard-costa/richard-costa.github.io
     input-position: top
     loading: lazy
-    theme: transparent_dark
+    theme: https://cdn.jsdelivr.net/gh/richard-costa/richard-costa.github.io@e8dd2ad9ca537de688c4e769926e3eb1738d86de/giscus-theme.css
