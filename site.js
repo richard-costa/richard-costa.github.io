@@ -213,10 +213,7 @@
       "      \\      /",
       "       `----'",
     ].join("\n");
-    const note = document.createElement("div");
-    note.className = "terminal-muted";
-    note.textContent = "coffee: brewed locally, no package manager required.";
-    output.append(art, note);
+    output.append(art);
   }
 
   function startCmatrix(input) {
