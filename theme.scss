@@ -91,7 +91,8 @@ hr {
 
 @media (prefers-reduced-motion: reduce) {
   .home-identity::after,
-  .quarto-title h1.title::after {
+  .quarto-title h1.title::after,
+  .page-command-title::after {
     animation: none;
     opacity: 1;
   }
@@ -179,13 +180,26 @@ h3 {
   @include terminal-cursor;
 }
 
+.page-command-title {
+  margin-top: 0;
+}
+
+.page-command-title::before {
+  content: "> ";
+  color: $accent;
+}
+
+.page-command-title::after {
+  @include terminal-cursor;
+}
+
 // ------------------------------------------------------------
 // Homepage
 // ------------------------------------------------------------
 
 .home-shell {
-  width: min(100% - 2rem, 980px);
-  margin: 0 auto;
+  width: min(100%, 980px);
+  margin: 0;
   padding: clamp(3.5rem, 9vw, 7rem) 0 5rem;
 }
 
@@ -208,7 +222,7 @@ h3 {
 }
 
 .home-identity {
-  margin: 0 0 2rem;
+  margin: 0 0 1.3rem;
   font-size: 0.76rem;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -238,26 +252,34 @@ h3 {
   font-size: 1.02rem;
 }
 
-.home-site-links p {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  margin: 0 0 1.35rem;
+.home-directory {
+  display: grid;
+  gap: 0.28rem;
+  max-width: 620px;
+  margin: 0 0 2.5rem;
   font-family: $mono;
-  font-size: 0.84rem;
+  font-size: 0.86rem;
 }
 
-.home-site-links a {
+.home-directory a {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 0.8rem;
   color: $text-strong;
   text-decoration: none;
 }
 
-.home-site-links a::before {
+.home-command::before {
   content: "> ";
   color: $accent;
 }
 
-.home-site-links a:hover {
+.home-command-description {
+  color: $muted;
+}
+
+.home-directory a:hover .home-command,
+.home-directory a:focus .home-command {
   color: $accent;
 }
 
@@ -306,15 +328,8 @@ h3 {
   border-bottom: 0;
 }
 
-.section-label {
+.home-section-title {
   margin: 0 0 1.8rem;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-}
-
-.section-label::before {
-  content: "";
 }
 
 .item-row {
@@ -505,8 +520,17 @@ video {
 
 @media (max-width: 680px) {
   .home-shell {
-    width: min(100% - 1.4rem, 980px);
+    width: 100%;
     padding-top: 2.5rem;
+  }
+
+  .home-directory a {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .home-command-description {
+    padding-left: 1.25rem;
   }
 
   .home-hero {

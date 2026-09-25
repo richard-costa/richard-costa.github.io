@@ -5,11 +5,36 @@ toc: false
 page-layout: full
 ---
 
+<style>
+.navbar .navbar-nav {
+  display: none !important;
+}
+
+.navbar-toggler {
+  display: none !important;
+}
+</style>
+
 ::: {.home-shell}
 
 ::: {.home-hero}
 
 <p class="home-identity">richard.costa_ / são paulo</p>
+
+<nav class="home-directory" aria-label="Site sections">
+  <a href="#projects">
+    <span class="home-command">projects</span>
+    <span class="home-command-description">things I've built</span>
+  </a>
+  <a href="notes/index.qmd">
+    <span class="home-command">notes</span>
+    <span class="home-command-description">technical / working notes</span>
+  </a>
+  <a href="posts.qmd">
+    <span class="home-command">posts</span>
+    <span class="home-command-description">occasional writing</span>
+  </a>
+</nav>
 
 <p class="hero-role">&gt; data scientist</p>
 <p class="hero-role">&gt; software / ml engineering</p>
@@ -18,11 +43,6 @@ page-layout: full
 <p class="hero-copy">
 Building things with data, models and code. I work mainly on the engineering and application side of data science, with a background in physics.
 </p>
-
-::: {.home-site-links}
-[notes →](notes/index.qmd)
-[posts →](posts.qmd)
-:::
 
 ::: {.hero-links}
 [github](https://github.com/richard-costa){.terminal-link}
@@ -36,7 +56,7 @@ Building things with data, models and code. I work mainly on the engineering and
 
 ::: {.home-section}
 
-<p class="section-label">projects</p>
+## projects {#projects .home-section-title}
 
 ::: {.item-row}
 

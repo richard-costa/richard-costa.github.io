@@ -1,7 +1,10 @@
 ---
-title: "notes"
+title: ""
+pagetitle: "notes"
 toc: false
 ---
+
+# notes {.page-command-title}
 
 Technical notes and working material. Status labels are **draft**, **developing** and **mature**.
 
