@@ -2,8 +2,9 @@
 # Page-specific options belong in the page itself or in a directory _metadata.yml.
 project:
   type: website
-  pre-render: "python _scripts/generate_changelog.py"
-  post-render: "python _scripts/generate_notes_feed.py"
+  post-render:
+    - _scripts/generate_changelog.py
+    - _scripts/generate_notes_feed.py
   resources:
     - robots.txt
     - humans.txt
