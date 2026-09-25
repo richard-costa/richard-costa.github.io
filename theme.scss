@@ -255,10 +255,12 @@ h3 {
 .home-directory {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.35rem;
-  margin: 0 0 2rem;
+  gap: 1.75rem;
+  margin: 0 0 2.2rem;
   font-family: $mono;
-  font-size: 0.9rem;
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
 }
 
 .home-directory a {
@@ -266,14 +268,21 @@ h3 {
   text-decoration: none;
 }
 
-.home-command::before {
-  content: "• ";
+.home-command::after {
+  content: " →";
   color: $accent;
+  display: inline-block;
+  transition: transform 120ms ease;
 }
 
 .home-directory a:hover .home-command,
 .home-directory a:focus .home-command {
   color: $accent;
+}
+
+.home-directory a:hover .home-command::after,
+.home-directory a:focus .home-command::after {
+  transform: translateX(0.14em);
 }
 
 .hero-links p {
