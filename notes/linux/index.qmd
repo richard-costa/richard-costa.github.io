@@ -7,4 +7,4 @@ Configuration and troubleshooting notes.
 
 - [Using the SDDM Astronaut theme](sddm-astronaut-theme.qmd) [developing]{.note-status .status-developing}
 - [YAD calendar popup for Waybar](waybar-yad-calendar.qmd) [mature]{.note-status .status-mature}
-- [Installing and updating Quarto on Arch Linux](arch/quarto.qmd) [mature]{.note-status .status-mature}
+- [Installing and updating Quarto on Arch Linux](quarto-on-arch.qmd) [mature]{.note-status .status-mature}

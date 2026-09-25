@@ -69,6 +69,34 @@ hr {
   opacity: 1;
 }
 
+@keyframes terminal-cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@mixin terminal-cursor {
+  content: "▋";
+  display: inline-block;
+  margin-left: 0.22rem;
+  color: $accent;
+  animation: terminal-cursor-blink 1s steps(1, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-identity::after,
+  .navbar-nav .nav-link::after {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 // ------------------------------------------------------------
 // Navigation
 // ------------------------------------------------------------
@@ -101,6 +129,10 @@ hr {
   content: "/";
   color: darken($muted, 25%);
   margin-right: 0.12rem;
+}
+
+.navbar-nav .nav-link::after {
+  @include terminal-cursor;
 }
 
 .navbar-nav .nav-link:hover,
@@ -180,6 +212,10 @@ h3 {
   font-size: 0.76rem;
   letter-spacing: 0.13em;
   text-transform: uppercase;
+}
+
+.home-identity::after {
+  @include terminal-cursor;
 }
 
 .hero-role {

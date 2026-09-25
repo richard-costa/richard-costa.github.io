@@ -9,7 +9,7 @@ Technical notes and working material. Status labels are **draft**, **developing*
 
 - [Using the SDDM Astronaut theme](linux/sddm-astronaut-theme.qmd) [developing]{.note-status .status-developing}
 - [YAD calendar popup for Waybar](linux/waybar-yad-calendar.qmd) [mature]{.note-status .status-mature}
-- [Installing and updating Quarto on Arch Linux](linux/arch/quarto.qmd) [mature]{.note-status .status-mature}
+- [Installing and updating Quarto on Arch Linux](linux/quarto-on-arch.qmd) [mature]{.note-status .status-mature}
 
 ## quantum_mechanics
 
@@ -29,7 +29,6 @@ References I want to keep around.
 
 - [The word "tensor" in machine learning, math, and physics](https://stats.stackexchange.com/a/198395)
 
-
 ### mathematical_physics
 
 - [nLab: mathematical physics](https://ncatlab.org/nlab/show/mathematical+physics)
@@ -40,4 +39,3 @@ This site is built with [Quarto](https://quarto.org/).
 
 - [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/)
 - [Adding a blog to your existing Quarto website](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/)
-
