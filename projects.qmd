@@ -17,6 +17,7 @@ A framework-light RAG implementation built to understand the underlying applicat
 :::
 
 ::: {.item-meta}
+<span class="project-status status-experiment">experiment</span><br>
 python · postgres · pgvector · ollama
 :::
 
