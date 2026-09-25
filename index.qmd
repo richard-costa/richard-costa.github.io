@@ -12,7 +12,9 @@ page-layout: full
 <div class="home-page-title">about</div>
 
 <p class="hero-copy">
-Building things with data, models and code. I work mainly on the engineering and application side of data science, with a background in physics.
+Physics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is "AI Engineering", let's see how long that lasts. 
+
+Also, remember, all work and no play brings you a worse day. Take care and poke around!
 </p>
 
 ::: {.hero-links}
@@ -26,7 +28,7 @@ Building things with data, models and code. I work mainly on the engineering and
 :::
 
 <div class="home-blogroll">
-  <div class="blogroll-title">blogroll</div>
+  <div class="blogroll-title">blogroll (placeholder links for now, i'll update them soon)</div>
   <nav class="blogroll-links" aria-label="Blogroll">
     <a href="https://ncatlab.org/">nLab <span>↗</span></a>
     <a href="https://quarto.org/">Quarto <span>↗</span></a>
