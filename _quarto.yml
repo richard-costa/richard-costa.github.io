@@ -2,10 +2,17 @@
 # Page-specific options belong in the page itself or in a directory _metadata.yml.
 project:
   type: website
+  pre-render: "python _scripts/generate_changelog.py"
+  post-render: "python _scripts/generate_notes_feed.py"
+  resources:
+    - robots.txt
+    - humans.txt
+    - site.js
 
 website:
   title: "Richard Costa"
   site-url: "https://richard-costa.github.io"
+  description: "Projects, technical notes, and occasional posts by Richard Costa."
 
   navbar:
     title: "richard.costa_ / são paulo"
@@ -16,10 +23,20 @@ website:
         text: notes
       - href: posts.qmd
         text: posts
+      - text: more
+        menu:
+          - href: now.qmd
+            text: now
+          - href: bookmarks.qmd
+            text: bookmarks
+          - href: blogroll.qmd
+            text: blogroll
+          - href: changelog.qmd
+            text: changelog
 
   page-footer:
     left: "Richard Costa"
-    right: "Built with Quarto"
+    right: "Built with Quarto · [humans.txt](/humans.txt)"
 
 format:
   html:
@@ -27,6 +44,7 @@ format:
     toc: true
     smooth-scroll: true
     code-copy: true
+    include-after-body: _includes/site-scripts.html
 
 # Keep equation references compact: "(1)" instead of "Equation 1".
 # Equation numbering/cross-references remain Quarto-native.
