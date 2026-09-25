@@ -23,7 +23,7 @@ page-layout: full
 
 ::: {.home-hero}
 
-# richard.costa_/ {.page-command-title .home-page-title}
+<div class="home-page-title">richard.costa_ / são paulo</div>
 
 <nav class="home-directory" aria-label="Site sections">
   <a href="projects.qmd"><span class="home-command">projects</span></a>

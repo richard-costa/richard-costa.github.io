@@ -91,7 +91,7 @@ hr {
 
 @media (prefers-reduced-motion: reduce) {
   .quarto-title h1.title::after,
-  .page-command-title::after {
+  .home-page-title::after {
     animation: none;
     opacity: 1;
   }
@@ -218,7 +218,22 @@ h3 {
 }
 
 .home-page-title {
-  margin-bottom: 1.6rem;
+  margin: 0 0 1.6rem;
+  color: $text-strong;
+  font-family: $mono;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.home-page-title::before {
+  content: "> ";
+  color: $accent;
+}
+
+.home-page-title::after {
+  @include terminal-cursor;
 }
 
 .hero-role {
