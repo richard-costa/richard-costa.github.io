@@ -5,6 +5,8 @@ toc: false
 
 Technical notes and working material. Status labels are **draft**, **developing** and **mature**.
 
+[rss](/notes.xml){.feed-link} · [bookmarks](/bookmarks.html){.feed-link}
+
 ## linux
 
 - [Using the SDDM Astronaut theme](linux/sddm-astronaut-theme.qmd) [developing]{.note-status .status-developing}
@@ -20,22 +22,3 @@ Technical notes and working material. Status labels are **draft**, **developing*
 ## logic
 
 - [Introduction to Logic](logic/introduction.qmd) [draft]{.note-status .status-draft}
-
-## resources
-
-References I want to keep around.
-
-### data science/ml
-
-- [The word "tensor" in machine learning, math, and physics](https://stats.stackexchange.com/a/198395)
-
-### mathematical_physics
-
-- [nLab: mathematical physics](https://ncatlab.org/nlab/show/mathematical+physics)
-
-### quarto
-
-This site is built with [Quarto](https://quarto.org/).
-
-- [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/)
-- [Adding a blog to your existing Quarto website](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/)
