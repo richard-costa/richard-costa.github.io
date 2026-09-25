@@ -328,6 +328,70 @@ h3 {
 }
 
 // ------------------------------------------------------------
+// Secondary site UI
+// ------------------------------------------------------------
+
+.dropdown-menu {
+  border-color: $border;
+  background: $surface;
+  font-family: $mono;
+}
+
+.dropdown-item {
+  color: $muted;
+  font-size: 0.8rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: rgba($accent, 0.08);
+  color: $accent;
+}
+
+.feed-link {
+  font-family: $mono;
+  font-size: 0.76rem;
+  text-decoration: none;
+}
+
+.feed-link::before {
+  content: "[ ";
+  color: $muted;
+}
+
+.feed-link::after {
+  content: " ]";
+  color: $muted;
+}
+
+.project-status {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  padding: 0.08rem 0.38rem;
+  border: 1px solid $border;
+  border-radius: 3px;
+  font-family: $mono;
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.status-active {
+  border-color: #305743;
+  color: #82d6ab;
+}
+
+.status-experiment {
+  border-color: #344e70;
+  color: #87b7f4;
+}
+
+.status-dormant {
+  border-color: #404947;
+  color: $muted;
+}
+
+// ------------------------------------------------------------
 // Notes, posts, code, and math
 // ------------------------------------------------------------
 
@@ -448,6 +512,133 @@ video {
 .math.display {
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+// ------------------------------------------------------------
+// 404 and terminal easter eggs
+// ------------------------------------------------------------
+
+.terminal-404 {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border: 1px solid $border;
+  border-radius: 4px;
+  background: $surface;
+  font-family: $mono;
+}
+
+.terminal-404-line,
+.terminal-404-error {
+  overflow-wrap: anywhere;
+}
+
+.terminal-prompt {
+  color: $accent;
+}
+
+.terminal-404-error {
+  margin: 0.45rem 0 1.5rem;
+  color: $muted;
+}
+
+.site-terminal-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1080;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid $border;
+  border-radius: 3px;
+  background: rgba($bg, 0.92);
+  color: $muted;
+  font-family: $mono;
+  font-size: 0.68rem;
+  cursor: pointer;
+}
+
+.site-terminal-toggle:hover,
+.site-terminal-toggle:focus {
+  border-color: $accent;
+  color: $accent;
+}
+
+.site-terminal {
+  position: fixed;
+  right: 1rem;
+  bottom: 3.4rem;
+  z-index: 1090;
+  width: min(430px, calc(100vw - 2rem));
+  border: 1px solid $border;
+  border-radius: 4px;
+  background: rgba($bg, 0.98);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.35);
+  color: $text;
+  font-family: $mono;
+  font-size: 0.78rem;
+}
+
+.site-terminal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0.7rem;
+  border-bottom: 1px solid $border;
+  color: $muted;
+}
+
+.site-terminal-close {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $muted;
+  font: inherit;
+  cursor: pointer;
+}
+
+.site-terminal-close:hover {
+  color: $text-strong;
+}
+
+.site-terminal-body {
+  padding: 0.85rem;
+}
+
+.site-terminal-output {
+  min-height: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.site-terminal-output a {
+  display: inline-block;
+  margin: 0.15rem 0.55rem 0.15rem 0;
+  color: $accent;
+  text-decoration: none;
+}
+
+.site-terminal-form {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.site-terminal-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.32rem 0.4rem;
+  border: 0;
+  border-bottom: 1px solid $border;
+  outline: 0;
+  background: transparent;
+  color: $text-strong;
+  font: inherit;
+}
+
+.site-terminal-form input:focus {
+  border-bottom-color: $accent;
+}
+
+.terminal-muted {
+  color: $muted;
 }
 
 // ------------------------------------------------------------
