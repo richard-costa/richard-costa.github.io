@@ -2,11 +2,13 @@ from datetime import datetime, timezone
 from email.utils import format_datetime
 from pathlib import Path
 import html
+import os
 import re
 import subprocess
 
 SITE = "https://richard-costa.github.io"
-OUT = Path("_site/notes.xml")
+OUTPUT_DIR = Path(os.environ.get("QUARTO_PROJECT_OUTPUT_DIR", "_site"))
+OUT = OUTPUT_DIR / "notes.xml"
 
 
 def git_modified(path):
@@ -23,8 +25,8 @@ def git_modified(path):
 
 
 def field(frontmatter, name):
-    match = re.search(rf"^{name}:\\s*(.+?)\\s*$", frontmatter, re.MULTILINE)
-    return match.group(1).strip().strip("'\\"") if match else ""
+    match = re.search(rf"^{name}:\s*(.+?)\s*$", frontmatter, re.MULTILINE)
+    return match.group(1).strip().strip("'\"") if match else ""
 
 
 items = []
@@ -34,7 +36,7 @@ for path in Path("notes").rglob("*.qmd"):
         continue
 
     source = path.read_text(encoding="utf-8")
-    match = re.match(r"^---\\s*\\n([\\s\\S]*?)\\n---\\s*\\n?", source)
+    match = re.match(r"^---\s*\n([\s\S]*?)\n---\s*\n?", source)
     if not match:
         continue
 
@@ -54,7 +56,7 @@ items.sort(reverse=True, key=lambda item: item[0])
 
 xml_items = []
 for modified, title, url, description, status in items:
-    category = f"\\n      <category>{html.escape(status)}</category>" if status else ""
+    category = f"\n      <category>{html.escape(status)}</category>" if status else ""
     xml_items.append(
         f"""    <item>
       <title>{html.escape(title)}</title>
