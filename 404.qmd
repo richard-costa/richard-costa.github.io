@@ -1,0 +1,14 @@
+---
+title: "404"
+pagetitle: "404 — command not found"
+toc: false
+---
+
+::: {.terminal-404}
+
+<div class="terminal-404-line"><span class="terminal-prompt">$</span> cd /missing</div>
+<div class="terminal-404-error">bash: cd: /missing: No such file or directory</div>
+
+Try [cd ~](/), [ls notes](/notes/), or [ls projects](/projects.html).
+
+:::
