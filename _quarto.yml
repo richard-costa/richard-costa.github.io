@@ -9,6 +9,7 @@ project:
     - robots.txt
     - humans.txt
     - site.js
+    - data/equations.json
 
 website:
   title: "Richard Costa"
