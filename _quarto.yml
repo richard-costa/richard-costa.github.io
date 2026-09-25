@@ -10,6 +10,8 @@ website:
   navbar:
     title: "richard.costa_"
     right:
+      - href: projects.qmd
+        text: projects
       - href: notes/index.qmd
         text: notes
       - href: posts.qmd

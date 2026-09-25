@@ -12,7 +12,8 @@ quarto preview
 
 ## Repository map
 
-- `index.qmd` — homepage and selected work
+- `index.qmd` — homepage / about
+- `projects.qmd` — projects
 - `notes/` — technical notes and references
 - `posts/` — chronological posts
 - `files/` — résumé and other static downloads

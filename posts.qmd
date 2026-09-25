@@ -1,6 +1,5 @@
 ---
-title: ""
-pagetitle: "posts"
+title: "posts"
 toc: false
 
 # Everything under posts/ is included automatically.
@@ -10,5 +9,3 @@ listing:
   type: default
   categories: true
 ---
-
-# posts {.page-command-title}

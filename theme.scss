@@ -90,7 +90,6 @@ hr {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-identity::after,
   .quarto-title h1.title::after,
   .page-command-title::after {
     animation: none;
@@ -161,11 +160,6 @@ h2 {
   font-size: 1.35rem;
 }
 
-h2::before {
-  content: "> ";
-  color: $accent;
-}
-
 h3 {
   font-size: 1.05rem;
 }
@@ -174,6 +168,11 @@ h3 {
 .description,
 .subtitle {
   color: $muted;
+}
+
+.quarto-title h1.title::before {
+  content: "> ";
+  color: $accent;
 }
 
 .quarto-title h1.title::after {
@@ -212,24 +211,14 @@ h3 {
   border-bottom: 1px solid $border;
 }
 
-.home-identity,
-.section-label,
 .item-number,
-.item-meta,
-.home-location {
+.item-meta {
   color: $muted;
   font-family: $mono;
 }
 
-.home-identity {
-  margin: 0 0 1.3rem;
-  font-size: 0.76rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.home-identity::after {
-  @include terminal-cursor;
+.home-page-title {
+  margin-bottom: 1.6rem;
 }
 
 .hero-role {
@@ -241,10 +230,6 @@ h3 {
   letter-spacing: -0.04em;
 }
 
-.hero-role::first-letter {
-  color: $accent;
-}
-
 .hero-copy {
   max-width: 650px;
   margin: 2rem 0 1.8rem;
@@ -253,18 +238,15 @@ h3 {
 }
 
 .home-directory {
-  display: grid;
-  gap: 0.28rem;
-  max-width: 620px;
-  margin: 0 0 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.35rem;
+  margin: 2.2rem 0 0;
   font-family: $mono;
-  font-size: 0.86rem;
+  font-size: 0.9rem;
 }
 
 .home-directory a {
-  display: grid;
-  grid-template-columns: 8.5rem minmax(0, 1fr);
-  gap: 0.8rem;
   color: $text-strong;
   text-decoration: none;
 }
@@ -272,10 +254,6 @@ h3 {
 .home-command::before {
   content: "> ";
   color: $accent;
-}
-
-.home-command-description {
-  color: $muted;
 }
 
 .home-directory a:hover .home-command,
@@ -317,19 +295,6 @@ h3 {
   background: rgba($accent, 0.1);
   color: $accent;
   text-decoration: none;
-}
-
-.home-section {
-  padding: 3.2rem 0;
-  border-bottom: 1px solid $border;
-}
-
-.home-section:last-child {
-  border-bottom: 0;
-}
-
-.home-section-title {
-  margin: 0 0 1.8rem;
 }
 
 .item-row {
@@ -378,10 +343,6 @@ h3 {
 
 .item-meta {
   text-align: right;
-}
-
-.home-location {
-  font-size: 0.72rem;
 }
 
 // ------------------------------------------------------------
@@ -522,15 +483,6 @@ video {
   .home-shell {
     width: 100%;
     padding-top: 2.5rem;
-  }
-
-  .home-directory a {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .home-command-description {
-    padding-left: 1.25rem;
   }
 
   .home-hero {
