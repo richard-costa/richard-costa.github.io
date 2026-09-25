@@ -461,9 +461,8 @@ video {
 .giscus-frame {
   display: block;
   width: 100%;
-  border: 1px solid $border !important;
-  border-radius: 4px;
-  background: $surface;
+  border: 0 !important;
+  background: transparent;
   color-scheme: dark;
 }
 
