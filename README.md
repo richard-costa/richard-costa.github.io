@@ -1,14 +1,8 @@
 # richard-costa.github.io
 
-Source for [richard-costa.github.io](https://richard-costa.github.io/) — my personal website for projects, technical notes, posts, bookmarks, and small web experiments.
+Source for [richard-costa.github.io](https://richard-costa.github.io/)
 
-Built with [Quarto](https://quarto.org/).
-
-## Local preview
-
-```bash
-quarto preview
-```
+Built with [Quarto](https://quarto.org/). Use `quarto preview` for local preview.
 
 Project scripts generate the changelog from Git history and a separate RSS feed for notes during rendering. Posts use Quarto's native listing feed.
 
