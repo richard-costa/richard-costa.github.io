@@ -451,6 +451,23 @@ video {
 }
 
 // ------------------------------------------------------------
+// Giscus comments
+// ------------------------------------------------------------
+
+.giscus {
+  margin-top: 3rem;
+}
+
+.giscus-frame {
+  display: block;
+  width: 100%;
+  border: 1px solid $border !important;
+  border-radius: 4px;
+  background: $surface;
+  color-scheme: dark;
+}
+
+// ------------------------------------------------------------
 // Footer and mobile
 // ------------------------------------------------------------
 
