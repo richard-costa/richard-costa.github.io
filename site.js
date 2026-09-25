@@ -3,6 +3,48 @@
     node.textContent = window.location.pathname;
   });
 
+  const changelog = document.getElementById("git-changelog");
+  if (changelog) {
+    fetch("/changelog.json")
+      .then((response) => {
+        if (!response.ok) throw new Error("changelog unavailable");
+        return response.json();
+      })
+      .then((entries) => {
+        changelog.textContent = "";
+
+        if (!Array.isArray(entries) || entries.length === 0) {
+          changelog.textContent = "No recent changes found.";
+          return;
+        }
+
+        let currentDate = "";
+
+        for (const entry of entries) {
+          if (entry.date !== currentDate) {
+            const heading = document.createElement("h2");
+            heading.textContent = entry.date;
+            changelog.appendChild(heading);
+            currentDate = entry.date;
+          }
+
+          const item = document.createElement("p");
+          const link = document.createElement("a");
+          const sha = document.createElement("code");
+
+          link.href = entry.url;
+          link.textContent = entry.subject;
+          sha.textContent = entry.short_sha;
+
+          item.append(link, " · ", sha);
+          changelog.appendChild(item);
+        }
+      })
+      .catch(() => {
+        changelog.textContent = "Recent Git history was unavailable for this render.";
+      });
+  }
+
   function openTerminal() {
     let root = document.getElementById("site-terminal");
 
