@@ -204,14 +204,14 @@
     output.innerHTML = "";
     const art = document.createElement("pre");
     art.className = "terminal-art";
-    art.textContent = String.raw`
-       ( (
-        ) )
-     ........
-     |      |]
-     \      /
-      `----'
-    `;
+    art.textContent = [
+      "       ( (",
+      "        ) )",
+      "     ........",
+      "     |      |]",
+      "     \\      /",
+      "      `----'",
+    ].join("\\n");
     const note = document.createElement("div");
     note.className = "terminal-muted";
     note.textContent = "coffee: brewed locally, no package manager required.";
