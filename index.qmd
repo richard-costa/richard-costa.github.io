@@ -31,9 +31,7 @@ page-layout: full
   <a href="posts.qmd"><span class="home-command">posts</span></a>
 </nav>
 
-<p class="hero-role">data scientist</p>
-<p class="hero-role">software / ml engineering</p>
-<p class="hero-role">physics</p>
+<p class="hero-role-line">data science · ml engineering · physics</p>
 
 <p class="hero-copy">
 Building things with data, models and code. I work mainly on the engineering and application side of data science, with a background in physics.
