@@ -1,0 +1,86 @@
+[
+  {
+    "date": "2026-09-25",
+    "subject": "reorder now section",
+    "sha": "dd3274eb6a36ac8eaa824213de2d6e66863a5b71",
+    "short_sha": "dd3274e",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/dd3274eb6a36ac8eaa824213de2d6e66863a5b71"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "update README",
+    "sha": "77c88f7d8dde1dd3d6f90a8e6a2288ceb7b6c138",
+    "short_sha": "77c88f7",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/77c88f7d8dde1dd3d6f90a8e6a2288ceb7b6c138"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Make rm easter egg easier to trigger",
+    "sha": "0b571c38b4d56610c49e9a2545db83f427cc2007",
+    "short_sha": "0b571c3",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/0b571c38b4d56610c49e9a2545db83f427cc2007"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Load terminal equations from JSON",
+    "sha": "895d52004b2de0ce9b9d818e06c9c3c649378f73",
+    "short_sha": "895d520",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/895d52004b2de0ce9b9d818e06c9c3c649378f73"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Move terminal equations to data file",
+    "sha": "49e4d44aee434c25ec080eb5d83b9d452cf30c3a",
+    "short_sha": "49e4d44",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/49e4d44aee434c25ec080eb5d83b9d452cf30c3a"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "add a better landing page text",
+    "sha": "d8f85eeca35700e4c57691b1f01ee87ca3c72fc4",
+    "short_sha": "d8f85ee",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/d8f85eeca35700e4c57691b1f01ee87ca3c72fc4"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Style traditional homepage blogroll",
+    "sha": "7b489931d5a49ab4b62daf477d3e691949db4481",
+    "short_sha": "7b48993",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/7b489931d5a49ab4b62daf477d3e691949db4481"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Redesign homepage blogroll as sidebar",
+    "sha": "3b465a1f1468baa51163ab7453bf84e844142344",
+    "short_sha": "3b465a1",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/3b465a1f1468baa51163ab7453bf84e844142344"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Remove standalone blogroll page",
+    "sha": "fc454d9c4fa05681010b0e6ead4d56ab70877209",
+    "short_sha": "fc454d9",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/fc454d9c4fa05681010b0e6ead4d56ab70877209"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Style homepage blogroll",
+    "sha": "1a867d23a61bf6f88c3fb933715ffe709f859cd1",
+    "short_sha": "1a867d2",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/1a867d23a61bf6f88c3fb933715ffe709f859cd1"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Ensure UTF-8 humans file rendering",
+    "sha": "58280effdcf0285163c18f8b46e69369840189e8",
+    "short_sha": "58280ef",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/58280effdcf0285163c18f8b46e69369840189e8"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Simplify coffee command output",
+    "sha": "2edd7d5841e1dd087a6702c221173a34cf029174",
+    "short_sha": "2edd7d5",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/2edd7d5841e1dd087a6702c221173a34cf029174"
+  }
+]

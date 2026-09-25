@@ -1,0 +1,56 @@
+{
+  "physics": [
+    {
+      "name": "time-dependent Schrödinger equation",
+      "latex": "i\\hbar \\frac{\\partial}{\\partial t}\\lvert\\psi(t)\\rangle = \\hat H\\lvert\\psi(t)\\rangle",
+      "note": "Quantum states evolve under the Hamiltonian."
+    },
+    {
+      "name": "Einstein field equations",
+      "latex": "G_{\\mu\\nu} + \\Lambda g_{\\mu\\nu} = \\frac{8\\pi G}{c^4}T_{\\mu\\nu}",
+      "note": "Spacetime geometry related to energy and momentum."
+    },
+    {
+      "name": "covariant Maxwell equation",
+      "latex": "\\nabla_{\\mu}F^{\\mu\\nu} = \\mu_0 J^{\\nu}",
+      "note": "A compact relativistic form of the sourced Maxwell equations."
+    },
+    {
+      "name": "Dirac equation",
+      "latex": "\\left(i\\gamma^\\mu\\partial_\\mu - m\\right)\\psi = 0",
+      "note": "Relativistic spin-1/2 dynamics in natural units."
+    },
+    {
+      "name": "Hamilton's equations",
+      "latex": "\\dot q_i = \\frac{\\partial H}{\\partial p_i}, \\qquad \\dot p_i = -\\frac{\\partial H}{\\partial q_i}",
+      "note": "Classical dynamics written in phase-space form."
+    }
+  ],
+  "math": [
+    {
+      "name": "Euler's identity",
+      "latex": "e^{i\\pi} + 1 = 0",
+      "note": "Five fundamental constants in one line."
+    },
+    {
+      "name": "Gaussian integral",
+      "latex": "\\int_{-\\infty}^{\\infty} e^{-x^2}\\,dx = \\sqrt{\\pi}",
+      "note": "A classic integral with no elementary antiderivative."
+    },
+    {
+      "name": "Basel problem",
+      "latex": "\\sum_{n=1}^{\\infty}\\frac{1}{n^2} = \\frac{\\pi^2}{6}",
+      "note": "An infinite series unexpectedly meeting π."
+    },
+    {
+      "name": "Cauchy–Schwarz inequality",
+      "latex": "\\left|\\langle x,y\\rangle\\right|^2 \\leq \\langle x,x\\rangle\\langle y,y\\rangle",
+      "note": "One of the structural inequalities behind inner-product spaces."
+    },
+    {
+      "name": "Euler's formula",
+      "latex": "e^{ix} = \\cos x + i\\sin x",
+      "note": "The bridge between exponentials and rotations."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Richard Costa — notes</title>
+    <link>https://richard-costa.github.io/notes/</link>
+    <description>Technical notes and working material by Richard Costa.</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Sep 2026 13:10:57 -0300</lastBuildDate>
+    <atom:link href="https://richard-costa.github.io/notes.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Logic</title>
+      <link>https://richard-costa.github.io/notes/logic/introduction.html</link>
+      <guid isPermaLink="true">https://richard-costa.github.io/notes/logic/introduction.html</guid>
+      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <description>Technical note · draft</description>
+      <category>draft</category>
+    </item>
+    <item>
+      <title>Dirac Notation and Riesz Theorem</title>
+      <link>https://richard-costa.github.io/notes/quantum-mechanics/dirac-riesz.html</link>
+      <guid isPermaLink="true">https://richard-costa.github.io/notes/quantum-mechanics/dirac-riesz.html</guid>
+      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <description>Technical note · draft</description>
+      <category>draft</category>
+    </item>
+    <item>
+      <title>Review of Quantum Mechanics</title>
+      <link>https://richard-costa.github.io/notes/quantum-mechanics/review.html</link>
+      <guid isPermaLink="true">https://richard-costa.github.io/notes/quantum-mechanics/review.html</guid>
+      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <description>Technical note · draft</description>
+      <category>draft</category>
+    </item>
+    <item>
+      <title>Installing and updating Quarto on Arch Linux</title>
+      <link>https://richard-costa.github.io/notes/linux/quarto-on-arch.html</link>
+      <guid isPermaLink="true">https://richard-costa.github.io/notes/linux/quarto-on-arch.html</guid>
+      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <description>Technical note · mature</description>
+      <category>mature</category>
+    </item>
+    <item>
+      <title>Using the SDDM Astronaut theme</title>
+      <link>https://richard-costa.github.io/notes/linux/sddm-astronaut-theme.html</link>
+      <guid isPermaLink="true">https://richard-costa.github.io/notes/linux/sddm-astronaut-theme.html</guid>
+      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <description>Technical note · developing</description>
+      <category>developing</category>
+    </item>
+    <item>
+      <title>YAD calendar popup for Waybar</title>
+      <link>https://richard-costa.github.io/notes/linux/waybar-yad-calendar.html</link>
+      <guid isPermaLink="true">https://richard-costa.github.io/notes/linux/waybar-yad-calendar.html</guid>
+      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <description>Technical note · mature</description>
+      <category>mature</category>
+    </item>
+  </channel>
+</rss>

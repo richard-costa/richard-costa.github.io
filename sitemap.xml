@@ -2,15 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://richard-costa.github.io/projects.html</loc>
-    <lastmod>2026-09-25T17:18:17.668Z</lastmod>
+    <lastmod>2026-09-25T21:26:29.586Z</lastmod>
   </url>
   <url>
-    <loc>https://richard-costa.github.io/posts.html</loc>
-    <lastmod>2026-09-25T16:39:35.160Z</lastmod>
+    <loc>https://richard-costa.github.io/now.html</loc>
+    <lastmod>2026-09-25T21:26:29.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/changelog.html</loc>
+    <lastmod>2026-09-25T21:26:29.585Z</lastmod>
   </url>
   <url>
     <loc>https://richard-costa.github.io/notes/index.html</loc>
-    <lastmod>2026-09-25T17:18:17.666Z</lastmod>
+    <lastmod>2026-09-25T21:26:29.585Z</lastmod>
   </url>
   <url>
     <loc>https://richard-costa.github.io/notes/linux/sddm-astronaut-theme.html</loc>
@@ -45,7 +49,15 @@
     <lastmod>2026-09-04T21:37:31.000Z</lastmod>
   </url>
   <url>
+    <loc>https://richard-costa.github.io/bookmarks.html</loc>
+    <lastmod>2026-09-25T21:26:29.585Z</lastmod>
+  </url>
+  <url>
     <loc>https://richard-costa.github.io/index.html</loc>
-    <lastmod>2026-09-25T17:18:17.666Z</lastmod>
+    <lastmod>2026-09-25T21:32:01.009Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/posts.html</loc>
+    <lastmod>2026-09-25T21:26:29.585Z</lastmod>
   </url>
 </urlset>

@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
+
 Sitemap: https://richard-costa.github.io/sitemap.xml

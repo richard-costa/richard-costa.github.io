@@ -1,0 +1,18 @@
+﻿/* HUMAN */
+Name: Richard Costa
+Location: São Paulo, Brazil
+
+/* SITE */
+Site: https://richard-costa.github.io
+Source: https://github.com/richard-costa/richard-costa.github.io
+Generator: Quarto
+Host: GitHub Pages
+OS: Arch Linux
+Fonts: system sans-serif + SFMono / Consolas / Liberation Mono / Menlo
+Theme: custom dark SCSS
+Comments: Giscus
+AI assistance: GPT-5.6 Sol
+
+/* NOTES */
+Built as a personal corner of the web for projects, technical notes, posts,
+bookmarks, and whatever else is worth keeping around.
