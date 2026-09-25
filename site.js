@@ -48,61 +48,20 @@
       });
   }
 
-  const physicsEquations = [
-    {
-      name: "time-dependent Schrödinger equation",
-      latex: String.raw`i\hbar \frac{\partial}{\partial t}\lvert\psi(t)\rangle = \hat H\lvert\psi(t)\rangle`,
-      note: "Quantum states evolve under the Hamiltonian."
-    },
-    {
-      name: "Einstein field equations",
-      latex: String.raw`G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}`,
-      note: "Spacetime geometry related to energy and momentum."
-    },
-    {
-      name: "covariant Maxwell equation",
-      latex: String.raw`\nabla_{\mu}F^{\mu\nu} = \mu_0 J^{\nu}`,
-      note: "A compact relativistic form of the sourced Maxwell equations."
-    },
-    {
-      name: "Dirac equation",
-      latex: String.raw`\left(i\gamma^\mu\partial_\mu - m\right)\psi = 0`,
-      note: "Relativistic spin-1/2 dynamics in natural units."
-    },
-    {
-      name: "Hamilton's equations",
-      latex: String.raw`\dot q_i = \frac{\partial H}{\partial p_i}, \qquad \dot p_i = -\frac{\partial H}{\partial q_i}`,
-      note: "Classical dynamics written in phase-space form."
-    }
-  ];
+  let equationDataPromise = null;
 
-  const mathEquations = [
-    {
-      name: "Euler's identity",
-      latex: String.raw`e^{i\pi} + 1 = 0`,
-      note: "Five fundamental constants in one line."
-    },
-    {
-      name: "Gaussian integral",
-      latex: String.raw`\int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}`,
-      note: "A classic integral with no elementary antiderivative."
-    },
-    {
-      name: "Basel problem",
-      latex: String.raw`\sum_{n=1}^{\infty}\frac{1}{n^2} = \frac{\pi^2}{6}`,
-      note: "An infinite series unexpectedly meeting π."
-    },
-    {
-      name: "Cauchy–Schwarz inequality",
-      latex: String.raw`\left|\langle x,y\rangle\right|^2 \leq \langle x,x\rangle\langle y,y\rangle`,
-      note: "One of the structural inequalities behind inner-product spaces."
-    },
-    {
-      name: "Euler's formula",
-      latex: String.raw`e^{ix} = \cos x + i\sin x`,
-      note: "The bridge between exponentials and rotations."
+  function loadEquationData() {
+    if (!equationDataPromise) {
+      equationDataPromise = fetch("/data/equations.json")
+        .then((response) => {
+          if (!response.ok) throw new Error("equation data unavailable");
+          return response.json();
+        });
     }
-  ];
+
+    return equationDataPromise;
+  }
+
 
   function randomItem(items) {
     return items[Math.floor(Math.random() * items.length)];
@@ -155,24 +114,27 @@
   }
 
   async function renderEquation(output, kind) {
-    const item = randomItem(kind === "physics" ? physicsEquations : mathEquations);
-
-    output.innerHTML = `
-      <div class="terminal-result-title">${item.name}</div>
-      <div class="terminal-math">\\[${item.latex}\\]</div>
-      <div class="terminal-muted">${item.note}</div>
-    `;
-
     try {
+      const data = await loadEquationData();
+      const items = data?.[kind];
+
+      if (!Array.isArray(items) || items.length === 0) {
+        throw new Error("equation category unavailable");
+      }
+
+      const item = randomItem(items);
+
+      output.innerHTML = `
+        <div class="terminal-result-title">${item.name}</div>
+        <div class="terminal-math">\\[${item.latex}\\]</div>
+        <div class="terminal-muted">${item.note}</div>
+      `;
+
       const mathJax = await ensureMathJax();
       if (mathJax?.typesetClear) mathJax.typesetClear([output]);
       if (mathJax?.typesetPromise) await mathJax.typesetPromise([output]);
     } catch {
-      output.innerHTML = `
-        <div class="terminal-result-title">${item.name}</div>
-        <code>${item.latex}</code>
-        <div class="terminal-muted">Math renderer unavailable.</div>
-      `;
+      output.innerHTML = '<span class="terminal-muted">equation data unavailable.</span>';
     }
   }
 
