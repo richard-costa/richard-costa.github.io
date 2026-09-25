@@ -1,4 +1,8 @@
 (() => {
+  document.querySelectorAll(".js-404-path").forEach((node) => {
+    node.textContent = window.location.pathname;
+  });
+
   function openTerminal() {
     let root = document.getElementById("site-terminal");
 
