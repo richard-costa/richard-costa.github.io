@@ -241,7 +241,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 1.35rem;
-  margin: 2.2rem 0 0;
+  margin: 0 0 2rem;
   font-family: $mono;
   font-size: 0.9rem;
 }
@@ -252,7 +252,7 @@ h3 {
 }
 
 .home-command::before {
-  content: "> ";
+  content: "• ";
   color: $accent;
 }
 

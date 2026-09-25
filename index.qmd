@@ -13,6 +13,10 @@ page-layout: full
 .navbar-toggler {
   display: none !important;
 }
+
+.quarto-title-block {
+  display: none !important;
+}
 </style>
 
 ::: {.home-shell}
@@ -20,6 +24,12 @@ page-layout: full
 ::: {.home-hero}
 
 # richard.costa_/ {.page-command-title .home-page-title}
+
+<nav class="home-directory" aria-label="Site sections">
+  <a href="projects.qmd"><span class="home-command">projects</span></a>
+  <a href="notes/index.qmd"><span class="home-command">notes</span></a>
+  <a href="posts.qmd"><span class="home-command">posts</span></a>
+</nav>
 
 <p class="hero-role">data scientist</p>
 <p class="hero-role">software / ml engineering</p>
@@ -36,12 +46,6 @@ Building things with data, models and code. I work mainly on the engineering and
 [résumé - pt](/files/resume/resume_portuguese.pdf){.terminal-link}
 [email](mailto:scosta.richard@gmail.com){.terminal-link}
 :::
-
-<nav class="home-directory" aria-label="Site sections">
-  <a href="projects.qmd"><span class="home-command">projects</span></a>
-  <a href="notes/index.qmd"><span class="home-command">notes</span></a>
-  <a href="posts.qmd"><span class="home-command">posts</span></a>
-</nav>
 
 :::
 
