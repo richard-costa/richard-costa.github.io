@@ -91,6 +91,7 @@ hr {
 
 @media (prefers-reduced-motion: reduce) {
   .home-identity::after,
+  .section-label::after,
   .navbar-nav .nav-link::after {
     animation: none;
     opacity: 1;
@@ -292,6 +293,10 @@ h3 {
 
 .section-label::before {
   content: "";
+}
+
+.section-label::after {
+  @include terminal-cursor;
 }
 
 .item-row {
