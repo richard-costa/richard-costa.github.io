@@ -5,31 +5,11 @@ toc: false
 page-layout: full
 ---
 
-<style>
-.navbar .navbar-nav {
-  display: none !important;
-}
-
-.navbar-toggler {
-  display: none !important;
-}
-
-.quarto-title-block {
-  display: none !important;
-}
-</style>
-
 ::: {.home-shell}
 
 ::: {.home-hero}
 
-<div class="home-page-title">richard.costa_ / são paulo</div>
-
-<nav class="home-directory" aria-label="Site sections">
-  <a href="projects.qmd"><span class="home-command">projects</span></a>
-  <a href="notes/index.qmd"><span class="home-command">notes</span></a>
-  <a href="posts.qmd"><span class="home-command">posts</span></a>
-</nav>
+<div class="home-page-title">about</div>
 
 <p class="hero-copy">
 Building things with data, models and code. I work mainly on the engineering and application side of data science, with a background in physics.

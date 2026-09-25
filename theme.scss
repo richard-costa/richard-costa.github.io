@@ -243,27 +243,6 @@ h3 {
   font-size: 1.02rem;
 }
 
-.home-directory {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.75rem;
-  margin: 0 0 0.65rem;
-  font-family: $mono;
-  font-size: clamp(1.4rem, 3vw, 1.85rem);
-  line-height: 1.25;
-  letter-spacing: -0.03em;
-}
-
-.home-directory a {
-  color: $text-strong;
-  text-decoration: none;
-}
-
-.home-directory a:hover .home-command,
-.home-directory a:focus .home-command {
-  color: $accent;
-}
-
 .hero-links p {
   display: flex;
   flex-wrap: wrap;
