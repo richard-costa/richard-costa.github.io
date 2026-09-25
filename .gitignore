@@ -7,5 +7,3 @@
 # Keep local Obsidian workspace/settings out of Git.
 /notes/.obsidian/
 
-# Generated from Git history during Quarto render.
-/_generated/
