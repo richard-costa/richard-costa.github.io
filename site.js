@@ -306,7 +306,7 @@
 
       form?.addEventListener("submit", async (event) => {
         event.preventDefault();
-        const command = input.value.trim().toLowerCase();
+        const command = input.value.trim().toLowerCase().replace(/\s+/g, " ");
         input.value = "";
 
         if (command === "help") {
@@ -333,7 +333,7 @@
         } else if (command === "cmatrix") {
           output.innerHTML = '<span class="terminal-muted">cmatrix: q or Esc exits.</span>';
           startCmatrix(input);
-        } else if (command === "rm -rf /") {
+        } else if (["rm -rf /", "sudo rm -rf /", "rm -rf *"].includes(command)) {
           output.innerHTML = 'rm: refusing to remove <code>/</code><br><span class="terminal-muted">filesystem is read-only. nice try.</span>';
         } else if (command) {
           output.textContent = `command not found: ${command}`;
