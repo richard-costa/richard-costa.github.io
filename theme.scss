@@ -236,15 +236,6 @@ h3 {
   @include terminal-cursor;
 }
 
-.hero-role-line {
-  margin: 0 0 1.8rem;
-  color: $muted;
-  font-family: $mono;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-}
-
 .hero-copy {
   max-width: 650px;
   margin: 2rem 0 1.8rem;
@@ -268,22 +259,9 @@ h3 {
   text-decoration: none;
 }
 
-.home-command::before {
-  content: "→";
-  color: $accent;
-  display: inline-block;
-  margin-right: 0.42em;
-  transition: transform 120ms ease;
-}
-
 .home-directory a:hover .home-command,
 .home-directory a:focus .home-command {
   color: $accent;
-}
-
-.home-directory a:hover .home-command::before,
-.home-directory a:focus .home-command::before {
-  transform: translateX(0.12em);
 }
 
 .hero-links p {
