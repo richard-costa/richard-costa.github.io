@@ -238,8 +238,8 @@ h3 {
 
 .hero-copy {
   max-width: 650px;
-  margin: 2rem 0 1.8rem;
-  color: $muted;
+  margin: 0.75rem 0 1.8rem;
+  color: $text;
   font-size: 1.02rem;
 }
 
@@ -247,7 +247,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 1.75rem;
-  margin: 0 0 2.2rem;
+  margin: 0 0 0.65rem;
   font-family: $mono;
   font-size: clamp(1.4rem, 3vw, 1.85rem);
   line-height: 1.25;
