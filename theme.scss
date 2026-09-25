@@ -641,6 +641,92 @@ video {
   color: $muted;
 }
 
+.terminal-result-title {
+  margin-bottom: 0.55rem;
+  color: $text-strong;
+  font-weight: 600;
+}
+
+.terminal-help {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.terminal-help-row {
+  display: grid;
+  grid-template-columns: 5.6rem minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: baseline;
+}
+
+.terminal-help-row code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $accent;
+}
+
+.terminal-art {
+  margin: 0 0 0.55rem;
+  padding: 0;
+  border: 0;
+  background: transparent !important;
+  color: $text-strong !important;
+  font-family: $mono;
+  line-height: 1.15;
+}
+
+.terminal-math {
+  margin: 0.65rem 0;
+  overflow-x: auto;
+  color: $text-strong;
+}
+
+.cmatrix-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  overflow: hidden;
+  background: $bg;
+}
+
+.cmatrix-overlay canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cmatrix-hint {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.28rem 0.45rem;
+  border: 1px solid rgba($accent, 0.35);
+  border-radius: 3px;
+  background: rgba($bg, 0.75);
+  color: $muted;
+  font-family: $mono;
+  font-size: 0.68rem;
+}
+
+.cmatrix-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $muted;
+  font-family: $mono;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cmatrix-close:hover,
+.cmatrix-close:focus {
+  color: $accent;
+}
+
 // ------------------------------------------------------------
 // Giscus comments
 // ------------------------------------------------------------
