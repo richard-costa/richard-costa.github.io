@@ -1,6 +1,9 @@
 ---
 title: "Introduction to Logic"
 status: draft
+date-modified: last-modified
+language:
+  title-block-modified: "UPDATED"
 ---
 
 [Introduction to Logic — Cezar Mortari](https://www.amazon.com/Introdução-Lógica-Portuguese-Cezar-Mortari-ebook/dp/B01975TDH4/)

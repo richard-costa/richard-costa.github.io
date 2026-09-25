@@ -1,6 +1,9 @@
 ---
 title: "Dirac Notation and Riesz Theorem"
 status: draft
+date-modified: last-modified
+language:
+  title-block-modified: "UPDATED"
 ---
 
 ### Riesz Representation Theorem

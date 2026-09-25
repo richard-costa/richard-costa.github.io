@@ -1,0 +1,23 @@
+---
+title: "projects"
+toc: false
+---
+
+::: {.item-row}
+
+::: {.item-number}
+01
+:::
+
+::: {.item-body}
+<p class="item-title">[rag ↗](https://github.com/richard-costa/rag)</p>
+<p class="item-description">
+A framework-light RAG implementation built to understand the underlying application structure rather than hide it behind abstractions.
+</p>
+:::
+
+::: {.item-meta}
+python · postgres · pgvector · ollama
+:::
+
+:::

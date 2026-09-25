@@ -1,6 +1,0 @@
----
-title: "arch linux"
-toc: false
----
-
-- [Installing current Quarto on Arch Linux](quarto.qmd) [mature]{.note-status .status-mature}

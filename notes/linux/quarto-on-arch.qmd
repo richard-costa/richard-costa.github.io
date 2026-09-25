@@ -1,6 +1,9 @@
 ---
 title: "Installing and updating Quarto on Arch Linux"
 status: mature
+date-modified: last-modified
+language:
+  title-block-modified: "UPDATED"
 ---
 
 There are two useful installation paths: an AUR package, or Quarto's upstream Linux tarball.

@@ -8,14 +8,14 @@ website:
   site-url: "https://richard-costa.github.io"
 
   navbar:
-    title: "richard.costa_"
+    title: "richard.costa_ / são paulo"
     right:
+      - href: projects.qmd
+        text: projects
       - href: notes/index.qmd
         text: notes
       - href: posts.qmd
         text: posts
-      - href: https://github.com/richard-costa
-        text: github
 
   page-footer:
     left: "Richard Costa"

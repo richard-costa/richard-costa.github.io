@@ -1,6 +1,9 @@
 ---
 title: "Review of Quantum Mechanics"
 status: draft
+date-modified: last-modified
+language:
+  title-block-modified: "UPDATED"
 
 # This note intentionally declares both formats here.
 # Quarto will render qm_review.html and qm_review.pdf and expose

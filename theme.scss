@@ -69,6 +69,34 @@ hr {
   opacity: 1;
 }
 
+@keyframes terminal-cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@mixin terminal-cursor {
+  content: "▋";
+  display: inline-block;
+  margin-left: 0.22rem;
+  color: $accent;
+  animation: terminal-cursor-blink 1s steps(1, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quarto-title h1.title::after,
+  .home-page-title::after {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 // ------------------------------------------------------------
 // Navigation
 // ------------------------------------------------------------
@@ -132,11 +160,6 @@ h2 {
   font-size: 1.35rem;
 }
 
-h2::before {
-  content: "> ";
-  color: $accent;
-}
-
 h3 {
   font-size: 1.05rem;
 }
@@ -147,13 +170,35 @@ h3 {
   color: $muted;
 }
 
+.quarto-title h1.title::before {
+  content: "> ";
+  color: $accent;
+}
+
+.quarto-title h1.title::after {
+  @include terminal-cursor;
+}
+
+.page-command-title {
+  margin-top: 0;
+}
+
+.page-command-title::before {
+  content: "> ";
+  color: $accent;
+}
+
+.page-command-title::after {
+  @include terminal-cursor;
+}
+
 // ------------------------------------------------------------
 // Homepage
 // ------------------------------------------------------------
 
 .home-shell {
-  width: min(100% - 2rem, 980px);
-  margin: 0 auto;
+  width: min(100%, 980px);
+  margin: 0;
   padding: clamp(3.5rem, 9vw, 7rem) 0 5rem;
 }
 
@@ -166,39 +211,35 @@ h3 {
   border-bottom: 1px solid $border;
 }
 
-.home-identity,
-.section-label,
 .item-number,
-.item-meta,
-.home-location {
+.item-meta {
   color: $muted;
   font-family: $mono;
 }
 
-.home-identity {
-  margin: 0 0 2rem;
-  font-size: 0.76rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.hero-role {
-  margin: 0.18rem 0;
+.home-page-title {
+  margin: 0 0 1.6rem;
   color: $text-strong;
   font-family: $mono;
-  font-size: clamp(1.35rem, 4vw, 2.2rem);
-  line-height: 1.35;
-  letter-spacing: -0.04em;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
 }
 
-.hero-role::first-letter {
+.home-page-title::before {
+  content: "> ";
   color: $accent;
+}
+
+.home-page-title::after {
+  @include terminal-cursor;
 }
 
 .hero-copy {
   max-width: 650px;
-  margin: 2rem 0 1.8rem;
-  color: $muted;
+  margin: 0.75rem 0 1.8rem;
+  color: $text;
   font-size: 1.02rem;
 }
 
@@ -236,26 +277,6 @@ h3 {
   background: rgba($accent, 0.1);
   color: $accent;
   text-decoration: none;
-}
-
-.home-section {
-  padding: 3.2rem 0;
-  border-bottom: 1px solid $border;
-}
-
-.home-section:last-child {
-  border-bottom: 0;
-}
-
-.section-label {
-  margin: 0 0 1.8rem;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-}
-
-.section-label::before {
-  content: "";
 }
 
 .item-row {
@@ -304,10 +325,6 @@ h3 {
 
 .item-meta {
   text-align: right;
-}
-
-.home-location {
-  font-size: 0.72rem;
 }
 
 // ------------------------------------------------------------
@@ -446,7 +463,7 @@ video {
 
 @media (max-width: 680px) {
   .home-shell {
-    width: min(100% - 1.4rem, 980px);
+    width: 100%;
     padding-top: 2.5rem;
   }
 

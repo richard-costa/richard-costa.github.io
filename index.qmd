@@ -9,11 +9,7 @@ page-layout: full
 
 ::: {.home-hero}
 
-<p class="home-identity">richard.costa_ / são paulo</p>
-
-<p class="hero-role">&gt; data scientist</p>
-<p class="hero-role">&gt; software / ml engineering</p>
-<p class="hero-role">&gt; physics</p>
+<div class="home-page-title">about</div>
 
 <p class="hero-copy">
 Building things with data, models and code. I work mainly on the engineering and application side of data science, with a background in physics.
@@ -26,71 +22,6 @@ Building things with data, models and code. I work mainly on the engineering and
 [résumé - pt](/files/resume/resume_portuguese.pdf){.terminal-link}
 [email](mailto:scosta.richard@gmail.com){.terminal-link}
 :::
-
-:::
-
-::: {.home-section}
-
-<p class="section-label">selected_work</p>
-
-::: {.item-row}
-
-::: {.item-number}
-01
-:::
-
-::: {.item-body}
-<p class="item-title">[rag ↗](https://github.com/richard-costa/rag)</p>
-<p class="item-description">
-A framework-light RAG implementation built to understand the underlying application structure rather than hide it behind abstractions.
-</p>
-:::
-
-::: {.item-meta}
-python · postgres · pgvector · ollama
-:::
-
-:::
-
-:::
-
-::: {.home-section}
-
-<p class="section-label">selected_notes</p>
-
-::: {.item-row}
-
-::: {.item-number}
-01
-:::
-
-::: {.item-body}
-<p class="item-title">[review of quantum mechanics ↗](notes/quantum-mechanics/review.qmd)</p>
-:::
-
-::: {.item-meta}
-physics · latex
-:::
-
-:::
-
-::: {.item-row}
-
-::: {.item-number}
-02
-:::
-
-::: {.item-body}
-<p class="item-title">[dirac notation & riesz theorem ↗](notes/quantum-mechanics/dirac-riesz.qmd)</p>
-:::
-
-::: {.item-meta}
-physics · math
-:::
-
-:::
-
-<p class="home-location">São Paulo / Brazil</p>
 
 :::
 
