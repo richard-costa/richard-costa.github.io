@@ -1,0 +1,19 @@
+---
+title: "bookmarks"
+toc: false
+---
+
+References and links I want to keep around. Unlike notes, these are mostly pointers rather than things I wrote.
+
+## data science / ml
+
+- [The word "tensor" in machine learning, math, and physics](https://stats.stackexchange.com/a/198395) — a useful explanation of how the term shifts across fields.
+
+## mathematical physics
+
+- [nLab: mathematical physics](https://ncatlab.org/nlab/show/mathematical+physics) — a dense reference map for mathematical physics topics.
+
+## quarto / web
+
+- [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/) — a practical Quarto website walkthrough.
+- [Adding a blog to your existing Quarto website](https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/) — notes on adding blog-style publishing to Quarto.
