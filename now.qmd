@@ -1,0 +1,20 @@
+---
+title: "now"
+toc: false
+---
+
+A small snapshot of what has my attention right now. Updated manually, not meant to be exhaustive.
+
+## building
+
+- This site — RSS, bookmarks, a changelog, and small terminal-style details.
+- A framework-light [RAG project](https://github.com/richard-costa/rag) focused on understanding the application structure rather than hiding it behind abstractions.
+
+## learning / revisiting
+
+- Quantum mechanics and mathematical physics through the notes on this site.
+- Linux tooling and small desktop workflows.
+
+## reading
+
+This section stays intentionally current. I’ll add books, papers, and essays here when they are actually in rotation.
