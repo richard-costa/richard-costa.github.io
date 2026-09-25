@@ -91,8 +91,7 @@ hr {
 
 @media (prefers-reduced-motion: reduce) {
   .home-identity::after,
-  .section-label::after,
-  .navbar-nav .nav-link::after {
+  .quarto-title h1.title::after {
     animation: none;
     opacity: 1;
   }
@@ -130,10 +129,6 @@ hr {
   content: "/";
   color: darken($muted, 25%);
   margin-right: 0.12rem;
-}
-
-.navbar-nav .nav-link::after {
-  @include terminal-cursor;
 }
 
 .navbar-nav .nav-link:hover,
@@ -178,6 +173,10 @@ h3 {
 .description,
 .subtitle {
   color: $muted;
+}
+
+.quarto-title h1.title::after {
+  @include terminal-cursor;
 }
 
 // ------------------------------------------------------------
@@ -239,6 +238,29 @@ h3 {
   font-size: 1.02rem;
 }
 
+.home-site-links p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 0 0 1.35rem;
+  font-family: $mono;
+  font-size: 0.84rem;
+}
+
+.home-site-links a {
+  color: $text-strong;
+  text-decoration: none;
+}
+
+.home-site-links a::before {
+  content: "> ";
+  color: $accent;
+}
+
+.home-site-links a:hover {
+  color: $accent;
+}
+
 .hero-links p {
   display: flex;
   flex-wrap: wrap;
@@ -293,10 +315,6 @@ h3 {
 
 .section-label::before {
   content: "";
-}
-
-.section-label::after {
-  @include terminal-cursor;
 }
 
 .item-row {

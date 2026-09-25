@@ -1,6 +1,9 @@
 ---
 title: "Using the SDDM Astronaut theme"
 status: developing
+date-modified: last-modified
+language:
+  title-block-modified: "UPDATED"
 ---
 
 Notes from a setup where I disabled SDDM autologin and used [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme/).

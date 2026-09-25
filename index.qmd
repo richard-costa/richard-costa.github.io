@@ -19,6 +19,11 @@ page-layout: full
 Building things with data, models and code. I work mainly on the engineering and application side of data science, with a background in physics.
 </p>
 
+::: {.home-site-links}
+[notes →](notes/index.qmd)
+[posts →](posts.qmd)
+:::
+
 ::: {.hero-links}
 [github](https://github.com/richard-costa){.terminal-link}
 [linkedin](https://www.linkedin.com/in/richard-silva-costa){.terminal-link}
@@ -31,7 +36,7 @@ Building things with data, models and code. I work mainly on the engineering and
 
 ::: {.home-section}
 
-<p class="section-label">selected_work</p>
+<p class="section-label">projects</p>
 
 ::: {.item-row}
 
@@ -48,44 +53,6 @@ A framework-light RAG implementation built to understand the underlying applicat
 
 ::: {.item-meta}
 python · postgres · pgvector · ollama
-:::
-
-:::
-
-:::
-
-::: {.home-section}
-
-<p class="section-label">selected_notes</p>
-
-::: {.item-row}
-
-::: {.item-number}
-01
-:::
-
-::: {.item-body}
-<p class="item-title">[review of quantum mechanics ↗](notes/quantum-mechanics/review.qmd)</p>
-:::
-
-::: {.item-meta}
-physics · latex
-:::
-
-:::
-
-::: {.item-row}
-
-::: {.item-number}
-02
-:::
-
-::: {.item-body}
-<p class="item-title">[dirac notation & riesz theorem ↗](notes/quantum-mechanics/dirac-riesz.qmd)</p>
-:::
-
-::: {.item-meta}
-physics · math
 :::
 
 :::
