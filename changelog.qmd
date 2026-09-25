@@ -1,0 +1,8 @@
+---
+title: "changelog"
+toc: false
+---
+
+Small site edits, generated from recent Git history.
+
+{{< include _generated/changelog.md >}}
