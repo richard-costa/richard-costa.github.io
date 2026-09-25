@@ -6,8 +6,8 @@ toc: false
 
 ::: {.terminal-404}
 
-<div class="terminal-404-line"><span class="terminal-prompt">$</span> cd /missing</div>
-<div class="terminal-404-error">bash: cd: /missing: No such file or directory</div>
+<div class="terminal-404-line"><span class="terminal-prompt">$</span> cd <span class="js-404-path">/missing</span></div>
+<div class="terminal-404-error">bash: cd: <span class="js-404-path">/missing</span>: No such file or directory</div>
 
 Try [cd ~](/), [ls notes](/notes/), or [ls projects](/projects.html).
 
