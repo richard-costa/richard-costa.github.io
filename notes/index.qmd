@@ -5,7 +5,7 @@ toc: false
 
 Technical notes and working material. Status labels are **draft**, **developing** and **mature**.
 
-[rss](/notes.xml){.feed-link} · [bookmarks](/bookmarks.html){.feed-link}
+[rss](/notes.xml){.feed-link}
 
 ## linux
 
