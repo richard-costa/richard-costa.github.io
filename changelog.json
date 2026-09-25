@@ -1,6 +1,41 @@
 [
   {
     "date": "2026-09-25",
+    "subject": "Pin learning-links demo submodule",
+    "sha": "484aaed51d5db2f0f0e6866de76607b585631026",
+    "short_sha": "484aaed",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/484aaed51d5db2f0f0e6866de76607b585631026"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Document vendored demo workflow",
+    "sha": "bcee2f88e5ab23de56eb51dc0822aaf7c135bf44",
+    "short_sha": "bcee2f8",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/bcee2f88e5ab23de56eb51dc0822aaf7c135bf44"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Add learning-links project and demo",
+    "sha": "19ecb7eae10eb3962d272fb65a617e554ba21ede",
+    "short_sha": "19ecb7e",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/19ecb7eae10eb3962d272fb65a617e554ba21ede"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Add demo publishing script",
+    "sha": "01779b4d15c8e0b20fc02d86cc5c4881b3153086",
+    "short_sha": "01779b4",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/01779b4d15c8e0b20fc02d86cc5c4881b3153086"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Configure learning-links submodule",
+    "sha": "2624a82ef1392d04c057121adc78bbad0beea018",
+    "short_sha": "2624a82",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/2624a82ef1392d04c057121adc78bbad0beea018"
+  },
+  {
+    "date": "2026-09-25",
     "subject": "reorder now section",
     "sha": "dd3274eb6a36ac8eaa824213de2d6e66863a5b71",
     "short_sha": "dd3274e",
@@ -47,40 +82,5 @@
     "sha": "7b489931d5a49ab4b62daf477d3e691949db4481",
     "short_sha": "7b48993",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/7b489931d5a49ab4b62daf477d3e691949db4481"
-  },
-  {
-    "date": "2026-09-25",
-    "subject": "Redesign homepage blogroll as sidebar",
-    "sha": "3b465a1f1468baa51163ab7453bf84e844142344",
-    "short_sha": "3b465a1",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/3b465a1f1468baa51163ab7453bf84e844142344"
-  },
-  {
-    "date": "2026-09-25",
-    "subject": "Remove standalone blogroll page",
-    "sha": "fc454d9c4fa05681010b0e6ead4d56ab70877209",
-    "short_sha": "fc454d9",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/fc454d9c4fa05681010b0e6ead4d56ab70877209"
-  },
-  {
-    "date": "2026-09-25",
-    "subject": "Style homepage blogroll",
-    "sha": "1a867d23a61bf6f88c3fb933715ffe709f859cd1",
-    "short_sha": "1a867d2",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/1a867d23a61bf6f88c3fb933715ffe709f859cd1"
-  },
-  {
-    "date": "2026-09-25",
-    "subject": "Ensure UTF-8 humans file rendering",
-    "sha": "58280effdcf0285163c18f8b46e69369840189e8",
-    "short_sha": "58280ef",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/58280effdcf0285163c18f8b46e69369840189e8"
-  },
-  {
-    "date": "2026-09-25",
-    "subject": "Simplify coffee command output",
-    "sha": "2edd7d5841e1dd087a6702c221173a34cf029174",
-    "short_sha": "2edd7d5",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/2edd7d5841e1dd087a6702c221173a34cf029174"
   }
 ]

@@ -4,7 +4,7 @@
     "href": "projects.html",
     "title": "projects",
     "section": "",
-    "text": "01\n\n\n\nrag ↗\n\n\nA framework-light RAG implementation built to understand the underlying application structure rather than hide it behind abstractions.\n\n\n\nexperiment python · postgres · pgvector · ollama"
+    "text": "01\n\n\n\nrag ↗\n\n\nA framework-light RAG implementation built to understand the underlying application structure rather than hide it behind abstractions.\n\n\n\nexperiment python · postgres · pgvector · ollama\n\n\n\n\n02\n\n\n\nlearning-links · demo ↗ · repo ↗\n\n\nA tool for building and visualizing prerequisite and helpful relationships between topics for self-directed learning.\n\n\n\nexperiment python · sqlite · javascript"
   },
   {
     "objectID": "now.html",
