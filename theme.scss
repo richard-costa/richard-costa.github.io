@@ -250,6 +250,49 @@ h3 {
   margin: 0;
 }
 
+.home-blogroll {
+  margin-top: 3.2rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid $border;
+}
+
+.home-section-label {
+  margin-bottom: 0.9rem;
+  color: $muted;
+  font-family: $mono;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.blogroll-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.blogroll-item {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.35fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.7rem 0;
+  border-top: 1px dashed $border;
+}
+
+.blogroll-item:first-child {
+  border-top: 0;
+}
+
+.blogroll-item a {
+  font-family: $mono;
+  text-decoration: none;
+}
+
+.blogroll-item span {
+  color: $muted;
+  font-size: 0.9rem;
+}
+
 .terminal-link {
   display: inline-flex;
   white-space: nowrap;
@@ -766,6 +809,11 @@ video {
 
   .item-row {
     grid-template-columns: 2rem minmax(0, 1fr);
+  }
+
+  .blogroll-item {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
 
   .item-meta {
