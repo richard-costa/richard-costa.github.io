@@ -22,3 +22,16 @@ Project scripts generate the changelog from Git history and a separate RSS feed 
 - `site.js` — tiny terminal commands
 - `theme.scss` — site styling
 - `_quarto.yml` — site-wide configuration
+
+
+## Vendored demos
+
+Standalone project demos are kept in their project repositories and included here as Git submodules under `_vendor/`.
+
+Initialize them after cloning:
+
+```bash
+git submodule update --init --recursive
+```
+
+Before publishing, update a demo to the desired project revision and commit the changed submodule pointer. `_scripts/publish_demos.py` copies the learning-links web demo into `_site/demos/learning-links/` during Quarto post-render.
