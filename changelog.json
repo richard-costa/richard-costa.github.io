@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-26",
+    "subject": "Add exit command to site terminal",
+    "sha": "22675b8d00aa7814814e0a1926d52df3c9c7890b",
+    "short_sha": "22675b8",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/22675b8d00aa7814814e0a1926d52df3c9c7890b"
+  },
+  {
     "date": "2026-09-25",
     "subject": "remove demo of learning links",
     "sha": "b07ab0183aefb975acfc418b63c057dc1c6278ed",
@@ -75,12 +82,5 @@
     "sha": "0b571c38b4d56610c49e9a2545db83f427cc2007",
     "short_sha": "0b571c3",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/0b571c38b4d56610c49e9a2545db83f427cc2007"
-  },
-  {
-    "date": "2026-09-25",
-    "subject": "Load terminal equations from JSON",
-    "sha": "895d52004b2de0ce9b9d818e06c9c3c649378f73",
-    "short_sha": "895d520",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/895d52004b2de0ce9b9d818e06c9c3c649378f73"
   }
 ]
