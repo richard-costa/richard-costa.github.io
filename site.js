@@ -145,6 +145,7 @@
       ["ls", "list site sections"],
       ["coffee", "brew something small"],
       ["clear", "clear terminal output"],
+      ["exit", "close terminal session"],
       ["physics", "render a random physics equation"],
       ["math", "render a random mathematical identity"],
       ["cmatrix", "start the blue character rain"]
@@ -328,6 +329,8 @@
           renderCoffee(output);
         } else if (command === "clear") {
           output.textContent = "";
+        } else if (command === "exit") {
+          root.hidden = true;
         } else if (command === "physics" || command === "math") {
           await renderEquation(output, command);
         } else if (command === "cmatrix") {
