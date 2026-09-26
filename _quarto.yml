@@ -5,7 +5,6 @@ project:
   post-render:
     - _scripts/generate_changelog.py
     - _scripts/generate_notes_feed.py
-    - _scripts/publish_demos.py
   resources:
     - robots.txt
     - humans.txt
