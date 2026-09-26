@@ -1,0 +1,110 @@
+main.content {
+  padding-top: 2.2rem;
+}
+
+#TOC {
+  border-left-color: $border;
+}
+
+#TOC a {
+  color: $muted;
+}
+
+#TOC a:hover,
+#TOC .active {
+  color: $accent !important;
+}
+
+.note-status {
+  display: inline-block;
+  margin-left: 0.45rem;
+  padding: 0.08rem 0.38rem;
+  border: 1px solid $border;
+  border-radius: 3px;
+  color: $muted;
+  font-family: $mono;
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: 0.08em;
+}
+
+.status-draft {
+  border-color: $status-draft-border;
+  color: $status-draft;
+}
+
+.status-developing {
+  border-color: $status-experiment-border;
+  color: $status-experiment;
+}
+
+.status-mature {
+  border-color: $status-active-border;
+  color: $status-active;
+}
+
+.quarto-listing .listing-item {
+  border-bottom-color: $border !important;
+}
+
+.quarto-listing .listing-title,
+.quarto-listing .listing-title a {
+  color: $text-strong;
+  font-family: $mono;
+}
+
+.quarto-listing .listing-title {
+  margin-bottom: 0.6rem !important;
+}
+
+.quarto-listing .listing-categories {
+  margin-bottom: 1rem;
+}
+
+.quarto-listing .listing-date,
+.quarto-listing .listing-category,
+.quarto-listing .listing-description {
+  color: $muted;
+}
+
+code {
+  color: $code-text;
+}
+
+pre,
+div.sourceCode {
+  border: 1px solid $border;
+  border-radius: 4px;
+  background: $surface !important;
+  color: $code-text !important;
+}
+
+pre > code,
+pre > code.sourceCode,
+div.sourceCode pre,
+div.sourceCode pre > code {
+  color: $code-text !important;
+}
+
+p code,
+li code {
+  padding: 0.14rem 0.32rem;
+  border: 1px solid $code-border;
+  border-radius: 3px;
+  background: $code-bg;
+  color: $code-text;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.math.display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}

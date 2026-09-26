@@ -1,5 +1,7 @@
 (() => {
-  const ACCENT = "#7e99c3";
+  const ACCENT = getComputedStyle(document.documentElement)
+    .getPropertyValue("--site-accent")
+    .trim() || "#7e99c3";
   let mathJaxPromise = null;
 
   document.querySelectorAll(".js-404-path").forEach((node) => {

@@ -1,0 +1,154 @@
+/* Giscus theme source. Shared palette variables are injected at render time. */
+
+:host,
+html {
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-family-monospace: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+main {
+  --color-prettylights-syntax-comment: var(--site-muted);
+  --color-prettylights-syntax-constant: var(--site-accent);
+  --color-prettylights-syntax-entity: #b4c6e3;
+  --color-prettylights-syntax-storage-modifier-import: var(--site-text);
+  --color-prettylights-syntax-entity-tag: var(--site-status-active);
+  --color-prettylights-syntax-keyword: var(--site-status-draft);
+  --color-prettylights-syntax-string: #a9c2e8;
+  --color-prettylights-syntax-variable: #d7b58a;
+  --color-prettylights-syntax-brackethighlighter-unmatched: var(--site-danger);
+  --color-prettylights-syntax-invalid-illegal-text: var(--site-text-strong);
+  --color-prettylights-syntax-invalid-illegal-bg: #5b1f23;
+  --color-prettylights-syntax-carriage-return-text: var(--site-text-strong);
+  --color-prettylights-syntax-carriage-return-bg: #6b2529;
+  --color-prettylights-syntax-string-regexp: var(--site-status-active);
+  --color-prettylights-syntax-markup-list: var(--site-status-draft);
+  --color-prettylights-syntax-markup-heading: var(--site-accent);
+  --color-prettylights-syntax-markup-italic: var(--site-text);
+  --color-prettylights-syntax-markup-bold: var(--site-text-strong);
+  --color-prettylights-syntax-markup-deleted-text: #f2b8b5;
+  --color-prettylights-syntax-markup-deleted-bg: #3d171a;
+  --color-prettylights-syntax-markup-inserted-text: #a9e3c3;
+  --color-prettylights-syntax-markup-inserted-bg: #133025;
+  --color-prettylights-syntax-markup-changed-text: #e5ca9b;
+  --color-prettylights-syntax-markup-changed-bg: #342817;
+  --color-prettylights-syntax-markup-ignored-text: var(--site-text);
+  --color-prettylights-syntax-markup-ignored-bg: #223149;
+  --color-prettylights-syntax-meta-diff-range: #b4c6e3;
+  --color-prettylights-syntax-brackethighlighter-angle: var(--site-muted);
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #52605d;
+  --color-prettylights-syntax-constant-other-reference-link: #a9c2e8;
+
+  --color-btn-text: var(--site-text);
+  --color-btn-bg: var(--site-code-bg);
+  --color-btn-border: var(--site-code-border);
+  --color-btn-shadow: 0 0 transparent;
+  --color-btn-inset-shadow: 0 0 transparent;
+  --color-btn-hover-bg: var(--site-border);
+  --color-btn-hover-border: var(--site-accent);
+  --color-btn-active-bg: var(--site-border);
+  --color-btn-active-border: var(--site-accent);
+  --color-btn-selected-bg: var(--site-surface);
+
+  --color-btn-primary-text: var(--site-bg);
+  --color-btn-primary-bg: var(--site-accent);
+  --color-btn-primary-border: var(--site-accent);
+  --color-btn-primary-shadow: 0 0 transparent;
+  --color-btn-primary-inset-shadow: 0 0 transparent;
+  --color-btn-primary-hover-bg: var(--site-accent-hover);
+  --color-btn-primary-hover-border: var(--site-accent-hover);
+  --color-btn-primary-selected-bg: var(--site-accent-strong);
+  --color-btn-primary-selected-shadow: 0 0 transparent;
+  --color-btn-primary-disabled-text: rgb(var(--site-bg-rgb) / 55%);
+  --color-btn-primary-disabled-bg: rgb(var(--site-accent-rgb) / 55%);
+  --color-btn-primary-disabled-border: rgb(var(--site-accent-rgb) / 30%);
+
+  --color-action-list-item-default-hover-bg: rgb(var(--site-accent-rgb) / 10%);
+  --color-segmented-control-bg: rgb(var(--site-muted-rgb) / 8%);
+  --color-segmented-control-button-bg: var(--site-surface);
+  --color-segmented-control-button-selected-border: var(--site-accent);
+
+  --color-fg-default: var(--site-text);
+  --color-fg-muted: var(--site-muted);
+  --color-fg-subtle: #596662;
+  --color-canvas-default: transparent;
+  --color-canvas-overlay: var(--site-surface);
+  --color-canvas-inset: var(--site-bg);
+  --color-canvas-subtle: var(--site-surface);
+  --color-border-default: var(--site-border);
+  --color-border-muted: #182121;
+  --color-neutral-muted: rgb(var(--site-muted-rgb) / 12%);
+  --color-neutral-subtle: rgb(var(--site-muted-rgb) / 8%);
+
+  --color-accent-fg: var(--site-accent);
+  --color-accent-emphasis: var(--site-accent-strong);
+  --color-accent-muted: rgb(var(--site-accent-rgb) / 35%);
+  --color-accent-subtle: rgb(var(--site-accent-rgb) / 10%);
+
+  --color-success-fg: var(--site-status-active);
+  --color-attention-fg: var(--site-status-draft);
+  --color-attention-muted: rgb(var(--site-status-draft-rgb) / 35%);
+  --color-attention-subtle: rgb(var(--site-status-draft-rgb) / 10%);
+  --color-danger-fg: var(--site-danger);
+  --color-danger-muted: rgb(var(--site-danger-rgb) / 35%);
+  --color-danger-subtle: rgb(var(--site-danger-rgb) / 10%);
+
+  --color-primer-shadow-inset: 0 0 transparent;
+  --color-scale-gray-7: var(--site-code-bg);
+  --color-scale-blue-8: #273957;
+  --color-social-reaction-bg-hover: var(--site-code-bg);
+  --color-social-reaction-bg-reacted-hover: #273957;
+}
+
+.gsc-main {
+  box-sizing: border-box;
+  gap: 1.35rem;
+  padding: 0.8rem 1rem 1rem;
+}
+
+.gsc-reactions {
+  padding: 0.15rem 0.25rem;
+}
+
+.gsc-comments {
+  gap: 1rem;
+}
+
+.gsc-header {
+  padding: 0 0.25rem;
+}
+
+.gsc-reactions-count,
+.gsc-comments-count {
+  color: var(--site-text);
+  font-family: var(--font-family-monospace);
+  font-weight: 500;
+}
+
+.gsc-comment-box:not(.gsc-comment-box-is-reply),
+.gsc-comment-box-tabs {
+  border-color: var(--site-border);
+  background: var(--site-surface);
+}
+
+.gsc-comment-box-textarea {
+  border-color: var(--site-border);
+  background: var(--site-bg);
+  color: var(--site-text);
+}
+
+.gsc-comment-box-textarea::placeholder {
+  color: var(--site-muted);
+}
+
+.gsc-comment-box-write:focus-within {
+  border-color: var(--site-accent);
+  box-shadow: 0 0 0 1px var(--site-accent);
+}
+
+.gsc-pagination-button {
+  background: var(--site-surface);
+}
+
+main .gsc-loading-image {
+  background-image: url("https://github.githubassets.com/images/mona-loading-dark.gif");
+}

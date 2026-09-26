@@ -4,7 +4,7 @@ Source for [richard-costa.github.io](https://richard-costa.github.io/).
 
 Built with [Quarto](https://quarto.org/). Use `quarto preview` for local preview and `quarto publish gh-pages` to publish.
 
-Project scripts generate the changelog from Git history and a separate RSS feed for notes during rendering. Posts use Quarto's native listing feed.
+Project scripts generate the changelog from Git history, a separate RSS feed for notes, and the Giscus theme during rendering. Posts use Quarto's native listing feed.
 
 ## Repository map
 
@@ -20,11 +20,15 @@ Project scripts generate the changelog from Git history and a separate RSS feed 
 - `data/` — small runtime data files
 - `_includes/` — Quarto HTML includes
 - `_scripts/` — post-render generators
+- `_styles/` — shared theme variables, SCSS partials, and Giscus source CSS
 - `site.js` — site-wide JavaScript and terminal commands
-- `theme.scss` — site styling and design tokens
-- `giscus-theme.css` — standalone Giscus theme
+- `theme.scss` — Quarto theme entrypoint
 - `_quarto.yml` — site-wide configuration
 - `robots.txt` / `humans.txt` — crawler rules and site trivia
+
+## Theme structure
+
+Site colors live in `_styles/_variables.scss`. The main theme imports partials from `_styles/`, and `_scripts/generate_giscus_theme.py` uses the same palette to generate `/giscus-theme.css` in the rendered site.
 
 ## Local workflow
 

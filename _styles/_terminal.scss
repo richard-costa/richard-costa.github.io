@@ -1,0 +1,208 @@
+.terminal-404 {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border: 1px solid $border;
+  border-radius: 4px;
+  background: $surface;
+  font-family: $mono;
+}
+
+.terminal-404-line,
+.terminal-404-error {
+  overflow-wrap: anywhere;
+}
+
+.terminal-prompt {
+  color: $accent;
+}
+
+.terminal-404-error {
+  margin: 0.45rem 0 1.5rem;
+  color: $muted;
+}
+
+.site-terminal-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1080;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid $border;
+  border-radius: 3px;
+  background: rgba($bg, 0.92);
+  color: $muted;
+  font-family: $mono;
+  font-size: 0.68rem;
+  cursor: pointer;
+}
+
+.site-terminal-toggle:hover,
+.site-terminal-toggle:focus {
+  border-color: $accent;
+  color: $accent;
+}
+
+.site-terminal {
+  position: fixed;
+  right: 1rem;
+  bottom: 3.4rem;
+  z-index: 1090;
+  width: min(430px, calc(100vw - 2rem));
+  border: 1px solid $border;
+  border-radius: 4px;
+  background: rgba($bg, 0.98);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.35);
+  color: $text;
+  font-family: $mono;
+  font-size: 0.78rem;
+}
+
+.site-terminal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0.7rem;
+  border-bottom: 1px solid $border;
+  color: $muted;
+}
+
+.site-terminal-close {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $muted;
+  font: inherit;
+  cursor: pointer;
+}
+
+.site-terminal-close:hover {
+  color: $text-strong;
+}
+
+.site-terminal-body {
+  padding: 0.85rem;
+}
+
+.site-terminal-output {
+  min-height: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.site-terminal-output a {
+  display: inline-block;
+  margin: 0.15rem 0.55rem 0.15rem 0;
+  color: $accent;
+  text-decoration: none;
+}
+
+.site-terminal-form {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.site-terminal-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.32rem 0.4rem;
+  border: 0;
+  border-bottom: 1px solid $border;
+  outline: 0;
+  background: transparent;
+  color: $text-strong;
+  font: inherit;
+}
+
+.site-terminal-form input:focus {
+  border-bottom-color: $accent;
+}
+
+.terminal-muted {
+  color: $muted;
+}
+
+.terminal-result-title {
+  margin-bottom: 0.55rem;
+  color: $text-strong;
+  font-weight: 600;
+}
+
+.terminal-help {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.terminal-help-row {
+  display: grid;
+  grid-template-columns: 5.6rem minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: baseline;
+}
+
+.terminal-help-row code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $accent;
+}
+
+.terminal-art {
+  margin: 0 0 0.55rem;
+  padding: 0;
+  border: 0;
+  background: transparent !important;
+  color: $text-strong !important;
+  font-family: $mono;
+  line-height: 1.15;
+}
+
+.terminal-math {
+  margin: 0.65rem 0;
+  overflow-x: auto;
+  color: $text-strong;
+}
+
+.cmatrix-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  overflow: hidden;
+  background: $bg;
+}
+
+.cmatrix-overlay canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cmatrix-hint {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.28rem 0.45rem;
+  border: 1px solid rgba($accent, 0.35);
+  border-radius: 3px;
+  background: rgba($bg, 0.75);
+  color: $muted;
+  font-family: $mono;
+  font-size: 0.68rem;
+}
+
+.cmatrix-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $muted;
+  font-family: $mono;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cmatrix-close:hover,
+.cmatrix-close:focus {
+  color: $accent;
+}

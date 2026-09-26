@@ -1,0 +1,38 @@
+.nav-footer {
+  border-top: 1px solid $border;
+  color: $muted;
+  font-family: $mono;
+  font-size: 0.68rem;
+}
+
+@media (max-width: 680px) {
+  .home-shell {
+    width: 100%;
+    padding-top: 2.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .home-hero {
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  .home-blogroll {
+    width: min(100%, 320px);
+  }
+
+  .item-row {
+    grid-template-columns: 2rem minmax(0, 1fr);
+  }
+
+  .item-meta {
+    grid-column: 2;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .navbar-nav .nav-link::before {
+    content: "";
+  }
+}

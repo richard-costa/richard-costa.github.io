@@ -1,0 +1,59 @@
+.dropdown-menu {
+  border-color: $border;
+  background: $surface;
+  font-family: $mono;
+}
+
+.dropdown-item {
+  color: $muted;
+  font-size: 0.8rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: rgba($accent, 0.08);
+  color: $accent;
+}
+
+.feed-link {
+  font-family: $mono;
+  font-size: 0.76rem;
+  text-decoration: none;
+}
+
+.feed-link::before {
+  content: "[ ";
+  color: $muted;
+}
+
+.feed-link::after {
+  content: " ]";
+  color: $muted;
+}
+
+.project-status {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  padding: 0.08rem 0.38rem;
+  border: 1px solid $border;
+  border-radius: 3px;
+  font-family: $mono;
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.status-active {
+  border-color: $status-active-border;
+  color: $status-active;
+}
+
+.status-experiment {
+  border-color: $status-experiment-border;
+  color: $status-experiment;
+}
+
+.status-dormant {
+  border-color: $status-dormant-border;
+  color: $muted;
+}
