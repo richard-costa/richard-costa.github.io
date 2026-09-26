@@ -1,8 +1,8 @@
 # richard-costa.github.io
 
-Source for [richard-costa.github.io](https://richard-costa.github.io/)
+Source for [richard-costa.github.io](https://richard-costa.github.io/).
 
-Built with [Quarto](https://quarto.org/). Use `quarto preview` for local preview.
+Built with [Quarto](https://quarto.org/). Use `quarto preview` for local preview and `quarto publish gh-pages` to publish.
 
 Project scripts generate the changelog from Git history and a separate RSS feed for notes during rendering. Posts use Quarto's native listing feed.
 
@@ -11,27 +11,30 @@ Project scripts generate the changelog from Git history and a separate RSS feed 
 - `index.qmd` — homepage / about
 - `projects.qmd` — projects and status indicators
 - `now.qmd` — current work / learning / reading
-- `notes/` — technical notes
-- `posts/` — chronological posts
+- `notes/` — technical notes and shared note metadata
+- `posts/` — chronological posts and post metadata
 - `bookmarks.qmd` — saved references
-- `blogroll.qmd` — sites worth returning to
 - `changelog.qmd` — recent site changes from Git history
 - `404.qmd` — custom shell-style 404
-- `robots.txt` / `humans.txt` — crawler rules and site trivia
-- `_scripts/` — changelog and notes-RSS generators
-- `site.js` — tiny terminal commands
-- `theme.scss` — site styling
+- `files/` — downloadable PDFs and résumé files
+- `data/` — small runtime data files
+- `_includes/` — Quarto HTML includes
+- `_scripts/` — post-render generators
+- `_styles/` — SCSS partials used by `theme.scss`
+- `site.js` — site-wide JavaScript and terminal commands
+- `theme.scss` — Quarto theme entrypoint and design tokens
+- `giscus-theme.css` — standalone Giscus theme
 - `_quarto.yml` — site-wide configuration
+- `robots.txt` / `humans.txt` — crawler rules and site trivia
 
-
-## Vendored demos
-
-Standalone project demos are kept in their project repositories and included here as Git submodules under `_vendor/`.
-
-Initialize them after cloning:
+## Local workflow
 
 ```bash
-git submodule update --init --recursive
+quarto preview
 ```
 
-Before publishing, update a demo to the desired project revision and commit the changed submodule pointer. `_scripts/publish_demos.py` copies the learning-links web demo into `_site/demos/learning-links/` during Quarto post-render.
+To publish the current branch after testing:
+
+```bash
+quarto publish gh-pages
+```
