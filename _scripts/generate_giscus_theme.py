@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 import re
 
-VARIABLES = Path("_styles/_variables.scss")
+VARIABLES = Path("theme.scss")
 SOURCE = Path("_styles/_giscus-theme.css")
 OUTPUT_DIR = Path(os.environ.get("QUARTO_PROJECT_OUTPUT_DIR", "_site"))
 OUTPUT = OUTPUT_DIR / "giscus-theme.css"
@@ -60,8 +60,7 @@ def render_css(palette: dict[str, str]) -> str:
     source = SOURCE.read_text(encoding="utf-8").rstrip()
 
     return (
-        "/* Generated from _styles/_variables.scss and "
-        "_styles/_giscus-theme.css. */\n\n"
+        "/* Generated from theme.scss and _styles/_giscus-theme.css. */\n\n"
         f":root {{\n{variables}\n}}\n\n"
         f"{source}\n"
     )
