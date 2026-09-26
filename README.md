@@ -20,9 +20,8 @@ Project scripts generate the changelog from Git history and a separate RSS feed 
 - `data/` — small runtime data files
 - `_includes/` — Quarto HTML includes
 - `_scripts/` — post-render generators
-- `_styles/` — SCSS partials used by `theme.scss`
 - `site.js` — site-wide JavaScript and terminal commands
-- `theme.scss` — Quarto theme entrypoint and design tokens
+- `theme.scss` — site styling and design tokens
 - `giscus-theme.css` — standalone Giscus theme
 - `_quarto.yml` — site-wide configuration
 - `robots.txt` / `humans.txt` — crawler rules and site trivia
