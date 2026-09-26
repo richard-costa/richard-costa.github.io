@@ -1,3 +1,6 @@
 # Defaults inherited by every document inside notes/.
-# Keep format choices in each note when a note has multiple outputs.
+# Keep note-specific fields such as title, status, and special formats in each note.
 toc: true
+date-modified: last-modified
+language:
+  title-block-modified: "UPDATED"
