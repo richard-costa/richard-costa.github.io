@@ -1,6 +1,27 @@
 [
   {
     "date": "2026-09-25",
+    "subject": "remove demo of learning links",
+    "sha": "b07ab0183aefb975acfc418b63c057dc1c6278ed",
+    "short_sha": "b07ab01",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/b07ab0183aefb975acfc418b63c057dc1c6278ed"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "remove demo of learning links",
+    "sha": "2a0fdd0efb4209d9dc28701cd1080e4c63f20713",
+    "short_sha": "2a0fdd0",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/2a0fdd0efb4209d9dc28701cd1080e4c63f20713"
+  },
+  {
+    "date": "2026-09-25",
+    "subject": "Remove learning-links demo submodule",
+    "sha": "90e1b68ee0e16dc4163d355f5cbfa14e72fd2748",
+    "short_sha": "90e1b68",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/90e1b68ee0e16dc4163d355f5cbfa14e72fd2748"
+  },
+  {
+    "date": "2026-09-25",
     "subject": "Pin learning-links demo submodule",
     "sha": "484aaed51d5db2f0f0e6866de76607b585631026",
     "short_sha": "484aaed",
@@ -61,26 +82,5 @@
     "sha": "895d52004b2de0ce9b9d818e06c9c3c649378f73",
     "short_sha": "895d520",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/895d52004b2de0ce9b9d818e06c9c3c649378f73"
-  },
-  {
-    "date": "2026-09-25",
-    "subject": "Move terminal equations to data file",
-    "sha": "49e4d44aee434c25ec080eb5d83b9d452cf30c3a",
-    "short_sha": "49e4d44",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/49e4d44aee434c25ec080eb5d83b9d452cf30c3a"
-  },
-  {
-    "date": "2026-09-25",
-    "subject": "add a better landing page text",
-    "sha": "d8f85eeca35700e4c57691b1f01ee87ca3c72fc4",
-    "short_sha": "d8f85ee",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/d8f85eeca35700e4c57691b1f01ee87ca3c72fc4"
-  },
-  {
-    "date": "2026-09-25",
-    "subject": "Style traditional homepage blogroll",
-    "sha": "7b489931d5a49ab4b62daf477d3e691949db4481",
-    "short_sha": "7b48993",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/7b489931d5a49ab4b62daf477d3e691949db4481"
   }
 ]
