@@ -11,7 +11,7 @@ OUTPUT_DIR = Path(os.environ.get("QUARTO_PROJECT_OUTPUT_DIR", "_site"))
 OUT = OUTPUT_DIR / "notes.xml"
 
 
-def git_modified(path):
+def git_modified(path: Path) -> datetime:
     try:
         value = subprocess.check_output(
             ["git", "log", "-1", "--format=%cI", "--", str(path)],
@@ -24,52 +24,55 @@ def git_modified(path):
     return datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
 
 
-def field(frontmatter, name):
+def field(frontmatter: str, name: str) -> str:
     match = re.search(rf"^{name}:\s*(.+?)\s*$", frontmatter, re.MULTILINE)
     return match.group(1).strip().strip("'\"") if match else ""
 
 
-items = []
+def note_items() -> list[tuple[datetime, str, str, str, str]]:
+    items = []
 
-for path in Path("notes").rglob("*.qmd"):
-    if path.name == "index.qmd" or path.name.startswith("_"):
-        continue
+    for path in Path("notes").rglob("*.qmd"):
+        if path.name == "index.qmd" or path.name.startswith("_"):
+            continue
 
-    source = path.read_text(encoding="utf-8")
-    match = re.match(r"^---\s*\n([\s\S]*?)\n---\s*\n?", source)
-    if not match:
-        continue
+        source = path.read_text(encoding="utf-8")
+        match = re.match(r"^---\s*\n([\s\S]*?)\n---\s*\n?", source)
+        if not match:
+            continue
 
-    meta = match.group(1)
-    title = field(meta, "title")
-    if not title or field(meta, "feed").lower() == "false":
-        continue
+        meta = match.group(1)
+        title = field(meta, "title")
+        if not title or field(meta, "feed").lower() == "false":
+            continue
 
-    status = field(meta, "status")
-    modified = git_modified(path)
-    url = f"{SITE}/{path.with_suffix('.html').as_posix()}"
-    description = f"Technical note · {status}" if status else "Technical note"
+        status = field(meta, "status")
+        modified = git_modified(path)
+        url = f"{SITE}/{path.with_suffix('.html').as_posix()}"
+        description = f"Technical note · {status}" if status else "Technical note"
 
-    items.append((modified, title, url, description, status))
+        items.append((modified, title, url, description, status))
 
-items.sort(reverse=True, key=lambda item: item[0])
+    return sorted(items, reverse=True, key=lambda item: item[0])
 
-xml_items = []
-for modified, title, url, description, status in items:
-    category = f"\n      <category>{html.escape(status)}</category>" if status else ""
-    xml_items.append(
-        f"""    <item>
+
+def render_feed(items: list[tuple[datetime, str, str, str, str]]) -> str:
+    xml_items = []
+    for modified, title, url, description, status in items:
+        category = f"\n      <category>{html.escape(status)}</category>" if status else ""
+        xml_items.append(
+            f"""    <item>
       <title>{html.escape(title)}</title>
       <link>{html.escape(url)}</link>
       <guid isPermaLink="true">{html.escape(url)}</guid>
       <pubDate>{format_datetime(modified)}</pubDate>
       <description>{html.escape(description)}</description>{category}
     </item>"""
-    )
+        )
 
-last_build = items[0][0] if items else datetime.now(timezone.utc)
+    last_build = items[0][0] if items else datetime.now(timezone.utc)
 
-rss = f"""<?xml version="1.0" encoding="UTF-8"?>
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Richard Costa — notes</title>
@@ -83,5 +86,11 @@ rss = f"""<?xml version="1.0" encoding="UTF-8"?>
 </rss>
 """
 
-OUT.parent.mkdir(parents=True, exist_ok=True)
-OUT.write_text(rss, encoding="utf-8")
+
+def main() -> None:
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(render_feed(note_items()), encoding="utf-8")
+
+
+if __name__ == "__main__":
+    main()
