@@ -30,7 +30,7 @@ python · postgres · pgvector · ollama
 :::
 
 ::: {.item-body}
-<p class="item-title">learning-links · [demo ↗](/demos/learning-links/) · [repo ↗](https://github.com/richard-costa/learning-links)</p>
+<p class="item-title">learning-links · [repo ↗](https://github.com/richard-costa/learning-links)</p>
 <p class="item-description">
 A tool for building and visualizing prerequisite and helpful relationships between topics for self-directed learning.
 </p>
