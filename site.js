@@ -52,16 +52,14 @@
 
   function loadEquationData() {
     if (!equationDataPromise) {
-      equationDataPromise = fetch("/data/equations.json")
-        .then((response) => {
-          if (!response.ok) throw new Error("equation data unavailable");
-          return response.json();
-        });
+      equationDataPromise = fetch("/data/equations.json").then((response) => {
+        if (!response.ok) throw new Error("equation data unavailable");
+        return response.json();
+      });
     }
 
     return equationDataPromise;
   }
-
 
   function randomItem(items) {
     return items[Math.floor(Math.random() * items.length)];
@@ -138,23 +136,11 @@
     }
   }
 
-  function renderHelp(output) {
-    const commands = [
-      ["help", "show this command list"],
-      ["whoami", "identify this site"],
-      ["ls", "list site sections"],
-      ["coffee", "brew something small"],
-      ["clear", "clear terminal output"],
-      ["exit", "close terminal session"],
-      ["physics", "render a random physics equation"],
-      ["math", "render a random mathematical identity"],
-      ["cmatrix", "start the blue character rain"]
-    ];
-
+  function renderHelp(output, commands) {
     output.innerHTML = `
       <div class="terminal-result-title">available commands</div>
       <div class="terminal-help">
-        ${commands.map(([name, description]) => `
+        ${commands.map(({ name, description }) => `
           <div class="terminal-help-row">
             <code>${name}</code>
             <span>${description}</span>
@@ -301,6 +287,74 @@
       const input = root.querySelector("input");
       const output = root.querySelector(".site-terminal-output");
 
+      const commands = [
+        {
+          name: "help",
+          description: "show this command list",
+          run: () => renderHelp(output, commands)
+        },
+        {
+          name: "whoami",
+          description: "identify this site",
+          run: () => {
+            output.innerHTML = 'richard.costa_ / são paulo<br><span class="terminal-muted">personal site · data, software, physics</span>';
+          }
+        },
+        {
+          name: "ls",
+          description: "list site sections",
+          run: () => {
+            output.innerHTML = `
+              <a href="/projects.html">projects/</a>
+              <a href="/notes/">notes/</a>
+              <a href="/posts.html">posts/</a>
+              <a href="/now.html">now/</a>
+              <a href="/bookmarks.html">bookmarks/</a>
+              <a href="/blogroll.html">blogroll/</a>
+              <a href="/changelog.html">changelog/</a>
+              <a href="/humans.txt">humans.txt</a>
+            `;
+          }
+        },
+        {
+          name: "coffee",
+          description: "brew something small",
+          run: () => renderCoffee(output)
+        },
+        {
+          name: "clear",
+          description: "clear terminal output",
+          run: () => {
+            output.textContent = "";
+          }
+        },
+        {
+          name: "exit",
+          description: "close terminal session",
+          run: () => {
+            root.hidden = true;
+          }
+        },
+        {
+          name: "physics",
+          description: "render a random physics equation",
+          run: () => renderEquation(output, "physics")
+        },
+        {
+          name: "math",
+          description: "render a random mathematical identity",
+          run: () => renderEquation(output, "math")
+        },
+        {
+          name: "cmatrix",
+          description: "start the blue character rain",
+          run: () => {
+            output.innerHTML = '<span class="terminal-muted">cmatrix: q or Esc exits.</span>';
+            startCmatrix(input);
+          }
+        }
+      ];
+
       close?.addEventListener("click", () => {
         root.hidden = true;
       });
@@ -310,32 +364,9 @@
         const command = input.value.trim().toLowerCase().replace(/\s+/g, " ");
         input.value = "";
 
-        if (command === "help") {
-          renderHelp(output);
-        } else if (command === "whoami") {
-          output.innerHTML = 'richard.costa_ / são paulo<br><span class="terminal-muted">personal site · data, software, physics</span>';
-        } else if (command === "ls") {
-          output.innerHTML = `
-            <a href="/projects.html">projects/</a>
-            <a href="/notes/">notes/</a>
-            <a href="/posts.html">posts/</a>
-            <a href="/now.html">now/</a>
-            <a href="/bookmarks.html">bookmarks/</a>
-            <a href="/blogroll.html">blogroll/</a>
-            <a href="/changelog.html">changelog/</a>
-            <a href="/humans.txt">humans.txt</a>
-          `;
-        } else if (command === "coffee") {
-          renderCoffee(output);
-        } else if (command === "clear") {
-          output.textContent = "";
-        } else if (command === "exit") {
-          root.hidden = true;
-        } else if (command === "physics" || command === "math") {
-          await renderEquation(output, command);
-        } else if (command === "cmatrix") {
-          output.innerHTML = '<span class="terminal-muted">cmatrix: q or Esc exits.</span>';
-          startCmatrix(input);
+        const entry = commands.find(({ name }) => name === command);
+        if (entry) {
+          await entry.run();
         } else if (["rm -rf /", "sudo rm -rf /", "rm -rf *"].includes(command)) {
           output.innerHTML = 'rm: refusing to remove <code>/</code><br><span class="terminal-muted">filesystem is read-only. nice try.</span>';
         } else if (command) {
