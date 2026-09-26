@@ -5,13 +5,13 @@
     <link>https://richard-costa.github.io/notes/</link>
     <description>Technical notes and working material by Richard Costa.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 25 Sep 2026 13:10:57 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 18:06:37 -0300</lastBuildDate>
     <atom:link href="https://richard-costa.github.io/notes.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Introduction to Logic</title>
-      <link>https://richard-costa.github.io/notes/logic/introduction.html</link>
-      <guid isPermaLink="true">https://richard-costa.github.io/notes/logic/introduction.html</guid>
-      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <title>Review of Quantum Mechanics</title>
+      <link>https://richard-costa.github.io/notes/quantum-mechanics/review.html</link>
+      <guid isPermaLink="true">https://richard-costa.github.io/notes/quantum-mechanics/review.html</guid>
+      <pubDate>Sat, 26 Sep 2026 18:06:37 -0300</pubDate>
       <description>Technical note · draft</description>
       <category>draft</category>
     </item>
@@ -19,23 +19,23 @@
       <title>Dirac Notation and Riesz Theorem</title>
       <link>https://richard-costa.github.io/notes/quantum-mechanics/dirac-riesz.html</link>
       <guid isPermaLink="true">https://richard-costa.github.io/notes/quantum-mechanics/dirac-riesz.html</guid>
-      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <pubDate>Sat, 26 Sep 2026 18:06:26 -0300</pubDate>
       <description>Technical note · draft</description>
       <category>draft</category>
     </item>
     <item>
-      <title>Review of Quantum Mechanics</title>
-      <link>https://richard-costa.github.io/notes/quantum-mechanics/review.html</link>
-      <guid isPermaLink="true">https://richard-costa.github.io/notes/quantum-mechanics/review.html</guid>
-      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <title>Introduction to Logic</title>
+      <link>https://richard-costa.github.io/notes/logic/introduction.html</link>
+      <guid isPermaLink="true">https://richard-costa.github.io/notes/logic/introduction.html</guid>
+      <pubDate>Sat, 26 Sep 2026 18:06:15 -0300</pubDate>
       <description>Technical note · draft</description>
       <category>draft</category>
     </item>
     <item>
-      <title>Installing and updating Quarto on Arch Linux</title>
-      <link>https://richard-costa.github.io/notes/linux/quarto-on-arch.html</link>
-      <guid isPermaLink="true">https://richard-costa.github.io/notes/linux/quarto-on-arch.html</guid>
-      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <title>YAD calendar popup for Waybar</title>
+      <link>https://richard-costa.github.io/notes/linux/waybar-yad-calendar.html</link>
+      <guid isPermaLink="true">https://richard-costa.github.io/notes/linux/waybar-yad-calendar.html</guid>
+      <pubDate>Sat, 26 Sep 2026 18:06:10 -0300</pubDate>
       <description>Technical note · mature</description>
       <category>mature</category>
     </item>
@@ -43,15 +43,15 @@
       <title>Using the SDDM Astronaut theme</title>
       <link>https://richard-costa.github.io/notes/linux/sddm-astronaut-theme.html</link>
       <guid isPermaLink="true">https://richard-costa.github.io/notes/linux/sddm-astronaut-theme.html</guid>
-      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <pubDate>Sat, 26 Sep 2026 18:06:02 -0300</pubDate>
       <description>Technical note · developing</description>
       <category>developing</category>
     </item>
     <item>
-      <title>YAD calendar popup for Waybar</title>
-      <link>https://richard-costa.github.io/notes/linux/waybar-yad-calendar.html</link>
-      <guid isPermaLink="true">https://richard-costa.github.io/notes/linux/waybar-yad-calendar.html</guid>
-      <pubDate>Fri, 25 Sep 2026 13:10:57 -0300</pubDate>
+      <title>Installing and updating Quarto on Arch Linux</title>
+      <link>https://richard-costa.github.io/notes/linux/quarto-on-arch.html</link>
+      <guid isPermaLink="true">https://richard-costa.github.io/notes/linux/quarto-on-arch.html</guid>
+      <pubDate>Sat, 26 Sep 2026 18:05:52 -0300</pubDate>
       <description>Technical note · mature</description>
       <category>mature</category>
     </item>
