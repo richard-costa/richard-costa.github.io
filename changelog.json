@@ -1,6 +1,13 @@
 [
   {
     "date": "2026-09-27",
+    "subject": "Improve homepage terminal discovery",
+    "sha": "b448fddee80253d3db7a9fcbff3568d0df7d88c2",
+    "short_sha": "b448fdd",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/b448fddee80253d3db7a9fcbff3568d0df7d88c2"
+  },
+  {
+    "date": "2026-09-27",
     "subject": "Fix homepage intro markup",
     "sha": "80c7a4863ae90264aaa90630f453a590def21e3c",
     "short_sha": "80c7a48",
@@ -75,12 +82,5 @@
     "sha": "f5632fcd66bb9d42df72677eb7c64f395195c3f9",
     "short_sha": "f5632fc",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/f5632fcd66bb9d42df72677eb7c64f395195c3f9"
-  },
-  {
-    "date": "2026-09-26",
-    "subject": "Refactor changelog generator structure",
-    "sha": "4e5a3c9640b88b8587626a008561e3efdcb2d968",
-    "short_sha": "4e5a3c9",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/4e5a3c9640b88b8587626a008561e3efdcb2d968"
   }
 ]
