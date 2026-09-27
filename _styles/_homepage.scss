@@ -198,6 +198,42 @@
   text-decoration: none;
 }
 
+.resume-selector {
+  display: inline-flex;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid $border;
+  border-radius: 3px;
+  color: $text;
+  font-family: $mono;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.resume-selector-label,
+.resume-selector a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.58rem;
+}
+
+.resume-selector-label {
+  color: $text;
+}
+
+.resume-selector a {
+  border-left: 1px solid $border;
+  color: $muted;
+  text-decoration: none;
+}
+
+.resume-selector a:hover,
+.resume-selector a:focus-visible {
+  background: rgba($accent, 0.1);
+  color: $accent;
+  text-decoration: none;
+}
+
 .home-terminal-invite {
   width: 100%;
   margin: 0;
