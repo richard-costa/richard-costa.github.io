@@ -11,11 +11,11 @@ page-layout: full
 
 <div class="home-page-title">about</div>
 
-<p class="hero-copy">
+::: {.hero-copy}
 Physics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is "AI Engineering", let's see how long that lasts. 
 
 Also, remember, all work and no play brings you a worse day. Take care and poke around!
-</p>
+:::
 
 ::: {.hero-links}
 [github](https://github.com/richard-costa){.terminal-link}
