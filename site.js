@@ -480,6 +480,10 @@
       const input = root.querySelector("input");
       const output = root.querySelector(".site-terminal-output");
 
+      function closeTerminal() {
+        root.hidden = true;
+      }
+
       const commands = [
         {
           name: "help",
@@ -524,9 +528,7 @@
         {
           name: "exit",
           description: "close terminal session",
-          run: () => {
-            root.hidden = true;
-          }
+          run: closeTerminal
         },
         {
           name: "physics",
@@ -548,8 +550,12 @@
         }
       ];
 
-      close?.addEventListener("click", () => {
-        root.hidden = true;
+      close?.addEventListener("click", closeTerminal);
+
+      root.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeTerminal();
+        }
       });
 
       form?.addEventListener("submit", async (event) => {
@@ -572,11 +578,7 @@
     root.querySelector("input")?.focus();
   }
 
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "site-terminal-toggle";
-  button.textContent = "terminal";
-  button.setAttribute("aria-label", "Open site terminal");
-  button.addEventListener("click", openTerminal);
-  document.body.appendChild(button);
+  document.querySelectorAll("[data-open-terminal]").forEach((button) => {
+    button.addEventListener("click", openTerminal);
+  });
 })();

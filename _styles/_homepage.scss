@@ -60,9 +60,27 @@
   margin: 0;
 }
 
-.home-blogroll {
+.home-sidebar {
   grid-area: blogroll;
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+@media (min-width: 681px) {
+  .home-sidebar {
+    align-self: start;
+    margin-top: 0.9rem;
+    gap: 2.3rem;
+  }
+
+  .home-sidebar > p {
+    margin: 0;
+  }
+}
+
+.home-blogroll {
   padding: 0.8rem 0;
   border: 1px solid $border;
   border-radius: 3px;
@@ -178,6 +196,27 @@
   background: rgba($accent, 0.1);
   color: $accent;
   text-decoration: none;
+}
+
+.home-terminal-invite {
+  width: 100%;
+  margin: 0;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid $border;
+  border-radius: 3px;
+  background: rgba($surface, 0.6);
+  color: $text;
+  font-family: $mono;
+  font-size: 0.78rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.home-terminal-invite:hover,
+.home-terminal-invite:focus-visible {
+  border-color: $accent;
+  background: rgba($accent, 0.08);
+  color: $accent;
 }
 
 .item-row {

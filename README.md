@@ -57,3 +57,8 @@ either ImageMagick or Pillow, then regenerates `assets/home-media/` and
 generated files. Missing mappings are recorded in the local, ignored
 `data/home-media-missing-urls.txt` report; add a mapping to `SOURCE_URLS` in the
 script before running it again.
+
+## TODO
+
+- When the homepage blogroll reaches six entries, give it an internal scroll
+	area so it does not push the full-width wallpaper section down on desktop.

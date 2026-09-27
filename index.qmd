@@ -32,12 +32,17 @@ Also, remember, all work and no play brings you a worse day. Take care and poke 
   <div id="home-media" class="home-media"></div>
 </section>
 
-<div class="home-blogroll">
-  <div class="blogroll-title">blogroll (placeholder links for now, i'll update them soon)</div>
-  <nav class="blogroll-links" aria-label="Blogroll">
-    <a href="https://ncatlab.org/">nLab <span>↗</span></a>
-    <a href="https://quarto.org/">Quarto <span>↗</span></a>
-  </nav>
-</div>
+::: {.home-sidebar}
+  <button type="button" class="home-terminal-invite" data-open-terminal>&gt; launch terminal_</button>
+
+::: {.home-blogroll}
+<div class="blogroll-title">blogroll (placeholder links for now, i'll update them soon)</div>
+<nav class="blogroll-links" aria-label="Blogroll">
+  <a href="https://ncatlab.org/">nLab <span>↗</span></a>
+  <a href="https://quarto.org/">Quarto <span>↗</span></a>
+</nav>
+:::
+
+:::
 
 :::
