@@ -1,6 +1,13 @@
 [
   {
     "date": "2026-09-27",
+    "subject": "Consolidate resume links",
+    "sha": "89652cf885b8af663ae2bda0507fd84645e6eba6",
+    "short_sha": "89652cf",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/89652cf885b8af663ae2bda0507fd84645e6eba6"
+  },
+  {
+    "date": "2026-09-27",
     "subject": "Improve homepage terminal discovery",
     "sha": "b448fddee80253d3db7a9fcbff3568d0df7d88c2",
     "short_sha": "b448fdd",
@@ -75,12 +82,5 @@
     "sha": "d0eb57f92d0e0f2d97eae13a7124639532a5a10a",
     "short_sha": "d0eb57f",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/d0eb57f92d0e0f2d97eae13a7124639532a5a10a"
-  },
-  {
-    "date": "2026-09-26",
-    "subject": "Refactor notes feed generator structure",
-    "sha": "f5632fcd66bb9d42df72677eb7c64f395195c3f9",
-    "short_sha": "f5632fc",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/f5632fcd66bb9d42df72677eb7c64f395195c3f9"
   }
 ]
