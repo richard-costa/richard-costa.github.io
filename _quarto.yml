@@ -11,6 +11,8 @@ project:
     - humans.txt
     - site.js
     - data/equations.json
+    - data/home-media.json
+    - assets/home-media/**
 
 website:
   title: "Richard Costa"
