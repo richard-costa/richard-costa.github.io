@@ -155,8 +155,26 @@ def main() -> int:
     image_output = project_root / "assets" / "home-media" / "images"
     video_output = project_root / "assets" / "home-media" / "videos"
     manifest_path = project_root / "data" / "home-media.json"
+    missing_urls_path = project_root / "data" / "home-media-missing-urls.txt"
     images = source_files(wallpaper_root, IMAGE_EXTENSIONS)
     videos = source_files(video_root, VIDEO_EXTENSIONS)
+    source_urls: dict[Path, str] = {}
+    missing_urls: list[str] = []
+
+    for source in [*images, *videos]:
+        try:
+            source_urls[source] = original_url(source)
+        except ValueError:
+            missing_urls.append(source.relative_to(source_root).as_posix())
+
+    missing_urls_path.parent.mkdir(parents=True, exist_ok=True)
+    missing_urls_path.write_text(
+        "\n".join(missing_urls) + ("\n" if missing_urls else ""),
+        encoding="utf-8",
+    )
+    if missing_urls:
+        parser.error(f"missing original URLs; see {missing_urls_path.relative_to(project_root)}")
+
     clean_output(image_output, ".webp")
     clean_output(video_output, ".mp4")
 
@@ -178,7 +196,7 @@ def main() -> int:
             {
                 "type": "image",
                 "src": f"/assets/home-media/images/{destination.name}",
-                "original": original_url(source),
+                "original": source_urls[source],
             }
         )
 
@@ -197,7 +215,7 @@ def main() -> int:
             {
                 "type": "video",
                 "src": f"/assets/home-media/videos/{destination.name}",
-                "original": original_url(source),
+                "original": source_urls[source],
             }
         )
 

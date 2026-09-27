@@ -8,17 +8,17 @@
     "hero blogroll"
     "media media";
   column-gap: clamp(2.5rem, 6vw, 5rem);
-  row-gap: clamp(2rem, 5vw, 4rem);
+  row-gap: clamp(1.8rem, 3vw, 2.5rem);
   align-items: center;
 }
 
 .home-hero {
   grid-area: hero;
-  min-height: 54vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: clamp(3rem, 8vw, 5rem);
+  padding-bottom: 0;
 }
 
 .item-number,
@@ -98,16 +98,21 @@
 }
 
 .home-media a {
-  display: block;
+  display: grid;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  place-items: center;
+  border: 1px solid $border;
+  border-radius: 3px;
+  background: rgba($surface, 0.6);
 }
 
 .home-media img,
 .home-media video {
   display: block;
   width: 100%;
-  height: auto;
-  border: 1px solid $border;
-  border-radius: 3px;
+  height: 100%;
+  object-fit: contain;
 }
 
 .blogroll-title {
