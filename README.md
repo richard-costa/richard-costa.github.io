@@ -41,3 +41,19 @@ To publish the current branch after testing:
 ```bash
 quarto publish gh-pages
 ```
+
+## Homepage media
+
+Homepage media is generated from a sibling `arch-setup` checkout. Run the
+optimizer after adding or changing source wallpapers or videos:
+
+```bash
+python _scripts/prepare_home_media.py [path-to-arch-setup]
+```
+
+The default source path is `../arch-setup`. The script requires FFmpeg and
+either ImageMagick or Pillow, then regenerates `assets/home-media/` and
+`data/home-media.json`. It validates every original-source link before replacing
+generated files. Missing mappings are recorded in the local, ignored
+`data/home-media-missing-urls.txt` report; add a mapping to `SOURCE_URLS` in the
+script before running it again.
