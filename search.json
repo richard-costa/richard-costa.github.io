@@ -1,38 +1,17 @@
 [
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "projects",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Richard Costa",
     "section": "",
-    "text": "01\n\n\n\nrag ↗\n\n\nA framework-light RAG implementation built to understand the underlying application structure rather than hide it behind abstractions.\n\n\n\nexperiment python · postgres · pgvector · ollama\n\n\n\n\n02\n\n\n\nlearning-links · repo ↗\n\n\nA tool for building and visualizing prerequisite and helpful relationships between topics for self-directed learning.\n\n\n\nexperiment python · sqlite · javascript"
+    "text": "about\n\n\nPhysics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is “AI Engineering”, let’s see how long that lasts.\nAlso, remember, all work and no play brings you a worse day. Take care and poke around!\n\n\ngithub linkedin résumé - en résumé - pt email\n\n\n\n\nIf you wait a bit, you can see the wallpapers changing ;)\n\n\n\n\n\n\n\nblogroll (placeholder links for now, i’ll update them soon)\n\n\nnLab ↗ Quarto ↗"
   },
   {
-    "objectID": "now.html",
-    "href": "now.html",
-    "title": "now",
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "posts",
     "section": "",
-    "text": "A small snapshot of what has my attention right now. Updated manually, not meant to be exhaustive."
-  },
-  {
-    "objectID": "now.html#building",
-    "href": "now.html#building",
-    "title": "now",
-    "section": "building",
-    "text": "building\n\nThis site — RSS, bookmarks, a changelog, and small terminal-style details.\nA framework-light RAG project focused on understanding the application structure rather than hiding it behind abstractions."
-  },
-  {
-    "objectID": "now.html#learning-revisiting",
-    "href": "now.html#learning-revisiting",
-    "title": "now",
-    "section": "learning / revisiting",
-    "text": "learning / revisiting\n\nQuantum mechanics and mathematical physics through the notes on this site.\nLinux tooling and small desktop workflows."
-  },
-  {
-    "objectID": "now.html#reading",
-    "href": "now.html#reading",
-    "title": "now",
-    "section": "reading",
-    "text": "reading\nThis section stays intentionally current. I’ll add books, papers, and essays here when they are actually in rotation."
+    "text": "rss\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMusic for an Elderly Elephant\n\n\n\nwholesome\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "changelog.html",
@@ -231,17 +210,38 @@
     "text": "quarto / web\n\nCreating your personal website using Quarto — a practical Quarto website walkthrough.\nAdding a blog to your existing Quarto website — notes on adding blog-style publishing to Quarto."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Richard Costa",
+    "objectID": "now.html",
+    "href": "now.html",
+    "title": "now",
     "section": "",
-    "text": "about\n\n\nPhysics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is “AI Engineering”, let’s see how long that lasts.\nAlso, remember, all work and no play brings you a worse day. Take care and poke around!\n\n\ngithub linkedin résumé - en résumé - pt email\n\n\n\n\nblogroll (placeholder links for now, i’ll update them soon)\n\n\nnLab ↗ Quarto ↗"
+    "text": "A small snapshot of what has my attention right now. Updated manually, not meant to be exhaustive."
   },
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "posts",
+    "objectID": "now.html#building",
+    "href": "now.html#building",
+    "title": "now",
+    "section": "building",
+    "text": "building\n\nThis site — RSS, bookmarks, a changelog, and small terminal-style details.\nA framework-light RAG project focused on understanding the application structure rather than hiding it behind abstractions."
+  },
+  {
+    "objectID": "now.html#learning-revisiting",
+    "href": "now.html#learning-revisiting",
+    "title": "now",
+    "section": "learning / revisiting",
+    "text": "learning / revisiting\n\nQuantum mechanics and mathematical physics through the notes on this site.\nLinux tooling and small desktop workflows."
+  },
+  {
+    "objectID": "now.html#reading",
+    "href": "now.html#reading",
+    "title": "now",
+    "section": "reading",
+    "text": "reading\nThis section stays intentionally current. I’ll add books, papers, and essays here when they are actually in rotation."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "projects",
     "section": "",
-    "text": "rss\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMusic for an Elderly Elephant\n\n\n\nwholesome\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\nNo matching items"
+    "text": "01\n\n\n\nrag ↗\n\n\nA framework-light RAG implementation built to understand the underlying application structure rather than hide it behind abstractions.\n\n\n\nexperiment python · postgres · pgvector · ollama\n\n\n\n\n02\n\n\n\nlearning-links · repo ↗\n\n\nA tool for building and visualizing prerequisite and helpful relationships between topics for self-directed learning.\n\n\n\nexperiment python · sqlite · javascript"
   }
 ]

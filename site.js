@@ -50,6 +50,197 @@
       });
   }
 
+  const homeMedia = document.getElementById("home-media");
+  if (homeMedia) {
+    const TIME_ZONE = "America/Sao_Paulo";
+    const FADE_DURATION = 400;
+    const ROTATION_INTERVAL = 30_000;
+    const mobileMedia = window.matchMedia("(max-width: 680px)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const connection = navigator.connection;
+    let mediaEntries = [];
+    let selectedSource = null;
+    let isUpdating = false;
+
+    function hideHomeMedia() {
+      homeMedia.classList.remove("is-visible");
+      homeMedia.replaceChildren();
+      homeMedia.hidden = true;
+    }
+
+    function hash(value) {
+      let result = 2166136261;
+      for (const character of value) {
+        result ^= character.charCodeAt(0);
+        result = Math.imul(result, 16777619);
+      }
+      return result >>> 0;
+    }
+
+    function dailySequence(entries, date) {
+      const shuffled = [...entries];
+      let state = hash(date);
+      for (let index = shuffled.length - 1; index > 0; index -= 1) {
+        state = (Math.imul(state, 1664525) + 1013904223) >>> 0;
+        const swapIndex = state % (index + 1);
+        [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+      }
+      return shuffled;
+    }
+
+    function currentDateAndSlot() {
+      const parts = new Intl.DateTimeFormat("en-CA", {
+        timeZone: TIME_ZONE,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hourCycle: "h23"
+      }).formatToParts(new Date());
+      const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+      return {
+        date: `${values.year}-${values.month}-${values.day}`,
+        slot: (Number(values.hour) * 60 + Number(values.minute)) * 2 + Math.floor(Number(values.second) / 30)
+      };
+    }
+
+    function imageOnlyMode() {
+      return mobileMedia.matches || reducedMotion.matches || connection?.saveData === true;
+    }
+
+    function selectedEntry() {
+      const candidates = imageOnlyMode()
+        ? mediaEntries.filter((entry) => entry.type === "image")
+        : mediaEntries;
+      if (candidates.length === 0) return null;
+
+      const { date, slot } = currentDateAndSlot();
+      const sequence = dailySequence(candidates, date);
+      return sequence[slot % sequence.length];
+    }
+
+    function waitForAsset(element) {
+      return new Promise((resolve, reject) => {
+        const loaded = () => {
+          cleanup();
+          resolve();
+        };
+        const failed = () => {
+          cleanup();
+          reject();
+        };
+        const cleanup = () => {
+          element.removeEventListener("load", loaded);
+          element.removeEventListener("loadedmetadata", loaded);
+          element.removeEventListener("loadeddata", loaded);
+          element.removeEventListener("error", failed);
+        };
+
+        element.addEventListener("load", loaded, { once: true });
+        element.addEventListener("loadedmetadata", loaded, { once: true });
+        element.addEventListener("loadeddata", loaded, { once: true });
+        element.addEventListener("error", failed, { once: true });
+        if (element instanceof HTMLImageElement && element.complete && element.naturalWidth > 0) {
+          loaded();
+        } else if (element instanceof HTMLVideoElement && element.readyState >= HTMLMediaElement.HAVE_METADATA) {
+          loaded();
+        }
+      });
+    }
+
+    function createMediaElement(entry) {
+      const link = document.createElement("a");
+      link.href = entry.original;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.setAttribute("aria-label", "View original wallpaper");
+      link.title = "View original wallpaper";
+
+      if (entry.type === "image") {
+        const image = document.createElement("img");
+        image.src = entry.src;
+        image.alt = "";
+        image.decoding = "async";
+        link.appendChild(image);
+        return { link, media: image };
+      }
+
+      const video = document.createElement("video");
+      video.src = entry.src;
+      video.autoplay = true;
+      video.muted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.preload = "metadata";
+      video.setAttribute("aria-hidden", "true");
+      link.appendChild(video);
+      return { link, media: video };
+    }
+
+    function afterFade() {
+      return new Promise((resolve) => window.setTimeout(resolve, FADE_DURATION));
+    }
+
+    async function updateHomeMedia() {
+      if (isUpdating) return;
+      const entry = selectedEntry();
+      if (!entry) {
+        hideHomeMedia();
+        return;
+      }
+      if (entry.src === selectedSource) return;
+
+      isUpdating = true;
+      homeMedia.hidden = false;
+      if (homeMedia.firstElementChild) {
+        homeMedia.classList.remove("is-visible");
+        await afterFade();
+      }
+
+      const { link, media } = createMediaElement(entry);
+      try {
+        await waitForAsset(media);
+      } catch {
+        isUpdating = false;
+        hideHomeMedia();
+        return;
+      }
+
+      homeMedia.replaceChildren(link);
+      selectedSource = entry.src;
+      if (media instanceof HTMLVideoElement) media.play().catch(() => {});
+      window.setTimeout(() => homeMedia.classList.add("is-visible"), 0);
+      isUpdating = false;
+    }
+
+    fetch("/data/home-media.json")
+      .then((response) => {
+        if (!response.ok) throw new Error("home media unavailable");
+        return response.json();
+      })
+      .then((entries) => {
+        if (!Array.isArray(entries)) throw new Error("invalid home media manifest");
+        mediaEntries = entries.filter(
+          (entry) =>
+            (entry.type === "image" || entry.type === "video") &&
+            typeof entry.src === "string" &&
+            typeof entry.original === "string"
+        );
+        if (mediaEntries.length === 0) {
+          hideHomeMedia();
+          return;
+        }
+        updateHomeMedia();
+        window.setInterval(updateHomeMedia, ROTATION_INTERVAL);
+        mobileMedia.addEventListener("change", updateHomeMedia);
+        reducedMotion.addEventListener("change", updateHomeMedia);
+        connection?.addEventListener?.("change", updateHomeMedia);
+      })
+      .catch(hideHomeMedia);
+  }
+
   let equationDataPromise = null;
 
   function loadEquationData() {

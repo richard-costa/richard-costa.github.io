@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-09-27",
+    "subject": "Fix homepage intro markup",
+    "sha": "80c7a4863ae90264aaa90630f453a590def21e3c",
+    "short_sha": "80c7a48",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/80c7a4863ae90264aaa90630f453a590def21e3c"
+  },
+  {
+    "date": "2026-09-27",
+    "subject": "Refine homepage media placement",
+    "sha": "4822d1d51598bd373703e4ef7d7a616a5a8fc4f3",
+    "short_sha": "4822d1d",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/4822d1d51598bd373703e4ef7d7a616a5a8fc4f3"
+  },
+  {
+    "date": "2026-09-27",
+    "subject": "Add rotating homepage media",
+    "sha": "98808a59e85ecd10227741ae674b698740a9e6e8",
+    "short_sha": "98808a5",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/98808a59e85ecd10227741ae674b698740a9e6e8"
+  },
+  {
     "date": "2026-09-26",
     "subject": "Remove obsolete duplicate theme variables",
     "sha": "2acf2844a5173bf84237c3248e31f9f97debd988",
@@ -61,26 +82,5 @@
     "sha": "4e5a3c9640b88b8587626a008561e3efdcb2d968",
     "short_sha": "4e5a3c9",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/4e5a3c9640b88b8587626a008561e3efdcb2d968"
-  },
-  {
-    "date": "2026-09-26",
-    "subject": "Remove duplicated note metadata",
-    "sha": "6247e3bfacf055f6d640c6892688e0d05d43b7e2",
-    "short_sha": "6247e3b",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/6247e3bfacf055f6d640c6892688e0d05d43b7e2"
-  },
-  {
-    "date": "2026-09-26",
-    "subject": "Remove duplicated note metadata",
-    "sha": "88f5a4a08d528e5aff1d289af83c8c13284503ee",
-    "short_sha": "88f5a4a",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/88f5a4a08d528e5aff1d289af83c8c13284503ee"
-  },
-  {
-    "date": "2026-09-26",
-    "subject": "Remove duplicated note metadata",
-    "sha": "da9bae41c91d67fc77b506f465104ce7ebafc820",
-    "short_sha": "da9bae4",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/da9bae41c91d67fc77b506f465104ce7ebafc820"
   }
 ]
