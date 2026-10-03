@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-03",
+    "subject": "update projects.qmd",
+    "sha": "af01f03298f3bd880753723fbbfb3b973b539c63",
+    "short_sha": "af01f03",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/af01f03298f3bd880753723fbbfb3b973b539c63"
+  },
+  {
     "date": "2026-09-27",
     "subject": "Consolidate resume links",
     "sha": "89652cf885b8af663ae2bda0507fd84645e6eba6",
@@ -75,12 +82,5 @@
     "sha": "e5fcb798199723a7acd3e10cd6af995370c20752",
     "short_sha": "e5fcb79",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/e5fcb798199723a7acd3e10cd6af995370c20752"
-  },
-  {
-    "date": "2026-09-26",
-    "subject": "Keep repository map aligned with current structure",
-    "sha": "d0eb57f92d0e0f2d97eae13a7124639532a5a10a",
-    "short_sha": "d0eb57f",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/d0eb57f92d0e0f2d97eae13a7124639532a5a10a"
   }
 ]
