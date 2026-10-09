@@ -46,6 +46,10 @@ def published_date(meta: str, path: Path) -> datetime:
     return git_modified(path)
 
 
+def rendered_path(path: Path) -> str:
+    return "/" + path.with_suffix(".html").as_posix()
+
+
 def writing_items() -> list[dict[str, str]]:
     items: list[tuple[datetime, dict[str, str]]] = []
 
@@ -67,7 +71,7 @@ def writing_items() -> list[dict[str, str]]:
 
             item = {
                 "title": title,
-                "path": path.as_posix(),
+                "path": rendered_path(path),
                 "date": activity_date.date().isoformat(),
                 "writing_type": writing_type,
                 "activity": "updated" if writing_type == "note" else "published",

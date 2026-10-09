@@ -4,27 +4,37 @@ Source for [richard-costa.github.io](https://richard-costa.github.io/).
 
 Built with [Quarto](https://quarto.org/). Use `quarto preview` for local preview and `quarto publish gh-pages` to publish.
 
-Project scripts generate the changelog from Git history, a separate RSS feed for notes, and the Giscus theme during rendering. Posts use Quarto's native listing feed.
+Writing is organized as essays, notes, and shorts. `writing.qmd` aggregates recent activity across all three and provides the main RSS feed. A pre-render script generates the shared writing metadata; post-render scripts generate the changelog, the separate notes feed, and the Giscus theme.
 
 ## Repository map
 
-- `index.qmd` — homepage / about
+- `index.qmd` — homepage / about with recent writing
+- `writing.qmd` — aggregate writing view and main feed
+- `essays/` — longer finished writing
+- `notes/` — reference material and working knowledge
+- `shorts/` — lightweight posts, observations, and discoveries
 - `projects.qmd` — projects and status indicators
 - `now.qmd` — current work / learning / reading
-- `notes/` — technical notes and shared note metadata
-- `posts/` — chronological posts and post metadata
 - `bookmarks.qmd` — saved references
 - `changelog.qmd` — recent site changes from Git history
 - `404.qmd` — custom shell-style 404
 - `files/` — downloadable PDFs and résumé files
-- `data/` — small runtime data files
+- `data/` — small runtime data files; `writing.yml` is generated and ignored
+- `_templates/` — custom Quarto listing templates
 - `_includes/` — Quarto HTML includes
-- `_scripts/` — post-render generators
+- `_scripts/` — pre/post-render generators
 - `_styles/` — shared theme variables, SCSS partials, and Giscus source CSS
 - `site.js` — site-wide JavaScript and terminal commands
 - `theme.scss` — Quarto theme entrypoint
 - `_quarto.yml` — site-wide configuration
 - `robots.txt` / `humans.txt` — crawler rules and site trivia
+
+## Feeds
+
+- `/writing.xml` — all writing
+- `/essays/index.xml` — essays
+- `/notes.xml` — notes and note updates
+- `/shorts/index.xml` — shorts
 
 ## Theme structure
 
@@ -61,4 +71,4 @@ script before running it again.
 ## TODO
 
 - When the homepage blogroll reaches six entries, give it an internal scroll
-	area so it does not push the full-width wallpaper section down on desktop.
+  area so it does not push the full-width wallpaper section down on desktop.
