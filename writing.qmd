@@ -1,15 +1,16 @@
 ---
 title: "writing"
 toc: false
-aliases:
-  - /posts.html
 listing:
   id: writing-list
-  contents: data/writing.yml
+  contents:
+    - essays
+    - notes
+    - shorts
+  exclude:
+    filename: "index.qmd"
   sort: "date desc"
   template: _templates/writing-list.ejs.md
-  field-types:
-    date: date
   feed:
     title: "Richard Costa — writing"
     description: "Essays, notes, and shorts by Richard Costa."

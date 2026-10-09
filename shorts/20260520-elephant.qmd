@@ -4,8 +4,6 @@ date: 2026-05-20
 image: https://i.ytimg.com/vi/i1qQOGCyRbY/maxresdefault.jpg
 categories:
   - wholesome
-aliases:
-  - /posts/20260520-elephant.html
 ---
 
 {{< video https://youtu.be/i1qQOGCyRbY?si=ftUPLB2T-HDpixuT >}}

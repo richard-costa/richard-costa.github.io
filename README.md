@@ -4,7 +4,7 @@ Source for [richard-costa.github.io](https://richard-costa.github.io/).
 
 Built with [Quarto](https://quarto.org/). Use `quarto preview` for local preview and `quarto publish gh-pages` to publish.
 
-Writing is organized as essays, notes, and shorts. `writing.qmd` aggregates recent activity across all three and provides the main RSS feed. A pre-render script generates the shared writing metadata; post-render scripts generate the changelog, the separate notes feed, and the Giscus theme.
+Writing is organized as essays, notes, and shorts. `writing.qmd` and the homepage use Quarto's native listings to aggregate recent activity across all three.
 
 ## Repository map
 
@@ -19,10 +19,10 @@ Writing is organized as essays, notes, and shorts. `writing.qmd` aggregates rece
 - `changelog.qmd` — recent site changes from Git history
 - `404.qmd` — custom shell-style 404
 - `files/` — downloadable PDFs and résumé files
-- `data/` — small runtime data files; `writing.yml` is generated and ignored
-- `_templates/` — custom Quarto listing templates
+- `data/` — small runtime data files
+- `_templates/` — custom Quarto listing presentation
 - `_includes/` — Quarto HTML includes
-- `_scripts/` — pre/post-render generators
+- `_scripts/` — post-render generators
 - `_styles/` — shared theme variables, SCSS partials, and Giscus source CSS
 - `site.js` — site-wide JavaScript and terminal commands
 - `theme.scss` — Quarto theme entrypoint
@@ -35,6 +35,8 @@ Writing is organized as essays, notes, and shorts. `writing.qmd` aggregates rece
 - `/essays/index.xml` — essays
 - `/notes.xml` — notes and note updates
 - `/shorts/index.xml` — shorts
+
+The aggregate, essay, and short feeds are Quarto-native. The notes feed remains a small post-render script because the Notes page is manually grouped by topic and status instead of being a listing.
 
 ## Theme structure
 

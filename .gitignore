@@ -1,7 +1,6 @@
 /.quarto/
 /_site/
 data/home-media-missing-urls.txt
-data/writing.yml
 **/*.quarto_ipynb
 /.luarc.json
 
