@@ -48,7 +48,7 @@ Also, remember, all work and no play brings you a worse day. Take care and poke 
 :::
 
 <section class="home-media-section">
-  <p class="home-media-intro">If you wait a bit, you can see the wallpapers changing ;)</p>
+  <p class="hero-copy home-media-intro">If you wait a bit, you can see the wallpapers changing ;)</p>
   <div id="home-media" class="home-media"></div>
 </section>
 
