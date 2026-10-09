@@ -67,8 +67,8 @@ cd ../richard-costa.github.io
 ./_scripts/update_home_media.sh
 ```
 
-The site wrapper defaults to `../arch-setup`; pass another checkout path as its
-first argument when needed.
+The site wrapper looks for a nearby/common `arch-setup` checkout. You can also
+pass the checkout path explicitly or set `ARCH_SETUP_ROOT`.
 
 `_scripts/prepare_home_media.py` reads `wallpapers/`,
 `video-wallpapers/`, and `media-sources.toml` from `arch-setup`, then
