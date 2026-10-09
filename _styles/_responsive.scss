@@ -8,10 +8,10 @@
 @media (max-width: 680px) {
   .home-shell {
     width: 100%;
+    min-width: 0;
     padding-top: 2rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
-      "terminal"
       "hero"
       "media"
       "recent"
@@ -19,9 +19,20 @@
     gap: 1.5rem;
   }
 
+  .home-shell > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .home-hero {
     min-height: auto;
     padding-bottom: 0;
+  }
+
+  .home-terminal {
+    width: max-content;
+    max-width: 100%;
+    margin-bottom: 1rem;
   }
 
   .home-page-title {
@@ -33,16 +44,17 @@
   }
 
   .hero-links {
+    min-width: 0;
     row-gap: 0.3rem;
+    overflow-wrap: anywhere;
   }
 
   #home-recent,
-  .home-blogroll {
-    width: min(100%, 360px);
-  }
-
-  .home-terminal {
-    width: max-content;
+  .home-blogroll,
+  .home-media-section {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .home-blogroll {
@@ -53,15 +65,19 @@
     display: block;
     border-right: 0;
     border-bottom: 1px solid $border;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .blogroll-links {
     flex-direction: column;
+    flex-wrap: nowrap;
     padding: 0.25rem 0;
   }
 
   .blogroll-links a {
     min-width: 0;
+    max-width: 100%;
     border-right: 0;
   }
 
@@ -71,6 +87,12 @@
 
   .home-media {
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .resume-inline {
+    white-space: normal;
   }
 
   .item-row {
