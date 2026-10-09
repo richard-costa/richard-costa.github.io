@@ -4,20 +4,23 @@ Source for [richard-costa.github.io](https://richard-costa.github.io/).
 
 Built with [Quarto](https://quarto.org/). Use `quarto preview` for local preview and `quarto publish gh-pages` to publish.
 
-Project scripts generate the changelog from Git history, a separate RSS feed for notes, and the Giscus theme during rendering. Posts use Quarto's native listing feed.
+Writing is organized as essays, notes, and posts. `writing.qmd` and the homepage use Quarto's native listings to aggregate recent activity across all three.
 
 ## Repository map
 
-- `index.qmd` — homepage / about
+- `index.qmd` — homepage / about with recent writing
+- `writing.qmd` — aggregate writing view and main feed
+- `essays/` — longer finished writing
+- `notes/` — reference material and working knowledge
+- `posts/` — shorter chronological writing
 - `projects.qmd` — projects and status indicators
 - `now.qmd` — current work / learning / reading
-- `notes/` — technical notes and shared note metadata
-- `posts/` — chronological posts and post metadata
 - `bookmarks.qmd` — saved references
 - `changelog.qmd` — recent site changes from Git history
 - `404.qmd` — custom shell-style 404
 - `files/` — downloadable PDFs and résumé files
 - `data/` — small runtime data files
+- `_templates/` — custom Quarto listing presentation
 - `_includes/` — Quarto HTML includes
 - `_scripts/` — post-render generators
 - `_styles/` — shared theme variables, SCSS partials, and Giscus source CSS
@@ -25,6 +28,15 @@ Project scripts generate the changelog from Git history, a separate RSS feed for
 - `theme.scss` — Quarto theme entrypoint
 - `_quarto.yml` — site-wide configuration
 - `robots.txt` / `humans.txt` — crawler rules and site trivia
+
+## Feeds
+
+- `/writing.xml` — all writing
+- `/essays/index.xml` — essays
+- `/notes.xml` — notes and note updates
+- `/posts/index.xml` — posts
+
+The aggregate, essay, and post feeds are Quarto-native. The notes feed remains a small post-render script because the Notes page is manually grouped by topic and status instead of being a listing.
 
 ## Theme structure
 
@@ -44,21 +56,34 @@ quarto publish gh-pages
 
 ## Homepage media
 
-Homepage media is generated from a sibling `arch-setup` checkout. Run the
-optimizer after adding or changing source wallpapers or videos:
+Wallpaper originals live in the sibling `arch-setup` repository. After changing
+your local wallpaper folders, update the two repositories in this order:
 
 ```bash
-python _scripts/prepare_home_media.py [path-to-arch-setup]
+cd ../arch-setup
+./scripts/sync-media.sh
+
+cd ../richard-costa.github.io
+./_scripts/update_home_media.sh
 ```
 
-The default source path is `../arch-setup`. The script requires FFmpeg and
-either ImageMagick or Pillow, then regenerates `assets/home-media/` and
-`data/home-media.json`. It validates every original-source link before replacing
-generated files. Missing mappings are recorded in the local, ignored
-`data/home-media-missing-urls.txt` report; add a mapping to `SOURCE_URLS` in the
-script before running it again.
+The site wrapper looks for a nearby/common `arch-setup` checkout. You can also
+pass the checkout path explicitly or set `ARCH_SETUP_ROOT`.
+
+`_scripts/prepare_home_media.py` reads `wallpapers/`,
+`video-wallpapers/`, and `media-sources.toml` from `arch-setup`, then
+regenerates optimized files under `assets/home-media/` and the
+`data/home-media.json` manifest.
+
+Wallhaven URLs are derived automatically from filenames matching
+`wallhaven-<id>.<ext>`. Original URLs for other media belong in
+`arch-setup/media-sources.toml`.
+
+This media preparation is intentionally separate from `quarto render`: normal
+site rendering does not require a sibling `arch-setup` checkout, Git LFS,
+FFmpeg, or ImageMagick/Pillow.
 
 ## TODO
 
 - When the homepage blogroll reaches six entries, give it an internal scroll
-	area so it does not push the full-width wallpaper section down on desktop.
+  area so it does not push the full-width wallpaper section down on desktop.

@@ -3,45 +3,61 @@ title: ""
 pagetitle: "Richard Costa"
 toc: false
 page-layout: full
+listing:
+  id: home-recent
+  contents:
+    - essays
+    - notes
+    - posts
+  exclude:
+    filename: "index.qmd"
+  sort: "date desc"
+  max-items: 3
+  template: _templates/home-recent.ejs.md
 ---
 
 ::: {.home-shell}
 
 ::: {.home-hero}
 
+::: {.home-terminal}
+<button type="button" class="home-terminal-invite" data-open-terminal>&gt; launch terminal_</button>
+:::
+
 <div class="home-page-title">about</div>
 
 ::: {.hero-copy}
-Physics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is "AI Engineering", let's see how long that lasts. 
+Physics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is "AI Engineering", let's see how long that lasts.
 
 Also, remember, all work and no play brings you a worse day. Take care and poke around!
 :::
 
-::: {.hero-links}
-[github](https://github.com/richard-costa){.terminal-link}
-[linkedin](https://www.linkedin.com/in/richard-silva-costa){.terminal-link}
-<span class="resume-selector" aria-label="Resume downloads"><span class="resume-selector-label">résumé:</span><a href="/files/resume/resume_english.pdf" lang="en">EN</a><a href="/files/resume/resume_portuguese.pdf" lang="pt-BR">PT</a></span>
-[email](mailto:scosta.richard@gmail.com){.terminal-link}
+<nav class="hero-links" aria-label="Elsewhere">
+  <a href="https://github.com/richard-costa">github</a>
+  <span class="hero-link-separator" aria-hidden="true">·</span>
+  <a href="https://www.linkedin.com/in/richard-silva-costa">linkedin</a>
+  <span class="hero-link-separator" aria-hidden="true">·</span>
+  <span class="resume-inline">résumé <a href="/files/resume/resume_english.pdf" lang="en">EN</a>/<a href="/files/resume/resume_portuguese.pdf" lang="pt-BR">PT</a></span>
+  <span class="hero-link-separator" aria-hidden="true">·</span>
+  <a href="mailto:scosta.richard@gmail.com">email</a>
+</nav>
+
 :::
 
+::: {#home-recent}
 :::
 
 <section class="home-media-section">
-  <p class="home-media-intro">If you wait a bit, you can see the wallpapers changing ;)</p>
+  <p class="hero-copy home-media-intro">If you wait a bit, you can see the wallpapers changing ;)</p>
   <div id="home-media" class="home-media"></div>
 </section>
 
-::: {.home-sidebar}
-  <button type="button" class="home-terminal-invite" data-open-terminal>&gt; launch terminal_</button>
-
 ::: {.home-blogroll}
-<div class="blogroll-title">blogroll (placeholder links for now, i'll update them soon)</div>
+<div class="blogroll-title">blogroll</div>
 <nav class="blogroll-links" aria-label="Blogroll">
   <a href="https://ncatlab.org/">nLab <span>↗</span></a>
   <a href="https://quarto.org/">Quarto <span>↗</span></a>
 </nav>
-:::
-
 :::
 
 :::

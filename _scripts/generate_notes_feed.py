@@ -49,7 +49,7 @@ def note_items() -> list[tuple[datetime, str, str, str, str]]:
         status = field(meta, "status")
         modified = git_modified(path)
         url = f"{SITE}/{path.with_suffix('.html').as_posix()}"
-        description = f"Technical note · {status}" if status else "Technical note"
+        description = f"Note · {status}" if status else "Note"
 
         items.append((modified, title, url, description, status))
 
@@ -77,7 +77,7 @@ def render_feed(items: list[tuple[datetime, str, str, str, str]]) -> str:
   <channel>
     <title>Richard Costa — notes</title>
     <link>{SITE}/notes/</link>
-    <description>Technical notes and working material by Richard Costa.</description>
+    <description>Notes and working material by Richard Costa.</description>
     <language>en</language>
     <lastBuildDate>{format_datetime(last_build)}</lastBuildDate>
     <atom:link href="{SITE}/notes.xml" rel="self" type="application/rss+xml" />

@@ -17,19 +17,17 @@ project:
 website:
   title: "Richard Costa"
   site-url: "https://richard-costa.github.io"
-  description: "Projects, technical notes, and occasional posts by Richard Costa."
+  description: "Projects, essays, notes, and posts by Richard Costa."
 
   navbar:
     title: "richard.costa_ / são paulo"
     right:
-      - href: now.qmd
-        text: now
+      - href: writing.qmd
+        text: writing
       - href: projects.qmd
         text: projects
-      - href: notes/index.qmd
-        text: notes
-      - href: posts.qmd
-        text: posts
+      - href: now.qmd
+        text: now
       - text: more
         menu:
           - href: bookmarks.qmd

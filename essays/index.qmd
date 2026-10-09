@@ -1,0 +1,16 @@
+---
+title: "essays"
+toc: false
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  feed:
+    title: "Richard Costa — essays"
+    description: "Essays by Richard Costa."
+---
+
+Longer, finished pieces meant to be read from beginning to end.
+
+[rss](index.xml){.feed-link}

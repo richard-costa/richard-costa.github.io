@@ -142,6 +142,25 @@
   color: $text-strong;
 }
 
+@media (max-width: 680px) {
+  .site-terminal {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    width: auto;
+    max-width: none;
+    max-height: 70dvh;
+    transform: none;
+    overflow: hidden;
+  }
+
+  .site-terminal-body {
+    max-height: calc(70dvh - 2.4rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
 .cmatrix-overlay {
   position: fixed;
   inset: 0;

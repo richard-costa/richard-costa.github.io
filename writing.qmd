@@ -1,0 +1,27 @@
+---
+title: "writing"
+toc: false
+listing:
+  id: writing-list
+  contents:
+    - essays
+    - notes
+    - posts
+  exclude:
+    filename: "index.qmd"
+  sort: "date desc"
+  template: _templates/writing-list.ejs.md
+  feed:
+    title: "Richard Costa — writing"
+    description: "Essays, notes, and posts by Richard Costa."
+    type: metadata
+---
+
+Essays, notes, and posts, shown together by recent activity.
+
+::: {.writing-section-links}
+[essays](essays/index.qmd) · [notes](notes/index.qmd) · [posts](posts/index.qmd) · [rss](/writing.xml)
+:::
+
+::: {#writing-list}
+:::

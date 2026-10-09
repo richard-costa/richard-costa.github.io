@@ -6,28 +6,26 @@
 }
 
 @media (max-width: 680px) {
-  .home-shell {
-    width: 100%;
-    padding-top: 2.5rem;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "hero"
-      "media"
-      "blogroll";
-    gap: 1.8rem;
+  .home-page-title {
+    margin-bottom: 1.15rem;
   }
 
-  .home-hero {
-    min-height: auto;
-    padding-bottom: 0;
+  .hero-copy {
+    margin-bottom: 1rem;
   }
 
+  .hero-links {
+    row-gap: 0.3rem;
+    overflow-wrap: anywhere;
+  }
+
+  #home-recent,
   .home-blogroll {
-    width: min(100%, 320px);
+    width: 100%;
   }
 
-  .home-media {
-    width: 100%;
+  .resume-inline {
+    white-space: normal;
   }
 
   .item-row {
@@ -38,6 +36,15 @@
     grid-column: 2;
     padding-top: 0;
     text-align: left;
+  }
+
+  .writing-list-item {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .writing-list-meta {
+    justify-content: flex-start;
   }
 
   .navbar-nav .nav-link::before {

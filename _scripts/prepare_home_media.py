@@ -9,6 +9,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tomllib
 import unicodedata
 from pathlib import Path
 
@@ -18,15 +19,6 @@ VIDEO_EXTENSIONS = {".mp4"}
 IMAGE_QUALITY = 80
 VIDEO_CRF = 29
 VIDEO_MAX_BYTES = 12 * 1024 * 1024
-SOURCE_URLS = {
-    "Leonardo_da_vinci,_Head_of_a_girl_01.jpg": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Leonardo_da_vinci%2C_Head_of_a_girl_01.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original",
-    "rare-gallery-girl-in-a-tunnel.jpg": "https://rare-gallery.com/5522099-anime-girls-with-blonde-hair-and-green-eyes-in-a-tunnel.html",
-    "reddit-girl-with-lear-earring.png": "https://www.reddit.com/r/wallpaper/comments/sesrxu/1920x1080_vermeers_girl_with_a_pearl_earring_true/#lightbox",
-    "cyberpunk-2077-lucy-h-live-wallpaper-rare-gallery.mp4": "https://rare-gallery.com/142295-cyberpunk-2077-lucy-h-live-wallpaper.html",
-    "luminous-night-clouds-wallpaper-wallsflow.mp4": "https://wallsflow.com/live-wallpapers/minimalist/997-luminous-night-clouds-wallpaper.html",
-    "peaceful-meadow-moewalls-com.mp4": "https://moewalls.com/lifestyle/peaceful-meadow-live-wallpaper/",
-    "tokyo-alley-moewalls.mp4": "https://rare-gallery.com/142295-cyberpunk-2077-lucy-h-live-wallpaper.html",
-}
 
 
 def source_files(directory: Path, extensions: set[str]) -> list[Path]:
@@ -48,9 +40,24 @@ def safe_stem(path: Path, used_stems: set[str]) -> str:
     return candidate
 
 
-def original_url(source: Path) -> str:
-    if source.name in SOURCE_URLS:
-        return SOURCE_URLS[source.name]
+def load_source_urls(source_root: Path) -> dict[str, str]:
+    path = source_root / "media-sources.toml"
+    if not path.is_file():
+        raise FileNotFoundError(f"missing source metadata: {path}")
+
+    with path.open("rb") as file:
+        data = tomllib.load(file)
+
+    sources = data.get("sources", {})
+    if not isinstance(sources, dict):
+        raise ValueError(f"invalid [sources] table in {path}")
+
+    return {str(name): str(url) for name, url in sources.items()}
+
+
+def original_url(source: Path, source_urls: dict[str, str]) -> str:
+    if source.name in source_urls:
+        return source_urls[source.name]
 
     match = re.fullmatch(r"wallhaven-([a-z0-9]+)\.(?:jpe?g|png)", source.name, re.IGNORECASE)
     if match:
@@ -158,12 +165,17 @@ def main() -> int:
     missing_urls_path = project_root / "data" / "home-media-missing-urls.txt"
     images = source_files(wallpaper_root, IMAGE_EXTENSIONS)
     videos = source_files(video_root, VIDEO_EXTENSIONS)
+    try:
+        configured_source_urls = load_source_urls(source_root)
+    except (FileNotFoundError, ValueError, tomllib.TOMLDecodeError) as error:
+        parser.error(str(error))
+
     source_urls: dict[Path, str] = {}
     missing_urls: list[str] = []
 
     for source in [*images, *videos]:
         try:
-            source_urls[source] = original_url(source)
+            source_urls[source] = original_url(source, configured_source_urls)
         except ValueError:
             missing_urls.append(source.relative_to(source_root).as_posix())
 
