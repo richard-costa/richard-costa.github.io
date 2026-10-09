@@ -4,7 +4,7 @@ Source for [richard-costa.github.io](https://richard-costa.github.io/).
 
 Built with [Quarto](https://quarto.org/). Use `quarto preview` for local preview and `quarto publish gh-pages` to publish.
 
-Writing is organized as essays, notes, and shorts. `writing.qmd` and the homepage use Quarto's native listings to aggregate recent activity across all three.
+Writing is organized as essays, notes, and posts. `writing.qmd` and the homepage use Quarto's native listings to aggregate recent activity across all three.
 
 ## Repository map
 
@@ -12,7 +12,7 @@ Writing is organized as essays, notes, and shorts. `writing.qmd` and the homepag
 - `writing.qmd` — aggregate writing view and main feed
 - `essays/` — longer finished writing
 - `notes/` — reference material and working knowledge
-- `shorts/` — lightweight posts, observations, and discoveries
+- `posts/` — shorter chronological writing
 - `projects.qmd` — projects and status indicators
 - `now.qmd` — current work / learning / reading
 - `bookmarks.qmd` — saved references
@@ -34,9 +34,9 @@ Writing is organized as essays, notes, and shorts. `writing.qmd` and the homepag
 - `/writing.xml` — all writing
 - `/essays/index.xml` — essays
 - `/notes.xml` — notes and note updates
-- `/shorts/index.xml` — shorts
+- `/posts/index.xml` — posts
 
-The aggregate, essay, and short feeds are Quarto-native. The notes feed remains a small post-render script because the Notes page is manually grouped by topic and status instead of being a listing.
+The aggregate, essay, and post feeds are Quarto-native. The notes feed remains a small post-render script because the Notes page is manually grouped by topic and status instead of being a listing.
 
 ## Theme structure
 

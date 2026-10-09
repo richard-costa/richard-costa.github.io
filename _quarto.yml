@@ -17,7 +17,7 @@ project:
 website:
   title: "Richard Costa"
   site-url: "https://richard-costa.github.io"
-  description: "Projects, essays, notes, and shorts by Richard Costa."
+  description: "Projects, essays, notes, and posts by Richard Costa."
 
   navbar:
     title: "richard.costa_ / são paulo"

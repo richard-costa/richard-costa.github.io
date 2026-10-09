@@ -1,5 +1,5 @@
 ---
-title: "shorts"
+title: "posts"
 toc: false
 listing:
   contents: "*.qmd"
@@ -7,8 +7,8 @@ listing:
   type: default
   categories: true
   feed:
-    title: "Richard Costa — shorts"
-    description: "Short observations, discoveries, and lightweight posts by Richard Costa."
+    title: "Richard Costa — posts"
+    description: "Posts by Richard Costa."
 ---
 
 Small things worth sharing without turning them into essays.
