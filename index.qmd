@@ -18,6 +18,10 @@ listing:
 
 ::: {.home-shell}
 
+::: {.home-terminal}
+<button type="button" class="home-terminal-invite" data-open-terminal>&gt; launch terminal_</button>
+:::
+
 ::: {.home-hero}
 
 <div class="home-page-title">about</div>
@@ -40,12 +44,13 @@ Also, remember, all work and no play brings you a worse day. Take care and poke 
 
 :::
 
-::: {.home-terminal}
-<button type="button" class="home-terminal-invite" data-open-terminal>&gt; launch terminal_</button>
-:::
-
 ::: {#home-recent}
 :::
+
+<section class="home-media-section">
+  <p class="home-media-intro">If you wait a bit, you can see the wallpapers changing ;)</p>
+  <div id="home-media" class="home-media"></div>
+</section>
 
 ::: {.home-blogroll}
 <div class="blogroll-title">blogroll (placeholder links for now, i'll update them soon)</div>
@@ -54,10 +59,5 @@ Also, remember, all work and no play brings you a worse day. Take care and poke 
   <a href="https://quarto.org/">Quarto <span>↗</span></a>
 </nav>
 :::
-
-<section class="home-media-section">
-  <p class="home-media-intro">If you wait a bit, you can see the wallpapers changing ;)</p>
-  <div id="home-media" class="home-media"></div>
-</section>
 
 :::
