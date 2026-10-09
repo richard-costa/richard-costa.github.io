@@ -2,15 +2,15 @@
   width: min(100%, 1080px);
   min-width: 0;
   margin: 0;
-  padding: clamp(2rem, 4vw, 3.25rem) 0 5rem;
+  padding: clamp(1.25rem, 2.5vw, 2rem) 0 5rem;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
-    "hero recent"
-    "media media"
-    "blogroll blogroll";
-  column-gap: clamp(2.5rem, 6vw, 5rem);
-  row-gap: 0.9rem;
+    "hero"
+    "media"
+    "recent"
+    "blogroll";
+  gap: 1.5rem;
   align-items: start;
 }
 
@@ -37,7 +37,7 @@
 .home-terminal {
   width: max-content;
   max-width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .home-page-title {
@@ -102,6 +102,7 @@
 
 #home-recent {
   grid-area: recent;
+  width: min(100%, 420px);
   min-width: 0;
 }
 
@@ -184,34 +185,27 @@
 
 .home-blogroll {
   grid-area: blogroll;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: stretch;
+  width: min(100%, 420px);
+  display: block;
   padding: 0;
 }
 
 .home-blogroll .blogroll-title {
-  display: flex;
-  align-items: center;
-  border-right: 1px solid $border;
-  border-bottom: 0;
+  display: block;
+  border-right: 0;
+  border-bottom: 1px solid $border;
 }
 
 .blogroll-links {
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  padding: 0;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0.25rem 0;
 }
 
 .blogroll-links a {
   align-items: center;
   justify-content: space-between;
   min-width: 0;
-  border-right: 1px solid $border;
-}
-
-.blogroll-links a:last-child {
   border-right: 0;
 }
 
@@ -223,12 +217,12 @@
   grid-area: media;
   width: 100%;
   min-width: 0;
-  margin-top: 0.3rem;
+  margin-top: 0.15rem;
 }
 
 .home-media-intro {
   margin: 0 0 0.65rem;
-  color: $muted;
+  color: $text;
   font-family: $mono;
   font-size: 0.78rem;
   overflow-wrap: anywhere;
