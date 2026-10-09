@@ -1,86 +1,86 @@
 [
   {
-    "date": "2026-10-03",
-    "subject": "update projects.qmd",
-    "sha": "af01f03298f3bd880753723fbbfb3b973b539c63",
-    "short_sha": "af01f03",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/af01f03298f3bd880753723fbbfb3b973b539c63"
+    "date": "2026-10-09",
+    "subject": "update media",
+    "sha": "66a2b68f77f083f9564b2da074530946b34bc35f",
+    "short_sha": "66a2b68",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/66a2b68f77f083f9564b2da074530946b34bc35f"
   },
   {
-    "date": "2026-09-27",
-    "subject": "Consolidate resume links",
-    "sha": "89652cf885b8af663ae2bda0507fd84645e6eba6",
-    "short_sha": "89652cf",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/89652cf885b8af663ae2bda0507fd84645e6eba6"
+    "date": "2026-10-09",
+    "subject": "document arch-setup media path lookup",
+    "sha": "96ffc146552ec859e8e3c0693bed6248cf923039",
+    "short_sha": "96ffc14",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/96ffc146552ec859e8e3c0693bed6248cf923039"
   },
   {
-    "date": "2026-09-27",
-    "subject": "Improve homepage terminal discovery",
-    "sha": "b448fddee80253d3db7a9fcbff3568d0df7d88c2",
-    "short_sha": "b448fdd",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/b448fddee80253d3db7a9fcbff3568d0df7d88c2"
+    "date": "2026-10-09",
+    "subject": "make homepage media wrapper find arch-setup reliably",
+    "sha": "822830acc8cd2c0a2b6c0d16797a80750a7e6865",
+    "short_sha": "822830a",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/822830acc8cd2c0a2b6c0d16797a80750a7e6865"
   },
   {
-    "date": "2026-09-27",
-    "subject": "Fix homepage intro markup",
-    "sha": "80c7a4863ae90264aaa90630f453a590def21e3c",
-    "short_sha": "80c7a48",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/80c7a4863ae90264aaa90630f453a590def21e3c"
+    "date": "2026-10-09",
+    "subject": "tidy homepage media script",
+    "sha": "8749c68f795e1191abc5828af12ce695d3740845",
+    "short_sha": "8749c68",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/8749c68f795e1191abc5828af12ce695d3740845"
   },
   {
-    "date": "2026-09-27",
-    "subject": "Refine homepage media placement",
-    "sha": "4822d1d51598bd373703e4ef7d7a616a5a8fc4f3",
-    "short_sha": "4822d1d",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/4822d1d51598bd373703e4ef7d7a616a5a8fc4f3"
+    "date": "2026-10-09",
+    "subject": "connect homepage media to arch-setup sources",
+    "sha": "df138391d938b09bd35970906c8c1d9ba1dcf49f",
+    "short_sha": "df13839",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/df138391d938b09bd35970906c8c1d9ba1dcf49f"
   },
   {
-    "date": "2026-09-27",
-    "subject": "Add rotating homepage media",
-    "sha": "98808a59e85ecd10227741ae674b698740a9e6e8",
-    "short_sha": "98808a5",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/98808a59e85ecd10227741ae674b698740a9e6e8"
+    "date": "2026-10-09",
+    "subject": "align mobile homepage spacing with desktop",
+    "sha": "0db5fce3b2cc0c5482e8d6fae795b584bf7c50b3",
+    "short_sha": "0db5fce",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/0db5fce3b2cc0c5482e8d6fae795b584bf7c50b3"
   },
   {
-    "date": "2026-09-26",
-    "subject": "Remove obsolete duplicate theme variables",
-    "sha": "2acf2844a5173bf84237c3248e31f9f97debd988",
-    "short_sha": "2acf284",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/2acf2844a5173bf84237c3248e31f9f97debd988"
+    "date": "2026-10-09",
+    "subject": "separate writing styles from generic content",
+    "sha": "197e2042eece776aaab4bc0cb176ba2710fc9815",
+    "short_sha": "197e204",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/197e2042eece776aaab4bc0cb176ba2710fc9815"
   },
   {
-    "date": "2026-09-26",
-    "subject": "Read Giscus palette from Quarto theme entrypoint",
-    "sha": "918322bcffa44bddee3b5dee5401718dda76d61a",
-    "short_sha": "918322b",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/918322bcffa44bddee3b5dee5401718dda76d61a"
+    "date": "2026-10-09",
+    "subject": "import writing styles",
+    "sha": "1607f76185d6efac596e09b67b8d13b20a61e4af",
+    "short_sha": "1607f76",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/1607f76185d6efac596e09b67b8d13b20a61e4af"
   },
   {
-    "date": "2026-09-26",
-    "subject": "Fix Quarto SCSS variable ordering warnings",
-    "sha": "af63017ba38f4c74965b86cbc8f33e7e326c3cf0",
-    "short_sha": "af63017",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/af63017ba38f4c74965b86cbc8f33e7e326c3cf0"
+    "date": "2026-10-09",
+    "subject": "remove redundant responsive rules",
+    "sha": "8c10e1b539293c9e593049c3c9a46f991b232f79",
+    "short_sha": "8c10e1b",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/8c10e1b539293c9e593049c3c9a46f991b232f79"
   },
   {
-    "date": "2026-09-26",
-    "subject": "Split theme styles and synchronize Giscus palette",
-    "sha": "cb608c5e8364d00618eb75fee50897bc3cede252",
-    "short_sha": "cb608c5",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/cb608c5e8364d00618eb75fee50897bc3cede252"
+    "date": "2026-10-09",
+    "subject": "separate writing styles from generic content",
+    "sha": "97497386b44dde34c5d718b4d4645a0e925e7f1a",
+    "short_sha": "9749738",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/97497386b44dde34c5d718b4d4645a0e925e7f1a"
   },
   {
-    "date": "2026-09-26",
-    "subject": "Make terminal commands data-driven",
-    "sha": "2a5a77a7562405882487f8ff3a3fe7a40beacc68",
-    "short_sha": "2a5a77a",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/2a5a77a7562405882487f8ff3a3fe7a40beacc68"
+    "date": "2026-10-09",
+    "subject": "balance homepage vertical spacing",
+    "sha": "3f787be6fd1d56eb74655e2ffb00cb8dbf6fe48e",
+    "short_sha": "3f787be",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/3f787be6fd1d56eb74655e2ffb00cb8dbf6fe48e"
   },
   {
-    "date": "2026-09-26",
-    "subject": "Remove unused empty gitmodules file",
-    "sha": "e5fcb798199723a7acd3e10cd6af995370c20752",
-    "short_sha": "e5fcb79",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/e5fcb798199723a7acd3e10cd6af995370c20752"
+    "date": "2026-10-09",
+    "subject": "align hero copy width with wallpaper",
+    "sha": "9019b0d0c69408136eab7d0cacb88bf126fe7471",
+    "short_sha": "9019b0d",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/9019b0d0c69408136eab7d0cacb88bf126fe7471"
   }
 ]

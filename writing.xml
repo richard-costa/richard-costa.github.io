@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Richard Costa — writing</title>
+<link>https://richard-costa.github.io/writing.html</link>
+<atom:link href="https://richard-costa.github.io/writing.xml" rel="self" type="application/rss+xml"/>
+<description>Essays, notes, and posts by Richard Costa.</description>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Sat, 26 Sep 2026 21:14:33 GMT</lastBuildDate>
+<item>
+  <title>Introduction to Logic</title>
+  <link>https://richard-costa.github.io/notes/logic/introduction.html</link>
+  <description><![CDATA[  ]]></description>
+  <guid>https://richard-costa.github.io/notes/logic/introduction.html</guid>
+  <pubDate>Sat, 26 Sep 2026 21:14:33 GMT</pubDate>
+</item>
+<item>
+  <title>Dirac Notation and Riesz Theorem</title>
+  <link>https://richard-costa.github.io/notes/quantum-mechanics/dirac-riesz.html</link>
+  <description><![CDATA[  ]]></description>
+  <guid>https://richard-costa.github.io/notes/quantum-mechanics/dirac-riesz.html</guid>
+  <pubDate>Sat, 26 Sep 2026 21:14:33 GMT</pubDate>
+</item>
+<item>
+  <title>Review of Quantum Mechanics</title>
+  <link>https://richard-costa.github.io/notes/quantum-mechanics/review.html</link>
+  <description><![CDATA[  ]]></description>
+  <guid>https://richard-costa.github.io/notes/quantum-mechanics/review.html</guid>
+  <pubDate>Sat, 26 Sep 2026 21:14:33 GMT</pubDate>
+</item>
+<item>
+  <title>Installing and updating Quarto on Arch Linux</title>
+  <link>https://richard-costa.github.io/notes/linux/quarto-on-arch.html</link>
+  <description><![CDATA[  ]]></description>
+  <guid>https://richard-costa.github.io/notes/linux/quarto-on-arch.html</guid>
+  <pubDate>Sat, 26 Sep 2026 21:14:33 GMT</pubDate>
+</item>
+<item>
+  <title>Using the SDDM Astronaut theme</title>
+  <link>https://richard-costa.github.io/notes/linux/sddm-astronaut-theme.html</link>
+  <description><![CDATA[  ]]></description>
+  <guid>https://richard-costa.github.io/notes/linux/sddm-astronaut-theme.html</guid>
+  <pubDate>Sat, 26 Sep 2026 21:14:33 GMT</pubDate>
+</item>
+<item>
+  <title>YAD calendar popup for Waybar</title>
+  <link>https://richard-costa.github.io/notes/linux/waybar-yad-calendar.html</link>
+  <description><![CDATA[  ]]></description>
+  <guid>https://richard-costa.github.io/notes/linux/waybar-yad-calendar.html</guid>
+  <pubDate>Sat, 26 Sep 2026 21:14:33 GMT</pubDate>
+</item>
+<item>
+  <title>Music for an Elderly Elephant</title>
+  <link>https://richard-costa.github.io/posts/20260520-elephant.html</link>
+  <description><![CDATA[  ]]></description>
+  <category>wholesome</category>
+  <guid>https://richard-costa.github.io/posts/20260520-elephant.html</guid>
+  <pubDate>Wed, 20 May 2026 03:00:00 GMT</pubDate>
+  <media:content url="https://i.ytimg.com/vi/i1qQOGCyRbY/maxresdefault.jpg" medium="image" type="image/jpeg"/>
+</item>
+</channel>
+</rss>

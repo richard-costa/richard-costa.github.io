@@ -431,7 +431,7 @@
       window.removeEventListener("resize", resize);
       document.removeEventListener("keydown", onKeydown, true);
       overlay.remove();
-      input?.focus();
+      if (window.matchMedia("(pointer: fine)").matches) input?.focus();
     }
 
     function onKeydown(event) {
@@ -504,7 +504,7 @@
             output.innerHTML = `
               <a href="/projects.html">projects/</a>
               <a href="/notes/">notes/</a>
-              <a href="/posts.html">posts/</a>
+              <a href="/posts/">posts/</a>
               <a href="/now.html">now/</a>
               <a href="/bookmarks.html">bookmarks/</a>
               <a href="/blogroll.html">blogroll/</a>
@@ -575,7 +575,7 @@
     }
 
     root.hidden = false;
-    root.querySelector("input")?.focus();
+    if (window.matchMedia("(pointer: fine)").matches) root.querySelector("input")?.focus();
   }
 
   document.querySelectorAll("[data-open-terminal]").forEach((button) => {

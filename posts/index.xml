@@ -5,10 +5,10 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Richard Costa</title>
-<link>https://richard-costa.github.io/posts.html</link>
-<atom:link href="https://richard-costa.github.io/posts.xml" rel="self" type="application/rss+xml"/>
-<description>Projects, technical notes, and occasional posts by Richard Costa.</description>
+<title>Richard Costa — posts</title>
+<link>https://richard-costa.github.io/posts/</link>
+<atom:link href="https://richard-costa.github.io/posts/index.xml" rel="self" type="application/rss+xml"/>
+<description>Posts by Richard Costa.</description>
 <generator>quarto-1.10.18</generator>
 <lastBuildDate>Wed, 20 May 2026 03:00:00 GMT</lastBuildDate>
 <item>

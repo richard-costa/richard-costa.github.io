@@ -1,7 +1,35 @@
 [
   {
-    "listing": "/posts.html",
+    "listing": "/writing.html",
     "items": [
+      "/notes/logic/introduction.html",
+      "/notes/quantum-mechanics/dirac-riesz.html",
+      "/notes/quantum-mechanics/review.html",
+      "/notes/linux/quarto-on-arch.html",
+      "/notes/linux/sddm-astronaut-theme.html",
+      "/notes/linux/waybar-yad-calendar.html",
+      "/posts/20260520-elephant.html"
+    ]
+  },
+  {
+    "listing": "/essays/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/20260520-elephant.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/notes/logic/introduction.html",
+      "/notes/quantum-mechanics/dirac-riesz.html",
+      "/notes/quantum-mechanics/review.html",
+      "/notes/linux/quarto-on-arch.html",
+      "/notes/linux/sddm-astronaut-theme.html",
+      "/notes/linux/waybar-yad-calendar.html",
       "/posts/20260520-elephant.html"
     ]
   }

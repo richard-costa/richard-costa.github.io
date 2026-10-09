@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://richard-costa.github.io/index.html</loc>
-    <lastmod>2026-09-27T05:42:30.763Z</lastmod>
+    <loc>https://richard-costa.github.io/writing.html</loc>
+    <lastmod>2026-10-09T13:25:58.992Z</lastmod>
   </url>
   <url>
-    <loc>https://richard-costa.github.io/posts.html</loc>
+    <loc>https://richard-costa.github.io/essays/index.html</loc>
+    <lastmod>2026-10-09T13:25:58.990Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/posts/20260520-elephant.html</loc>
+    <lastmod>2026-10-09T13:25:58.990Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/now.html</loc>
     <lastmod>2026-09-25T21:26:29.580Z</lastmod>
   </url>
   <url>
-    <loc>https://richard-costa.github.io/changelog.html</loc>
+    <loc>https://richard-costa.github.io/bookmarks.html</loc>
     <lastmod>2026-09-25T21:26:29.580Z</lastmod>
   </url>
   <url>
     <loc>https://richard-costa.github.io/notes/index.html</loc>
-    <lastmod>2026-09-25T21:26:29.580Z</lastmod>
+    <lastmod>2026-10-09T13:25:58.990Z</lastmod>
   </url>
   <url>
     <loc>https://richard-costa.github.io/notes/linux/sddm-astronaut-theme.html</loc>
@@ -45,19 +53,19 @@
     <lastmod>2026-09-26T21:14:33.820Z</lastmod>
   </url>
   <url>
-    <loc>https://richard-costa.github.io/posts/20260520-elephant.html</loc>
-    <lastmod>2026-09-04T21:37:31.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/bookmarks.html</loc>
-    <lastmod>2026-09-25T21:26:29.580Z</lastmod>
-  </url>
-  <url>
-    <loc>https://richard-costa.github.io/now.html</loc>
+    <loc>https://richard-costa.github.io/changelog.html</loc>
     <lastmod>2026-09-25T21:26:29.580Z</lastmod>
   </url>
   <url>
     <loc>https://richard-costa.github.io/projects.html</loc>
     <lastmod>2026-10-03T18:34:24.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/posts/index.html</loc>
+    <lastmod>2026-10-09T13:25:58.991Z</lastmod>
+  </url>
+  <url>
+    <loc>https://richard-costa.github.io/index.html</loc>
+    <lastmod>2026-10-09T13:25:58.990Z</lastmod>
   </url>
 </urlset>

@@ -1,31 +1,87 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Richard Costa",
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "writing",
     "section": "",
-    "text": "about\n\n\nPhysics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is “AI Engineering”, let’s see how long that lasts.\nAlso, remember, all work and no play brings you a worse day. Take care and poke around!\n\n\ngithub linkedin résumé:ENPT email\n\n\n\n\nIf you wait a bit, you can see the wallpapers changing ;)\n\n\n\n\n\n\n&gt; launch terminal_\n\n\nblogroll (placeholder links for now, i’ll update them soon)\n\n\nnLab ↗ Quarto ↗"
+    "text": "Essays, notes, and posts, shown together by recent activity.\n\nessays · notes · posts · rss\n\n\n\n\n  \n    \n      note\n      Sep 26, 2026\n    \n    Introduction to Logic\n  \n\n  \n    \n      note\n      Sep 26, 2026\n    \n    Dirac Notation and Riesz Theorem\n  \n\n  \n    \n      note\n      Sep 26, 2026\n    \n    Review of Quantum Mechanics\n  \n\n  \n    \n      note\n      Sep 26, 2026\n    \n    Installing and updating Quarto on Arch Linux\n  \n\n  \n    \n      note\n      Sep 26, 2026\n    \n    Using the SDDM Astronaut theme\n  \n\n  \n    \n      note\n      Sep 26, 2026\n    \n    YAD calendar popup for Waybar\n  \n\n  \n    \n      post\n      May 20, 2026\n    \n    Music for an Elderly Elephant\n  \n\n\nNo matching items"
   },
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "posts",
+    "objectID": "essays/index.html",
+    "href": "essays/index.html",
+    "title": "essays",
     "section": "",
-    "text": "rss\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMusic for an Elderly Elephant\n\n\n\nwholesome\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Longer, finished pieces meant to be read from beginning to end.\nrss\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "changelog.html",
-    "href": "changelog.html",
-    "title": "changelog",
+    "objectID": "posts/20260520-elephant.html",
+    "href": "posts/20260520-elephant.html",
+    "title": "Music for an Elderly Elephant",
     "section": "",
-    "text": "Small site edits, generated from recent Git history.\n\nLoading recent changes…"
+    "text": "Somewhere someone played piano to an elderly elephant. That’s it. Also, they flap their ears to express some emotions."
+  },
+  {
+    "objectID": "now.html",
+    "href": "now.html",
+    "title": "now",
+    "section": "",
+    "text": "A small snapshot of what has my attention right now. Updated manually, not meant to be exhaustive."
+  },
+  {
+    "objectID": "now.html#building",
+    "href": "now.html#building",
+    "title": "now",
+    "section": "building",
+    "text": "building\n\nThis site — RSS, bookmarks, a changelog, and small terminal-style details.\nA framework-light RAG project focused on understanding the application structure rather than hiding it behind abstractions."
+  },
+  {
+    "objectID": "now.html#learning-revisiting",
+    "href": "now.html#learning-revisiting",
+    "title": "now",
+    "section": "learning / revisiting",
+    "text": "learning / revisiting\n\nQuantum mechanics and mathematical physics through the notes on this site.\nLinux tooling and small desktop workflows."
+  },
+  {
+    "objectID": "now.html#reading",
+    "href": "now.html#reading",
+    "title": "now",
+    "section": "reading",
+    "text": "reading\nThis section stays intentionally current. I’ll add books, papers, and essays here when they are actually in rotation."
+  },
+  {
+    "objectID": "bookmarks.html",
+    "href": "bookmarks.html",
+    "title": "bookmarks",
+    "section": "",
+    "text": "References and links I want to keep around. Unlike notes, these are mostly pointers rather than things I wrote."
+  },
+  {
+    "objectID": "bookmarks.html#data-science-ml",
+    "href": "bookmarks.html#data-science-ml",
+    "title": "bookmarks",
+    "section": "data science / ml",
+    "text": "data science / ml\n\nThe word “tensor” in machine learning, math, and physics — a useful explanation of how the term shifts across fields."
+  },
+  {
+    "objectID": "bookmarks.html#mathematical-physics",
+    "href": "bookmarks.html#mathematical-physics",
+    "title": "bookmarks",
+    "section": "mathematical physics",
+    "text": "mathematical physics\n\nnLab: mathematical physics — a dense reference map for mathematical physics topics."
+  },
+  {
+    "objectID": "bookmarks.html#quarto-web",
+    "href": "bookmarks.html#quarto-web",
+    "title": "bookmarks",
+    "section": "quarto / web",
+    "text": "quarto / web\n\nCreating your personal website using Quarto — a practical Quarto website walkthrough.\nAdding a blog to your existing Quarto website — notes on adding blog-style publishing to Quarto."
   },
   {
     "objectID": "notes/index.html",
     "href": "notes/index.html",
     "title": "notes",
     "section": "",
-    "text": "Technical notes and working material. Status labels are draft, developing and mature.\nrss"
+    "text": "Reference material and working knowledge. Status labels are draft, developing and mature.\nrss"
   },
   {
     "objectID": "notes/index.html#linux",
@@ -175,67 +231,11 @@
     "text": "optional Hyprland keybinding\nFor SUPER + C:\nbindd = SUPER, C, Calendar, exec, ~/.config/waybar/scripts/calendar.sh\nTo float and center the popup:\nwindowrulev2 = float, class:^(?i:yad)$, title:^(Calendar)$\nwindowrulev2 = center, class:^(?i:yad)$, title:^(Calendar)$"
   },
   {
-    "objectID": "posts/20260520-elephant.html",
-    "href": "posts/20260520-elephant.html",
-    "title": "Music for an Elderly Elephant",
+    "objectID": "changelog.html",
+    "href": "changelog.html",
+    "title": "changelog",
     "section": "",
-    "text": "Somewhere someone played piano to an elderly elephant. That’s it. Also, they flap their ears to express some emotions."
-  },
-  {
-    "objectID": "bookmarks.html",
-    "href": "bookmarks.html",
-    "title": "bookmarks",
-    "section": "",
-    "text": "References and links I want to keep around. Unlike notes, these are mostly pointers rather than things I wrote."
-  },
-  {
-    "objectID": "bookmarks.html#data-science-ml",
-    "href": "bookmarks.html#data-science-ml",
-    "title": "bookmarks",
-    "section": "data science / ml",
-    "text": "data science / ml\n\nThe word “tensor” in machine learning, math, and physics — a useful explanation of how the term shifts across fields."
-  },
-  {
-    "objectID": "bookmarks.html#mathematical-physics",
-    "href": "bookmarks.html#mathematical-physics",
-    "title": "bookmarks",
-    "section": "mathematical physics",
-    "text": "mathematical physics\n\nnLab: mathematical physics — a dense reference map for mathematical physics topics."
-  },
-  {
-    "objectID": "bookmarks.html#quarto-web",
-    "href": "bookmarks.html#quarto-web",
-    "title": "bookmarks",
-    "section": "quarto / web",
-    "text": "quarto / web\n\nCreating your personal website using Quarto — a practical Quarto website walkthrough.\nAdding a blog to your existing Quarto website — notes on adding blog-style publishing to Quarto."
-  },
-  {
-    "objectID": "now.html",
-    "href": "now.html",
-    "title": "now",
-    "section": "",
-    "text": "A small snapshot of what has my attention right now. Updated manually, not meant to be exhaustive."
-  },
-  {
-    "objectID": "now.html#building",
-    "href": "now.html#building",
-    "title": "now",
-    "section": "building",
-    "text": "building\n\nThis site — RSS, bookmarks, a changelog, and small terminal-style details.\nA framework-light RAG project focused on understanding the application structure rather than hiding it behind abstractions."
-  },
-  {
-    "objectID": "now.html#learning-revisiting",
-    "href": "now.html#learning-revisiting",
-    "title": "now",
-    "section": "learning / revisiting",
-    "text": "learning / revisiting\n\nQuantum mechanics and mathematical physics through the notes on this site.\nLinux tooling and small desktop workflows."
-  },
-  {
-    "objectID": "now.html#reading",
-    "href": "now.html#reading",
-    "title": "now",
-    "section": "reading",
-    "text": "reading\nThis section stays intentionally current. I’ll add books, papers, and essays here when they are actually in rotation."
+    "text": "Small site edits, generated from recent Git history.\n\nLoading recent changes…"
   },
   {
     "objectID": "projects.html",
@@ -243,5 +243,19 @@
     "title": "projects",
     "section": "",
     "text": "01\n\n\n\nrag ↗\n\n\nA framework-light RAG implementation built to understand the underlying application structure rather than hide it behind abstractions.\n\n\n\nexperiment python · postgres · pgvector · ollama"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "posts",
+    "section": "",
+    "text": "Small things worth sharing without turning them into essays.\nrss\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMusic for an Elderly Elephant\n\n\n\nwholesome\n\n\n\n\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Richard Costa",
+    "section": "",
+    "text": "&gt; launch terminal_\n\n\n\nabout\n\n\nPhysics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is “AI Engineering”, let’s see how long that lasts.\nAlso, remember, all work and no play brings you a worse day. Take care and poke around!\n\n\ngithub · linkedin · résumé EN/PT · email\n\n\n\n\n  recent\n  \n  \n    \n      note\n      Introduction to Logic\n    \n  \n    \n      note\n      Dirac Notation and Riesz Theorem\n    \n  \n    \n      note\n      Review of Quantum Mechanics\n    \n  \n  \n  all writing →\n\nNo matching items\n\n\n\nIf you wait a bit, you can see the wallpapers changing ;)\n\n\n\n\n\n\n\nblogroll\n\n\nnLab ↗ Quarto ↗"
   }
 ]
