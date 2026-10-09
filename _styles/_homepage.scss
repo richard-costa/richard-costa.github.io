@@ -5,10 +5,10 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) 240px;
   grid-template-areas:
-    "hero terminal"
+    "terminal recent"
     "hero recent"
-    "hero blogroll"
-    "media media";
+    "media media"
+    "blogroll blogroll";
   column-gap: clamp(2.5rem, 6vw, 5rem);
   row-gap: 0.9rem;
   align-items: start;
@@ -169,12 +169,35 @@
 
 .home-blogroll {
   grid-area: blogroll;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: stretch;
+  padding: 0;
+}
+
+.home-blogroll .blogroll-title {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid $border;
+  border-bottom: 0;
+  white-space: nowrap;
+}
+
+.blogroll-links {
+  flex-direction: row;
+  align-items: stretch;
   padding: 0;
 }
 
 .blogroll-links a {
   align-items: center;
   justify-content: space-between;
+  min-width: 7rem;
+  border-right: 1px solid $border;
+}
+
+.blogroll-links a:last-child {
+  border-right: 0;
 }
 
 .blogroll-links span {
@@ -190,7 +213,7 @@
   grid-area: media;
   width: 100%;
   min-width: 0;
-  margin-top: clamp(0.8rem, 2vw, 1.35rem);
+  margin-top: 0.3rem;
 }
 
 .home-media-intro {
@@ -233,7 +256,7 @@
 }
 
 .home-terminal-invite {
-  width: 100%;
+  width: max-content;
   margin: 0;
   padding: 0.52rem 0.7rem;
   border: 1px solid $border;
