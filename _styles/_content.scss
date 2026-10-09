@@ -68,55 +68,6 @@ main.content {
   color: $muted;
 }
 
-.writing-section-links {
-  margin: 1rem 0 2rem;
-  font-family: $mono;
-  font-size: 0.78rem;
-}
-
-.writing-list {
-  border-top: 1px solid $border;
-}
-
-.writing-list-item {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 1px dashed $border;
-}
-
-.writing-list-title {
-  grid-column: 1;
-  grid-row: 1;
-  color: $text-strong;
-  font-family: $mono;
-  text-decoration: none;
-}
-
-.writing-list-title:hover,
-.writing-list-title:focus {
-  color: $accent;
-}
-
-.writing-list-meta {
-  grid-column: 2;
-  grid-row: 1;
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-end;
-  gap: 0.65rem;
-  color: $muted;
-  font-family: $mono;
-  font-size: 0.68rem;
-  white-space: nowrap;
-}
-
-.writing-list-type {
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
 code {
   color: $code-text;
 }
