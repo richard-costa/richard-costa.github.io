@@ -11,11 +11,11 @@
     padding-top: 2rem;
     grid-template-columns: 1fr;
     grid-template-areas:
+      "terminal"
       "hero"
       "media"
       "recent"
-      "blogroll"
-      "terminal";
+      "blogroll";
     gap: 1.5rem;
   }
 
@@ -37,9 +37,32 @@
   }
 
   #home-recent,
-  .home-blogroll,
-  .home-terminal {
+  .home-blogroll {
     width: min(100%, 360px);
+  }
+
+  .home-terminal {
+    width: max-content;
+  }
+
+  .home-blogroll {
+    display: block;
+  }
+
+  .home-blogroll .blogroll-title {
+    display: block;
+    border-right: 0;
+    border-bottom: 1px solid $border;
+  }
+
+  .blogroll-links {
+    flex-direction: column;
+    padding: 0.25rem 0;
+  }
+
+  .blogroll-links a {
+    min-width: 0;
+    border-right: 0;
   }
 
   .home-media-section {
