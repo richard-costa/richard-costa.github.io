@@ -1,5 +1,6 @@
 # Defaults inherited by every document inside notes/.
 # Keep note-specific fields such as title, status, and special formats in each note.
+writing-type: note
 toc: true
 date: last-modified
 language:
