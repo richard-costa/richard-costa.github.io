@@ -3,6 +3,14 @@ title: ""
 pagetitle: "Richard Costa"
 toc: false
 page-layout: full
+listing:
+  id: home-recent
+  contents: data/writing.yml
+  sort: "date desc"
+  max-items: 3
+  template: _templates/home-recent.ejs.md
+  field-types:
+    date: date
 ---
 
 ::: {.home-shell}
@@ -12,7 +20,7 @@ page-layout: full
 <div class="home-page-title">about</div>
 
 ::: {.hero-copy}
-Physics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is "AI Engineering", let's see how long that lasts. 
+Physics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is "AI Engineering", let's see how long that lasts.
 
 Also, remember, all work and no play brings you a worse day. Take care and poke around!
 :::
@@ -26,13 +34,13 @@ Also, remember, all work and no play brings you a worse day. Take care and poke 
 
 :::
 
+::: {#home-recent}
+:::
+
 <section class="home-media-section">
   <p class="home-media-intro">If you wait a bit, you can see the wallpapers changing ;)</p>
   <div id="home-media" class="home-media"></div>
 </section>
-
-::: {.home-sidebar}
-  <button type="button" class="home-terminal-invite" data-open-terminal>&gt; launch terminal_</button>
 
 ::: {.home-blogroll}
 <div class="blogroll-title">blogroll (placeholder links for now, i'll update them soon)</div>
@@ -42,6 +50,8 @@ Also, remember, all work and no play brings you a worse day. Take care and poke 
 </nav>
 :::
 
+::: {.home-terminal}
+<button type="button" class="home-terminal-invite" data-open-terminal>&gt; launch terminal_</button>
 :::
 
 :::

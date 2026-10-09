@@ -5,11 +5,13 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) 240px;
   grid-template-areas:
+    "hero recent"
     "hero blogroll"
+    "hero terminal"
     "media media";
   column-gap: clamp(2.5rem, 6vw, 5rem);
-  row-gap: clamp(1.8rem, 3vw, 2.5rem);
-  align-items: center;
+  row-gap: clamp(1rem, 2vw, 1.5rem);
+  align-items: start;
 }
 
 .home-hero {
@@ -18,6 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-self: center;
   padding-bottom: 0;
 }
 
@@ -60,38 +63,107 @@
   margin: 0;
 }
 
-.home-sidebar {
-  grid-area: blogroll;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+#home-recent {
+  grid-area: recent;
+  min-width: 0;
 }
 
-@media (min-width: 681px) {
-  .home-sidebar {
-    align-self: start;
-    margin-top: 0.9rem;
-    gap: 2.3rem;
-  }
-
-  .home-sidebar > p {
-    margin: 0;
-  }
-}
-
+.home-recent,
 .home-blogroll {
-  padding: 0.8rem 0;
   border: 1px solid $border;
   border-radius: 3px;
   background: rgba($surface, 0.6);
   font-family: $mono;
 }
 
+.home-recent-title,
+.blogroll-title {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid $border;
+  color: $muted;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+
+.home-recent-links,
+.blogroll-links {
+  display: flex;
+  flex-direction: column;
+  padding: 0.35rem 0;
+}
+
+.home-recent-item,
+.blogroll-links a {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.45rem 0.8rem;
+  color: $text;
+  font-size: 0.78rem;
+  text-decoration: none;
+}
+
+.home-recent-item {
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
+.home-recent-item:hover,
+.home-recent-item:focus,
+.blogroll-links a:hover,
+.blogroll-links a:focus {
+  background: rgba($accent, 0.08);
+  color: $accent;
+}
+
+.home-recent-type {
+  color: $muted;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.home-recent-name {
+  overflow-wrap: anywhere;
+}
+
+.home-recent-all {
+  display: block;
+  padding: 0.55rem 0.8rem;
+  border-top: 1px solid $border;
+  color: $muted;
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+.home-recent-all:hover,
+.home-recent-all:focus {
+  color: $accent;
+}
+
+.home-blogroll {
+  grid-area: blogroll;
+  padding: 0;
+}
+
+.blogroll-links a {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blogroll-links span {
+  color: $muted;
+}
+
+.home-terminal {
+  grid-area: terminal;
+}
+
 .home-media-section {
   grid-area: media;
   width: 100%;
   min-width: 0;
+  margin-top: clamp(0.8rem, 2vw, 1.5rem);
 }
 
 .home-media-intro {
@@ -131,42 +203,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.blogroll-title {
-  padding: 0 0.8rem 0.55rem;
-  border-bottom: 1px solid $border;
-  color: $muted;
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: lowercase;
-}
-
-.blogroll-links {
-  display: flex;
-  flex-direction: column;
-  padding-top: 0.35rem;
-}
-
-.blogroll-links a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;
-  padding: 0.45rem 0.8rem;
-  color: $text;
-  font-size: 0.78rem;
-  text-decoration: none;
-}
-
-.blogroll-links a:hover,
-.blogroll-links a:focus {
-  background: rgba($accent, 0.08);
-  color: $accent;
-}
-
-.blogroll-links span {
-  color: $muted;
 }
 
 .terminal-link {
