@@ -19,6 +19,8 @@ VIDEO_EXTENSIONS = {".mp4"}
 IMAGE_QUALITY = 80
 VIDEO_CRF = 29
 VIDEO_MAX_BYTES = 12 * 1024 * 1024
+
+
 def source_files(directory: Path, extensions: set[str]) -> list[Path]:
     return sorted(
         (path for path in directory.rglob("*") if path.suffix.lower() in extensions),
