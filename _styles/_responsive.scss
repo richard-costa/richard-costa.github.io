@@ -8,20 +8,32 @@
 @media (max-width: 680px) {
   .home-shell {
     width: 100%;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
     grid-template-columns: 1fr;
     grid-template-areas:
       "hero"
-      "recent"
       "media"
+      "recent"
       "blogroll"
       "terminal";
-    gap: 1.8rem;
+    gap: 1.5rem;
   }
 
   .home-hero {
     min-height: auto;
     padding-bottom: 0;
+  }
+
+  .home-page-title {
+    margin-bottom: 1.15rem;
+  }
+
+  .hero-copy {
+    margin-bottom: 1rem;
+  }
+
+  .hero-links {
+    row-gap: 0.3rem;
   }
 
   #home-recent,
@@ -31,7 +43,7 @@
   }
 
   .home-media-section {
-    margin-top: 0;
+    margin-top: 0.15rem;
   }
 
   .home-media {
