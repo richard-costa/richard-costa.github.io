@@ -8,7 +8,7 @@ listing:
   contents:
     - essays
     - notes
-    - shorts
+    - posts
   exclude:
     filename: "index.qmd"
   sort: "date desc"
@@ -28,22 +28,24 @@ Physics graduate turned into Data Scientist and Python Developer. I guess the cu
 Also, remember, all work and no play brings you a worse day. Take care and poke around!
 :::
 
-::: {.hero-links}
-[github](https://github.com/richard-costa){.terminal-link}
-[linkedin](https://www.linkedin.com/in/richard-silva-costa){.terminal-link}
-<span class="resume-selector" aria-label="Resume downloads"><span class="resume-selector-label">résumé:</span><a href="/files/resume/resume_english.pdf" lang="en">EN</a><a href="/files/resume/resume_portuguese.pdf" lang="pt-BR">PT</a></span>
-[email](mailto:scosta.richard@gmail.com){.terminal-link}
+<nav class="hero-links" aria-label="Elsewhere">
+  <a href="https://github.com/richard-costa">github</a>
+  <span class="hero-link-separator" aria-hidden="true">·</span>
+  <a href="https://www.linkedin.com/in/richard-silva-costa">linkedin</a>
+  <span class="hero-link-separator" aria-hidden="true">·</span>
+  <span class="resume-inline">résumé <a href="/files/resume/resume_english.pdf" lang="en">EN</a>/<a href="/files/resume/resume_portuguese.pdf" lang="pt-BR">PT</a></span>
+  <span class="hero-link-separator" aria-hidden="true">·</span>
+  <a href="mailto:scosta.richard@gmail.com">email</a>
+</nav>
+
 :::
 
+::: {.home-terminal}
+<button type="button" class="home-terminal-invite" data-open-terminal>&gt; launch terminal_</button>
 :::
 
 ::: {#home-recent}
 :::
-
-<section class="home-media-section">
-  <p class="home-media-intro">If you wait a bit, you can see the wallpapers changing ;)</p>
-  <div id="home-media" class="home-media"></div>
-</section>
 
 ::: {.home-blogroll}
 <div class="blogroll-title">blogroll (placeholder links for now, i'll update them soon)</div>
@@ -53,8 +55,9 @@ Also, remember, all work and no play brings you a worse day. Take care and poke 
 </nav>
 :::
 
-::: {.home-terminal}
-<button type="button" class="home-terminal-invite" data-open-terminal>&gt; launch terminal_</button>
-:::
+<section class="home-media-section">
+  <p class="home-media-intro">If you wait a bit, you can see the wallpapers changing ;)</p>
+  <div id="home-media" class="home-media"></div>
+</section>
 
 :::
