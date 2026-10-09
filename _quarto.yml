@@ -2,6 +2,8 @@
 # Page-specific options belong in the page itself or in a directory _metadata.yml.
 project:
   type: website
+  pre-render:
+    - _scripts/generate_writing_listing.py
   post-render:
     - _scripts/generate_changelog.py
     - _scripts/generate_notes_feed.py
@@ -17,19 +19,17 @@ project:
 website:
   title: "Richard Costa"
   site-url: "https://richard-costa.github.io"
-  description: "Projects, technical notes, and occasional posts by Richard Costa."
+  description: "Projects, essays, notes, and shorts by Richard Costa."
 
   navbar:
     title: "richard.costa_ / são paulo"
     right:
-      - href: now.qmd
-        text: now
+      - href: writing.qmd
+        text: writing
       - href: projects.qmd
         text: projects
-      - href: notes/index.qmd
-        text: notes
-      - href: posts.qmd
-        text: posts
+      - href: now.qmd
+        text: now
       - text: more
         menu:
           - href: bookmarks.qmd

@@ -3,7 +3,7 @@ title: "notes"
 toc: false
 ---
 
-Technical notes and working material. Status labels are **draft**, **developing** and **mature**.
+Reference material and working knowledge. Status labels are **draft**, **developing** and **mature**.
 
 [rss](/notes.xml){.feed-link}
 

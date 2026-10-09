@@ -1,10 +1,10 @@
 /.quarto/
 /_site/
 data/home-media-missing-urls.txt
+data/writing.yml
 **/*.quarto_ipynb
 /.luarc.json
 
 # The notes directory can be opened directly as an Obsidian vault.
 # Keep local Obsidian workspace/settings out of Git.
 /notes/.obsidian/
-
