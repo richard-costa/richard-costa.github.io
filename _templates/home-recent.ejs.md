@@ -1,7 +1,7 @@
 ````{=html}
 <%
 function writingType(item) {
-  const path = item.path || "";
+  const path = (item.path || "").replace(/^\\.\\//, "");
   if (path.startsWith("essays/")) return "essay";
   if (path.startsWith("notes/")) return "note";
   if (path.startsWith("shorts/")) return "short";
