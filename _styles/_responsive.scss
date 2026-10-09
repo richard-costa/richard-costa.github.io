@@ -10,12 +10,6 @@
     width: 100%;
     min-width: 0;
     padding-top: 2rem;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "hero"
-      "media"
-      "recent"
-      "blogroll";
     gap: 1.5rem;
   }
 
@@ -55,34 +49,6 @@
     width: 100%;
     min-width: 0;
     max-width: 100%;
-  }
-
-  .home-blogroll {
-    display: block;
-  }
-
-  .home-blogroll .blogroll-title {
-    display: block;
-    border-right: 0;
-    border-bottom: 1px solid $border;
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-
-  .blogroll-links {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    padding: 0.25rem 0;
-  }
-
-  .blogroll-links a {
-    min-width: 0;
-    max-width: 100%;
-    border-right: 0;
-  }
-
-  .home-media-section {
-    margin-top: 0.15rem;
   }
 
   .home-media {
