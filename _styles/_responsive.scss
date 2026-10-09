@@ -7,25 +7,10 @@
 
 @media (max-width: 680px) {
   .home-shell {
-    width: 100%;
-    min-width: 0;
     padding-top: 2rem;
-    gap: 1.5rem;
-  }
-
-  .home-shell > * {
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .home-hero {
-    min-height: auto;
-    padding-bottom: 0;
   }
 
   .home-terminal {
-    width: max-content;
-    max-width: 100%;
     margin-bottom: 1rem;
   }
 
@@ -38,23 +23,13 @@
   }
 
   .hero-links {
-    min-width: 0;
     row-gap: 0.3rem;
     overflow-wrap: anywhere;
   }
 
   #home-recent,
-  .home-blogroll,
-  .home-media-section {
+  .home-blogroll {
     width: 100%;
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .home-media {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
   }
 
   .resume-inline {
