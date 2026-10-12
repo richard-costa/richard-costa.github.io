@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/writing.html",
+    "listing": "/index.html",
     "items": [
       "/notes/logic/introduction.html",
       "/notes/quantum-mechanics/dirac-riesz.html",
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/writing.html",
     "items": [
       "/notes/logic/introduction.html",
       "/notes/quantum-mechanics/dirac-riesz.html",

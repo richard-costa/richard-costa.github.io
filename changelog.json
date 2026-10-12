@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-10-12",
+    "subject": "move social links to below about and adjust vertical spaces there",
+    "sha": "6968932295a72d44f87fe3d9c767474d7a8f9e40",
+    "short_sha": "6968932",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/6968932295a72d44f87fe3d9c767474d7a8f9e40"
+  },
+  {
+    "date": "2026-10-12",
+    "subject": "Underline homepage links",
+    "sha": "e094840f4f436d96d3e20adfab745b1eeb3ad15a",
+    "short_sha": "e094840",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/e094840f4f436d96d3e20adfab745b1eeb3ad15a"
+  },
+  {
+    "date": "2026-10-12",
+    "subject": "unmute links home page links",
+    "sha": "7352a284a2b01e7f924ae87ec9214628fbaf2817",
+    "short_sha": "7352a28",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/7352a284a2b01e7f924ae87ec9214628fbaf2817"
+  },
+  {
+    "date": "2026-10-12",
+    "subject": "Increase homepage link font size",
+    "sha": "8c27c67be11d87f73beac77cac0d85e5711d705e",
+    "short_sha": "8c27c67",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/8c27c67be11d87f73beac77cac0d85e5711d705e"
+  },
+  {
+    "date": "2026-10-12",
+    "subject": "Add colon after résumé",
+    "sha": "d3587c19bb7abeb94b3e6d29bcd721afea7fe085",
+    "short_sha": "d3587c1",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/d3587c19bb7abeb94b3e6d29bcd721afea7fe085"
+  },
+  {
     "date": "2026-10-09",
     "subject": "update media",
     "sha": "66a2b68f77f083f9564b2da074530946b34bc35f",
@@ -47,40 +82,5 @@
     "sha": "197e2042eece776aaab4bc0cb176ba2710fc9815",
     "short_sha": "197e204",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/197e2042eece776aaab4bc0cb176ba2710fc9815"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "import writing styles",
-    "sha": "1607f76185d6efac596e09b67b8d13b20a61e4af",
-    "short_sha": "1607f76",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/1607f76185d6efac596e09b67b8d13b20a61e4af"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "remove redundant responsive rules",
-    "sha": "8c10e1b539293c9e593049c3c9a46f991b232f79",
-    "short_sha": "8c10e1b",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/8c10e1b539293c9e593049c3c9a46f991b232f79"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "separate writing styles from generic content",
-    "sha": "97497386b44dde34c5d718b4d4645a0e925e7f1a",
-    "short_sha": "9749738",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/97497386b44dde34c5d718b4d4645a0e925e7f1a"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "balance homepage vertical spacing",
-    "sha": "3f787be6fd1d56eb74655e2ffb00cb8dbf6fe48e",
-    "short_sha": "3f787be",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/3f787be6fd1d56eb74655e2ffb00cb8dbf6fe48e"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "align hero copy width with wallpaper",
-    "sha": "9019b0d0c69408136eab7d0cacb88bf126fe7471",
-    "short_sha": "9019b0d",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/9019b0d0c69408136eab7d0cacb88bf126fe7471"
   }
 ]
