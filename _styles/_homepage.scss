@@ -73,13 +73,13 @@
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.28rem;
-  color: $muted;
+  color: $text;// $muted;
   font-family: $mono;
   font-size: 0.85rem;
 }
 
 .hero-links a {
-  color: $muted;
+  color: $text; // $muted;
   text-decoration: none;
 }
 
