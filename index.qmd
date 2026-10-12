@@ -26,12 +26,6 @@ listing:
 
 <div class="home-page-title">about</div>
 
-::: {.hero-copy}
-Physics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is "AI Engineering", let's see how long that lasts.
-
-Also, remember, all work and no play brings you a worse day. Take care and poke around!
-:::
-
 <nav class="hero-links" aria-label="Elsewhere">
   <a href="https://github.com/richard-costa">github</a>
   <span class="hero-link-separator" aria-hidden="true">·</span>
@@ -41,6 +35,14 @@ Also, remember, all work and no play brings you a worse day. Take care and poke 
   <span class="hero-link-separator" aria-hidden="true">·</span>
   <a href="mailto:scosta.richard@gmail.com">email</a>
 </nav>
+
+
+::: {.hero-copy}
+Physics graduate turned into Data Scientist and Python Developer. I guess the current fancy term for what I do is "AI Engineering", let's see how long that lasts.
+
+Also, remember, all work and no play brings you a worse day. Take care and poke around!
+:::
+
 
 :::
 

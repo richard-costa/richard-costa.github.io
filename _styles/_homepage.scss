@@ -41,7 +41,7 @@
 }
 
 .home-page-title {
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.6rem; // 0 0 1.25rem;
   color: $text-strong;
   font-family: $mono;
   font-size: clamp(2rem, 5vw, 3.25rem);
@@ -68,6 +68,7 @@
 }
 
 .hero-links {
+  margin-bottom: 1.2rem;
   min-width: 0;
   display: flex;
   flex-wrap: wrap;
