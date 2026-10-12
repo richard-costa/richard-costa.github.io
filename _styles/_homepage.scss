@@ -5,11 +5,6 @@
   padding: 0 0 5rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-areas:
-    "hero"
-    "media"
-    "recent"
-    "blogroll";
   gap: 1.5rem;
   align-items: start;
 }
@@ -20,7 +15,6 @@
 }
 
 .home-hero {
-  grid-area: hero;
   min-height: auto;
   display: flex;
   flex-direction: column;
@@ -104,7 +98,6 @@
 }
 
 #home-recent {
-  grid-area: recent;
   width: min(100%, 420px);
   min-width: 0;
 }
@@ -187,7 +180,6 @@
 }
 
 .home-blogroll {
-  grid-area: blogroll;
   width: min(100%, 420px);
   display: block;
   padding: 0;
@@ -217,7 +209,6 @@
 }
 
 .home-media-section {
-  grid-area: media;
   width: 100%;
   min-width: 0;
   margin-top: 0.15rem;
