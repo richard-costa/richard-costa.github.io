@@ -1,4 +1,10 @@
+/**
+ * Site-wide browser behavior loaded after Quarto renders each page.
+ * Features guard on their required DOM elements, so this single script can run
+ * everywhere without page-specific bundles.
+ */
 (() => {
+  // Shared runtime values and small page-independent enhancements.
   const ACCENT = getComputedStyle(document.documentElement)
     .getPropertyValue("--site-accent")
     .trim() || "#7e99c3";
@@ -8,6 +14,7 @@
     node.textContent = window.location.pathname;
   });
 
+  // Changelog page: fetch generated Git data and group commits by date.
   const changelog = document.getElementById("git-changelog");
   if (changelog) {
     fetch("/changelog.json")
@@ -50,12 +57,15 @@
       });
   }
 
+  // Homepage wallpaper rotation. The manifest is generated at build time;
+  // JavaScript selects and loads one asset for each 30-second time slot.
   const homeMedia = document.getElementById("home-media");
   if (homeMedia) {
+    const homeMediaSection = homeMedia.closest(".home-media-section");
+    const homeMediaIntro = homeMediaSection?.querySelector(".home-media-intro");
     const TIME_ZONE = "America/Sao_Paulo";
     const FADE_DURATION = 400;
     const ROTATION_INTERVAL = 30_000;
-    const mobileMedia = window.matchMedia("(max-width: 680px)");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const connection = navigator.connection;
     let mediaEntries = [];
@@ -64,8 +74,10 @@
 
     function hideHomeMedia() {
       homeMedia.classList.remove("is-visible");
+      homeMediaIntro?.classList.remove("is-visible");
       homeMedia.replaceChildren();
       homeMedia.hidden = true;
+      if (homeMediaSection) homeMediaSection.hidden = true;
     }
 
     function hash(value) {
@@ -78,6 +90,7 @@
     }
 
     function dailySequence(entries, date) {
+      // Seeded Fisher-Yates shuffle: every visitor sees the same order each day.
       const shuffled = [...entries];
       let state = hash(date);
       for (let index = shuffled.length - 1; index > 0; index -= 1) {
@@ -89,6 +102,7 @@
     }
 
     function currentDateAndSlot() {
+      // Use São Paulo wall-clock time so rotation slots agree across time zones.
       const parts = new Intl.DateTimeFormat("en-CA", {
         timeZone: TIME_ZONE,
         year: "numeric",
@@ -107,7 +121,7 @@
     }
 
     function imageOnlyMode() {
-      return mobileMedia.matches || reducedMotion.matches || connection?.saveData === true;
+      return reducedMotion.matches || connection?.saveData === true;
     }
 
     function selectedEntry() {
@@ -122,6 +136,7 @@
     }
 
     function waitForAsset(element) {
+      // Do not swap the visible element until its dimensions/metadata are ready.
       return new Promise((resolve, reject) => {
         const loaded = () => {
           cleanup();
@@ -180,6 +195,7 @@
     }
 
     function afterFade() {
+      if (reducedMotion.matches) return Promise.resolve();
       return new Promise((resolve) => window.setTimeout(resolve, FADE_DURATION));
     }
 
@@ -211,6 +227,8 @@
       homeMedia.replaceChildren(link);
       selectedSource = entry.src;
       if (media instanceof HTMLVideoElement) media.play().catch(() => {});
+      if (homeMediaSection) homeMediaSection.hidden = false;
+      homeMediaIntro?.classList.add("is-visible");
       window.setTimeout(() => homeMedia.classList.add("is-visible"), 0);
       isUpdating = false;
     }
@@ -234,13 +252,13 @@
         }
         updateHomeMedia();
         window.setInterval(updateHomeMedia, ROTATION_INTERVAL);
-        mobileMedia.addEventListener("change", updateHomeMedia);
         reducedMotion.addEventListener("change", updateHomeMedia);
         connection?.addEventListener?.("change", updateHomeMedia);
       })
       .catch(hideHomeMedia);
   }
 
+  // Terminal equations: lazily fetch data and MathJax only when requested.
   let equationDataPromise = null;
 
   function loadEquationData() {
@@ -329,6 +347,7 @@
     }
   }
 
+  // Terminal output helpers keep command definitions below focused on behavior.
   function renderHelp(output, commands) {
     output.innerHTML = `
       <div class="terminal-result-title">available commands</div>
@@ -358,6 +377,7 @@
     output.append(art);
   }
 
+  // Full-screen canvas animation used by the terminal's cmatrix command.
   function startCmatrix(input) {
     if (document.getElementById("cmatrix-overlay")) return;
 
@@ -401,6 +421,8 @@
     }
 
     function draw(timestamp) {
+      // requestAnimationFrame follows browser scheduling; this guard caps the
+      // effect near 20 FPS to avoid unnecessary CPU work.
       if (timestamp - lastFrame >= 48) {
         context.fillStyle = "rgba(9, 13, 15, 0.16)";
         context.fillRect(0, 0, window.innerWidth, window.innerHeight);
@@ -452,6 +474,7 @@
     animationFrame = requestAnimationFrame(draw);
   }
 
+  // Create the terminal once, then hide/show the same DOM tree on later opens.
   function openTerminal() {
     let root = document.getElementById("site-terminal");
 
@@ -484,6 +507,7 @@
         root.hidden = true;
       }
 
+      // A command is data plus a handler, similar to a small route table.
       const commands = [
         {
           name: "help",
@@ -559,6 +583,7 @@
       });
 
       form?.addEventListener("submit", async (event) => {
+        // Normalize whitespace before dispatching to an exact command name.
         event.preventDefault();
         const command = input.value.trim().toLowerCase().replace(/\s+/g, " ");
         input.value = "";

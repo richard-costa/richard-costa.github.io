@@ -1,6 +1,41 @@
 [
   {
     "date": "2026-10-12",
+    "subject": "Document site code and align responsive behavior",
+    "sha": "37882933247efe697230efcc775fe33f0d61ebdf",
+    "short_sha": "3788293",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/37882933247efe697230efcc775fe33f0d61ebdf"
+  },
+  {
+    "date": "2026-10-12",
+    "subject": "Let homepage sections follow index.qmd source order",
+    "sha": "00ac696590126847626d71423268f339d531bd24",
+    "short_sha": "00ac696",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/00ac696590126847626d71423268f339d531bd24"
+  },
+  {
+    "date": "2026-10-12",
+    "subject": "Adjust spacing for wallpaper note below rotation",
+    "sha": "ebcb421113ab0dd7e178b979ddb4b833577b6ea0",
+    "short_sha": "ebcb421",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/ebcb421113ab0dd7e178b979ddb4b833577b6ea0"
+  },
+  {
+    "date": "2026-10-12",
+    "subject": "Align homepage source order and put wallpaper note below rotation",
+    "sha": "4b0b427c3fdb3329196101ec21c06fe2482c0360",
+    "short_sha": "4b0b427",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/4b0b427c3fdb3329196101ec21c06fe2482c0360"
+  },
+  {
+    "date": "2026-10-12",
+    "subject": "small tweak",
+    "sha": "a36e2b3024581cba02309a87ed95e660ab3b48ae",
+    "short_sha": "a36e2b3",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/a36e2b3024581cba02309a87ed95e660ab3b48ae"
+  },
+  {
+    "date": "2026-10-12",
     "subject": "move social links to below about and adjust vertical spaces there",
     "sha": "6968932295a72d44f87fe3d9c767474d7a8f9e40",
     "short_sha": "6968932",
@@ -47,40 +82,5 @@
     "sha": "96ffc146552ec859e8e3c0693bed6248cf923039",
     "short_sha": "96ffc14",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/96ffc146552ec859e8e3c0693bed6248cf923039"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "make homepage media wrapper find arch-setup reliably",
-    "sha": "822830acc8cd2c0a2b6c0d16797a80750a7e6865",
-    "short_sha": "822830a",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/822830acc8cd2c0a2b6c0d16797a80750a7e6865"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "tidy homepage media script",
-    "sha": "8749c68f795e1191abc5828af12ce695d3740845",
-    "short_sha": "8749c68",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/8749c68f795e1191abc5828af12ce695d3740845"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "connect homepage media to arch-setup sources",
-    "sha": "df138391d938b09bd35970906c8c1d9ba1dcf49f",
-    "short_sha": "df13839",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/df138391d938b09bd35970906c8c1d9ba1dcf49f"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "align mobile homepage spacing with desktop",
-    "sha": "0db5fce3b2cc0c5482e8d6fae795b584bf7c50b3",
-    "short_sha": "0db5fce",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/0db5fce3b2cc0c5482e8d6fae795b584bf7c50b3"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "separate writing styles from generic content",
-    "sha": "197e2042eece776aaab4bc0cb176ba2710fc9815",
-    "short_sha": "197e204",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/197e2042eece776aaab4bc0cb176ba2710fc9815"
   }
 ]
