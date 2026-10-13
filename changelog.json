@@ -1,6 +1,13 @@
 [
   {
     "date": "2026-10-12",
+    "subject": "Move wallpaper note above media",
+    "sha": "7e7dac6f20b253041a3552a266adaaba5e3513de",
+    "short_sha": "7e7dac6",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/7e7dac6f20b253041a3552a266adaaba5e3513de"
+  },
+  {
+    "date": "2026-10-12",
     "subject": "Document site code and align responsive behavior",
     "sha": "37882933247efe697230efcc775fe33f0d61ebdf",
     "short_sha": "3788293",
@@ -75,12 +82,5 @@
     "sha": "66a2b68f77f083f9564b2da074530946b34bc35f",
     "short_sha": "66a2b68",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/66a2b68f77f083f9564b2da074530946b34bc35f"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "document arch-setup media path lookup",
-    "sha": "96ffc146552ec859e8e3c0693bed6248cf923039",
-    "short_sha": "96ffc14",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/96ffc146552ec859e8e3c0693bed6248cf923039"
   }
 ]
