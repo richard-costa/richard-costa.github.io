@@ -42,13 +42,12 @@ Physics graduate turned into Data Scientist and Python Developer. I guess the cu
 Also, remember, all work and no play brings you a worse day. Take care and poke around!
 :::
 
+<section class="home-media-section">
+  <p class="hero-copy home-media-intro">If you wait a bit, you can see the wallpapers changing ;)</p>
+  <div id="home-media" class="home-media"></div>
+</section>
 
 :::
-
-<section class="home-media-section">
-  <div id="home-media" class="home-media"></div>
-  <p class="hero-copy home-media-intro">If you wait a bit, you can see the wallpapers changing ;)</p>
-</section>
 
 ::: {#home-recent}
 :::
