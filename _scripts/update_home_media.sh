@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
+# Locate the sibling arch-setup media repository, then delegate conversion and
+# manifest generation to prepare_home_media.py. An argument or ARCH_SETUP_ROOT
+# takes precedence over the common local checkout paths below.
+
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
+# Resolve the source checkout without assuming one workstation directory.
 if [[ $# -gt 0 ]]; then
   SOURCE="$1"
 elif [[ -n "${ARCH_SETUP_ROOT:-}" ]]; then

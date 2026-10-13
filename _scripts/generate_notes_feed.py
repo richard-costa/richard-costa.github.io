@@ -1,3 +1,9 @@
+"""Generate an RSS feed for notes that are not represented by a Quarto listing.
+
+Metadata comes from QMD frontmatter; modification dates prefer Git history and
+fall back to filesystem timestamps when the source is untracked.
+"""
+
 from datetime import datetime, timezone
 from email.utils import format_datetime
 from pathlib import Path
@@ -6,12 +12,14 @@ import os
 import re
 import subprocess
 
+# Feed identity and render-time output location.
 SITE = "https://richard-costa.github.io"
 OUTPUT_DIR = Path(os.environ.get("QUARTO_PROJECT_OUTPUT_DIR", "_site"))
 OUT = OUTPUT_DIR / "notes.xml"
 
 
 def git_modified(path: Path) -> datetime:
+    """Return the last committed timestamp, or the file mtime as a fallback."""
     try:
         value = subprocess.check_output(
             ["git", "log", "-1", "--format=%cI", "--", str(path)],
@@ -25,11 +33,13 @@ def git_modified(path: Path) -> datetime:
 
 
 def field(frontmatter: str, name: str) -> str:
+    """Read the simple scalar frontmatter fields used by the notes feed."""
     match = re.search(rf"^{name}:\s*(.+?)\s*$", frontmatter, re.MULTILINE)
     return match.group(1).strip().strip("'\"") if match else ""
 
 
 def note_items() -> list[tuple[datetime, str, str, str, str]]:
+    """Discover eligible notes and normalize them into newest-first feed data."""
     items = []
 
     for path in Path("notes").rglob("*.qmd"):
@@ -57,6 +67,7 @@ def note_items() -> list[tuple[datetime, str, str, str, str]]:
 
 
 def render_feed(items: list[tuple[datetime, str, str, str, str]]) -> str:
+    """Render normalized note data as escaped RSS 2.0 XML."""
     xml_items = []
     for modified, title, url, description, status in items:
         category = f"\n      <category>{html.escape(status)}</category>" if status else ""
@@ -88,6 +99,7 @@ def render_feed(items: list[tuple[datetime, str, str, str, str]]) -> str:
 
 
 def main() -> None:
+    # Rendering is deliberately dependency-free and uses the standard library.
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(render_feed(note_items()), encoding="utf-8")
 

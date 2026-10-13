@@ -1,14 +1,21 @@
+"""Generate the changelog JSON consumed by site.js from recent Git commits.
+
+This runs after Quarto renders and writes into QUARTO_PROJECT_OUTPUT_DIR.
+"""
+
 from pathlib import Path
 import json
 import os
 import subprocess
 
+# Input policy and output location.
 REPO_URL = "https://github.com/richard-costa/richard-costa.github.io"
 OUTPUT_DIR = Path(os.environ.get("QUARTO_PROJECT_OUTPUT_DIR", "_site"))
 SKIP_PREFIXES = ("automated update", "publish", "merge pull request")
 
 
 def git(*args: str) -> str:
+    """Run a read-only Git command, returning an empty result if Git is unavailable."""
     try:
         result = subprocess.run(
             ["git", *args],
@@ -22,6 +29,7 @@ def git(*args: str) -> str:
 
 
 def changelog_entries(limit: int = 12) -> list[dict[str, str]]:
+    """Parse recent non-merge commits into the browser-facing JSON schema."""
     raw = git(
         "log",
         "--no-merges",
@@ -58,6 +66,7 @@ def changelog_entries(limit: int = 12) -> list[dict[str, str]]:
 
 
 def main() -> None:
+    # Keep file-system side effects at the entrypoint; helpers stay testable.
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     (OUTPUT_DIR / "changelog.json").write_text(
         json.dumps(changelog_entries(), ensure_ascii=False, indent=2) + "\n",

@@ -1,5 +1,9 @@
 /*-- scss:defaults --*/
 
+// Quarto theme entrypoint: defines the shared design tokens and imports the
+// partials that implement the site. Variables above scss:rules can override
+// Bootstrap defaults before Quarto compiles the final stylesheet.
+
 // Shared design palette. Keep site-wide colors here.
 $bg: #090d0f;
 $surface: #0e1416;
@@ -38,6 +42,8 @@ $font-family-monospace: $mono;
 
 /*-- scss:rules --*/
 
+// Import order follows the cascade: foundations first, page-specific rules
+// next, and cross-page responsive overrides last.
 @import "_styles/base";
 @import "_styles/navigation";
 @import "_styles/homepage";

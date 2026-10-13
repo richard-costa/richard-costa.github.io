@@ -1,3 +1,7 @@
+// Small reusable components shared across non-homepage pages: Quarto dropdowns,
+// feed links, and project status labels.
+
+// Quarto/Bootstrap dropdown menu overrides.
 .dropdown-menu {
   border-color: $border;
   background: $surface;
@@ -15,6 +19,7 @@
   color: $accent;
 }
 
+// Feed links receive decorative brackets through pseudo-elements.
 .feed-link {
   font-family: $mono;
   font-size: 0.76rem;
@@ -31,6 +36,7 @@
   color: $muted;
 }
 
+// Project status badge base and semantic state colors from theme.scss.
 .project-status {
   display: inline-block;
   margin-bottom: 0.35rem;

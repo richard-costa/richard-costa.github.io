@@ -1,4 +1,5 @@
 ````{=html}
+<!-- Writing listing: render normalized type/date metadata beside each title. -->
 <div class="writing-list list">
 <% for (const item of items) { %>
   <article class="writing-list-item" <%= metadataAttrs(item) %>>

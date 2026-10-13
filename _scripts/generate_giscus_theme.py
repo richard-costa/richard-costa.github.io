@@ -1,7 +1,14 @@
+"""Build a standalone Giscus iframe theme from the site's SCSS palette.
+
+Giscus runs in an iframe and cannot inherit the host page's CSS variables, so
+the required colors are extracted from theme.scss and written into its theme.
+"""
+
 from pathlib import Path
 import os
 import re
 
+# Theme inputs, generated output, and the simple SCSS token format we accept.
 VARIABLES = Path("theme.scss")
 SOURCE = Path("_styles/_giscus-theme.css")
 OUTPUT_DIR = Path(os.environ.get("QUARTO_PROJECT_OUTPUT_DIR", "_site"))
@@ -31,11 +38,13 @@ REQUIRED = {
 
 
 def hex_to_rgb(value: str) -> str:
+    """Convert #rrggbb into the space-separated RGB syntax used by modern CSS."""
     value = value.removeprefix("#")
     return " ".join(str(int(value[i : i + 2], 16)) for i in (0, 2, 4))
 
 
 def load_palette() -> dict[str, str]:
+    """Extract palette tokens and fail early if the Giscus theme needs more."""
     source = VARIABLES.read_text(encoding="utf-8")
     palette = {
         match.group("name"): match.group("value")
@@ -51,6 +60,7 @@ def load_palette() -> dict[str, str]:
 
 
 def render_css(palette: dict[str, str]) -> str:
+    """Prepend generated CSS variables to the hand-authored Giscus template."""
     declarations = []
     for name, value in palette.items():
         declarations.append(f"  --site-{name}: {value};")
@@ -67,6 +77,7 @@ def render_css(palette: dict[str, str]) -> str:
 
 
 def main() -> None:
+    # Quarto may provide a different output directory during preview/render.
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(render_css(load_palette()), encoding="utf-8")
 

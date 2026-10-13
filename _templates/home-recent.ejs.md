@@ -1,4 +1,5 @@
 ````{=html}
+<!-- Homepage listing: Quarto passes the newest cross-section items here. -->
 <div class="home-recent">
   <div class="home-recent-title">recent</div>
   <div class="home-recent-links">

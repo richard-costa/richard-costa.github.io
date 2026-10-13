@@ -1,3 +1,7 @@
+// Terminal-themed interfaces: the static 404 block, interactive site terminal,
+// command output helpers, and the full-screen cmatrix canvas overlay.
+
+// Static terminal presentation used by the 404 page.
 .terminal-404 {
   margin-top: 2rem;
   padding: 1.25rem;
@@ -21,6 +25,8 @@
   color: $muted;
 }
 
+// Interactive terminal panel created by site.js. Its z-index sits above Quarto
+// navigation but below the cmatrix overlay.
 .site-terminal {
   position: fixed;
   left: 50%;
@@ -97,6 +103,7 @@
   border-bottom-color: $accent;
 }
 
+// Structured command output: help rows, ASCII art, and rendered equations.
 .terminal-muted {
   color: $muted;
 }
@@ -142,6 +149,7 @@
   color: $text-strong;
 }
 
+// Fit the terminal inside narrow and notched mobile viewports.
 @media (max-width: 680px) {
   .site-terminal {
     left: 0.75rem;
@@ -161,6 +169,7 @@
   }
 }
 
+// Full-viewport canvas effect launched by the cmatrix command.
 .cmatrix-overlay {
   position: fixed;
   inset: 0;

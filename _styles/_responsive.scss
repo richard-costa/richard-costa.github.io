@@ -1,3 +1,7 @@
+// Cross-component mobile adaptations. The 680px boundary is shared with the
+// homepage's compact-panel behavior and keeps narrow layouts from overflowing.
+
+// Footer typography is global; the remaining rules apply only below 680px.
 .nav-footer {
   border-top: 1px solid $border;
   color: $muted;
@@ -6,11 +10,12 @@
 }
 
 @media (max-width: 680px) {
+  // Homepage spacing and compact panels.
   .home-page-title {
     margin-bottom: 1.15rem;
   }
 
-  .hero-copy {
+  .home-hero .hero-copy {
     margin-bottom: 1rem;
   }
 
@@ -19,7 +24,7 @@
     overflow-wrap: anywhere;
   }
 
-  #home-recent,
+  .home-recent,
   .home-blogroll {
     width: 100%;
   }
@@ -28,6 +33,7 @@
     white-space: normal;
   }
 
+  // Project and writing rows stack metadata below their main content.
   .item-row {
     grid-template-columns: 2rem minmax(0, 1fr);
   }
@@ -47,6 +53,7 @@
     justify-content: flex-start;
   }
 
+  // Save horizontal space by removing desktop navigation slashes.
   .navbar-nav .nav-link::before {
     content: "";
   }

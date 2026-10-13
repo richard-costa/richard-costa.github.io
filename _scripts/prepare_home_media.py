@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Build optimized homepage media from a sibling arch-setup checkout."""
+"""Build optimized homepage media from a sibling arch-setup checkout.
+
+Images become WebP, videos become muted web-ready MP4 files, and the generated
+JSON manifest gives site.js each optimized path plus its original-source URL.
+"""
 
 from __future__ import annotations
 
@@ -14,6 +18,7 @@ import unicodedata
 from pathlib import Path
 
 
+# Accepted source formats and output-size/quality policy.
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
 VIDEO_EXTENSIONS = {".mp4"}
 IMAGE_QUALITY = 80
@@ -22,6 +27,7 @@ VIDEO_MAX_BYTES = 12 * 1024 * 1024
 
 
 def source_files(directory: Path, extensions: set[str]) -> list[Path]:
+    """Find supported files in stable path order for reproducible manifests."""
     return sorted(
         (path for path in directory.rglob("*") if path.suffix.lower() in extensions),
         key=lambda path: path.relative_to(directory).as_posix().casefold(),
@@ -29,6 +35,7 @@ def source_files(directory: Path, extensions: set[str]) -> list[Path]:
 
 
 def safe_stem(path: Path, used_stems: set[str]) -> str:
+    """Create a unique, URL-safe ASCII filename stem."""
     normalized = unicodedata.normalize("NFKD", path.stem).encode("ascii", "ignore").decode()
     stem = re.sub(r"[^a-z0-9]+", "-", normalized.lower()).strip("-") or "media"
     candidate = stem
@@ -41,6 +48,7 @@ def safe_stem(path: Path, used_stems: set[str]) -> str:
 
 
 def load_source_urls(source_root: Path) -> dict[str, str]:
+    """Load the source filename-to-URL mapping maintained in arch-setup."""
     path = source_root / "media-sources.toml"
     if not path.is_file():
         raise FileNotFoundError(f"missing source metadata: {path}")
@@ -56,6 +64,7 @@ def load_source_urls(source_root: Path) -> dict[str, str]:
 
 
 def original_url(source: Path, source_urls: dict[str, str]) -> str:
+    """Resolve attribution explicitly, or derive standard Wallhaven URLs."""
     if source.name in source_urls:
         return source_urls[source.name]
 
@@ -71,6 +80,7 @@ def run(command: list[str]) -> None:
 
 
 def optimize_image(source: Path, destination: Path) -> None:
+    """Resize and encode an image with ImageMagick, falling back to Pillow."""
     magick = shutil.which("magick") or shutil.which("convert")
     if magick:
         run(
@@ -100,6 +110,7 @@ def optimize_image(source: Path, destination: Path) -> None:
 
 
 def optimize_video(source: Path, destination: Path, *, retry: bool = False) -> None:
+    """Encode a silent H.264 MP4; retry mode lowers size and quality further."""
     width = "960" if retry else "1280"
     crf = "31" if retry else str(VIDEO_CRF)
     run(
@@ -141,6 +152,8 @@ def format_size(size: int) -> str:
 
 
 def main() -> int:
+    # Validate the external checkout and required encoders before deleting or
+    # replacing any existing optimized output.
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", nargs="?", type=Path, default=Path("../arch-setup"))
     args = parser.parse_args()
@@ -158,6 +171,7 @@ def main() -> int:
         except ImportError:
             parser.error("ImageMagick or Pillow is required to optimize images")
 
+    # Discover sources and verify that every asset has an attribution URL.
     project_root = Path(__file__).resolve().parents[1]
     image_output = project_root / "assets" / "home-media" / "images"
     video_output = project_root / "assets" / "home-media" / "videos"
@@ -187,6 +201,7 @@ def main() -> int:
     if missing_urls:
         parser.error(f"missing original URLs; see {missing_urls_path.relative_to(project_root)}")
 
+    # Rebuild optimized assets and their browser-facing manifest from scratch.
     clean_output(image_output, ".webp")
     clean_output(video_output, ".mp4")
 
@@ -234,6 +249,7 @@ def main() -> int:
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
+    # Print a compact build report for manual media maintenance.
     source_size = sum(path.stat().st_size for path in [*images, *videos])
     optimized_paths = [*image_output.glob("*.webp"), *video_output.glob("*.mp4")]
     optimized_size = sum(path.stat().st_size for path in optimized_paths)

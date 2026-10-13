@@ -40,7 +40,7 @@ The aggregate, essay, and post feeds are Quarto-native. The notes feed remains a
 
 ## Theme structure
 
-Site colors live in `_styles/_variables.scss`. The main theme imports partials from `_styles/`, and `_scripts/generate_giscus_theme.py` uses the same palette to generate `/giscus-theme.css` in the rendered site.
+Site colors live in `theme.scss`. The main theme imports partials from `_styles/`, and `_scripts/generate_giscus_theme.py` uses the same palette to generate `/giscus-theme.css` in the rendered site.
 
 ## Local workflow
 

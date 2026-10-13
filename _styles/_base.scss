@@ -1,3 +1,7 @@
+// Global foundations: runtime color variables, element defaults, typography,
+// and the reusable terminal-style cursor used by page headings.
+
+// Expose selected SCSS tokens to browser JavaScript and generated components.
 :root {
   --site-bg: #{$bg};
   --site-surface: #{$surface};
@@ -8,6 +12,7 @@
   --site-accent: #{$accent};
 }
 
+// Base document elements and interaction colors.
 body {
   background: $bg;
   color: $text;
@@ -39,6 +44,8 @@ hr {
   opacity: 1;
 }
 
+// Heading cursor animation and mixin. A mixin copies this declaration block
+// into each selector that includes it.
 @keyframes terminal-cursor-blink {
   0%,
   49% {
@@ -67,6 +74,7 @@ hr {
   }
 }
 
+// Quarto heading hierarchy and command-prompt decoration.
 h1,
 h2,
 h3,
@@ -106,6 +114,7 @@ h3 {
   @include terminal-cursor;
 }
 
+// Reusable command-style title for manually authored page sections.
 .page-command-title {
   margin-top: 0;
 }

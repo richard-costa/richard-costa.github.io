@@ -1,3 +1,7 @@
+// Global navbar presentation. Quarto supplies the navbar markup and active
+// classes; this partial only changes its visual treatment.
+
+// Translucent bar and shared navigation typography.
 .navbar {
   background: rgba($bg, 0.9);
   border-bottom: 1px solid $border;
@@ -22,6 +26,7 @@
   text-transform: lowercase;
 }
 
+// Add the command-path slash visually without changing link text or semantics.
 .navbar-nav .nav-link::before {
   content: "/";
   color: darken($muted, 25%);
