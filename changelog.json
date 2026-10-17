@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-10-17",
+    "subject": "update wallpapers and fix arch setup repo path",
+    "sha": "6f580262b103b1c91896a8fdc52a5355e0eac6de",
+    "short_sha": "6f58026",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/6f580262b103b1c91896a8fdc52a5355e0eac6de"
+  },
+  {
+    "date": "2026-10-16",
+    "subject": "Remove robots.txt",
+    "sha": "95bc5110723fddaaa768067411eb844f6992bef9",
+    "short_sha": "95bc511",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/95bc5110723fddaaa768067411eb844f6992bef9"
+  },
+  {
+    "date": "2026-10-16",
+    "subject": "Remove humans.txt",
+    "sha": "d102e25513cdab0be2104f9869f34a41686ecd7d",
+    "short_sha": "d102e25",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/d102e25513cdab0be2104f9869f34a41686ecd7d"
+  },
+  {
     "date": "2026-10-12",
     "subject": "Move wallpaper note above media",
     "sha": "7e7dac6f20b253041a3552a266adaaba5e3513de",
@@ -61,26 +82,5 @@
     "sha": "7352a284a2b01e7f924ae87ec9214628fbaf2817",
     "short_sha": "7352a28",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/7352a284a2b01e7f924ae87ec9214628fbaf2817"
-  },
-  {
-    "date": "2026-10-12",
-    "subject": "Increase homepage link font size",
-    "sha": "8c27c67be11d87f73beac77cac0d85e5711d705e",
-    "short_sha": "8c27c67",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/8c27c67be11d87f73beac77cac0d85e5711d705e"
-  },
-  {
-    "date": "2026-10-12",
-    "subject": "Add colon after résumé",
-    "sha": "d3587c19bb7abeb94b3e6d29bcd721afea7fe085",
-    "short_sha": "d3587c1",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/d3587c19bb7abeb94b3e6d29bcd721afea7fe085"
-  },
-  {
-    "date": "2026-10-09",
-    "subject": "update media",
-    "sha": "66a2b68f77f083f9564b2da074530946b34bc35f",
-    "short_sha": "66a2b68",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/66a2b68f77f083f9564b2da074530946b34bc35f"
   }
 ]
