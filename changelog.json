@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-18",
+    "subject": "Align homepage panels and contain wallpapers",
+    "sha": "c4df549a9726ce7086069c1d927e848766938386",
+    "short_sha": "c4df549",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/c4df549a9726ce7086069c1d927e848766938386"
+  },
+  {
     "date": "2026-10-17",
     "subject": "update wallpapers and fix arch setup repo path",
     "sha": "6f580262b103b1c91896a8fdc52a5355e0eac6de",
@@ -75,12 +82,5 @@
     "sha": "e094840f4f436d96d3e20adfab745b1eeb3ad15a",
     "short_sha": "e094840",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/e094840f4f436d96d3e20adfab745b1eeb3ad15a"
-  },
-  {
-    "date": "2026-10-12",
-    "subject": "unmute links home page links",
-    "sha": "7352a284a2b01e7f924ae87ec9214628fbaf2817",
-    "short_sha": "7352a28",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/7352a284a2b01e7f924ae87ec9214628fbaf2817"
   }
 ]
