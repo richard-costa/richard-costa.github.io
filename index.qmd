@@ -49,15 +49,19 @@ Also, remember, all work and no play brings you a worse day. Take care and poke 
 
 :::
 
+::: {.home-panels}
+
 ::: {#home-recent}
 :::
 
 ::: {.home-blogroll}
-<div class="blogroll-title">blogroll</div>
+<div class="blogroll-title">blogroll (placeholders)</div>
 <nav class="blogroll-links" aria-label="Blogroll">
   <a href="https://ncatlab.org/">nLab <span>↗</span></a>
   <a href="https://quarto.org/">Quarto <span>↗</span></a>
 </nav>
+:::
+
 :::
 
 :::

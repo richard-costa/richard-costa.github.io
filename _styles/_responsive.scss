@@ -24,9 +24,8 @@
     overflow-wrap: anywhere;
   }
 
-  .home-recent,
-  .home-blogroll {
-    width: 100%;
+  .home-panels {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .resume-inline {
