@@ -8,7 +8,6 @@ A small snapshot of what has my attention right now. Updated manually, not meant
 ## building
 
 - This site — RSS, bookmarks, a changelog, and small terminal-style details.
-- A framework-light [RAG project](https://github.com/richard-costa/rag) focused on understanding the application structure rather than hiding it behind abstractions.
 
 ## learning / revisiting
 
