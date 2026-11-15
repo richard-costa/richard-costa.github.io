@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-15",
+    "subject": "Remove RAG project from now page",
+    "sha": "4e0316245c00617fd38cb726ed5985dbd8a91d01",
+    "short_sha": "4e03162",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/4e0316245c00617fd38cb726ed5985dbd8a91d01"
+  },
+  {
+    "date": "2026-11-15",
+    "subject": "Remove RAG project from projects page",
+    "sha": "229c3a1af871d3c93ae8829c91f3b4f1d733ffa8",
+    "short_sha": "229c3a1",
+    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/229c3a1af871d3c93ae8829c91f3b4f1d733ffa8"
+  },
+  {
     "date": "2026-10-18",
     "subject": "Align homepage panels and contain wallpapers",
     "sha": "c4df549a9726ce7086069c1d927e848766938386",
@@ -68,19 +82,5 @@
     "sha": "a36e2b3024581cba02309a87ed95e660ab3b48ae",
     "short_sha": "a36e2b3",
     "url": "https://github.com/richard-costa/richard-costa.github.io/commit/a36e2b3024581cba02309a87ed95e660ab3b48ae"
-  },
-  {
-    "date": "2026-10-12",
-    "subject": "move social links to below about and adjust vertical spaces there",
-    "sha": "6968932295a72d44f87fe3d9c767474d7a8f9e40",
-    "short_sha": "6968932",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/6968932295a72d44f87fe3d9c767474d7a8f9e40"
-  },
-  {
-    "date": "2026-10-12",
-    "subject": "Underline homepage links",
-    "sha": "e094840f4f436d96d3e20adfab745b1eeb3ad15a",
-    "short_sha": "e094840",
-    "url": "https://github.com/richard-costa/richard-costa.github.io/commit/e094840f4f436d96d3e20adfab745b1eeb3ad15a"
   }
 ]

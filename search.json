@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "projects",
+    "section": "",
+    "text": "No projects listed."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Richard Costa",
@@ -19,34 +26,6 @@
     "title": "Music for an Elderly Elephant",
     "section": "",
     "text": "Somewhere someone played piano to an elderly elephant. That’s it. Also, they flap their ears to express some emotions."
-  },
-  {
-    "objectID": "now.html",
-    "href": "now.html",
-    "title": "now",
-    "section": "",
-    "text": "A small snapshot of what has my attention right now. Updated manually, not meant to be exhaustive."
-  },
-  {
-    "objectID": "now.html#building",
-    "href": "now.html#building",
-    "title": "now",
-    "section": "building",
-    "text": "building\n\nThis site — RSS, bookmarks, a changelog, and small terminal-style details.\nA framework-light RAG project focused on understanding the application structure rather than hiding it behind abstractions."
-  },
-  {
-    "objectID": "now.html#learning-revisiting",
-    "href": "now.html#learning-revisiting",
-    "title": "now",
-    "section": "learning / revisiting",
-    "text": "learning / revisiting\n\nQuantum mechanics and mathematical physics through the notes on this site.\nLinux tooling and small desktop workflows."
-  },
-  {
-    "objectID": "now.html#reading",
-    "href": "now.html#reading",
-    "title": "now",
-    "section": "reading",
-    "text": "reading\nThis section stays intentionally current. I’ll add books, papers, and essays here when they are actually in rotation."
   },
   {
     "objectID": "bookmarks.html",
@@ -238,13 +217,6 @@
     "text": "Small site edits, generated from recent Git history.\n\nLoading recent changes…"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "projects",
-    "section": "",
-    "text": "01\n\n\n\nrag ↗\n\n\nA framework-light RAG implementation built to understand the underlying application structure rather than hide it behind abstractions.\n\n\n\nexperiment python · postgres · pgvector · ollama"
-  },
-  {
     "objectID": "posts/index.html",
     "href": "posts/index.html",
     "title": "posts",
@@ -257,5 +229,33 @@
     "title": "writing",
     "section": "",
     "text": "Essays, notes, and posts, shown together by recent activity.\n\nessays · notes · posts · rss\n\n\n\n\n\n  \n    \n      note\n      Sep 26, 2026\n    \n    Introduction to Logic\n  \n\n  \n    \n      note\n      Sep 26, 2026\n    \n    Dirac Notation and Riesz Theorem\n  \n\n  \n    \n      note\n      Sep 26, 2026\n    \n    Review of Quantum Mechanics\n  \n\n  \n    \n      note\n      Sep 26, 2026\n    \n    Installing and updating Quarto on Arch Linux\n  \n\n  \n    \n      note\n      Sep 26, 2026\n    \n    Using the SDDM Astronaut theme\n  \n\n  \n    \n      note\n      Sep 26, 2026\n    \n    YAD calendar popup for Waybar\n  \n\n  \n    \n      post\n      May 20, 2026\n    \n    Music for an Elderly Elephant\n  \n\n\nNo matching items"
+  },
+  {
+    "objectID": "now.html",
+    "href": "now.html",
+    "title": "now",
+    "section": "",
+    "text": "A small snapshot of what has my attention right now. Updated manually, not meant to be exhaustive."
+  },
+  {
+    "objectID": "now.html#building",
+    "href": "now.html#building",
+    "title": "now",
+    "section": "building",
+    "text": "building\n\nThis site — RSS, bookmarks, a changelog, and small terminal-style details."
+  },
+  {
+    "objectID": "now.html#learning-revisiting",
+    "href": "now.html#learning-revisiting",
+    "title": "now",
+    "section": "learning / revisiting",
+    "text": "learning / revisiting\n\nQuantum mechanics and mathematical physics through the notes on this site.\nLinux tooling and small desktop workflows."
+  },
+  {
+    "objectID": "now.html#reading",
+    "href": "now.html#reading",
+    "title": "now",
+    "section": "reading",
+    "text": "reading\nThis section stays intentionally current. I’ll add books, papers, and essays here when they are actually in rotation."
   }
 ]

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="430" viewBox="0 0 700 430" aria-hidden="true">
+<g fill="none" stroke="#896b45" stroke-linecap="round">
+<circle cx="368" cy="208" r="147" stroke-width="1.2" opacity=".53"/>
+<circle cx="368" cy="208" r="109" stroke-width=".8" opacity=".48"/>
+<circle cx="368" cy="208" r="68" stroke-width=".75" opacity=".42"/>
+<ellipse cx="368" cy="208" rx="147" ry="52" stroke-width=".8" opacity=".52"/>
+<ellipse cx="368" cy="208" rx="50" ry="147" stroke-width=".8" opacity=".5"/>
+<path d="M200 208H534M368 35V386M253 97L477 319M250 320L484 96" stroke-width=".8" opacity=".45"/>
+<path d="M240 129L495 129L493 294L242 294Z" stroke-width=".8" opacity=".34"/>
+<path d="M298 68L443 355M442 66L295 356" stroke-width=".6" opacity=".4"/>
+<path d="M100 53C197 40 290 69 386 49M98 57C177 43 290 72 384 52" stroke-width=".65" opacity=".55"/>
+<path d="M73 349C145 330 181 335 234 338M70 353Q151 336 237 340" stroke-width=".65" opacity=".6"/>
+<path d="M547 103q46-34 95-14M548 107Q600 81 646 94" stroke-width=".55" opacity=".65"/>
+<path d="M568 304l49-40M573 309l48-40" stroke-width=".7" opacity=".5"/>
+<g opacity=".55" stroke-width=".55">
+<path d="M222 208l8-7m0 7-8-7M514 208l-8-7m0 7 8-7"/>
+<path d="M368 62l-6 9 12 0zM368 355l-6-9 12 0z"/>
+<circle cx="368" cy="208" r="4"/>
+</g>
+</g>
+<g font-family="Georgia,serif" font-size="14" fill="#806444" font-style="italic" opacity=".8">
+<text x="87" y="38" transform="rotate(-4 87 38)">studio delle proporzioni e dei sistemi</text>
+<text x="67" y="332" transform="rotate(4 67 332)">un piccolo esperimento nella natura</text>
+<text x="518" y="80" transform="rotate(5 518 80)">figura 02</text>
+<text x="538" y="330" transform="rotate(-8 538 330)">curiositas</text>
+<text x="400" y="400" font-size="10">anno MMXXVI</text>
+</g>
+<g fill="#906744" opacity=".43">
+<circle cx="98" cy="51" r="2.5"/><circle cx="571" cy="105" r="1.5"/><circle cx="207" cy="339" r="2"/>
+</g>
+</svg>

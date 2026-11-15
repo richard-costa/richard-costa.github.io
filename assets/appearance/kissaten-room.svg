@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="1000" viewBox="0 0 650 1000" role="img" aria-label="Decorative twilight view through a wooden shoji window, with autumn maple foliage, tea and a notebook">
+<defs>
+  <linearGradient id="wall" x2="1" y2="1"><stop stop-color="#201c1a"/><stop offset=".5" stop-color="#121315"/><stop offset="1" stop-color="#29211e"/></linearGradient>
+  <linearGradient id="wood" x2=".8" y2="1"><stop stop-color="#382923"/><stop offset=".35" stop-color="#1d1a19"/><stop offset=".7" stop-color="#39251d"/><stop offset="1" stop-color="#171719"/></linearGradient>
+  <linearGradient id="sky" x2=".2" y2="1"><stop stop-color="#542e29"/><stop offset=".4" stop-color="#9c5240"/><stop offset=".8" stop-color="#c18a67"/><stop offset="1" stop-color="#3f3e3a"/></linearGradient>
+  <radialGradient id="moon"><stop stop-color="#cd7662"/><stop offset="1" stop-color="#a64c40"/></radialGradient>
+  <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#31251f"/><stop offset="1" stop-color="#100f0f"/></linearGradient>
+  <linearGradient id="cup" x2="1" y2=".2"><stop stop-color="#705c48"/><stop offset=".5" stop-color="#ba9d7a"/><stop offset="1" stop-color="#42352e"/></linearGradient>
+  <pattern id="grain" patternUnits="userSpaceOnUse" width="55" height="33">
+    <path d="M2 5Q20 2 54 8M0 17Q23 11 55 19M0 29Q27 27 54 31" fill="none" stroke="#9d7a5f" stroke-width=".8" opacity=".12"/>
+  </pattern>
+  <filter id="papergrain"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="12" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.1"/></filter>
+  <path id="maple" d="M0-19L4-10 12-14 10-6 19-2 11 2 14 9 5 8 2 16 0 12-3 16-6 7-14 8-11 1-19-3-9-6-12-13-4-10Z"/>
+</defs>
+<rect width="650" height="1000" fill="url(#wall)"/>
+<rect width="650" height="1000" fill="url(#grain)" opacity=".9"/>
+<!-- planks behind the alcove -->
+<g opacity=".35" stroke="#8b6551" stroke-width="1.1" fill="none">
+<path d="M0 120H650M0 263H650M0 410H650M0 560H650M0 701H650M0 861H650"/>
+<path d="M0 130H650M0 270H650M0 418H650M0 565H650"/>
+</g>
+<!-- recessed view -->
+<rect x="76" y="88" width="540" height="654" fill="#090a09" stroke="#120f0e" stroke-width="28"/>
+<rect x="94" y="113" width="501" height="604" fill="url(#sky)"/>
+<circle cx="410" cy="230" r="82" fill="url(#moon)" opacity=".72"/>
+<path d="M94 540 Q160 421 222 470Q288 358 358 470Q425 414 502 493Q560 448 595 509V718H94Z" fill="#62524a" opacity=".43"/>
+<path d="M94 573Q178 497 276 542Q360 477 445 548Q525 509 595 569V718H94Z" fill="#443e3b" opacity=".72"/>
+<path d="M94 613Q169 574 233 595Q308 555 392 592Q514 550 595 616V718H94Z" fill="#232f2f" opacity=".64"/>
+<path d="M94 674Q188 653 258 675Q374 652 469 681Q548 664 595 671V718H94Z" fill="#3a2c29" opacity=".87"/>
+<!-- outer Japanese maple silhouette -->
+<g fill="none" stroke="#342722" stroke-linecap="round">
+<path d="M102 192C189 174 228 210 275 260C310 291 345 294 401 328" stroke-width="13"/>
+<path d="M194 209Q257 155 339 157M261 245Q264 302 327 365M171 189Q135 260 158 312M291 287Q359 242 407 236" stroke-width="6"/>
+<path d="M341 160Q383 178 403 207M327 365Q299 407 306 446M156 316Q139 333 132 358" stroke-width="3"/>
+</g>
+<!-- hand-mixed leaves -->
+<g filter="url(#papergrain)"><use href="#maple" transform="translate(135.0 350.4) rotate(201) scale(0.47)" fill="#d98d60" opacity="0.66"/>
+<use href="#maple" transform="translate(175.4 360.3) rotate(314) scale(0.77)" fill="#a35342" opacity="0.65"/>
+<use href="#maple" transform="translate(195.9 247.4) rotate(36) scale(0.73)" fill="#774333" opacity="0.62"/>
+<use href="#maple" transform="translate(181.3 294.9) rotate(104) scale(1.08)" fill="#d98d60" opacity="0.69"/>
+<use href="#maple" transform="translate(323.1 161.4) rotate(149) scale(0.39)" fill="#a35342" opacity="0.62"/>
+<use href="#maple" transform="translate(268.9 402.8) rotate(185) scale(0.95)" fill="#9f5340" opacity="0.62"/>
+<use href="#maple" transform="translate(431.5 188.3) rotate(219) scale(0.90)" fill="#a35342" opacity="0.57"/>
+<use href="#maple" transform="translate(241.1 173.0) rotate(101) scale(0.97)" fill="#774333" opacity="0.52"/>
+<use href="#maple" transform="translate(187.1 222.0) rotate(91) scale(0.86)" fill="#774333" opacity="0.72"/>
+<use href="#maple" transform="translate(327.6 185.2) rotate(24) scale(0.84)" fill="#9f5340" opacity="0.73"/>
+<use href="#maple" transform="translate(158.9 389.0) rotate(101) scale(0.69)" fill="#9f5340" opacity="0.86"/>
+<use href="#maple" transform="translate(322.5 278.5) rotate(346) scale(0.40)" fill="#d98d60" opacity="0.71"/>
+<use href="#maple" transform="translate(149.0 176.2) rotate(41) scale(0.69)" fill="#774333" opacity="0.88"/>
+<use href="#maple" transform="translate(215.3 379.7) rotate(91) scale(0.77)" fill="#d98d60" opacity="0.61"/>
+<use href="#maple" transform="translate(158.0 214.2) rotate(153) scale(0.54)" fill="#9f5340" opacity="0.85"/>
+<use href="#maple" transform="translate(115.3 428.2) rotate(238) scale(0.91)" fill="#d98d60" opacity="0.80"/>
+<use href="#maple" transform="translate(321.8 274.0) rotate(298) scale(0.64)" fill="#9f5340" opacity="0.66"/>
+<use href="#maple" transform="translate(343.6 202.3) rotate(334) scale(1.02)" fill="#c66d4b" opacity="0.79"/>
+<use href="#maple" transform="translate(392.6 142.5) rotate(145) scale(0.40)" fill="#9f5340" opacity="0.74"/>
+<use href="#maple" transform="translate(170.7 447.9) rotate(220) scale(0.79)" fill="#9f5340" opacity="0.53"/>
+<use href="#maple" transform="translate(414.9 270.6) rotate(287) scale(0.41)" fill="#a35342" opacity="0.56"/>
+<use href="#maple" transform="translate(162.4 355.1) rotate(331) scale(0.59)" fill="#9f5340" opacity="0.83"/>
+<use href="#maple" transform="translate(351.5 248.8) rotate(238) scale(1.08)" fill="#d98d60" opacity="0.57"/>
+<use href="#maple" transform="translate(322.2 280.1) rotate(59) scale(0.67)" fill="#d98d60" opacity="0.68"/>
+<use href="#maple" transform="translate(117.5 385.6) rotate(98) scale(0.44)" fill="#d98d60" opacity="0.65"/>
+<use href="#maple" transform="translate(187.4 210.7) rotate(25) scale(0.71)" fill="#d98d60" opacity="0.80"/>
+<use href="#maple" transform="translate(350.6 169.3) rotate(130) scale(0.51)" fill="#c66d4b" opacity="0.67"/>
+<use href="#maple" transform="translate(270.6 362.2) rotate(24) scale(0.56)" fill="#774333" opacity="0.53"/>
+<use href="#maple" transform="translate(376.9 184.9) rotate(355) scale(0.74)" fill="#9f5340" opacity="0.81"/>
+<use href="#maple" transform="translate(337.1 230.1) rotate(272) scale(0.74)" fill="#c66d4b" opacity="0.59"/>
+<use href="#maple" transform="translate(217.7 437.6) rotate(135) scale(0.46)" fill="#c66d4b" opacity="0.74"/>
+<use href="#maple" transform="translate(167.7 394.2) rotate(348) scale(0.93)" fill="#9f5340" opacity="0.85"/>
+<use href="#maple" transform="translate(358.1 297.7) rotate(156) scale(0.88)" fill="#d98d60" opacity="0.71"/>
+<use href="#maple" transform="translate(258.2 226.8) rotate(71) scale(1.11)" fill="#d98d60" opacity="0.62"/>
+<use href="#maple" transform="translate(142.2 272.2) rotate(226) scale(0.66)" fill="#774333" opacity="0.79"/>
+<use href="#maple" transform="translate(256.1 288.0) rotate(17) scale(0.68)" fill="#9f5340" opacity="0.58"/>
+<use href="#maple" transform="translate(353.8 315.1) rotate(124) scale(1.01)" fill="#c66d4b" opacity="0.64"/>
+<use href="#maple" transform="translate(242.3 283.0) rotate(126) scale(0.49)" fill="#774333" opacity="0.73"/>
+<use href="#maple" transform="translate(172.4 152.4) rotate(12) scale(1.10)" fill="#774333" opacity="0.85"/>
+<use href="#maple" transform="translate(200.8 295.0) rotate(258) scale(0.59)" fill="#9f5340" opacity="0.68"/>
+<use href="#maple" transform="translate(342.0 303.1) rotate(123) scale(0.49)" fill="#774333" opacity="0.56"/>
+<use href="#maple" transform="translate(220.7 471.3) rotate(27) scale(0.63)" fill="#c66d4b" opacity="0.79"/>
+<use href="#maple" transform="translate(340.6 262.4) rotate(69) scale(0.80)" fill="#9f5340" opacity="0.90"/>
+<use href="#maple" transform="translate(182.1 367.0) rotate(272) scale(0.79)" fill="#774333" opacity="0.77"/>
+<use href="#maple" transform="translate(241.9 439.5) rotate(151) scale(0.61)" fill="#a35342" opacity="0.56"/>
+<use href="#maple" transform="translate(188.4 368.2) rotate(223) scale(0.51)" fill="#c66d4b" opacity="0.61"/>
+<use href="#maple" transform="translate(120.4 230.1) rotate(95) scale(0.96)" fill="#9f5340" opacity="0.65"/>
+<use href="#maple" transform="translate(173.9 446.2) rotate(359) scale(0.92)" fill="#c66d4b" opacity="0.80"/>
+<use href="#maple" transform="translate(399.1 150.5) rotate(246) scale(0.79)" fill="#774333" opacity="0.80"/>
+<use href="#maple" transform="translate(413.0 182.2) rotate(261) scale(0.71)" fill="#c66d4b" opacity="0.79"/>
+<use href="#maple" transform="translate(220.1 246.9) rotate(216) scale(0.55)" fill="#9f5340" opacity="0.75"/>
+<use href="#maple" transform="translate(183.7 251.8) rotate(216) scale(0.71)" fill="#774333" opacity="0.55"/>
+<use href="#maple" transform="translate(131.8 228.7) rotate(228) scale(0.71)" fill="#774333" opacity="0.76"/>
+<use href="#maple" transform="translate(254.5 350.9) rotate(281) scale(1.05)" fill="#c66d4b" opacity="0.80"/>
+<use href="#maple" transform="translate(318.6 198.6) rotate(207) scale(0.68)" fill="#c66d4b" opacity="0.58"/>
+<use href="#maple" transform="translate(133.4 227.1) rotate(51) scale(0.98)" fill="#d98d60" opacity="0.67"/>
+<use href="#maple" transform="translate(198.5 395.6) rotate(280) scale(0.83)" fill="#a35342" opacity="0.80"/>
+<use href="#maple" transform="translate(337.9 184.9) rotate(331) scale(0.76)" fill="#d98d60" opacity="0.53"/>
+<use href="#maple" transform="translate(265.4 367.8) rotate(291) scale(0.42)" fill="#a35342" opacity="0.53"/>
+<use href="#maple" transform="translate(135.7 224.8) rotate(241) scale(0.68)" fill="#d98d60" opacity="0.66"/>
+<use href="#maple" transform="translate(311.6 180.7) rotate(143) scale(0.92)" fill="#9f5340" opacity="0.75"/>
+<use href="#maple" transform="translate(435.7 293.5) rotate(213) scale(0.76)" fill="#a35342" opacity="0.56"/>
+<use href="#maple" transform="translate(240.2 299.8) rotate(301) scale(1.06)" fill="#c66d4b" opacity="0.71"/>
+<use href="#maple" transform="translate(334.9 144.5) rotate(89) scale(0.71)" fill="#774333" opacity="0.56"/>
+<use href="#maple" transform="translate(264.4 227.8) rotate(273) scale(0.49)" fill="#a35342" opacity="0.89"/>
+<use href="#maple" transform="translate(230.6 459.3) rotate(185) scale(0.49)" fill="#c66d4b" opacity="0.65"/>
+<use href="#maple" transform="translate(387.1 151.7) rotate(9) scale(0.76)" fill="#774333" opacity="0.79"/>
+<use href="#maple" transform="translate(115.1 372.2) rotate(171) scale(1.11)" fill="#774333" opacity="0.78"/>
+<use href="#maple" transform="translate(128.3 217.7) rotate(100) scale(0.99)" fill="#a35342" opacity="0.57"/>
+<use href="#maple" transform="translate(134.1 352.3) rotate(320) scale(0.91)" fill="#774333" opacity="0.87"/>
+<use href="#maple" transform="translate(341.4 211.2) rotate(315) scale(1.13)" fill="#9f5340" opacity="0.53"/>
+<use href="#maple" transform="translate(164.5 461.1) rotate(78) scale(0.64)" fill="#774333" opacity="0.70"/>
+<use href="#maple" transform="translate(120.8 339.5) rotate(250) scale(1.11)" fill="#774333" opacity="0.83"/>
+<use href="#maple" transform="translate(115.1 411.8) rotate(188) scale(0.84)" fill="#a35342" opacity="0.59"/>
+<use href="#maple" transform="translate(316.6 209.4) rotate(298) scale(0.70)" fill="#774333" opacity="0.87"/>
+<use href="#maple" transform="translate(232.7 294.8) rotate(336) scale(0.83)" fill="#c66d4b" opacity="0.58"/>
+<use href="#maple" transform="translate(276.4 196.1) rotate(211) scale(0.77)" fill="#d98d60" opacity="0.83"/>
+<use href="#maple" transform="translate(203.1 292.6) rotate(159) scale(0.64)" fill="#9f5340" opacity="0.74"/>
+<use href="#maple" transform="translate(208.8 349.5) rotate(226) scale(0.90)" fill="#a35342" opacity="0.85"/>
+<use href="#maple" transform="translate(288.5 227.9) rotate(106) scale(1.06)" fill="#9f5340" opacity="0.87"/>
+<use href="#maple" transform="translate(414.9 313.5) rotate(28) scale(0.88)" fill="#9f5340" opacity="0.68"/>
+<use href="#maple" transform="translate(220.3 311.6) rotate(90) scale(0.96)" fill="#774333" opacity="0.66"/>
+<use href="#maple" transform="translate(174.4 267.9) rotate(234) scale(0.72)" fill="#c66d4b" opacity="0.89"/>
+<use href="#maple" transform="translate(234.8 156.9) rotate(100) scale(0.97)" fill="#a35342" opacity="0.59"/>
+<use href="#maple" transform="translate(158.0 278.9) rotate(171) scale(0.65)" fill="#9f5340" opacity="0.78"/>
+<use href="#maple" transform="translate(172.6 249.4) rotate(97) scale(1.08)" fill="#a35342" opacity="0.62"/>
+<use href="#maple" transform="translate(239.2 399.8) rotate(136) scale(0.43)" fill="#a35342" opacity="0.69"/>
+<use href="#maple" transform="translate(165.5 169.6) rotate(216) scale(0.46)" fill="#d98d60" opacity="0.72"/>
+<use href="#maple" transform="translate(121.9 314.2) rotate(134) scale(1.01)" fill="#9f5340" opacity="0.55"/>
+<use href="#maple" transform="translate(407.6 317.3) rotate(182) scale(0.42)" fill="#a35342" opacity="0.72"/>
+<use href="#maple" transform="translate(274.6 443.8) rotate(16) scale(0.88)" fill="#d98d60" opacity="0.62"/>
+<use href="#maple" transform="translate(279.8 172.0) rotate(96) scale(0.46)" fill="#a35342" opacity="0.72"/>
+<use href="#maple" transform="translate(269.8 377.3) rotate(173) scale(0.66)" fill="#774333" opacity="0.57"/>
+<use href="#maple" transform="translate(322.9 310.5) rotate(334) scale(0.99)" fill="#774333" opacity="0.84"/>
+<use href="#maple" transform="translate(274.1 443.4) rotate(190) scale(0.72)" fill="#c66d4b" opacity="0.77"/>
+</g>
+<path d="M110 608Q151 587 172 591 M333 639Q355 633 369 643" fill="none" stroke="#be9070" opacity=".35"/>
+<!-- heavy shoji window lattices -->
+<rect x="85" y="99" width="519" height="627" fill="none" stroke="#090909" stroke-width="27"/>
+<rect x="92" y="104" width="502" height="614" fill="none" stroke="#573e32" stroke-width="7" opacity=".88"/>
+<path d="M260 109V715M426 109V715" stroke="#0d0e10" stroke-width="20"/>
+<path d="M258 109V715M422 109V715" stroke="#765546" stroke-width="2" opacity=".57"/>
+<path d="M95 244H594M95 404H594M95 566H594" stroke="#141518" stroke-width="12"/>
+<path d="M95 245H594M95 405H594M95 568H594" stroke="#7b5a45" stroke-width="2" opacity=".34"/>
+<rect x="76" y="714" width="543" height="24" fill="#1d1716" stroke="#745242" stroke-width="3"/>
+<!-- wood beams -->
+<path d="M0 781H650V1000H0Z" fill="url(#floor)"/>
+<path d="M0 791L650 773M0 868L650 847M0 950L650 923" fill="none" stroke="#624635" stroke-width="3" opacity=".58"/>
+<path d="M13 782L0 1000M141 780L109 1000M306 778L275 1000M496 779L463 1000" fill="none" stroke="#151314" stroke-width="5" opacity=".8"/>
+<!-- low writing table, coffee cup and small notebook -->
+<path d="M222 810L625 804 648 844 251 856Z" fill="#21191a" stroke="#50382e" stroke-width="6"/>
+<path d="M250 856L265 993 297 993 294 852 M585 852L584 993 612 993 627 843" fill="#1a1515" stroke="#694d3d" stroke-width="5"/>
+<path d="M334 817L465 813 474 832 339 840Z" fill="#ac9577" stroke="#392d2a" stroke-width="3"/>
+<path d="M346 806L465 803 473 824 350 832Z" fill="#c8b08e" stroke="#584437" stroke-width="2"/>
+<path d="M350 811L452 807M354 815L454 812M357 821L443 815" stroke="#5a4b3d" stroke-width="1.5" opacity=".66"/>
+<ellipse cx="539" cy="812" rx="65" ry="13" fill="#0c1010" opacity=".6"/>
+<ellipse cx="538" cy="798" rx="52" ry="14" fill="#6a5546" stroke="#231f1e" stroke-width="4"/>
+<path d="M494 739Q490 776 499 793Q539 818 579 795Q588 778 584 739Z" fill="url(#cup)" stroke="#251f1b" stroke-width="4"/>
+<ellipse cx="539" cy="740" rx="45" ry="11" fill="#5c4030" stroke="#bf9874" stroke-width="5"/>
+<path d="M584 756Q617 753 606 779Q598 793 580 785" fill="none" stroke="#b5987d" stroke-width="8"/>
+<g stroke="#bea58d" stroke-width="3" opacity=".5" fill="none">
+<path d="M521 729Q505 710 517 693T518 668M542 728Q559 707 543 690T545 666"/>
+</g>
+<path d="M5 996H648" stroke="#684333" stroke-width="6"/>
+</svg>

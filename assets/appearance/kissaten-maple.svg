@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="660" viewBox="0 0 820 660" aria-hidden="true">
+<defs><path id="leaf" d="M0-26 7-15 22-21 19-7 34-1 19 6 23 21 8 16 0 34 -7 17 -24 21 -18 5 -35-3 -18-8 -22-23 -6-15Z"/></defs>
+<g fill="none" stroke="#25120e" stroke-linecap="round" opacity=".75">
+<path d="M776 10Q713 49 670 127Q619 206 506 248Q395 272 336 352" stroke-width="12"/>
+<path d="M670 127Q603 102 536 113Q474 121 399 87M617 204Q592 280 530 335M505 247Q460 208 430 184" stroke-width="6"/>
+<path d="M535 113Q536 64 488 30M437 199Q415 232 359 237M527 329Q501 370 464 389" stroke-width="3"/>
+</g>
+<g fill="#923e2e" opacity=".66">
+<use href="#leaf" transform="translate(394 87) rotate(35) scale(1.1)"/>
+<use href="#leaf" transform="translate(431 101) rotate(-26) scale(.83)"/>
+<use href="#leaf" transform="translate(487 36) rotate(-14) scale(1.1)"/>
+<use href="#leaf" transform="translate(543 106) rotate(19) scale(1.2)"/>
+<use href="#leaf" transform="translate(600 141) rotate(65) scale(.91)"/>
+<use href="#leaf" transform="translate(649 165) rotate(89) scale(1.3)"/>
+<use href="#leaf" transform="translate(577 200) rotate(-12) scale(1.2)"/>
+<use href="#leaf" transform="translate(530 239) rotate(23) scale(1.26)"/>
+<use href="#leaf" transform="translate(459 216) rotate(76) scale(.85)"/>
+<use href="#leaf" transform="translate(431 183) rotate(-42) scale(.83)"/>
+<use href="#leaf" transform="translate(398 234) rotate(59) scale(.99)"/>
+<use href="#leaf" transform="translate(363 335) rotate(15) scale(.97)"/>
+<use href="#leaf" transform="translate(506 327) rotate(99) scale(1.3)"/>
+<use href="#leaf" transform="translate(461 374) rotate(-33) scale(.95)"/>
+<use href="#leaf" transform="translate(622 90) rotate(43) scale(.71)"/>
+</g>
+<g fill="#db784c" opacity=".48">
+<use href="#leaf" transform="translate(543 157) rotate(32) scale(1.3)"/>
+<use href="#leaf" transform="translate(637 126) rotate(52) scale(1.05)"/>
+<use href="#leaf" transform="translate(508 203) rotate(12) scale(.73)"/>
+<use href="#leaf" transform="translate(479 271) rotate(-10) scale(.75)"/>
+<use href="#leaf" transform="translate(588 252) rotate(72) scale(.8)"/>
+</g>
+</svg>
