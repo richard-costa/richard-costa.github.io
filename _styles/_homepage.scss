@@ -26,12 +26,6 @@
   padding-bottom: 0;
 }
 
-.item-number,
-.item-meta {
-  color: $muted;
-  font-family: $mono;
-}
-
 .home-terminal {
   width: max-content;
   max-width: 100%;
@@ -315,51 +309,3 @@
   color: $accent;
 }
 
-// Generic numbered rows used by the projects page.
-.item-row {
-  display: grid;
-  grid-template-columns: 3rem minmax(0, 1fr) auto;
-  gap: 1.2rem;
-  align-items: start;
-  padding: 1.2rem 0;
-}
-
-.item-row + .item-row {
-  border-top: 1px dashed $border;
-}
-
-.item-number,
-.item-meta {
-  padding-top: 0.15rem;
-  font-size: 0.7rem;
-}
-
-.item-title {
-  margin: 0 0 0.35rem;
-  font-family: $mono;
-  font-size: 0.98rem;
-}
-
-.item-title a {
-  color: $text-strong;
-  text-decoration: none;
-}
-
-.item-title a:hover {
-  color: $accent;
-}
-
-.item-description {
-  max-width: 650px;
-  margin: 0;
-  color: $muted;
-  font-size: 0.9rem;
-}
-
-.item-body {
-  min-width: 0;
-}
-
-.item-meta {
-  text-align: right;
-}

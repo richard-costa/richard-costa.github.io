@@ -1,6 +1,0 @@
----
-title: "projects"
-toc: false
----
-
-No projects listed.

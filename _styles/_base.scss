@@ -114,16 +114,3 @@ h3 {
   @include terminal-cursor;
 }
 
-// Reusable command-style title for manually authored page sections.
-.page-command-title {
-  margin-top: 0;
-}
-
-.page-command-title::before {
-  content: "> ";
-  color: $accent;
-}
-
-.page-command-title::after {
-  @include terminal-cursor;
-}

@@ -17,7 +17,6 @@ else
   candidates=(
     "$ROOT/../arch-setup"
     "$HOME/Documents/projects/arch-setup"
-    "$HOME/Documents/projects/arch-setup"
     "$HOME/arch-setup"
   )
 

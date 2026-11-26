@@ -32,17 +32,7 @@
     white-space: normal;
   }
 
-  // Project and writing rows stack metadata below their main content.
-  .item-row {
-    grid-template-columns: 2rem minmax(0, 1fr);
-  }
-
-  .item-meta {
-    grid-column: 2;
-    padding-top: 0;
-    text-align: left;
-  }
-
+  // Writing rows stack metadata below their main content.
   .writing-list-item {
     grid-template-columns: 1fr;
     gap: 0.35rem;

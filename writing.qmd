@@ -4,7 +4,6 @@ toc: false
 listing:
   id: writing-list
   contents:
-    - essays
     - notes
     - posts
   exclude:
@@ -20,7 +19,7 @@ listing:
 Essays, notes, and posts, shown together by recent activity.
 
 ::: {.writing-section-links}
-[essays](essays/index.qmd) · [notes](notes/index.qmd) · [posts](posts/index.qmd) · [rss](/writing.xml)
+[notes](notes/index.qmd) · [posts](posts/index.qmd) · [rss](/writing.xml)
 :::
 
 ::: {#writing-list}

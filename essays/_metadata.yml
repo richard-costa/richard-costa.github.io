@@ -1,8 +1,0 @@
-writing-type: essay
-freeze: true
-comments:
-  giscus:
-    repo: richard-costa/richard-costa.github.io
-    input-position: top
-    loading: lazy
-    theme: https://richard-costa.github.io/giscus-theme.css

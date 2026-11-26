@@ -6,7 +6,6 @@ page-layout: full
 listing:
   id: home-recent
   contents:
-    - essays
     - notes
     - posts
   exclude:
@@ -54,7 +53,7 @@ Also, remember, all work and no play brings you a worse day. Take care and poke 
 ::: {#home-recent}
 :::
 
-::: {.home-blogroll}
+::: {#blogroll .home-blogroll}
 <div class="blogroll-title">blogroll (placeholders)</div>
 <nav class="blogroll-links" aria-label="Blogroll">
   <a href="https://ncatlab.org/">nLab <span>↗</span></a>

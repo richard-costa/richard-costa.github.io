@@ -7,8 +7,6 @@ project:
     - _scripts/generate_notes_feed.py
     - _scripts/generate_giscus_theme.py
   resources:
-    - robots.txt
-    - humans.txt
     - site.js
     - data/equations.json
     - data/home-media.json
@@ -24,8 +22,6 @@ website:
     right:
       - href: writing.qmd
         text: writing
-      - href: projects.qmd
-        text: projects
       - href: now.qmd
         text: now
       - text: more
@@ -37,7 +33,7 @@ website:
 
   page-footer:
     left: "Richard Costa"
-    right: "Built with Quarto · [humans.txt](/humans.txt)"
+    right: "Built with Quarto"
 
 format:
   html:

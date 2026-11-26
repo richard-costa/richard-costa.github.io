@@ -526,14 +526,12 @@
           description: "list site sections",
           run: () => {
             output.innerHTML = `
-              <a href="/projects.html">projects/</a>
               <a href="/notes/">notes/</a>
               <a href="/posts/">posts/</a>
               <a href="/now.html">now/</a>
               <a href="/bookmarks.html">bookmarks/</a>
-              <a href="/blogroll.html">blogroll/</a>
+              <a href="/#blogroll">blogroll/</a>
               <a href="/changelog.html">changelog/</a>
-              <a href="/humans.txt">humans.txt</a>
             `;
           }
         },
